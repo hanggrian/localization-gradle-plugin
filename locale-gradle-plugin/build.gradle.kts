@@ -29,7 +29,7 @@ dependencies {
     implementation(kotlin("stdlib", VERSION_KOTLIN))
     implementation(guava())
 
-    testImplementation(junit())
+    testImplementation(kotlin("test-junit"))
 
     ktlint {
         invoke(ktlint())

@@ -6,15 +6,23 @@ import org.gradle.api.logging.LogLevel
 import org.gradle.api.tasks.Input
 import org.gradle.api.tasks.OutputDirectory
 import org.gradle.api.tasks.TaskAction
+import org.w3c.dom.Element
 import java.io.File
 import java.io.IOException
+import java.util.Locale
 import java.util.Properties
+import javax.xml.parsers.DocumentBuilderFactory
+import javax.xml.transform.TransformerFactory
+import javax.xml.transform.dom.DOMSource
+import javax.xml.transform.stream.StreamResult
 
 abstract class LocaleTask : DefaultTask() {
 
-    internal lateinit var table: RowSortedTable<String, String, String>
+    internal lateinit var table: RowSortedTable<String, Locale, String>
 
     @Input lateinit var localeName: String
+
+    @Input lateinit var defaultLocale: Locale
 
     /** Path that localization files will be generated to. */
     @OutputDirectory lateinit var outputDir: File
@@ -29,8 +37,7 @@ abstract class LocaleTask : DefaultTask() {
     @TaskAction
     @Throws(IOException::class)
     fun generate() {
-        logger.log(LogLevel.INFO, "Deleting old localization")
-        outputDir.deleteRecursively()
+        logger.log(LogLevel.INFO, "Preparing localization")
         outputDir.mkdirs()
 
         logger.log(LogLevel.INFO, "Writing localization")
@@ -39,7 +46,21 @@ abstract class LocaleTask : DefaultTask() {
 
     abstract fun write()
 
-    abstract fun getFileName(locale: String): String
+    internal fun Locale.toSuffix(separator: Char): String = buildString {
+        if (this@toSuffix == defaultLocale) {
+            return@buildString
+        }
+        append("$separator$language")
+        if (country.isNotBlank()) {
+            append("$separator$country")
+        }
+    }
+
+    internal fun File.deleteIfExists() {
+        if (exists()) {
+            delete()
+        }
+    }
 }
 
 open class JavaLocaleTask : LocaleTask() {
@@ -47,21 +68,32 @@ open class JavaLocaleTask : LocaleTask() {
     override fun write() = table.columnKeySet().forEach { locale ->
         val properties = Properties()
         table.rowKeySet().forEach { key ->
-            properties[key] = table.get(key, locale)
+            properties[key] = table[key, locale]
         }
-        outputDir.resolve(getFileName(locale)).outputStream().use {
+        val outputFile = outputDir.resolve("$localeName${locale.toSuffix('_')}.properties")
+        outputFile.deleteIfExists()
+        outputFile.outputStream().use {
             properties.store(it, null)
         }
     }
-
-    override fun getFileName(locale: String): String = "${localeName}_$locale.properties"
 }
 
 open class AndroidLocaleTask : LocaleTask() {
+    private val docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder()
+    private val transformer = TransformerFactory.newInstance().newTransformer()
 
     override fun write() = table.columnKeySet().forEach { locale ->
-
+        val doc = docBuilder.newDocument()
+        val resources = doc.createElement("resources") as Element
+        resources.setAttribute("xmlns:android", "http://schemas.android.com/apk/res/android")
+        doc.appendChild(resources)
+        table.rowKeySet().forEach { key ->
+            val s = doc.createElement("string")
+            s.appendChild(doc.createTextNode(table[key, locale]))
+            resources.appendChild(s)
+        }
+        val outputFile = outputDir.resolve("values${locale.toSuffix('-')}").resolve("strings.xml")
+        outputFile.deleteIfExists()
+        transformer.transform(DOMSource(doc), StreamResult(outputFile))
     }
-
-    override fun getFileName(locale: String): String = "$localeName-$locale.xml"
 }

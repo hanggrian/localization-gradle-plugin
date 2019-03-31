@@ -16,5 +16,3 @@ inline val PluginDependenciesSpec.`git-publish` get() = id("org.ajoberstar.git-p
 fun DependencyHandler.guava() = "com.google.guava:guava:27.1-jre"
 
 fun DependencyHandler.ktlint() = "com.github.shyiko:ktlint:0.31.0"
-
-fun DependencyHandler.junit() = "junit:junit:4.12"

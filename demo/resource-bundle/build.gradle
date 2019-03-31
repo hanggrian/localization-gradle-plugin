@@ -15,10 +15,17 @@ group 'com.example'
 version '1.0'
 
 locale {
+    def en = Locale.ENGLISH
+    def id = new Locale("id")
+    
     localeName = 'strings'
     invoke('about') {
-        en 'About'
-        de 'Tentang'
+        invoke en, 'About'
+        invoke id, 'Tentang'
+    }
+    invoke('home') {
+        invoke en, 'Home'
+        invoke id, 'Beranda'
     }
 }
 
