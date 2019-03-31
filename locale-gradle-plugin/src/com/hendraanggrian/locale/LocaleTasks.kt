@@ -1,7 +1,9 @@
 package com.hendraanggrian.locale
 
+import com.google.common.collect.RowSortedTable
 import org.gradle.api.DefaultTask
 import org.gradle.api.logging.LogLevel
+import org.gradle.api.tasks.Input
 import org.gradle.api.tasks.OutputDirectory
 import org.gradle.api.tasks.TaskAction
 import java.io.File
@@ -9,6 +11,10 @@ import java.io.IOException
 import java.util.Properties
 
 abstract class LocaleTask : DefaultTask() {
+
+    internal lateinit var table: RowSortedTable<String, String, String>
+
+    @Input lateinit var localeName: String
 
     /** Path that localization files will be generated to. */
     @OutputDirectory lateinit var outputDir: File
@@ -32,17 +38,30 @@ abstract class LocaleTask : DefaultTask() {
     }
 
     abstract fun write()
+
+    abstract fun getFileName(locale: String): String
 }
 
-class AndroidLocaleTask : LocaleTask() {
+open class JavaLocaleTask : LocaleTask() {
 
-    override fun write() {
-    }
-}
-
-class JavaLocaleTask : LocaleTask() {
-
-    override fun write() {
+    override fun write() = table.columnKeySet().forEach { locale ->
         val properties = Properties()
+        table.rowKeySet().forEach { key ->
+            properties[key] = table.get(key, locale)
+        }
+        outputDir.resolve(getFileName(locale)).outputStream().use {
+            properties.store(it, null)
+        }
     }
+
+    override fun getFileName(locale: String): String = "${localeName}_$locale.properties"
+}
+
+open class AndroidLocaleTask : LocaleTask() {
+
+    override fun write() = table.columnKeySet().forEach { locale ->
+
+    }
+
+    override fun getFileName(locale: String): String = "$localeName-$locale.xml"
 }
