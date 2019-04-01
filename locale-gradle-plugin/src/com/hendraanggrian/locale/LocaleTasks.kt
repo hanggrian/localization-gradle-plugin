@@ -7,8 +7,8 @@ import org.gradle.api.tasks.Input
 import org.gradle.api.tasks.Internal
 import org.gradle.api.tasks.OutputDirectory
 import org.gradle.api.tasks.TaskAction
-import org.w3c.dom.Element
 import java.io.File
+import java.io.FileWriter
 import java.io.IOException
 import java.util.Locale
 import java.util.Properties
@@ -17,6 +17,7 @@ import javax.xml.transform.TransformerFactory
 import javax.xml.transform.dom.DOMSource
 import javax.xml.transform.stream.StreamResult
 
+/** Non-platform specific locale writer task. */
 abstract class WriteLocaleTask : DefaultTask() {
 
     @Internal protected lateinit var table: RowSortedTable<String, Locale, String>
@@ -91,16 +92,18 @@ open class WriteAndroidResourcesTask : WriteLocaleTask() {
 
     override fun write() = table.columnKeySet().forEach { locale ->
         val doc = docBuilder.newDocument()
-        val resources = doc.createElement("resources") as Element
-        resources.setAttribute("xmlns:android", "http://schemas.android.com/apk/res/android")
-        doc.appendChild(resources)
+        doc.xmlStandalone = true
+        val resources = doc.appendChild(doc.createElement("resources"))
         table.rowKeySet().forEach { key ->
             val s = doc.createElement("string")
+            s.setAttribute("name", key)
             s.appendChild(doc.createTextNode(table[key, locale]))
             resources.appendChild(s)
         }
-        val outputFile = outputDir.resolve("values${locale.toSuffix('-')}").resolve("strings.xml")
+        val innerOutputDir = outputDir.resolve("values${locale.toSuffix('-')}")
+        innerOutputDir.mkdirs()
+        val outputFile = innerOutputDir.resolve("strings.xml")
         outputFile.deleteIfExists()
-        transformer.transform(DOMSource(doc), StreamResult(outputFile))
+        transformer.transform(DOMSource(doc), StreamResult(FileWriter(outputFile)))
     }
 }

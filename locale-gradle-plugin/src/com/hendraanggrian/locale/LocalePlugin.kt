@@ -20,12 +20,14 @@ class LocalePlugin : Plugin<Project> {
         project.tasks {
             val writeResourceBundles by registering(WriteResourceBundlesTask::class) {
                 group = GROUP_NAME
+                outputDir = project.projectDir.resolve("src/main/resources")
                 setTable(ext.table)
                 ext.resourceName?.let { resourceName = it }
                 defaultLocale = ext.defaultLocale
             }
             val writeAndroidResources by registering(WriteAndroidResourcesTask::class) {
                 group = GROUP_NAME
+                outputDir = project.projectDir.resolve("src/main/resources")
                 setTable(ext.table)
                 ext.resourceName?.let { resourceName = it }
                 defaultLocale = ext.defaultLocale

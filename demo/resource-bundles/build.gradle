@@ -25,7 +25,3 @@ locale {
         id = 'Beranda'
     }
 }
-
-tasks.withType(com.hendraanggrian.locale.WriteResourceBundlesTask) {
-    outputDirectory 'src/main/resources'
-}
