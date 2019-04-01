@@ -3,6 +3,7 @@ package com.hendraanggrian.locale
 import java.util.Locale
 
 /**
+ * Main interface used to configure localization content.
  * All locales are based on `https://github.com/umpirsky/locale-list/tree/master/data`.
  * Locales with code other than language and country code are excluded.
  */
@@ -2020,7 +2021,7 @@ interface LocaleBuilder {
 
     var zh_CN: String
         @Deprecated(NO_GETTER, level = DeprecationLevel.ERROR) get() = noGetter()
-        set(value) = add(Locale.SIMPLIFIED_CHINESE, value)
+        set(value) = add(Locale.CHINA, value)
 
     var zh_HK: String
         @Deprecated(NO_GETTER, level = DeprecationLevel.ERROR) get() = noGetter()
@@ -2036,7 +2037,7 @@ interface LocaleBuilder {
 
     var zh_TW: String
         @Deprecated(NO_GETTER, level = DeprecationLevel.ERROR) get() = noGetter()
-        set(value) = add(Locale.TRADITIONAL_CHINESE, value)
+        set(value) = add(Locale.TAIWAN, value)
 
     var zu: String
         @Deprecated(NO_GETTER, level = DeprecationLevel.ERROR) get() = noGetter()

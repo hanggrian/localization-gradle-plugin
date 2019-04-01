@@ -18,7 +18,7 @@ class LocalePlugin : Plugin<Project> {
     override fun apply(project: Project) {
         val ext = project.extensions.create<LocaleExtension>(GROUP_NAME)
         project.tasks {
-            val writeResourceBundles by registering(WriteResourceBundlesTask::class) {
+            val writeResourceBundle by registering(WriteResourceBundleTask::class) {
                 group = GROUP_NAME
                 outputDir = project.projectDir.resolve("src/main/resources")
                 setTable(ext.table)

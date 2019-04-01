@@ -1,35 +1,18 @@
 buildscript {
     repositories {
         jcenter()
-        google()
     }
     dependencies {
         classpath files('../locale-gradle-plugin-0.1.jar')
         classpath 'com.google.guava:guava:27.1-jre'
-        classpath 'com.android.tools.build:gradle:3.5.0-alpha09'
     }
 }
 
-allprojects {
-    repositories {
-        google()
-        jcenter()
-    }
-}
-
-apply plugin: 'com.android.application'
+apply plugin: 'java'
 apply plugin: 'com.hendraanggrian.locale'
 
-android {
-    compileSdkVersion 28
-    defaultConfig {
-        minSdkVersion 14
-        targetSdkVersion 28
-        applicationId 'com.example'
-        versionCode 1
-        versionName '1.0'
-    }
-}
+group 'com.example'
+version '1.0'
 
 locale {
     resourceName = 'strings'
@@ -41,4 +24,8 @@ locale {
         en = 'Home'
         id = 'Beranda'
     }
+}
+
+tasks.withType(com.hendraanggrian.locale.WriteResourceBundleTask) {
+    outputDirectory 'src/main/resources/localization'
 }

@@ -71,7 +71,8 @@ abstract class WriteLocaleTask : DefaultTask() {
     }
 }
 
-open class WriteResourceBundlesTask : WriteLocaleTask() {
+/** Task to write properties files which will then be used as [java.util.ResourceBundle]. */
+open class WriteResourceBundleTask : WriteLocaleTask() {
 
     override fun write() = table.columnKeySet().forEach { locale ->
         val properties = Properties()
@@ -86,6 +87,7 @@ open class WriteResourceBundlesTask : WriteLocaleTask() {
     }
 }
 
+/** Task to write Android string resources files. */
 open class WriteAndroidResourcesTask : WriteLocaleTask() {
     private val docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder()
     private val transformer = TransformerFactory.newInstance().newTransformer()

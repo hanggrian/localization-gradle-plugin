@@ -2,7 +2,6 @@ Locale Gradle Plugin
 ====================
 [![bintray](https://img.shields.io/badge/bintray-maven-brightgreen.svg)](https://bintray.com/hendraanggrian/maven)
 [![download](https://api.bintray.com/packages/hendraanggrian/maven/locale-gradle-plugin/images/download.svg)](https://bintray.com/hendraanggrian/maven/locale-gradle-plugin/_latestVersion)
-[![build](https://travis-ci.com/hendraanggrian/locale-gradle-plugin.svg)](https://travis-ci.com/hendraanggrian/locale-gradle-plugin)
 [![license](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 
 Cross-platform localization generated in Gradle.
@@ -28,13 +27,33 @@ buildscript {
 
 Usage
 -----
-Apply plugin in your module.
+Apply plugin in your module, and configure `locale` extension like below:
 
 ```gradle
 apply plugin: 'com.hendraanggrian.locale'
+
+locale {
+    resourceName = 'strings'
+    configure('home') {
+        en = 'Home'
+        id = 'Beranda'
+    }
+    configure('about') {
+        en = 'About'
+        id = 'Tentang'
+    }
+}
+
+task.withTask(com.hendraanggrian.locale.WriteResourceBundlesTask) {
+    outputDirectory 'src/main/resources'
+}
+
+task.withTask(com.hendraanggrian.locale.WriteAndroidResourcesTask) {
+    outputDirectory 'my/custom/directory'
+}
 ```
 
-Configure `locale` extension like below:
+It's even simpler with Gradle Kotlin DSL.
 
 ```gradle
 locale {
@@ -48,6 +67,8 @@ locale {
     }
 }
 ```
+
+Then use command `writeAndroidResources` or `writeResourceBundles` to write localization files into their respective directory.
 
 License
 -------
