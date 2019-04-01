@@ -9,15 +9,7 @@
 <br/>
 <h1>LocaleExtension</h1>
 <code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">LocaleExtension</span></code>
-<p>+----------+----------+---------+
-|          |    en    |    id   |
-+----------+----------+---------+
-| about    | About    | Tentang |
-+----------+----------+---------+
-| home     | Home     | Beranda |
-+----------+----------+---------+
-| settings | Settings | Setelan |
-+----------+----------+---------+</p>
+<p>Gradle extension to configure localization, any changes made here will take affect in <a href="../-write-locale-task/index.html">WriteLocaleTask</a>.</p>
 <h3>Constructors</h3>
 <table>
 <tbody>
@@ -27,15 +19,7 @@
 </td>
 <td>
 <code><span class="identifier">LocaleExtension</span><span class="symbol">(</span><span class="symbol">)</span></code>
-<p>+----------+----------+---------+
-|          |    en    |    id   |
-+----------+----------+---------+
-| about    | About    | Tentang |
-+----------+----------+---------+
-| home     | Home     | Beranda |
-+----------+----------+---------+
-| settings | Settings | Setelan |
-+----------+----------+---------+</p>
+<p>Gradle extension to configure localization, any changes made here will take affect in <a href="../-write-locale-task/index.html">WriteLocaleTask</a>.</p>
 </td>
 </tr>
 </tbody>
@@ -64,10 +48,21 @@
 <tbody>
 <tr>
 <td>
+<p><a href="configure.html">configure</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">configure</span><span class="symbol">(</span><span class="identifier" id="com.hendraanggrian.locale.LocaleExtension$configure(kotlin.String, org.gradle.api.Action((com.hendraanggrian.locale.LocaleBuilder)))/key">key</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.hendraanggrian.locale.LocaleExtension$configure(kotlin.String, org.gradle.api.Action((com.hendraanggrian.locale.LocaleBuilder)))/action">action</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action</span><span class="symbol">&lt;</span><a href="../-locale-builder/index.html"><span class="identifier">LocaleBuilder</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Opening closure to modify content of <a href="configure.html#com.hendraanggrian.locale.LocaleExtension$configure(kotlin.String, org.gradle.api.Action((com.hendraanggrian.locale.LocaleBuilder)))/key">key</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
 <p><a href="invoke.html">invoke</a></p>
 </td>
 <td>
-<code><span class="keyword">operator</span> <span class="keyword">fun </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">.</span><span class="identifier">invoke</span><span class="symbol">(</span><span class="identifier" id="com.hendraanggrian.locale.LocaleExtension$invoke(kotlin.String, org.gradle.api.Action((com.hendraanggrian.locale.LocaleBuilder)))/action">action</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action</span><span class="symbol">&lt;</span><a href="../-locale-builder/index.html"><span class="identifier">LocaleBuilder</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+<code><span class="keyword">operator</span> <span class="keyword">fun </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">.</span><span class="identifier">invoke</span><span class="symbol">(</span><span class="identifier" id="com.hendraanggrian.locale.LocaleExtension$invoke(kotlin.String, kotlin.Function1((com.hendraanggrian.locale.LocaleBuilder, kotlin.Unit)))/action">action</span><span class="symbol">:</span>&nbsp;<a href="../-locale-builder/index.html"><span class="identifier">LocaleBuilder</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Alias of <a href="configure.html">configure</a> for Gradle Kotlin DSL.</p>
+</td>
 </tr>
 </tbody>
 </table>

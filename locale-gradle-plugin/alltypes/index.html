@@ -12,7 +12,8 @@
 <td>
 <a href="../com.hendraanggrian.locale/-locale-builder/index.html">com.hendraanggrian.locale.LocaleBuilder</a></td>
 <td>
-<p>All locales are based on <code>https://github.com/umpirsky/locale-list/tree/master/data</code>.
+<p>Main interface used to configure localization content.
+All locales are based on <code>https://github.com/umpirsky/locale-list/tree/master/data</code>.
 Locales with code other than language and country code are excluded.</p>
 </td>
 </tr>
@@ -20,15 +21,7 @@ Locales with code other than language and country code are excluded.</p>
 <td>
 <a href="../com.hendraanggrian.locale/-locale-extension/index.html">com.hendraanggrian.locale.LocaleExtension</a></td>
 <td>
-<p>+----------+----------+---------+
-|          |    en    |    id   |
-+----------+----------+---------+
-| about    | About    | Tentang |
-+----------+----------+---------+
-| home     | Home     | Beranda |
-+----------+----------+---------+
-| settings | Settings | Setelan |
-+----------+----------+---------+</p>
+<p>Gradle extension to configure localization, any changes made here will take affect in <a href="../com.hendraanggrian.locale/-write-locale-task/index.html">WriteLocaleTask</a>.</p>
 </td>
 </tr>
 <tr>
@@ -41,6 +34,7 @@ Locales with code other than language and country code are excluded.</p>
 <td>
 <a href="../com.hendraanggrian.locale/-write-android-resources-task/index.html">com.hendraanggrian.locale.WriteAndroidResourcesTask</a></td>
 <td>
+<p>Task to write Android string resources files.</p>
 </td>
 </tr>
 <tr>
@@ -52,8 +46,9 @@ Locales with code other than language and country code are excluded.</p>
 </tr>
 <tr>
 <td>
-<a href="../com.hendraanggrian.locale/-write-resource-bundles-task/index.html">com.hendraanggrian.locale.WriteResourceBundlesTask</a></td>
+<a href="../com.hendraanggrian.locale/-write-resource-bundle-task/index.html">com.hendraanggrian.locale.WriteResourceBundleTask</a></td>
 <td>
+<p>Task to write properties files which will then be used as <a href="http://docs.oracle.com/javase/6/docs/api/java/util/ResourceBundle.html">java.util.ResourceBundle</a>.</p>
 </td>
 </tr>
 </tbody>
