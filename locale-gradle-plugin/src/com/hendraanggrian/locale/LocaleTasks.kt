@@ -4,6 +4,7 @@ import com.google.common.collect.RowSortedTable
 import org.gradle.api.DefaultTask
 import org.gradle.api.logging.LogLevel
 import org.gradle.api.tasks.Input
+import org.gradle.api.tasks.Internal
 import org.gradle.api.tasks.OutputDirectory
 import org.gradle.api.tasks.TaskAction
 import org.w3c.dom.Element
@@ -16,12 +17,14 @@ import javax.xml.transform.TransformerFactory
 import javax.xml.transform.dom.DOMSource
 import javax.xml.transform.stream.StreamResult
 
-abstract class LocaleTask : DefaultTask() {
+abstract class WriteLocaleTask : DefaultTask() {
 
-    internal lateinit var table: RowSortedTable<String, Locale, String>
+    @Internal protected lateinit var table: RowSortedTable<String, Locale, String>
 
-    @Input lateinit var localeName: String
+    /** Localization resource name. */
+    @Input lateinit var resourceName: String
 
+    /** Default locale, when matching localization is found, file name suffix is removed. */
     @Input lateinit var defaultLocale: Locale
 
     /** Path that localization files will be generated to. */
@@ -46,6 +49,10 @@ abstract class LocaleTask : DefaultTask() {
 
     abstract fun write()
 
+    internal fun setTable(table: RowSortedTable<String, Locale, String>) {
+        this.table = table
+    }
+
     internal fun Locale.toSuffix(separator: Char): String = buildString {
         if (this@toSuffix == defaultLocale) {
             return@buildString
@@ -63,14 +70,14 @@ abstract class LocaleTask : DefaultTask() {
     }
 }
 
-open class JavaLocaleTask : LocaleTask() {
+open class WriteResourceBundlesTask : WriteLocaleTask() {
 
     override fun write() = table.columnKeySet().forEach { locale ->
         val properties = Properties()
         table.rowKeySet().forEach { key ->
             properties[key] = table[key, locale]
         }
-        val outputFile = outputDir.resolve("$localeName${locale.toSuffix('_')}.properties")
+        val outputFile = outputDir.resolve("$resourceName${locale.toSuffix('_')}.properties")
         outputFile.deleteIfExists()
         outputFile.outputStream().use {
             properties.store(it, null)
@@ -78,7 +85,7 @@ open class JavaLocaleTask : LocaleTask() {
     }
 }
 
-open class AndroidLocaleTask : LocaleTask() {
+open class WriteAndroidResourcesTask : WriteLocaleTask() {
     private val docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder()
     private val transformer = TransformerFactory.newInstance().newTransformer()
 

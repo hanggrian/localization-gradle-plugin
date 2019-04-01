@@ -3,9 +3,9 @@ package com.hendraanggrian.locale
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.create
-import org.gradle.kotlin.dsl.getValue
 import org.gradle.kotlin.dsl.invoke
 import org.gradle.kotlin.dsl.registering
+import org.gradle.kotlin.dsl.getValue
 import org.gradle.kotlin.dsl.provideDelegate // ktlint-disable
 
 class LocalePlugin : Plugin<Project> {
@@ -14,19 +14,20 @@ class LocalePlugin : Plugin<Project> {
         const val GROUP_NAME = "locale"
     }
 
+    @Suppress("UNUSED_VARIABLE")
     override fun apply(project: Project) {
         val ext = project.extensions.create<LocaleExtension>(GROUP_NAME)
         project.tasks {
-            val javaLocale by registering(JavaLocaleTask::class) {
+            val writeResourceBundles by registering(WriteResourceBundlesTask::class) {
                 group = GROUP_NAME
-                table = ext.table
-                ext.localeName?.let { localeName = it }
+                setTable(ext.table)
+                ext.resourceName?.let { resourceName = it }
                 defaultLocale = ext.defaultLocale
             }
-            val androidLocale by registering(AndroidLocaleTask::class) {
+            val writeAndroidResources by registering(WriteAndroidResourcesTask::class) {
                 group = GROUP_NAME
-                table = ext.table
-                ext.localeName?.let { localeName = it }
+                setTable(ext.table)
+                ext.resourceName?.let { resourceName = it }
                 defaultLocale = ext.defaultLocale
             }
         }

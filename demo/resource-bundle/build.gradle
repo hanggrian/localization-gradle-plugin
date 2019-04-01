@@ -15,20 +15,17 @@ group 'com.example'
 version '1.0'
 
 locale {
-    def en = Locale.ENGLISH
-    def id = new Locale("id")
-    
-    localeName = 'strings'
+    resourceName = 'strings'
     invoke('about') {
-        invoke en, 'About'
-        invoke id, 'Tentang'
+        en = 'About'
+        id = 'Tentang'
     }
     invoke('home') {
-        invoke en, 'Home'
-        invoke id, 'Beranda'
+        en = 'Home'
+        id = 'Beranda'
     }
 }
 
-tasks.withType(com.hendraanggrian.locale.JavaLocaleTask) {
+tasks.withType(com.hendraanggrian.locale.WriteResourceBundlesTask) {
     outputDirectory 'src/main/resources'
 }
