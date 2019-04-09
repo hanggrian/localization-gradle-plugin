@@ -33,7 +33,7 @@ Apply plugin in your module, and configure `locale` extension like below:
 apply plugin: 'com.hendraanggrian.locale'
 
 locale {
-    resourceName = 'strings'
+    resourceName 'strings'
     configure('home') {
         en = 'Home'
         id = 'Beranda'
@@ -72,7 +72,7 @@ Then use command `localizeAndroid` or `localizeJava` to write localization files
 
 License
 -------
-    Copyright 2018 Hendra Anggrian
+    Copyright 2019 Hendra Anggrian
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -85,4 +85,3 @@ License
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
-    

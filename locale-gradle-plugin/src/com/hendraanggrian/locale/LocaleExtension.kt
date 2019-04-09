@@ -25,7 +25,8 @@ open class LocaleExtension {
     internal val table: RowSortedTable<String, Locale, String> get() = impl.table
 
     /**
-     * Locale values configured within [LocalBuilder] is kept in a Guava table, e.g.:
+     * Locale values configured within [LocaleBuilder] is kept in a Guava table,
+     * below are structure example of the table:
      *
      * ```
      * +----------+----------+---------+
@@ -40,7 +41,7 @@ open class LocaleExtension {
      * ```
      */
     private class LocaleBuilderImpl : LocaleBuilder {
-        private val localeCache: MutableMap<String, Locale> = mutableMapOf()
+        private val localeMap: MutableMap<String, Locale> = mutableMapOf()
         val table: RowSortedTable<String, Locale, String> = TreeBasedTable.create(
             { o1, o2 -> o1.compareTo(o2) },
             { o1, o2 -> o1.language.compareTo(o2.language) })
@@ -53,7 +54,7 @@ open class LocaleExtension {
         override fun add(language: String, country: String?, value: String) {
             val isCountryAvailable = country != null && country.isNotBlank()
             add(
-                localeCache.getOrPut(
+                localeMap.getOrPut(
                     when {
                         isCountryAvailable -> "$language-$country"
                         else -> language

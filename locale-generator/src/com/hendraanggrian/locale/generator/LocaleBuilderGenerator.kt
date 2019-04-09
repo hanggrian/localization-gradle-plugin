@@ -10,7 +10,7 @@ import com.squareup.kotlinpoet.TypeSpec
 import kotlinx.coroutines.runBlocking
 import java.io.File
 
-object Main {
+object LocaleBuilderGenerator {
     private const val PACKAGE_NAME = "com.hendraanggrian.locale"
     private const val CLASS_NAME = "LocaleBuilder"
 
@@ -77,7 +77,7 @@ object Main {
                                     FunSpec.setterBuilder()
                                         .addParameter("value", String::class)
                                         .addStatement(buildString {
-                                            append("add(")
+                                            append("return add(")
                                             append(
                                                 when {
                                                     language == "en" && country == null -> "java.util.Locale.ENGLISH"

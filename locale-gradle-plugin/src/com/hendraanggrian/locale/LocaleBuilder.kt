@@ -1,10 +1,5 @@
 package com.hendraanggrian.locale
 
-import kotlin.Deprecated
-import kotlin.Nothing
-import kotlin.String
-import kotlin.Suppress
-
 /**
  * Generated interface based on `https://github.com/umpirsky/locale-list`.
  */
@@ -22,9 +17,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("af", null, value)
-        }
+        set(value) = add("af", null, value)
 
     /**
      * Set locale value with language `af` and country `NA`.
@@ -35,9 +28,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("af", "NA", value)
-        }
+        set(value) = add("af", "NA", value)
 
     /**
      * Set locale value with language `af` and country `ZA`.
@@ -48,9 +39,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("af", "ZA", value)
-        }
+        set(value) = add("af", "ZA", value)
 
     /**
      * Set locale value with language `ak`.
@@ -61,9 +50,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ak", null, value)
-        }
+        set(value) = add("ak", null, value)
 
     /**
      * Set locale value with language `ak` and country `GH`.
@@ -74,9 +61,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ak", "GH", value)
-        }
+        set(value) = add("ak", "GH", value)
 
     /**
      * Set locale value with language `am`.
@@ -87,9 +72,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("am", null, value)
-        }
+        set(value) = add("am", null, value)
 
     /**
      * Set locale value with language `am` and country `ET`.
@@ -100,9 +83,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("am", "ET", value)
-        }
+        set(value) = add("am", "ET", value)
 
     /**
      * Set locale value with language `ar`.
@@ -113,9 +94,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ar", null, value)
-        }
+        set(value) = add("ar", null, value)
 
     /**
      * Set locale value with language `ar` and country `AE`.
@@ -126,9 +105,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ar", "AE", value)
-        }
+        set(value) = add("ar", "AE", value)
 
     /**
      * Set locale value with language `ar` and country `BH`.
@@ -139,9 +116,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ar", "BH", value)
-        }
+        set(value) = add("ar", "BH", value)
 
     /**
      * Set locale value with language `ar` and country `DJ`.
@@ -152,9 +127,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ar", "DJ", value)
-        }
+        set(value) = add("ar", "DJ", value)
 
     /**
      * Set locale value with language `ar` and country `DZ`.
@@ -165,9 +138,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ar", "DZ", value)
-        }
+        set(value) = add("ar", "DZ", value)
 
     /**
      * Set locale value with language `ar` and country `EG`.
@@ -178,9 +149,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ar", "EG", value)
-        }
+        set(value) = add("ar", "EG", value)
 
     /**
      * Set locale value with language `ar` and country `EH`.
@@ -191,9 +160,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ar", "EH", value)
-        }
+        set(value) = add("ar", "EH", value)
 
     /**
      * Set locale value with language `ar` and country `ER`.
@@ -204,9 +171,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ar", "ER", value)
-        }
+        set(value) = add("ar", "ER", value)
 
     /**
      * Set locale value with language `ar` and country `IL`.
@@ -217,9 +182,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ar", "IL", value)
-        }
+        set(value) = add("ar", "IL", value)
 
     /**
      * Set locale value with language `ar` and country `IQ`.
@@ -230,9 +193,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ar", "IQ", value)
-        }
+        set(value) = add("ar", "IQ", value)
 
     /**
      * Set locale value with language `ar` and country `JO`.
@@ -243,9 +204,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ar", "JO", value)
-        }
+        set(value) = add("ar", "JO", value)
 
     /**
      * Set locale value with language `ar` and country `KM`.
@@ -256,9 +215,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ar", "KM", value)
-        }
+        set(value) = add("ar", "KM", value)
 
     /**
      * Set locale value with language `ar` and country `KW`.
@@ -269,9 +226,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ar", "KW", value)
-        }
+        set(value) = add("ar", "KW", value)
 
     /**
      * Set locale value with language `ar` and country `LB`.
@@ -282,9 +237,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ar", "LB", value)
-        }
+        set(value) = add("ar", "LB", value)
 
     /**
      * Set locale value with language `ar` and country `LY`.
@@ -295,9 +248,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ar", "LY", value)
-        }
+        set(value) = add("ar", "LY", value)
 
     /**
      * Set locale value with language `ar` and country `MA`.
@@ -308,9 +259,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ar", "MA", value)
-        }
+        set(value) = add("ar", "MA", value)
 
     /**
      * Set locale value with language `ar` and country `MR`.
@@ -321,9 +270,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ar", "MR", value)
-        }
+        set(value) = add("ar", "MR", value)
 
     /**
      * Set locale value with language `ar` and country `OM`.
@@ -334,9 +281,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ar", "OM", value)
-        }
+        set(value) = add("ar", "OM", value)
 
     /**
      * Set locale value with language `ar` and country `PS`.
@@ -347,9 +292,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ar", "PS", value)
-        }
+        set(value) = add("ar", "PS", value)
 
     /**
      * Set locale value with language `ar` and country `QA`.
@@ -360,9 +303,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ar", "QA", value)
-        }
+        set(value) = add("ar", "QA", value)
 
     /**
      * Set locale value with language `ar` and country `SA`.
@@ -373,9 +314,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ar", "SA", value)
-        }
+        set(value) = add("ar", "SA", value)
 
     /**
      * Set locale value with language `ar` and country `SD`.
@@ -386,9 +325,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ar", "SD", value)
-        }
+        set(value) = add("ar", "SD", value)
 
     /**
      * Set locale value with language `ar` and country `SO`.
@@ -399,9 +336,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ar", "SO", value)
-        }
+        set(value) = add("ar", "SO", value)
 
     /**
      * Set locale value with language `ar` and country `SS`.
@@ -412,9 +347,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ar", "SS", value)
-        }
+        set(value) = add("ar", "SS", value)
 
     /**
      * Set locale value with language `ar` and country `SY`.
@@ -425,9 +358,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ar", "SY", value)
-        }
+        set(value) = add("ar", "SY", value)
 
     /**
      * Set locale value with language `ar` and country `TD`.
@@ -438,9 +369,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ar", "TD", value)
-        }
+        set(value) = add("ar", "TD", value)
 
     /**
      * Set locale value with language `ar` and country `TN`.
@@ -451,9 +380,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ar", "TN", value)
-        }
+        set(value) = add("ar", "TN", value)
 
     /**
      * Set locale value with language `ar` and country `YE`.
@@ -464,9 +391,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ar", "YE", value)
-        }
+        set(value) = add("ar", "YE", value)
 
     /**
      * Set locale value with language `as`.
@@ -477,9 +402,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("as", null, value)
-        }
+        set(value) = add("as", null, value)
 
     /**
      * Set locale value with language `as` and country `IN`.
@@ -490,9 +413,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("as", "IN", value)
-        }
+        set(value) = add("as", "IN", value)
 
     /**
      * Set locale value with language `az`.
@@ -503,9 +424,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("az", null, value)
-        }
+        set(value) = add("az", null, value)
 
     /**
      * Set locale value with language `az` and country `AZ`.
@@ -516,9 +435,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("az", "AZ", value)
-        }
+        set(value) = add("az", "AZ", value)
 
     /**
      * Set locale value with language `be`.
@@ -529,9 +446,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("be", null, value)
-        }
+        set(value) = add("be", null, value)
 
     /**
      * Set locale value with language `be` and country `BY`.
@@ -542,9 +457,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("be", "BY", value)
-        }
+        set(value) = add("be", "BY", value)
 
     /**
      * Set locale value with language `bg`.
@@ -555,9 +468,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("bg", null, value)
-        }
+        set(value) = add("bg", null, value)
 
     /**
      * Set locale value with language `bg` and country `BG`.
@@ -568,9 +479,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("bg", "BG", value)
-        }
+        set(value) = add("bg", "BG", value)
 
     /**
      * Set locale value with language `bm`.
@@ -581,9 +490,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("bm", null, value)
-        }
+        set(value) = add("bm", null, value)
 
     /**
      * Set locale value with language `bm` and country `ML`.
@@ -594,9 +501,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("bm", "ML", value)
-        }
+        set(value) = add("bm", "ML", value)
 
     /**
      * Set locale value with language `bn`.
@@ -607,9 +512,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("bn", null, value)
-        }
+        set(value) = add("bn", null, value)
 
     /**
      * Set locale value with language `bn` and country `BD`.
@@ -620,9 +523,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("bn", "BD", value)
-        }
+        set(value) = add("bn", "BD", value)
 
     /**
      * Set locale value with language `bn` and country `IN`.
@@ -633,9 +534,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("bn", "IN", value)
-        }
+        set(value) = add("bn", "IN", value)
 
     /**
      * Set locale value with language `bo`.
@@ -646,9 +545,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("bo", null, value)
-        }
+        set(value) = add("bo", null, value)
 
     /**
      * Set locale value with language `bo` and country `CN`.
@@ -659,9 +556,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("bo", "CN", value)
-        }
+        set(value) = add("bo", "CN", value)
 
     /**
      * Set locale value with language `bo` and country `IN`.
@@ -672,9 +567,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("bo", "IN", value)
-        }
+        set(value) = add("bo", "IN", value)
 
     /**
      * Set locale value with language `br`.
@@ -685,9 +578,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("br", null, value)
-        }
+        set(value) = add("br", null, value)
 
     /**
      * Set locale value with language `br` and country `FR`.
@@ -698,9 +589,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("br", "FR", value)
-        }
+        set(value) = add("br", "FR", value)
 
     /**
      * Set locale value with language `bs`.
@@ -711,9 +600,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("bs", null, value)
-        }
+        set(value) = add("bs", null, value)
 
     /**
      * Set locale value with language `bs` and country `BA`.
@@ -724,9 +611,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("bs", "BA", value)
-        }
+        set(value) = add("bs", "BA", value)
 
     /**
      * Set locale value with language `ca`.
@@ -737,9 +622,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ca", null, value)
-        }
+        set(value) = add("ca", null, value)
 
     /**
      * Set locale value with language `ca` and country `AD`.
@@ -750,9 +633,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ca", "AD", value)
-        }
+        set(value) = add("ca", "AD", value)
 
     /**
      * Set locale value with language `ca` and country `ES`.
@@ -763,9 +644,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ca", "ES", value)
-        }
+        set(value) = add("ca", "ES", value)
 
     /**
      * Set locale value with language `ca` and country `FR`.
@@ -776,9 +655,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ca", "FR", value)
-        }
+        set(value) = add("ca", "FR", value)
 
     /**
      * Set locale value with language `ca` and country `IT`.
@@ -789,9 +666,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ca", "IT", value)
-        }
+        set(value) = add("ca", "IT", value)
 
     /**
      * Set locale value with language `cs`.
@@ -802,9 +677,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("cs", null, value)
-        }
+        set(value) = add("cs", null, value)
 
     /**
      * Set locale value with language `cs` and country `CZ`.
@@ -815,9 +688,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("cs", "CZ", value)
-        }
+        set(value) = add("cs", "CZ", value)
 
     /**
      * Set locale value with language `cy`.
@@ -828,9 +699,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("cy", null, value)
-        }
+        set(value) = add("cy", null, value)
 
     /**
      * Set locale value with language `cy` and country `GB`.
@@ -841,9 +710,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("cy", "GB", value)
-        }
+        set(value) = add("cy", "GB", value)
 
     /**
      * Set locale value with language `da`.
@@ -854,9 +721,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("da", null, value)
-        }
+        set(value) = add("da", null, value)
 
     /**
      * Set locale value with language `da` and country `DK`.
@@ -867,9 +732,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("da", "DK", value)
-        }
+        set(value) = add("da", "DK", value)
 
     /**
      * Set locale value with language `da` and country `GL`.
@@ -880,9 +743,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("da", "GL", value)
-        }
+        set(value) = add("da", "GL", value)
 
     /**
      * Set locale value with language `de`.
@@ -893,9 +754,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add(java.util.Locale.GERMAN, value)
-        }
+        set(value) = add(java.util.Locale.GERMAN, value)
 
     /**
      * Set locale value with language `de` and country `AT`.
@@ -906,9 +765,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("de", "AT", value)
-        }
+        set(value) = add("de", "AT", value)
 
     /**
      * Set locale value with language `de` and country `BE`.
@@ -919,9 +776,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("de", "BE", value)
-        }
+        set(value) = add("de", "BE", value)
 
     /**
      * Set locale value with language `de` and country `CH`.
@@ -932,9 +787,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("de", "CH", value)
-        }
+        set(value) = add("de", "CH", value)
 
     /**
      * Set locale value with language `de` and country `DE`.
@@ -945,9 +798,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add(java.util.Locale.GERMANY, value)
-        }
+        set(value) = add(java.util.Locale.GERMANY, value)
 
     /**
      * Set locale value with language `de` and country `LI`.
@@ -958,9 +809,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("de", "LI", value)
-        }
+        set(value) = add("de", "LI", value)
 
     /**
      * Set locale value with language `de` and country `LU`.
@@ -971,9 +820,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("de", "LU", value)
-        }
+        set(value) = add("de", "LU", value)
 
     /**
      * Set locale value with language `dz`.
@@ -984,9 +831,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("dz", null, value)
-        }
+        set(value) = add("dz", null, value)
 
     /**
      * Set locale value with language `dz` and country `BT`.
@@ -997,9 +842,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("dz", "BT", value)
-        }
+        set(value) = add("dz", "BT", value)
 
     /**
      * Set locale value with language `ee`.
@@ -1010,9 +853,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ee", null, value)
-        }
+        set(value) = add("ee", null, value)
 
     /**
      * Set locale value with language `ee` and country `GH`.
@@ -1023,9 +864,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ee", "GH", value)
-        }
+        set(value) = add("ee", "GH", value)
 
     /**
      * Set locale value with language `ee` and country `TG`.
@@ -1036,9 +875,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ee", "TG", value)
-        }
+        set(value) = add("ee", "TG", value)
 
     /**
      * Set locale value with language `el`.
@@ -1049,9 +886,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("el", null, value)
-        }
+        set(value) = add("el", null, value)
 
     /**
      * Set locale value with language `el` and country `CY`.
@@ -1062,9 +897,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("el", "CY", value)
-        }
+        set(value) = add("el", "CY", value)
 
     /**
      * Set locale value with language `el` and country `GR`.
@@ -1075,9 +908,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("el", "GR", value)
-        }
+        set(value) = add("el", "GR", value)
 
     /**
      * Set locale value with language `en`.
@@ -1088,9 +919,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add(java.util.Locale.ENGLISH, value)
-        }
+        set(value) = add(java.util.Locale.ENGLISH, value)
 
     /**
      * Set locale value with language `en` and country `AG`.
@@ -1101,9 +930,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "AG", value)
-        }
+        set(value) = add("en", "AG", value)
 
     /**
      * Set locale value with language `en` and country `AI`.
@@ -1114,9 +941,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "AI", value)
-        }
+        set(value) = add("en", "AI", value)
 
     /**
      * Set locale value with language `en` and country `AS`.
@@ -1127,9 +952,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "AS", value)
-        }
+        set(value) = add("en", "AS", value)
 
     /**
      * Set locale value with language `en` and country `AU`.
@@ -1140,9 +963,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "AU", value)
-        }
+        set(value) = add("en", "AU", value)
 
     /**
      * Set locale value with language `en` and country `BB`.
@@ -1153,9 +974,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "BB", value)
-        }
+        set(value) = add("en", "BB", value)
 
     /**
      * Set locale value with language `en` and country `BE`.
@@ -1166,9 +985,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "BE", value)
-        }
+        set(value) = add("en", "BE", value)
 
     /**
      * Set locale value with language `en` and country `BM`.
@@ -1179,9 +996,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "BM", value)
-        }
+        set(value) = add("en", "BM", value)
 
     /**
      * Set locale value with language `en` and country `BS`.
@@ -1192,9 +1007,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "BS", value)
-        }
+        set(value) = add("en", "BS", value)
 
     /**
      * Set locale value with language `en` and country `BW`.
@@ -1205,9 +1018,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "BW", value)
-        }
+        set(value) = add("en", "BW", value)
 
     /**
      * Set locale value with language `en` and country `BZ`.
@@ -1218,9 +1029,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "BZ", value)
-        }
+        set(value) = add("en", "BZ", value)
 
     /**
      * Set locale value with language `en` and country `CA`.
@@ -1231,9 +1040,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add(java.util.Locale.CANADA, value)
-        }
+        set(value) = add(java.util.Locale.CANADA, value)
 
     /**
      * Set locale value with language `en` and country `CC`.
@@ -1244,9 +1051,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "CC", value)
-        }
+        set(value) = add("en", "CC", value)
 
     /**
      * Set locale value with language `en` and country `CK`.
@@ -1257,9 +1062,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "CK", value)
-        }
+        set(value) = add("en", "CK", value)
 
     /**
      * Set locale value with language `en` and country `CM`.
@@ -1270,9 +1073,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "CM", value)
-        }
+        set(value) = add("en", "CM", value)
 
     /**
      * Set locale value with language `en` and country `CX`.
@@ -1283,9 +1084,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "CX", value)
-        }
+        set(value) = add("en", "CX", value)
 
     /**
      * Set locale value with language `en` and country `DG`.
@@ -1296,9 +1095,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "DG", value)
-        }
+        set(value) = add("en", "DG", value)
 
     /**
      * Set locale value with language `en` and country `DM`.
@@ -1309,9 +1106,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "DM", value)
-        }
+        set(value) = add("en", "DM", value)
 
     /**
      * Set locale value with language `en` and country `ER`.
@@ -1322,9 +1117,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "ER", value)
-        }
+        set(value) = add("en", "ER", value)
 
     /**
      * Set locale value with language `en` and country `FJ`.
@@ -1335,9 +1128,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "FJ", value)
-        }
+        set(value) = add("en", "FJ", value)
 
     /**
      * Set locale value with language `en` and country `FK`.
@@ -1348,9 +1139,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "FK", value)
-        }
+        set(value) = add("en", "FK", value)
 
     /**
      * Set locale value with language `en` and country `FM`.
@@ -1361,9 +1150,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "FM", value)
-        }
+        set(value) = add("en", "FM", value)
 
     /**
      * Set locale value with language `en` and country `GB`.
@@ -1374,9 +1161,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add(java.util.Locale.UK, value)
-        }
+        set(value) = add(java.util.Locale.UK, value)
 
     /**
      * Set locale value with language `en` and country `GD`.
@@ -1387,9 +1172,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "GD", value)
-        }
+        set(value) = add("en", "GD", value)
 
     /**
      * Set locale value with language `en` and country `GG`.
@@ -1400,9 +1183,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "GG", value)
-        }
+        set(value) = add("en", "GG", value)
 
     /**
      * Set locale value with language `en` and country `GH`.
@@ -1413,9 +1194,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "GH", value)
-        }
+        set(value) = add("en", "GH", value)
 
     /**
      * Set locale value with language `en` and country `GI`.
@@ -1426,9 +1205,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "GI", value)
-        }
+        set(value) = add("en", "GI", value)
 
     /**
      * Set locale value with language `en` and country `GM`.
@@ -1439,9 +1216,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "GM", value)
-        }
+        set(value) = add("en", "GM", value)
 
     /**
      * Set locale value with language `en` and country `GU`.
@@ -1452,9 +1227,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "GU", value)
-        }
+        set(value) = add("en", "GU", value)
 
     /**
      * Set locale value with language `en` and country `GY`.
@@ -1465,9 +1238,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "GY", value)
-        }
+        set(value) = add("en", "GY", value)
 
     /**
      * Set locale value with language `en` and country `HK`.
@@ -1478,9 +1249,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "HK", value)
-        }
+        set(value) = add("en", "HK", value)
 
     /**
      * Set locale value with language `en` and country `IE`.
@@ -1491,9 +1260,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "IE", value)
-        }
+        set(value) = add("en", "IE", value)
 
     /**
      * Set locale value with language `en` and country `IM`.
@@ -1504,9 +1271,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "IM", value)
-        }
+        set(value) = add("en", "IM", value)
 
     /**
      * Set locale value with language `en` and country `IN`.
@@ -1517,9 +1282,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "IN", value)
-        }
+        set(value) = add("en", "IN", value)
 
     /**
      * Set locale value with language `en` and country `IO`.
@@ -1530,9 +1293,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "IO", value)
-        }
+        set(value) = add("en", "IO", value)
 
     /**
      * Set locale value with language `en` and country `JE`.
@@ -1543,9 +1304,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "JE", value)
-        }
+        set(value) = add("en", "JE", value)
 
     /**
      * Set locale value with language `en` and country `JM`.
@@ -1556,9 +1315,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "JM", value)
-        }
+        set(value) = add("en", "JM", value)
 
     /**
      * Set locale value with language `en` and country `KE`.
@@ -1569,9 +1326,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "KE", value)
-        }
+        set(value) = add("en", "KE", value)
 
     /**
      * Set locale value with language `en` and country `KI`.
@@ -1582,9 +1337,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "KI", value)
-        }
+        set(value) = add("en", "KI", value)
 
     /**
      * Set locale value with language `en` and country `KN`.
@@ -1595,9 +1348,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "KN", value)
-        }
+        set(value) = add("en", "KN", value)
 
     /**
      * Set locale value with language `en` and country `KY`.
@@ -1608,9 +1359,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "KY", value)
-        }
+        set(value) = add("en", "KY", value)
 
     /**
      * Set locale value with language `en` and country `LC`.
@@ -1621,9 +1370,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "LC", value)
-        }
+        set(value) = add("en", "LC", value)
 
     /**
      * Set locale value with language `en` and country `LR`.
@@ -1634,9 +1381,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "LR", value)
-        }
+        set(value) = add("en", "LR", value)
 
     /**
      * Set locale value with language `en` and country `LS`.
@@ -1647,9 +1392,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "LS", value)
-        }
+        set(value) = add("en", "LS", value)
 
     /**
      * Set locale value with language `en` and country `MG`.
@@ -1660,9 +1403,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "MG", value)
-        }
+        set(value) = add("en", "MG", value)
 
     /**
      * Set locale value with language `en` and country `MH`.
@@ -1673,9 +1414,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "MH", value)
-        }
+        set(value) = add("en", "MH", value)
 
     /**
      * Set locale value with language `en` and country `MO`.
@@ -1686,9 +1425,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "MO", value)
-        }
+        set(value) = add("en", "MO", value)
 
     /**
      * Set locale value with language `en` and country `MP`.
@@ -1699,9 +1436,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "MP", value)
-        }
+        set(value) = add("en", "MP", value)
 
     /**
      * Set locale value with language `en` and country `MS`.
@@ -1712,9 +1447,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "MS", value)
-        }
+        set(value) = add("en", "MS", value)
 
     /**
      * Set locale value with language `en` and country `MT`.
@@ -1725,9 +1458,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "MT", value)
-        }
+        set(value) = add("en", "MT", value)
 
     /**
      * Set locale value with language `en` and country `MU`.
@@ -1738,9 +1469,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "MU", value)
-        }
+        set(value) = add("en", "MU", value)
 
     /**
      * Set locale value with language `en` and country `MW`.
@@ -1751,9 +1480,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "MW", value)
-        }
+        set(value) = add("en", "MW", value)
 
     /**
      * Set locale value with language `en` and country `MY`.
@@ -1764,9 +1491,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "MY", value)
-        }
+        set(value) = add("en", "MY", value)
 
     /**
      * Set locale value with language `en` and country `NA`.
@@ -1777,9 +1502,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "NA", value)
-        }
+        set(value) = add("en", "NA", value)
 
     /**
      * Set locale value with language `en` and country `NF`.
@@ -1790,9 +1513,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "NF", value)
-        }
+        set(value) = add("en", "NF", value)
 
     /**
      * Set locale value with language `en` and country `NG`.
@@ -1803,9 +1524,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "NG", value)
-        }
+        set(value) = add("en", "NG", value)
 
     /**
      * Set locale value with language `en` and country `NR`.
@@ -1816,9 +1535,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "NR", value)
-        }
+        set(value) = add("en", "NR", value)
 
     /**
      * Set locale value with language `en` and country `NU`.
@@ -1829,9 +1546,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "NU", value)
-        }
+        set(value) = add("en", "NU", value)
 
     /**
      * Set locale value with language `en` and country `NZ`.
@@ -1842,9 +1557,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "NZ", value)
-        }
+        set(value) = add("en", "NZ", value)
 
     /**
      * Set locale value with language `en` and country `PG`.
@@ -1855,9 +1568,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "PG", value)
-        }
+        set(value) = add("en", "PG", value)
 
     /**
      * Set locale value with language `en` and country `PH`.
@@ -1868,9 +1579,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "PH", value)
-        }
+        set(value) = add("en", "PH", value)
 
     /**
      * Set locale value with language `en` and country `PK`.
@@ -1881,9 +1590,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "PK", value)
-        }
+        set(value) = add("en", "PK", value)
 
     /**
      * Set locale value with language `en` and country `PN`.
@@ -1894,9 +1601,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "PN", value)
-        }
+        set(value) = add("en", "PN", value)
 
     /**
      * Set locale value with language `en` and country `PR`.
@@ -1907,9 +1612,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "PR", value)
-        }
+        set(value) = add("en", "PR", value)
 
     /**
      * Set locale value with language `en` and country `PW`.
@@ -1920,9 +1623,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "PW", value)
-        }
+        set(value) = add("en", "PW", value)
 
     /**
      * Set locale value with language `en` and country `RW`.
@@ -1933,9 +1634,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "RW", value)
-        }
+        set(value) = add("en", "RW", value)
 
     /**
      * Set locale value with language `en` and country `SB`.
@@ -1946,9 +1645,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "SB", value)
-        }
+        set(value) = add("en", "SB", value)
 
     /**
      * Set locale value with language `en` and country `SC`.
@@ -1959,9 +1656,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "SC", value)
-        }
+        set(value) = add("en", "SC", value)
 
     /**
      * Set locale value with language `en` and country `SD`.
@@ -1972,9 +1667,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "SD", value)
-        }
+        set(value) = add("en", "SD", value)
 
     /**
      * Set locale value with language `en` and country `SG`.
@@ -1985,9 +1678,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "SG", value)
-        }
+        set(value) = add("en", "SG", value)
 
     /**
      * Set locale value with language `en` and country `SH`.
@@ -1998,9 +1689,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "SH", value)
-        }
+        set(value) = add("en", "SH", value)
 
     /**
      * Set locale value with language `en` and country `SL`.
@@ -2011,9 +1700,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "SL", value)
-        }
+        set(value) = add("en", "SL", value)
 
     /**
      * Set locale value with language `en` and country `SS`.
@@ -2024,9 +1711,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "SS", value)
-        }
+        set(value) = add("en", "SS", value)
 
     /**
      * Set locale value with language `en` and country `SX`.
@@ -2037,9 +1722,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "SX", value)
-        }
+        set(value) = add("en", "SX", value)
 
     /**
      * Set locale value with language `en` and country `SZ`.
@@ -2050,9 +1733,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "SZ", value)
-        }
+        set(value) = add("en", "SZ", value)
 
     /**
      * Set locale value with language `en` and country `TC`.
@@ -2063,9 +1744,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "TC", value)
-        }
+        set(value) = add("en", "TC", value)
 
     /**
      * Set locale value with language `en` and country `TK`.
@@ -2076,9 +1755,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "TK", value)
-        }
+        set(value) = add("en", "TK", value)
 
     /**
      * Set locale value with language `en` and country `TO`.
@@ -2089,9 +1766,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "TO", value)
-        }
+        set(value) = add("en", "TO", value)
 
     /**
      * Set locale value with language `en` and country `TT`.
@@ -2102,9 +1777,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "TT", value)
-        }
+        set(value) = add("en", "TT", value)
 
     /**
      * Set locale value with language `en` and country `TV`.
@@ -2115,9 +1788,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "TV", value)
-        }
+        set(value) = add("en", "TV", value)
 
     /**
      * Set locale value with language `en` and country `TZ`.
@@ -2128,9 +1799,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "TZ", value)
-        }
+        set(value) = add("en", "TZ", value)
 
     /**
      * Set locale value with language `en` and country `UG`.
@@ -2141,9 +1810,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "UG", value)
-        }
+        set(value) = add("en", "UG", value)
 
     /**
      * Set locale value with language `en` and country `UM`.
@@ -2154,9 +1821,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "UM", value)
-        }
+        set(value) = add("en", "UM", value)
 
     /**
      * Set locale value with language `en` and country `US`.
@@ -2167,9 +1832,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add(java.util.Locale.US, value)
-        }
+        set(value) = add(java.util.Locale.US, value)
 
     /**
      * Set locale value with language `en` and country `VC`.
@@ -2180,9 +1843,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "VC", value)
-        }
+        set(value) = add("en", "VC", value)
 
     /**
      * Set locale value with language `en` and country `VG`.
@@ -2193,9 +1854,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "VG", value)
-        }
+        set(value) = add("en", "VG", value)
 
     /**
      * Set locale value with language `en` and country `VI`.
@@ -2206,9 +1865,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "VI", value)
-        }
+        set(value) = add("en", "VI", value)
 
     /**
      * Set locale value with language `en` and country `VU`.
@@ -2219,9 +1876,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "VU", value)
-        }
+        set(value) = add("en", "VU", value)
 
     /**
      * Set locale value with language `en` and country `WS`.
@@ -2232,9 +1887,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "WS", value)
-        }
+        set(value) = add("en", "WS", value)
 
     /**
      * Set locale value with language `en` and country `ZA`.
@@ -2245,9 +1898,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "ZA", value)
-        }
+        set(value) = add("en", "ZA", value)
 
     /**
      * Set locale value with language `en` and country `ZM`.
@@ -2258,9 +1909,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "ZM", value)
-        }
+        set(value) = add("en", "ZM", value)
 
     /**
      * Set locale value with language `en` and country `ZW`.
@@ -2271,9 +1920,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("en", "ZW", value)
-        }
+        set(value) = add("en", "ZW", value)
 
     /**
      * Set locale value with language `eo`.
@@ -2284,9 +1931,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("eo", null, value)
-        }
+        set(value) = add("eo", null, value)
 
     /**
      * Set locale value with language `es`.
@@ -2297,9 +1942,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("es", null, value)
-        }
+        set(value) = add("es", null, value)
 
     /**
      * Set locale value with language `es` and country `AR`.
@@ -2310,9 +1953,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("es", "AR", value)
-        }
+        set(value) = add("es", "AR", value)
 
     /**
      * Set locale value with language `es` and country `BO`.
@@ -2323,9 +1964,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("es", "BO", value)
-        }
+        set(value) = add("es", "BO", value)
 
     /**
      * Set locale value with language `es` and country `CL`.
@@ -2336,9 +1975,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("es", "CL", value)
-        }
+        set(value) = add("es", "CL", value)
 
     /**
      * Set locale value with language `es` and country `CO`.
@@ -2349,9 +1986,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("es", "CO", value)
-        }
+        set(value) = add("es", "CO", value)
 
     /**
      * Set locale value with language `es` and country `CR`.
@@ -2362,9 +1997,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("es", "CR", value)
-        }
+        set(value) = add("es", "CR", value)
 
     /**
      * Set locale value with language `es` and country `CU`.
@@ -2375,9 +2008,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("es", "CU", value)
-        }
+        set(value) = add("es", "CU", value)
 
     /**
      * Set locale value with language `es` and country `DO`.
@@ -2388,9 +2019,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("es", "DO", value)
-        }
+        set(value) = add("es", "DO", value)
 
     /**
      * Set locale value with language `es` and country `EA`.
@@ -2401,9 +2030,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("es", "EA", value)
-        }
+        set(value) = add("es", "EA", value)
 
     /**
      * Set locale value with language `es` and country `EC`.
@@ -2414,9 +2041,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("es", "EC", value)
-        }
+        set(value) = add("es", "EC", value)
 
     /**
      * Set locale value with language `es` and country `ES`.
@@ -2427,9 +2052,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("es", "ES", value)
-        }
+        set(value) = add("es", "ES", value)
 
     /**
      * Set locale value with language `es` and country `GQ`.
@@ -2440,9 +2063,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("es", "GQ", value)
-        }
+        set(value) = add("es", "GQ", value)
 
     /**
      * Set locale value with language `es` and country `GT`.
@@ -2453,9 +2074,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("es", "GT", value)
-        }
+        set(value) = add("es", "GT", value)
 
     /**
      * Set locale value with language `es` and country `HN`.
@@ -2466,9 +2085,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("es", "HN", value)
-        }
+        set(value) = add("es", "HN", value)
 
     /**
      * Set locale value with language `es` and country `IC`.
@@ -2479,9 +2096,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("es", "IC", value)
-        }
+        set(value) = add("es", "IC", value)
 
     /**
      * Set locale value with language `es` and country `MX`.
@@ -2492,9 +2107,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("es", "MX", value)
-        }
+        set(value) = add("es", "MX", value)
 
     /**
      * Set locale value with language `es` and country `NI`.
@@ -2505,9 +2118,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("es", "NI", value)
-        }
+        set(value) = add("es", "NI", value)
 
     /**
      * Set locale value with language `es` and country `PA`.
@@ -2518,9 +2129,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("es", "PA", value)
-        }
+        set(value) = add("es", "PA", value)
 
     /**
      * Set locale value with language `es` and country `PE`.
@@ -2531,9 +2140,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("es", "PE", value)
-        }
+        set(value) = add("es", "PE", value)
 
     /**
      * Set locale value with language `es` and country `PH`.
@@ -2544,9 +2151,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("es", "PH", value)
-        }
+        set(value) = add("es", "PH", value)
 
     /**
      * Set locale value with language `es` and country `PR`.
@@ -2557,9 +2162,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("es", "PR", value)
-        }
+        set(value) = add("es", "PR", value)
 
     /**
      * Set locale value with language `es` and country `PY`.
@@ -2570,9 +2173,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("es", "PY", value)
-        }
+        set(value) = add("es", "PY", value)
 
     /**
      * Set locale value with language `es` and country `SV`.
@@ -2583,9 +2184,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("es", "SV", value)
-        }
+        set(value) = add("es", "SV", value)
 
     /**
      * Set locale value with language `es` and country `US`.
@@ -2596,9 +2195,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("es", "US", value)
-        }
+        set(value) = add("es", "US", value)
 
     /**
      * Set locale value with language `es` and country `UY`.
@@ -2609,9 +2206,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("es", "UY", value)
-        }
+        set(value) = add("es", "UY", value)
 
     /**
      * Set locale value with language `es` and country `VE`.
@@ -2622,9 +2217,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("es", "VE", value)
-        }
+        set(value) = add("es", "VE", value)
 
     /**
      * Set locale value with language `et`.
@@ -2635,9 +2228,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("et", null, value)
-        }
+        set(value) = add("et", null, value)
 
     /**
      * Set locale value with language `et` and country `EE`.
@@ -2648,9 +2239,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("et", "EE", value)
-        }
+        set(value) = add("et", "EE", value)
 
     /**
      * Set locale value with language `eu`.
@@ -2661,9 +2250,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("eu", null, value)
-        }
+        set(value) = add("eu", null, value)
 
     /**
      * Set locale value with language `eu` and country `ES`.
@@ -2674,9 +2261,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("eu", "ES", value)
-        }
+        set(value) = add("eu", "ES", value)
 
     /**
      * Set locale value with language `fa`.
@@ -2687,9 +2272,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fa", null, value)
-        }
+        set(value) = add("fa", null, value)
 
     /**
      * Set locale value with language `fa` and country `AF`.
@@ -2700,9 +2283,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fa", "AF", value)
-        }
+        set(value) = add("fa", "AF", value)
 
     /**
      * Set locale value with language `fa` and country `IR`.
@@ -2713,9 +2294,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fa", "IR", value)
-        }
+        set(value) = add("fa", "IR", value)
 
     /**
      * Set locale value with language `ff`.
@@ -2726,9 +2305,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ff", null, value)
-        }
+        set(value) = add("ff", null, value)
 
     /**
      * Set locale value with language `ff` and country `CM`.
@@ -2739,9 +2316,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ff", "CM", value)
-        }
+        set(value) = add("ff", "CM", value)
 
     /**
      * Set locale value with language `ff` and country `GN`.
@@ -2752,9 +2327,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ff", "GN", value)
-        }
+        set(value) = add("ff", "GN", value)
 
     /**
      * Set locale value with language `ff` and country `MR`.
@@ -2765,9 +2338,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ff", "MR", value)
-        }
+        set(value) = add("ff", "MR", value)
 
     /**
      * Set locale value with language `ff` and country `SN`.
@@ -2778,9 +2349,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ff", "SN", value)
-        }
+        set(value) = add("ff", "SN", value)
 
     /**
      * Set locale value with language `fi`.
@@ -2791,9 +2360,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fi", null, value)
-        }
+        set(value) = add("fi", null, value)
 
     /**
      * Set locale value with language `fi` and country `FI`.
@@ -2804,9 +2371,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fi", "FI", value)
-        }
+        set(value) = add("fi", "FI", value)
 
     /**
      * Set locale value with language `fo`.
@@ -2817,9 +2382,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fo", null, value)
-        }
+        set(value) = add("fo", null, value)
 
     /**
      * Set locale value with language `fo` and country `FO`.
@@ -2830,9 +2393,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fo", "FO", value)
-        }
+        set(value) = add("fo", "FO", value)
 
     /**
      * Set locale value with language `fr`.
@@ -2843,9 +2404,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add(java.util.Locale.FRENCH, value)
-        }
+        set(value) = add(java.util.Locale.FRENCH, value)
 
     /**
      * Set locale value with language `fr` and country `BE`.
@@ -2856,9 +2415,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fr", "BE", value)
-        }
+        set(value) = add("fr", "BE", value)
 
     /**
      * Set locale value with language `fr` and country `BF`.
@@ -2869,9 +2426,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fr", "BF", value)
-        }
+        set(value) = add("fr", "BF", value)
 
     /**
      * Set locale value with language `fr` and country `BI`.
@@ -2882,9 +2437,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fr", "BI", value)
-        }
+        set(value) = add("fr", "BI", value)
 
     /**
      * Set locale value with language `fr` and country `BJ`.
@@ -2895,9 +2448,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fr", "BJ", value)
-        }
+        set(value) = add("fr", "BJ", value)
 
     /**
      * Set locale value with language `fr` and country `BL`.
@@ -2908,9 +2459,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fr", "BL", value)
-        }
+        set(value) = add("fr", "BL", value)
 
     /**
      * Set locale value with language `fr` and country `CA`.
@@ -2921,9 +2470,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add(java.util.Locale.CANADA_FRENCH, value)
-        }
+        set(value) = add(java.util.Locale.CANADA_FRENCH, value)
 
     /**
      * Set locale value with language `fr` and country `CD`.
@@ -2934,9 +2481,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fr", "CD", value)
-        }
+        set(value) = add("fr", "CD", value)
 
     /**
      * Set locale value with language `fr` and country `CF`.
@@ -2947,9 +2492,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fr", "CF", value)
-        }
+        set(value) = add("fr", "CF", value)
 
     /**
      * Set locale value with language `fr` and country `CG`.
@@ -2960,9 +2503,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fr", "CG", value)
-        }
+        set(value) = add("fr", "CG", value)
 
     /**
      * Set locale value with language `fr` and country `CH`.
@@ -2973,9 +2514,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fr", "CH", value)
-        }
+        set(value) = add("fr", "CH", value)
 
     /**
      * Set locale value with language `fr` and country `CI`.
@@ -2986,9 +2525,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fr", "CI", value)
-        }
+        set(value) = add("fr", "CI", value)
 
     /**
      * Set locale value with language `fr` and country `CM`.
@@ -2999,9 +2536,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fr", "CM", value)
-        }
+        set(value) = add("fr", "CM", value)
 
     /**
      * Set locale value with language `fr` and country `DJ`.
@@ -3012,9 +2547,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fr", "DJ", value)
-        }
+        set(value) = add("fr", "DJ", value)
 
     /**
      * Set locale value with language `fr` and country `DZ`.
@@ -3025,9 +2558,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fr", "DZ", value)
-        }
+        set(value) = add("fr", "DZ", value)
 
     /**
      * Set locale value with language `fr` and country `FR`.
@@ -3038,9 +2569,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add(java.util.Locale.FRANCE, value)
-        }
+        set(value) = add(java.util.Locale.FRANCE, value)
 
     /**
      * Set locale value with language `fr` and country `GA`.
@@ -3051,9 +2580,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fr", "GA", value)
-        }
+        set(value) = add("fr", "GA", value)
 
     /**
      * Set locale value with language `fr` and country `GF`.
@@ -3064,9 +2591,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fr", "GF", value)
-        }
+        set(value) = add("fr", "GF", value)
 
     /**
      * Set locale value with language `fr` and country `GN`.
@@ -3077,9 +2602,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fr", "GN", value)
-        }
+        set(value) = add("fr", "GN", value)
 
     /**
      * Set locale value with language `fr` and country `GP`.
@@ -3090,9 +2613,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fr", "GP", value)
-        }
+        set(value) = add("fr", "GP", value)
 
     /**
      * Set locale value with language `fr` and country `GQ`.
@@ -3103,9 +2624,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fr", "GQ", value)
-        }
+        set(value) = add("fr", "GQ", value)
 
     /**
      * Set locale value with language `fr` and country `HT`.
@@ -3116,9 +2635,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fr", "HT", value)
-        }
+        set(value) = add("fr", "HT", value)
 
     /**
      * Set locale value with language `fr` and country `KM`.
@@ -3129,9 +2646,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fr", "KM", value)
-        }
+        set(value) = add("fr", "KM", value)
 
     /**
      * Set locale value with language `fr` and country `LU`.
@@ -3142,9 +2657,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fr", "LU", value)
-        }
+        set(value) = add("fr", "LU", value)
 
     /**
      * Set locale value with language `fr` and country `MA`.
@@ -3155,9 +2668,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fr", "MA", value)
-        }
+        set(value) = add("fr", "MA", value)
 
     /**
      * Set locale value with language `fr` and country `MC`.
@@ -3168,9 +2679,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fr", "MC", value)
-        }
+        set(value) = add("fr", "MC", value)
 
     /**
      * Set locale value with language `fr` and country `MF`.
@@ -3181,9 +2690,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fr", "MF", value)
-        }
+        set(value) = add("fr", "MF", value)
 
     /**
      * Set locale value with language `fr` and country `MG`.
@@ -3194,9 +2701,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fr", "MG", value)
-        }
+        set(value) = add("fr", "MG", value)
 
     /**
      * Set locale value with language `fr` and country `ML`.
@@ -3207,9 +2712,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fr", "ML", value)
-        }
+        set(value) = add("fr", "ML", value)
 
     /**
      * Set locale value with language `fr` and country `MQ`.
@@ -3220,9 +2723,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fr", "MQ", value)
-        }
+        set(value) = add("fr", "MQ", value)
 
     /**
      * Set locale value with language `fr` and country `MR`.
@@ -3233,9 +2734,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fr", "MR", value)
-        }
+        set(value) = add("fr", "MR", value)
 
     /**
      * Set locale value with language `fr` and country `MU`.
@@ -3246,9 +2745,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fr", "MU", value)
-        }
+        set(value) = add("fr", "MU", value)
 
     /**
      * Set locale value with language `fr` and country `NC`.
@@ -3259,9 +2756,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fr", "NC", value)
-        }
+        set(value) = add("fr", "NC", value)
 
     /**
      * Set locale value with language `fr` and country `NE`.
@@ -3272,9 +2767,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fr", "NE", value)
-        }
+        set(value) = add("fr", "NE", value)
 
     /**
      * Set locale value with language `fr` and country `PF`.
@@ -3285,9 +2778,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fr", "PF", value)
-        }
+        set(value) = add("fr", "PF", value)
 
     /**
      * Set locale value with language `fr` and country `PM`.
@@ -3298,9 +2789,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fr", "PM", value)
-        }
+        set(value) = add("fr", "PM", value)
 
     /**
      * Set locale value with language `fr` and country `RE`.
@@ -3311,9 +2800,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fr", "RE", value)
-        }
+        set(value) = add("fr", "RE", value)
 
     /**
      * Set locale value with language `fr` and country `RW`.
@@ -3324,9 +2811,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fr", "RW", value)
-        }
+        set(value) = add("fr", "RW", value)
 
     /**
      * Set locale value with language `fr` and country `SC`.
@@ -3337,9 +2822,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fr", "SC", value)
-        }
+        set(value) = add("fr", "SC", value)
 
     /**
      * Set locale value with language `fr` and country `SN`.
@@ -3350,9 +2833,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fr", "SN", value)
-        }
+        set(value) = add("fr", "SN", value)
 
     /**
      * Set locale value with language `fr` and country `SY`.
@@ -3363,9 +2844,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fr", "SY", value)
-        }
+        set(value) = add("fr", "SY", value)
 
     /**
      * Set locale value with language `fr` and country `TD`.
@@ -3376,9 +2855,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fr", "TD", value)
-        }
+        set(value) = add("fr", "TD", value)
 
     /**
      * Set locale value with language `fr` and country `TG`.
@@ -3389,9 +2866,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fr", "TG", value)
-        }
+        set(value) = add("fr", "TG", value)
 
     /**
      * Set locale value with language `fr` and country `TN`.
@@ -3402,9 +2877,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fr", "TN", value)
-        }
+        set(value) = add("fr", "TN", value)
 
     /**
      * Set locale value with language `fr` and country `VU`.
@@ -3415,9 +2888,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fr", "VU", value)
-        }
+        set(value) = add("fr", "VU", value)
 
     /**
      * Set locale value with language `fr` and country `WF`.
@@ -3428,9 +2899,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fr", "WF", value)
-        }
+        set(value) = add("fr", "WF", value)
 
     /**
      * Set locale value with language `fr` and country `YT`.
@@ -3441,9 +2910,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fr", "YT", value)
-        }
+        set(value) = add("fr", "YT", value)
 
     /**
      * Set locale value with language `fy`.
@@ -3454,9 +2921,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fy", null, value)
-        }
+        set(value) = add("fy", null, value)
 
     /**
      * Set locale value with language `fy` and country `NL`.
@@ -3467,9 +2932,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("fy", "NL", value)
-        }
+        set(value) = add("fy", "NL", value)
 
     /**
      * Set locale value with language `ga`.
@@ -3480,9 +2943,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ga", null, value)
-        }
+        set(value) = add("ga", null, value)
 
     /**
      * Set locale value with language `ga` and country `IE`.
@@ -3493,9 +2954,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ga", "IE", value)
-        }
+        set(value) = add("ga", "IE", value)
 
     /**
      * Set locale value with language `gd`.
@@ -3506,9 +2965,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("gd", null, value)
-        }
+        set(value) = add("gd", null, value)
 
     /**
      * Set locale value with language `gd` and country `GB`.
@@ -3519,9 +2976,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("gd", "GB", value)
-        }
+        set(value) = add("gd", "GB", value)
 
     /**
      * Set locale value with language `gl`.
@@ -3532,9 +2987,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("gl", null, value)
-        }
+        set(value) = add("gl", null, value)
 
     /**
      * Set locale value with language `gl` and country `ES`.
@@ -3545,9 +2998,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("gl", "ES", value)
-        }
+        set(value) = add("gl", "ES", value)
 
     /**
      * Set locale value with language `gu`.
@@ -3558,9 +3009,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("gu", null, value)
-        }
+        set(value) = add("gu", null, value)
 
     /**
      * Set locale value with language `gu` and country `IN`.
@@ -3571,9 +3020,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("gu", "IN", value)
-        }
+        set(value) = add("gu", "IN", value)
 
     /**
      * Set locale value with language `gv`.
@@ -3584,9 +3031,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("gv", null, value)
-        }
+        set(value) = add("gv", null, value)
 
     /**
      * Set locale value with language `gv` and country `IM`.
@@ -3597,9 +3042,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("gv", "IM", value)
-        }
+        set(value) = add("gv", "IM", value)
 
     /**
      * Set locale value with language `ha`.
@@ -3610,9 +3053,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ha", null, value)
-        }
+        set(value) = add("ha", null, value)
 
     /**
      * Set locale value with language `ha` and country `GH`.
@@ -3623,9 +3064,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ha", "GH", value)
-        }
+        set(value) = add("ha", "GH", value)
 
     /**
      * Set locale value with language `ha` and country `NE`.
@@ -3636,9 +3075,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ha", "NE", value)
-        }
+        set(value) = add("ha", "NE", value)
 
     /**
      * Set locale value with language `ha` and country `NG`.
@@ -3649,9 +3086,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ha", "NG", value)
-        }
+        set(value) = add("ha", "NG", value)
 
     /**
      * Set locale value with language `he`.
@@ -3662,9 +3097,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("he", null, value)
-        }
+        set(value) = add("he", null, value)
 
     /**
      * Set locale value with language `he` and country `IL`.
@@ -3675,9 +3108,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("he", "IL", value)
-        }
+        set(value) = add("he", "IL", value)
 
     /**
      * Set locale value with language `hi`.
@@ -3688,9 +3119,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("hi", null, value)
-        }
+        set(value) = add("hi", null, value)
 
     /**
      * Set locale value with language `hi` and country `IN`.
@@ -3701,9 +3130,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("hi", "IN", value)
-        }
+        set(value) = add("hi", "IN", value)
 
     /**
      * Set locale value with language `hr`.
@@ -3714,9 +3141,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("hr", null, value)
-        }
+        set(value) = add("hr", null, value)
 
     /**
      * Set locale value with language `hr` and country `BA`.
@@ -3727,9 +3152,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("hr", "BA", value)
-        }
+        set(value) = add("hr", "BA", value)
 
     /**
      * Set locale value with language `hr` and country `HR`.
@@ -3740,9 +3163,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("hr", "HR", value)
-        }
+        set(value) = add("hr", "HR", value)
 
     /**
      * Set locale value with language `hu`.
@@ -3753,9 +3174,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("hu", null, value)
-        }
+        set(value) = add("hu", null, value)
 
     /**
      * Set locale value with language `hu` and country `HU`.
@@ -3766,9 +3185,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("hu", "HU", value)
-        }
+        set(value) = add("hu", "HU", value)
 
     /**
      * Set locale value with language `hy`.
@@ -3779,9 +3196,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("hy", null, value)
-        }
+        set(value) = add("hy", null, value)
 
     /**
      * Set locale value with language `hy` and country `AM`.
@@ -3792,9 +3207,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("hy", "AM", value)
-        }
+        set(value) = add("hy", "AM", value)
 
     /**
      * Set locale value with language `id`.
@@ -3805,9 +3218,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("id", null, value)
-        }
+        set(value) = add("id", null, value)
 
     /**
      * Set locale value with language `id` and country `ID`.
@@ -3818,9 +3229,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("id", "ID", value)
-        }
+        set(value) = add("id", "ID", value)
 
     /**
      * Set locale value with language `ig`.
@@ -3831,9 +3240,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ig", null, value)
-        }
+        set(value) = add("ig", null, value)
 
     /**
      * Set locale value with language `ig` and country `NG`.
@@ -3844,9 +3251,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ig", "NG", value)
-        }
+        set(value) = add("ig", "NG", value)
 
     /**
      * Set locale value with language `ii`.
@@ -3857,9 +3262,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ii", null, value)
-        }
+        set(value) = add("ii", null, value)
 
     /**
      * Set locale value with language `ii` and country `CN`.
@@ -3870,9 +3273,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ii", "CN", value)
-        }
+        set(value) = add("ii", "CN", value)
 
     /**
      * Set locale value with language `is`.
@@ -3883,9 +3284,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("is", null, value)
-        }
+        set(value) = add("is", null, value)
 
     /**
      * Set locale value with language `is` and country `IS`.
@@ -3896,9 +3295,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("is", "IS", value)
-        }
+        set(value) = add("is", "IS", value)
 
     /**
      * Set locale value with language `it`.
@@ -3909,9 +3306,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add(java.util.Locale.ITALIAN, value)
-        }
+        set(value) = add(java.util.Locale.ITALIAN, value)
 
     /**
      * Set locale value with language `it` and country `CH`.
@@ -3922,9 +3317,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("it", "CH", value)
-        }
+        set(value) = add("it", "CH", value)
 
     /**
      * Set locale value with language `it` and country `IT`.
@@ -3935,9 +3328,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add(java.util.Locale.ITALY, value)
-        }
+        set(value) = add(java.util.Locale.ITALY, value)
 
     /**
      * Set locale value with language `it` and country `SM`.
@@ -3948,9 +3339,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("it", "SM", value)
-        }
+        set(value) = add("it", "SM", value)
 
     /**
      * Set locale value with language `ja`.
@@ -3961,9 +3350,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add(java.util.Locale.JAPANESE, value)
-        }
+        set(value) = add(java.util.Locale.JAPANESE, value)
 
     /**
      * Set locale value with language `ja` and country `JP`.
@@ -3974,9 +3361,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add(java.util.Locale.JAPAN, value)
-        }
+        set(value) = add(java.util.Locale.JAPAN, value)
 
     /**
      * Set locale value with language `ka`.
@@ -3987,9 +3372,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ka", null, value)
-        }
+        set(value) = add("ka", null, value)
 
     /**
      * Set locale value with language `ka` and country `GE`.
@@ -4000,9 +3383,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ka", "GE", value)
-        }
+        set(value) = add("ka", "GE", value)
 
     /**
      * Set locale value with language `ki`.
@@ -4013,9 +3394,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ki", null, value)
-        }
+        set(value) = add("ki", null, value)
 
     /**
      * Set locale value with language `ki` and country `KE`.
@@ -4026,9 +3405,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ki", "KE", value)
-        }
+        set(value) = add("ki", "KE", value)
 
     /**
      * Set locale value with language `kk`.
@@ -4039,9 +3416,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("kk", null, value)
-        }
+        set(value) = add("kk", null, value)
 
     /**
      * Set locale value with language `kk` and country `KZ`.
@@ -4052,9 +3427,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("kk", "KZ", value)
-        }
+        set(value) = add("kk", "KZ", value)
 
     /**
      * Set locale value with language `kl`.
@@ -4065,9 +3438,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("kl", null, value)
-        }
+        set(value) = add("kl", null, value)
 
     /**
      * Set locale value with language `kl` and country `GL`.
@@ -4078,9 +3449,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("kl", "GL", value)
-        }
+        set(value) = add("kl", "GL", value)
 
     /**
      * Set locale value with language `km`.
@@ -4091,9 +3460,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("km", null, value)
-        }
+        set(value) = add("km", null, value)
 
     /**
      * Set locale value with language `km` and country `KH`.
@@ -4104,9 +3471,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("km", "KH", value)
-        }
+        set(value) = add("km", "KH", value)
 
     /**
      * Set locale value with language `kn`.
@@ -4117,9 +3482,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("kn", null, value)
-        }
+        set(value) = add("kn", null, value)
 
     /**
      * Set locale value with language `kn` and country `IN`.
@@ -4130,9 +3493,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("kn", "IN", value)
-        }
+        set(value) = add("kn", "IN", value)
 
     /**
      * Set locale value with language `ko`.
@@ -4143,9 +3504,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add(java.util.Locale.KOREAN, value)
-        }
+        set(value) = add(java.util.Locale.KOREAN, value)
 
     /**
      * Set locale value with language `ko` and country `KP`.
@@ -4156,9 +3515,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ko", "KP", value)
-        }
+        set(value) = add("ko", "KP", value)
 
     /**
      * Set locale value with language `ko` and country `KR`.
@@ -4169,9 +3526,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add(java.util.Locale.KOREA, value)
-        }
+        set(value) = add(java.util.Locale.KOREA, value)
 
     /**
      * Set locale value with language `ks`.
@@ -4182,9 +3537,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ks", null, value)
-        }
+        set(value) = add("ks", null, value)
 
     /**
      * Set locale value with language `ks` and country `IN`.
@@ -4195,9 +3548,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ks", "IN", value)
-        }
+        set(value) = add("ks", "IN", value)
 
     /**
      * Set locale value with language `kw`.
@@ -4208,9 +3559,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("kw", null, value)
-        }
+        set(value) = add("kw", null, value)
 
     /**
      * Set locale value with language `kw` and country `GB`.
@@ -4221,9 +3570,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("kw", "GB", value)
-        }
+        set(value) = add("kw", "GB", value)
 
     /**
      * Set locale value with language `ky`.
@@ -4234,9 +3581,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ky", null, value)
-        }
+        set(value) = add("ky", null, value)
 
     /**
      * Set locale value with language `ky` and country `KG`.
@@ -4247,9 +3592,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ky", "KG", value)
-        }
+        set(value) = add("ky", "KG", value)
 
     /**
      * Set locale value with language `lb`.
@@ -4260,9 +3603,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("lb", null, value)
-        }
+        set(value) = add("lb", null, value)
 
     /**
      * Set locale value with language `lb` and country `LU`.
@@ -4273,9 +3614,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("lb", "LU", value)
-        }
+        set(value) = add("lb", "LU", value)
 
     /**
      * Set locale value with language `lg`.
@@ -4286,9 +3625,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("lg", null, value)
-        }
+        set(value) = add("lg", null, value)
 
     /**
      * Set locale value with language `lg` and country `UG`.
@@ -4299,9 +3636,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("lg", "UG", value)
-        }
+        set(value) = add("lg", "UG", value)
 
     /**
      * Set locale value with language `ln`.
@@ -4312,9 +3647,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ln", null, value)
-        }
+        set(value) = add("ln", null, value)
 
     /**
      * Set locale value with language `ln` and country `AO`.
@@ -4325,9 +3658,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ln", "AO", value)
-        }
+        set(value) = add("ln", "AO", value)
 
     /**
      * Set locale value with language `ln` and country `CD`.
@@ -4338,9 +3669,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ln", "CD", value)
-        }
+        set(value) = add("ln", "CD", value)
 
     /**
      * Set locale value with language `ln` and country `CF`.
@@ -4351,9 +3680,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ln", "CF", value)
-        }
+        set(value) = add("ln", "CF", value)
 
     /**
      * Set locale value with language `ln` and country `CG`.
@@ -4364,9 +3691,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ln", "CG", value)
-        }
+        set(value) = add("ln", "CG", value)
 
     /**
      * Set locale value with language `lo`.
@@ -4377,9 +3702,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("lo", null, value)
-        }
+        set(value) = add("lo", null, value)
 
     /**
      * Set locale value with language `lo` and country `LA`.
@@ -4390,9 +3713,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("lo", "LA", value)
-        }
+        set(value) = add("lo", "LA", value)
 
     /**
      * Set locale value with language `lt`.
@@ -4403,9 +3724,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("lt", null, value)
-        }
+        set(value) = add("lt", null, value)
 
     /**
      * Set locale value with language `lt` and country `LT`.
@@ -4416,9 +3735,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("lt", "LT", value)
-        }
+        set(value) = add("lt", "LT", value)
 
     /**
      * Set locale value with language `lu`.
@@ -4429,9 +3746,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("lu", null, value)
-        }
+        set(value) = add("lu", null, value)
 
     /**
      * Set locale value with language `lu` and country `CD`.
@@ -4442,9 +3757,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("lu", "CD", value)
-        }
+        set(value) = add("lu", "CD", value)
 
     /**
      * Set locale value with language `lv`.
@@ -4455,9 +3768,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("lv", null, value)
-        }
+        set(value) = add("lv", null, value)
 
     /**
      * Set locale value with language `lv` and country `LV`.
@@ -4468,9 +3779,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("lv", "LV", value)
-        }
+        set(value) = add("lv", "LV", value)
 
     /**
      * Set locale value with language `mg`.
@@ -4481,9 +3790,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("mg", null, value)
-        }
+        set(value) = add("mg", null, value)
 
     /**
      * Set locale value with language `mg` and country `MG`.
@@ -4494,9 +3801,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("mg", "MG", value)
-        }
+        set(value) = add("mg", "MG", value)
 
     /**
      * Set locale value with language `mk`.
@@ -4507,9 +3812,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("mk", null, value)
-        }
+        set(value) = add("mk", null, value)
 
     /**
      * Set locale value with language `mk` and country `MK`.
@@ -4520,9 +3823,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("mk", "MK", value)
-        }
+        set(value) = add("mk", "MK", value)
 
     /**
      * Set locale value with language `ml`.
@@ -4533,9 +3834,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ml", null, value)
-        }
+        set(value) = add("ml", null, value)
 
     /**
      * Set locale value with language `ml` and country `IN`.
@@ -4546,9 +3845,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ml", "IN", value)
-        }
+        set(value) = add("ml", "IN", value)
 
     /**
      * Set locale value with language `mn`.
@@ -4559,9 +3856,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("mn", null, value)
-        }
+        set(value) = add("mn", null, value)
 
     /**
      * Set locale value with language `mn` and country `MN`.
@@ -4572,9 +3867,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("mn", "MN", value)
-        }
+        set(value) = add("mn", "MN", value)
 
     /**
      * Set locale value with language `mr`.
@@ -4585,9 +3878,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("mr", null, value)
-        }
+        set(value) = add("mr", null, value)
 
     /**
      * Set locale value with language `mr` and country `IN`.
@@ -4598,9 +3889,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("mr", "IN", value)
-        }
+        set(value) = add("mr", "IN", value)
 
     /**
      * Set locale value with language `ms`.
@@ -4611,9 +3900,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ms", null, value)
-        }
+        set(value) = add("ms", null, value)
 
     /**
      * Set locale value with language `ms` and country `BN`.
@@ -4624,9 +3911,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ms", "BN", value)
-        }
+        set(value) = add("ms", "BN", value)
 
     /**
      * Set locale value with language `ms` and country `MY`.
@@ -4637,9 +3922,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ms", "MY", value)
-        }
+        set(value) = add("ms", "MY", value)
 
     /**
      * Set locale value with language `ms` and country `SG`.
@@ -4650,9 +3933,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ms", "SG", value)
-        }
+        set(value) = add("ms", "SG", value)
 
     /**
      * Set locale value with language `mt`.
@@ -4663,9 +3944,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("mt", null, value)
-        }
+        set(value) = add("mt", null, value)
 
     /**
      * Set locale value with language `mt` and country `MT`.
@@ -4676,9 +3955,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("mt", "MT", value)
-        }
+        set(value) = add("mt", "MT", value)
 
     /**
      * Set locale value with language `my`.
@@ -4689,9 +3966,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("my", null, value)
-        }
+        set(value) = add("my", null, value)
 
     /**
      * Set locale value with language `my` and country `MM`.
@@ -4702,9 +3977,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("my", "MM", value)
-        }
+        set(value) = add("my", "MM", value)
 
     /**
      * Set locale value with language `nb`.
@@ -4715,9 +3988,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("nb", null, value)
-        }
+        set(value) = add("nb", null, value)
 
     /**
      * Set locale value with language `nb` and country `NO`.
@@ -4728,9 +3999,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("nb", "NO", value)
-        }
+        set(value) = add("nb", "NO", value)
 
     /**
      * Set locale value with language `nb` and country `SJ`.
@@ -4741,9 +4010,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("nb", "SJ", value)
-        }
+        set(value) = add("nb", "SJ", value)
 
     /**
      * Set locale value with language `nd`.
@@ -4754,9 +4021,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("nd", null, value)
-        }
+        set(value) = add("nd", null, value)
 
     /**
      * Set locale value with language `nd` and country `ZW`.
@@ -4767,9 +4032,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("nd", "ZW", value)
-        }
+        set(value) = add("nd", "ZW", value)
 
     /**
      * Set locale value with language `ne`.
@@ -4780,9 +4043,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ne", null, value)
-        }
+        set(value) = add("ne", null, value)
 
     /**
      * Set locale value with language `ne` and country `IN`.
@@ -4793,9 +4054,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ne", "IN", value)
-        }
+        set(value) = add("ne", "IN", value)
 
     /**
      * Set locale value with language `ne` and country `NP`.
@@ -4806,9 +4065,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ne", "NP", value)
-        }
+        set(value) = add("ne", "NP", value)
 
     /**
      * Set locale value with language `nl`.
@@ -4819,9 +4076,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("nl", null, value)
-        }
+        set(value) = add("nl", null, value)
 
     /**
      * Set locale value with language `nl` and country `AW`.
@@ -4832,9 +4087,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("nl", "AW", value)
-        }
+        set(value) = add("nl", "AW", value)
 
     /**
      * Set locale value with language `nl` and country `BE`.
@@ -4845,9 +4098,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("nl", "BE", value)
-        }
+        set(value) = add("nl", "BE", value)
 
     /**
      * Set locale value with language `nl` and country `BQ`.
@@ -4858,9 +4109,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("nl", "BQ", value)
-        }
+        set(value) = add("nl", "BQ", value)
 
     /**
      * Set locale value with language `nl` and country `CW`.
@@ -4871,9 +4120,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("nl", "CW", value)
-        }
+        set(value) = add("nl", "CW", value)
 
     /**
      * Set locale value with language `nl` and country `NL`.
@@ -4884,9 +4131,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("nl", "NL", value)
-        }
+        set(value) = add("nl", "NL", value)
 
     /**
      * Set locale value with language `nl` and country `SR`.
@@ -4897,9 +4142,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("nl", "SR", value)
-        }
+        set(value) = add("nl", "SR", value)
 
     /**
      * Set locale value with language `nl` and country `SX`.
@@ -4910,9 +4153,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("nl", "SX", value)
-        }
+        set(value) = add("nl", "SX", value)
 
     /**
      * Set locale value with language `nn`.
@@ -4923,9 +4164,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("nn", null, value)
-        }
+        set(value) = add("nn", null, value)
 
     /**
      * Set locale value with language `nn` and country `NO`.
@@ -4936,9 +4175,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("nn", "NO", value)
-        }
+        set(value) = add("nn", "NO", value)
 
     /**
      * Set locale value with language `no`.
@@ -4949,9 +4186,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("no", null, value)
-        }
+        set(value) = add("no", null, value)
 
     /**
      * Set locale value with language `no` and country `NO`.
@@ -4962,9 +4197,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("no", "NO", value)
-        }
+        set(value) = add("no", "NO", value)
 
     /**
      * Set locale value with language `om`.
@@ -4975,9 +4208,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("om", null, value)
-        }
+        set(value) = add("om", null, value)
 
     /**
      * Set locale value with language `om` and country `ET`.
@@ -4988,9 +4219,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("om", "ET", value)
-        }
+        set(value) = add("om", "ET", value)
 
     /**
      * Set locale value with language `om` and country `KE`.
@@ -5001,9 +4230,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("om", "KE", value)
-        }
+        set(value) = add("om", "KE", value)
 
     /**
      * Set locale value with language `or`.
@@ -5014,9 +4241,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("or", null, value)
-        }
+        set(value) = add("or", null, value)
 
     /**
      * Set locale value with language `or` and country `IN`.
@@ -5027,9 +4252,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("or", "IN", value)
-        }
+        set(value) = add("or", "IN", value)
 
     /**
      * Set locale value with language `os`.
@@ -5040,9 +4263,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("os", null, value)
-        }
+        set(value) = add("os", null, value)
 
     /**
      * Set locale value with language `os` and country `GE`.
@@ -5053,9 +4274,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("os", "GE", value)
-        }
+        set(value) = add("os", "GE", value)
 
     /**
      * Set locale value with language `os` and country `RU`.
@@ -5066,9 +4285,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("os", "RU", value)
-        }
+        set(value) = add("os", "RU", value)
 
     /**
      * Set locale value with language `pa`.
@@ -5079,9 +4296,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("pa", null, value)
-        }
+        set(value) = add("pa", null, value)
 
     /**
      * Set locale value with language `pa` and country `PK`.
@@ -5092,9 +4307,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("pa", "PK", value)
-        }
+        set(value) = add("pa", "PK", value)
 
     /**
      * Set locale value with language `pa` and country `IN`.
@@ -5105,9 +4318,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("pa", "IN", value)
-        }
+        set(value) = add("pa", "IN", value)
 
     /**
      * Set locale value with language `pl`.
@@ -5118,9 +4329,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("pl", null, value)
-        }
+        set(value) = add("pl", null, value)
 
     /**
      * Set locale value with language `pl` and country `PL`.
@@ -5131,9 +4340,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("pl", "PL", value)
-        }
+        set(value) = add("pl", "PL", value)
 
     /**
      * Set locale value with language `ps`.
@@ -5144,9 +4351,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ps", null, value)
-        }
+        set(value) = add("ps", null, value)
 
     /**
      * Set locale value with language `ps` and country `AF`.
@@ -5157,9 +4362,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ps", "AF", value)
-        }
+        set(value) = add("ps", "AF", value)
 
     /**
      * Set locale value with language `pt`.
@@ -5170,9 +4373,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("pt", null, value)
-        }
+        set(value) = add("pt", null, value)
 
     /**
      * Set locale value with language `pt` and country `AO`.
@@ -5183,9 +4384,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("pt", "AO", value)
-        }
+        set(value) = add("pt", "AO", value)
 
     /**
      * Set locale value with language `pt` and country `BR`.
@@ -5196,9 +4395,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("pt", "BR", value)
-        }
+        set(value) = add("pt", "BR", value)
 
     /**
      * Set locale value with language `pt` and country `CV`.
@@ -5209,9 +4406,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("pt", "CV", value)
-        }
+        set(value) = add("pt", "CV", value)
 
     /**
      * Set locale value with language `pt` and country `GW`.
@@ -5222,9 +4417,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("pt", "GW", value)
-        }
+        set(value) = add("pt", "GW", value)
 
     /**
      * Set locale value with language `pt` and country `MO`.
@@ -5235,9 +4428,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("pt", "MO", value)
-        }
+        set(value) = add("pt", "MO", value)
 
     /**
      * Set locale value with language `pt` and country `MZ`.
@@ -5248,9 +4439,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("pt", "MZ", value)
-        }
+        set(value) = add("pt", "MZ", value)
 
     /**
      * Set locale value with language `pt` and country `PT`.
@@ -5261,9 +4450,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("pt", "PT", value)
-        }
+        set(value) = add("pt", "PT", value)
 
     /**
      * Set locale value with language `pt` and country `ST`.
@@ -5274,9 +4461,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("pt", "ST", value)
-        }
+        set(value) = add("pt", "ST", value)
 
     /**
      * Set locale value with language `pt` and country `TL`.
@@ -5287,9 +4472,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("pt", "TL", value)
-        }
+        set(value) = add("pt", "TL", value)
 
     /**
      * Set locale value with language `qu`.
@@ -5300,9 +4483,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("qu", null, value)
-        }
+        set(value) = add("qu", null, value)
 
     /**
      * Set locale value with language `qu` and country `BO`.
@@ -5313,9 +4494,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("qu", "BO", value)
-        }
+        set(value) = add("qu", "BO", value)
 
     /**
      * Set locale value with language `qu` and country `EC`.
@@ -5326,9 +4505,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("qu", "EC", value)
-        }
+        set(value) = add("qu", "EC", value)
 
     /**
      * Set locale value with language `qu` and country `PE`.
@@ -5339,9 +4516,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("qu", "PE", value)
-        }
+        set(value) = add("qu", "PE", value)
 
     /**
      * Set locale value with language `rm`.
@@ -5352,9 +4527,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("rm", null, value)
-        }
+        set(value) = add("rm", null, value)
 
     /**
      * Set locale value with language `rm` and country `CH`.
@@ -5365,9 +4538,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("rm", "CH", value)
-        }
+        set(value) = add("rm", "CH", value)
 
     /**
      * Set locale value with language `rn`.
@@ -5378,9 +4549,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("rn", null, value)
-        }
+        set(value) = add("rn", null, value)
 
     /**
      * Set locale value with language `rn` and country `BI`.
@@ -5391,9 +4560,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("rn", "BI", value)
-        }
+        set(value) = add("rn", "BI", value)
 
     /**
      * Set locale value with language `ro`.
@@ -5404,9 +4571,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ro", null, value)
-        }
+        set(value) = add("ro", null, value)
 
     /**
      * Set locale value with language `ro` and country `MD`.
@@ -5417,9 +4582,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ro", "MD", value)
-        }
+        set(value) = add("ro", "MD", value)
 
     /**
      * Set locale value with language `ro` and country `RO`.
@@ -5430,9 +4593,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ro", "RO", value)
-        }
+        set(value) = add("ro", "RO", value)
 
     /**
      * Set locale value with language `ru`.
@@ -5443,9 +4604,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ru", null, value)
-        }
+        set(value) = add("ru", null, value)
 
     /**
      * Set locale value with language `ru` and country `BY`.
@@ -5456,9 +4615,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ru", "BY", value)
-        }
+        set(value) = add("ru", "BY", value)
 
     /**
      * Set locale value with language `ru` and country `KG`.
@@ -5469,9 +4626,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ru", "KG", value)
-        }
+        set(value) = add("ru", "KG", value)
 
     /**
      * Set locale value with language `ru` and country `KZ`.
@@ -5482,9 +4637,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ru", "KZ", value)
-        }
+        set(value) = add("ru", "KZ", value)
 
     /**
      * Set locale value with language `ru` and country `MD`.
@@ -5495,9 +4648,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ru", "MD", value)
-        }
+        set(value) = add("ru", "MD", value)
 
     /**
      * Set locale value with language `ru` and country `RU`.
@@ -5508,9 +4659,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ru", "RU", value)
-        }
+        set(value) = add("ru", "RU", value)
 
     /**
      * Set locale value with language `ru` and country `UA`.
@@ -5521,9 +4670,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ru", "UA", value)
-        }
+        set(value) = add("ru", "UA", value)
 
     /**
      * Set locale value with language `rw`.
@@ -5534,9 +4681,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("rw", null, value)
-        }
+        set(value) = add("rw", null, value)
 
     /**
      * Set locale value with language `rw` and country `RW`.
@@ -5547,9 +4692,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("rw", "RW", value)
-        }
+        set(value) = add("rw", "RW", value)
 
     /**
      * Set locale value with language `se`.
@@ -5560,9 +4703,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("se", null, value)
-        }
+        set(value) = add("se", null, value)
 
     /**
      * Set locale value with language `se` and country `FI`.
@@ -5573,9 +4714,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("se", "FI", value)
-        }
+        set(value) = add("se", "FI", value)
 
     /**
      * Set locale value with language `se` and country `NO`.
@@ -5586,9 +4725,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("se", "NO", value)
-        }
+        set(value) = add("se", "NO", value)
 
     /**
      * Set locale value with language `se` and country `SE`.
@@ -5599,9 +4736,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("se", "SE", value)
-        }
+        set(value) = add("se", "SE", value)
 
     /**
      * Set locale value with language `sg`.
@@ -5612,9 +4747,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("sg", null, value)
-        }
+        set(value) = add("sg", null, value)
 
     /**
      * Set locale value with language `sg` and country `CF`.
@@ -5625,9 +4758,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("sg", "CF", value)
-        }
+        set(value) = add("sg", "CF", value)
 
     /**
      * Set locale value with language `sh`.
@@ -5638,9 +4769,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("sh", null, value)
-        }
+        set(value) = add("sh", null, value)
 
     /**
      * Set locale value with language `sh` and country `BA`.
@@ -5651,9 +4780,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("sh", "BA", value)
-        }
+        set(value) = add("sh", "BA", value)
 
     /**
      * Set locale value with language `si`.
@@ -5664,9 +4791,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("si", null, value)
-        }
+        set(value) = add("si", null, value)
 
     /**
      * Set locale value with language `si` and country `LK`.
@@ -5677,9 +4802,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("si", "LK", value)
-        }
+        set(value) = add("si", "LK", value)
 
     /**
      * Set locale value with language `sk`.
@@ -5690,9 +4813,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("sk", null, value)
-        }
+        set(value) = add("sk", null, value)
 
     /**
      * Set locale value with language `sk` and country `SK`.
@@ -5703,9 +4824,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("sk", "SK", value)
-        }
+        set(value) = add("sk", "SK", value)
 
     /**
      * Set locale value with language `sl`.
@@ -5716,9 +4835,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("sl", null, value)
-        }
+        set(value) = add("sl", null, value)
 
     /**
      * Set locale value with language `sl` and country `SI`.
@@ -5729,9 +4846,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("sl", "SI", value)
-        }
+        set(value) = add("sl", "SI", value)
 
     /**
      * Set locale value with language `sn`.
@@ -5742,9 +4857,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("sn", null, value)
-        }
+        set(value) = add("sn", null, value)
 
     /**
      * Set locale value with language `sn` and country `ZW`.
@@ -5755,9 +4868,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("sn", "ZW", value)
-        }
+        set(value) = add("sn", "ZW", value)
 
     /**
      * Set locale value with language `so`.
@@ -5768,9 +4879,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("so", null, value)
-        }
+        set(value) = add("so", null, value)
 
     /**
      * Set locale value with language `so` and country `DJ`.
@@ -5781,9 +4890,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("so", "DJ", value)
-        }
+        set(value) = add("so", "DJ", value)
 
     /**
      * Set locale value with language `so` and country `ET`.
@@ -5794,9 +4901,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("so", "ET", value)
-        }
+        set(value) = add("so", "ET", value)
 
     /**
      * Set locale value with language `so` and country `KE`.
@@ -5807,9 +4912,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("so", "KE", value)
-        }
+        set(value) = add("so", "KE", value)
 
     /**
      * Set locale value with language `so` and country `SO`.
@@ -5820,9 +4923,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("so", "SO", value)
-        }
+        set(value) = add("so", "SO", value)
 
     /**
      * Set locale value with language `sq`.
@@ -5833,9 +4934,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("sq", null, value)
-        }
+        set(value) = add("sq", null, value)
 
     /**
      * Set locale value with language `sq` and country `AL`.
@@ -5846,9 +4945,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("sq", "AL", value)
-        }
+        set(value) = add("sq", "AL", value)
 
     /**
      * Set locale value with language `sq` and country `MK`.
@@ -5859,9 +4956,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("sq", "MK", value)
-        }
+        set(value) = add("sq", "MK", value)
 
     /**
      * Set locale value with language `sq` and country `XK`.
@@ -5872,9 +4967,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("sq", "XK", value)
-        }
+        set(value) = add("sq", "XK", value)
 
     /**
      * Set locale value with language `sr`.
@@ -5885,9 +4978,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("sr", null, value)
-        }
+        set(value) = add("sr", null, value)
 
     /**
      * Set locale value with language `sr` and country `BA`.
@@ -5898,9 +4989,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("sr", "BA", value)
-        }
+        set(value) = add("sr", "BA", value)
 
     /**
      * Set locale value with language `sr` and country `ME`.
@@ -5911,9 +5000,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("sr", "ME", value)
-        }
+        set(value) = add("sr", "ME", value)
 
     /**
      * Set locale value with language `sr` and country `RS`.
@@ -5924,9 +5011,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("sr", "RS", value)
-        }
+        set(value) = add("sr", "RS", value)
 
     /**
      * Set locale value with language `sr` and country `XK`.
@@ -5937,9 +5022,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("sr", "XK", value)
-        }
+        set(value) = add("sr", "XK", value)
 
     /**
      * Set locale value with language `sv`.
@@ -5950,9 +5033,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("sv", null, value)
-        }
+        set(value) = add("sv", null, value)
 
     /**
      * Set locale value with language `sv` and country `AX`.
@@ -5963,9 +5044,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("sv", "AX", value)
-        }
+        set(value) = add("sv", "AX", value)
 
     /**
      * Set locale value with language `sv` and country `FI`.
@@ -5976,9 +5055,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("sv", "FI", value)
-        }
+        set(value) = add("sv", "FI", value)
 
     /**
      * Set locale value with language `sv` and country `SE`.
@@ -5989,9 +5066,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("sv", "SE", value)
-        }
+        set(value) = add("sv", "SE", value)
 
     /**
      * Set locale value with language `sw`.
@@ -6002,9 +5077,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("sw", null, value)
-        }
+        set(value) = add("sw", null, value)
 
     /**
      * Set locale value with language `sw` and country `KE`.
@@ -6015,9 +5088,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("sw", "KE", value)
-        }
+        set(value) = add("sw", "KE", value)
 
     /**
      * Set locale value with language `sw` and country `TZ`.
@@ -6028,9 +5099,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("sw", "TZ", value)
-        }
+        set(value) = add("sw", "TZ", value)
 
     /**
      * Set locale value with language `sw` and country `UG`.
@@ -6041,9 +5110,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("sw", "UG", value)
-        }
+        set(value) = add("sw", "UG", value)
 
     /**
      * Set locale value with language `ta`.
@@ -6054,9 +5121,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ta", null, value)
-        }
+        set(value) = add("ta", null, value)
 
     /**
      * Set locale value with language `ta` and country `IN`.
@@ -6067,9 +5132,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ta", "IN", value)
-        }
+        set(value) = add("ta", "IN", value)
 
     /**
      * Set locale value with language `ta` and country `LK`.
@@ -6080,9 +5143,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ta", "LK", value)
-        }
+        set(value) = add("ta", "LK", value)
 
     /**
      * Set locale value with language `ta` and country `MY`.
@@ -6093,9 +5154,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ta", "MY", value)
-        }
+        set(value) = add("ta", "MY", value)
 
     /**
      * Set locale value with language `ta` and country `SG`.
@@ -6106,9 +5165,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ta", "SG", value)
-        }
+        set(value) = add("ta", "SG", value)
 
     /**
      * Set locale value with language `te`.
@@ -6119,9 +5176,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("te", null, value)
-        }
+        set(value) = add("te", null, value)
 
     /**
      * Set locale value with language `te` and country `IN`.
@@ -6132,9 +5187,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("te", "IN", value)
-        }
+        set(value) = add("te", "IN", value)
 
     /**
      * Set locale value with language `th`.
@@ -6145,9 +5198,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("th", null, value)
-        }
+        set(value) = add("th", null, value)
 
     /**
      * Set locale value with language `th` and country `TH`.
@@ -6158,9 +5209,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("th", "TH", value)
-        }
+        set(value) = add("th", "TH", value)
 
     /**
      * Set locale value with language `ti`.
@@ -6171,9 +5220,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ti", null, value)
-        }
+        set(value) = add("ti", null, value)
 
     /**
      * Set locale value with language `ti` and country `ER`.
@@ -6184,9 +5231,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ti", "ER", value)
-        }
+        set(value) = add("ti", "ER", value)
 
     /**
      * Set locale value with language `ti` and country `ET`.
@@ -6197,9 +5242,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ti", "ET", value)
-        }
+        set(value) = add("ti", "ET", value)
 
     /**
      * Set locale value with language `tl`.
@@ -6210,9 +5253,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("tl", null, value)
-        }
+        set(value) = add("tl", null, value)
 
     /**
      * Set locale value with language `tl` and country `PH`.
@@ -6223,9 +5264,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("tl", "PH", value)
-        }
+        set(value) = add("tl", "PH", value)
 
     /**
      * Set locale value with language `to`.
@@ -6236,9 +5275,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("to", null, value)
-        }
+        set(value) = add("to", null, value)
 
     /**
      * Set locale value with language `to` and country `TO`.
@@ -6249,9 +5286,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("to", "TO", value)
-        }
+        set(value) = add("to", "TO", value)
 
     /**
      * Set locale value with language `tr`.
@@ -6262,9 +5297,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("tr", null, value)
-        }
+        set(value) = add("tr", null, value)
 
     /**
      * Set locale value with language `tr` and country `CY`.
@@ -6275,9 +5308,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("tr", "CY", value)
-        }
+        set(value) = add("tr", "CY", value)
 
     /**
      * Set locale value with language `tr` and country `TR`.
@@ -6288,9 +5319,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("tr", "TR", value)
-        }
+        set(value) = add("tr", "TR", value)
 
     /**
      * Set locale value with language `ug`.
@@ -6301,9 +5330,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ug", null, value)
-        }
+        set(value) = add("ug", null, value)
 
     /**
      * Set locale value with language `ug` and country `CN`.
@@ -6314,9 +5341,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ug", "CN", value)
-        }
+        set(value) = add("ug", "CN", value)
 
     /**
      * Set locale value with language `uk`.
@@ -6327,9 +5352,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("uk", null, value)
-        }
+        set(value) = add("uk", null, value)
 
     /**
      * Set locale value with language `uk` and country `UA`.
@@ -6340,9 +5363,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("uk", "UA", value)
-        }
+        set(value) = add("uk", "UA", value)
 
     /**
      * Set locale value with language `ur`.
@@ -6353,9 +5374,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ur", null, value)
-        }
+        set(value) = add("ur", null, value)
 
     /**
      * Set locale value with language `ur` and country `IN`.
@@ -6366,9 +5385,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ur", "IN", value)
-        }
+        set(value) = add("ur", "IN", value)
 
     /**
      * Set locale value with language `ur` and country `PK`.
@@ -6379,9 +5396,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("ur", "PK", value)
-        }
+        set(value) = add("ur", "PK", value)
 
     /**
      * Set locale value with language `uz`.
@@ -6392,9 +5407,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("uz", null, value)
-        }
+        set(value) = add("uz", null, value)
 
     /**
      * Set locale value with language `uz` and country `AF`.
@@ -6405,9 +5418,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("uz", "AF", value)
-        }
+        set(value) = add("uz", "AF", value)
 
     /**
      * Set locale value with language `uz` and country `UZ`.
@@ -6418,9 +5429,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("uz", "UZ", value)
-        }
+        set(value) = add("uz", "UZ", value)
 
     /**
      * Set locale value with language `vi`.
@@ -6431,9 +5440,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("vi", null, value)
-        }
+        set(value) = add("vi", null, value)
 
     /**
      * Set locale value with language `vi` and country `VN`.
@@ -6444,9 +5451,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("vi", "VN", value)
-        }
+        set(value) = add("vi", "VN", value)
 
     /**
      * Set locale value with language `yi`.
@@ -6457,9 +5462,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("yi", null, value)
-        }
+        set(value) = add("yi", null, value)
 
     /**
      * Set locale value with language `yo`.
@@ -6470,9 +5473,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("yo", null, value)
-        }
+        set(value) = add("yo", null, value)
 
     /**
      * Set locale value with language `yo` and country `BJ`.
@@ -6483,9 +5484,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("yo", "BJ", value)
-        }
+        set(value) = add("yo", "BJ", value)
 
     /**
      * Set locale value with language `yo` and country `NG`.
@@ -6496,9 +5495,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("yo", "NG", value)
-        }
+        set(value) = add("yo", "NG", value)
 
     /**
      * Set locale value with language `zh`.
@@ -6509,9 +5506,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add(java.util.Locale.CHINESE, value)
-        }
+        set(value) = add(java.util.Locale.CHINESE, value)
 
     /**
      * Set locale value with language `zh` and country `CN`.
@@ -6522,9 +5517,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add(java.util.Locale.CHINA, value)
-        }
+        set(value) = add(java.util.Locale.CHINA, value)
 
     /**
      * Set locale value with language `zh` and country `HK`.
@@ -6535,9 +5528,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("zh", "HK", value)
-        }
+        set(value) = add("zh", "HK", value)
 
     /**
      * Set locale value with language `zh` and country `MO`.
@@ -6548,9 +5539,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("zh", "MO", value)
-        }
+        set(value) = add("zh", "MO", value)
 
     /**
      * Set locale value with language `zh` and country `SG`.
@@ -6561,9 +5550,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("zh", "SG", value)
-        }
+        set(value) = add("zh", "SG", value)
 
     /**
      * Set locale value with language `zh` and country `TW`.
@@ -6574,9 +5561,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add(java.util.Locale.TAIWAN, value)
-        }
+        set(value) = add(java.util.Locale.TAIWAN, value)
 
     /**
      * Set locale value with language `zu`.
@@ -6587,9 +5572,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("zu", null, value)
-        }
+        set(value) = add("zu", null, value)
 
     /**
      * Set locale value with language `zu` and country `ZA`.
@@ -6600,9 +5583,7 @@ interface LocaleBuilder : BaseLocaleBuilder {
                 level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) {
-            add("zu", "ZA", value)
-        }
+        set(value) = add("zu", "ZA", value)
 
     private companion object {
         const val NO_GETTER: String = "Property does not have a getter."

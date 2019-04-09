@@ -1,5 +1,5 @@
 include(RELEASE_ARTIFACT)
-include("locale-builder-generator")
+include("locale-generator")
 include("website")
 includeDir("demo")
 

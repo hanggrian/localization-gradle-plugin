@@ -8,7 +8,7 @@ class LocaleExtensionTest {
 
     @Test
     fun test() {
-        val idLocale = Locale("id")
+        val bahasa = Locale("id")
         val ext = LocaleExtension()
         ext.run {
             "home" {
@@ -21,8 +21,8 @@ class LocaleExtensionTest {
             }
         }
         assertEquals("Home", ext.table["home", Locale.ENGLISH])
-        assertEquals("Beranda", ext.table["home", idLocale])
+        assertEquals("Beranda", ext.table["home", bahasa])
         assertEquals("About", ext.table["about", Locale.ENGLISH])
-        assertEquals("Tentang", ext.table["about", idLocale])
+        assertEquals("Tentang", ext.table["about", bahasa])
     }
 }
