@@ -14,7 +14,7 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
-        maven("https://oss.sonatype.org/content/repositories/snapshots/")
+        maven("https://kotlin.bintray.com/kotlinx")
     }
     tasks {
         withType<Delete> {

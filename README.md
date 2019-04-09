@@ -44,11 +44,11 @@ locale {
     }
 }
 
-task.withTask(com.hendraanggrian.locale.WriteResourceBundlesTask) {
+task.withTask(com.hendraanggrian.locale.LocalizeJavaTask) {
     outputDirectory 'src/main/resources'
 }
 
-task.withTask(com.hendraanggrian.locale.WriteAndroidResourcesTask) {
+task.withTask(com.hendraanggrian.locale.LocalizeAndroidTask) {
     outputDirectory 'my/custom/directory'
 }
 ```
@@ -68,7 +68,7 @@ locale {
 }
 ```
 
-Then use command `writeAndroidResources` or `writeResourceBundles` to write localization files into their respective directory.
+Then use command `localizeAndroid` or `localizeJava` to write localization files into their respective directory.
 
 License
 -------

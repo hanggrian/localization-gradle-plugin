@@ -18,22 +18,22 @@ import javax.xml.transform.dom.DOMSource
 import javax.xml.transform.stream.StreamResult
 
 /** Non-platform specific locale writer task. */
-abstract class WriteLocaleTask : DefaultTask() {
+abstract class LocalizeTask : DefaultTask() {
 
     @Internal protected lateinit var table: RowSortedTable<String, Locale, String>
 
     /** Localization resource name. */
-    @Input lateinit var resourceName: String
+    @Input var resourceName: String? = null
 
     /** Default locale, when matching localization is found, file name suffix is removed. */
-    @Input lateinit var defaultLocale: Locale
+    @Input var defaultLocale: Locale? = null
 
     /** Path that localization files will be generated to. */
-    @OutputDirectory lateinit var outputDir: File
+    @OutputDirectory var outputDir: File? = null
 
     /** Convenient method to set output directory from file path, relative to project directory. */
     var outputDirectory: String
-        @OutputDirectory get() = outputDir.absolutePath
+        @OutputDirectory get() = outputDir!!.absolutePath
         set(value) {
             outputDir = project.projectDir.resolve(value)
         }
@@ -42,7 +42,7 @@ abstract class WriteLocaleTask : DefaultTask() {
     @Throws(IOException::class)
     fun generate() {
         logger.log(LogLevel.INFO, "Preparing localization")
-        outputDir.mkdirs()
+        outputDir!!.mkdirs()
 
         logger.log(LogLevel.INFO, "Writing localization")
         write()
@@ -72,14 +72,14 @@ abstract class WriteLocaleTask : DefaultTask() {
 }
 
 /** Task to write properties files which will then be used as [java.util.ResourceBundle]. */
-open class WriteResourceBundleTask : WriteLocaleTask() {
+open class LocalizeJavaTask : LocalizeTask() {
 
     override fun write() = table.columnKeySet().forEach { locale ->
         val properties = Properties()
         table.rowKeySet().forEach { key ->
             properties[key] = table[key, locale]
         }
-        val outputFile = outputDir.resolve("$resourceName${locale.toSuffix('_')}.properties")
+        val outputFile = outputDir!!.resolve("$resourceName${locale.toSuffix('_')}.properties")
         outputFile.deleteIfExists()
         outputFile.outputStream().use {
             properties.store(it, null)
@@ -88,7 +88,7 @@ open class WriteResourceBundleTask : WriteLocaleTask() {
 }
 
 /** Task to write Android string resources files. */
-open class WriteAndroidResourcesTask : WriteLocaleTask() {
+open class LocalizeAndroidTask : LocalizeTask() {
     private val docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder()
     private val transformer = TransformerFactory.newInstance().newTransformer()
 
@@ -102,9 +102,9 @@ open class WriteAndroidResourcesTask : WriteLocaleTask() {
             s.appendChild(doc.createTextNode(table[key, locale]))
             resources.appendChild(s)
         }
-        val innerOutputDir = outputDir.resolve("values${locale.toSuffix('-')}")
+        val innerOutputDir = outputDir!!.resolve("values${locale.toSuffix('-')}")
         innerOutputDir.mkdirs()
-        val outputFile = innerOutputDir.resolve("strings.xml")
+        val outputFile = innerOutputDir.resolve("$resourceName.xml")
         outputFile.deleteIfExists()
         transformer.transform(DOMSource(doc), StreamResult(FileWriter(outputFile)))
     }

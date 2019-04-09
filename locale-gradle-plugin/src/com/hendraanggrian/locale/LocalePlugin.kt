@@ -3,9 +3,9 @@ package com.hendraanggrian.locale
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.create
+import org.gradle.kotlin.dsl.getValue
 import org.gradle.kotlin.dsl.invoke
 import org.gradle.kotlin.dsl.registering
-import org.gradle.kotlin.dsl.getValue
 import org.gradle.kotlin.dsl.provideDelegate // ktlint-disable
 
 class LocalePlugin : Plugin<Project> {
@@ -14,23 +14,42 @@ class LocalePlugin : Plugin<Project> {
         const val GROUP_NAME = "locale"
     }
 
-    @Suppress("UNUSED_VARIABLE")
     override fun apply(project: Project) {
         val ext = project.extensions.create<LocaleExtension>(GROUP_NAME)
         project.tasks {
-            val writeResourceBundle by registering(WriteResourceBundleTask::class) {
+            val localizeJava by registering(LocalizeJavaTask::class) {
                 group = GROUP_NAME
-                outputDir = project.projectDir.resolve("src/main/resources")
                 setTable(ext.table)
-                ext.resourceName?.let { resourceName = it }
-                defaultLocale = ext.defaultLocale
+                if (outputDir == null) {
+                    outputDir = project.projectDir.resolve("src/main/resources")
+                }
+                if (resourceName == null) {
+                    resourceName = ext.resourceName
+                }
+                if (defaultLocale == null) {
+                    defaultLocale = ext.defaultLocale
+                }
             }
-            val writeAndroidResources by registering(WriteAndroidResourcesTask::class) {
+            val localizeAndroid by registering(LocalizeAndroidTask::class) {
                 group = GROUP_NAME
-                outputDir = project.projectDir.resolve("src/main/resources")
                 setTable(ext.table)
-                ext.resourceName?.let { resourceName = it }
-                defaultLocale = ext.defaultLocale
+                if (outputDir == null) {
+                    outputDir = project.projectDir.resolve("src/main/resources")
+                }
+                if (resourceName == null) {
+                    resourceName = ext.resourceName
+                }
+                if (defaultLocale == null) {
+                    defaultLocale = ext.defaultLocale
+                }
+            }
+            @Suppress("UNUSED_VARIABLE")
+            val localizeAll by registering {
+                group = GROUP_NAME
+                dependsOn(
+                    localizeJava.get(),
+                    localizeAndroid.get()
+                )
             }
         }
     }

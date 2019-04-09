@@ -1,0 +1,34 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath files('../locale-gradle-plugin-0.1.jar')
+        classpath 'com.google.guava:guava:27.1-jre'
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'com.hendraanggrian.locale'
+
+group 'com.example'
+version '1.0'
+
+sourceSets['main'].resources.srcDir('res')
+
+locale {
+    configure('about') {
+        en = 'About'
+        id = 'Tentang'
+    }
+    configure('home') {
+        en = 'Home'
+        id = 'Beranda'
+    }
+}
+
+tasks.withType(com.hendraanggrian.locale.LocalizeJavaTask) {
+    resourceName 'my_strings'
+    defaultLocale new Locale("id")
+    outputDirectory 'res'
+}

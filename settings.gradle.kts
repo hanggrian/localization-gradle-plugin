@@ -1,8 +1,9 @@
 include(RELEASE_ARTIFACT)
+include("locale-builder-generator")
 include("website")
 includeDir("demo")
 
-fun includeDir(name: String) = file(name)
+fun includeDir(dir: String) = file(dir)
     .listFiles()
     .filter { it.isDirectory }
-    .forEach { include("$name:${it.name}") }
+    .forEach { include("$dir:${it.name}") }

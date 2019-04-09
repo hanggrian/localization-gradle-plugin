@@ -1,6 +1,15 @@
 import org.gradle.api.artifacts.dsl.DependencyHandler
 import org.gradle.plugin.use.PluginDependenciesSpec
 
+fun DependencyHandler.ktor(module: String) = "io.ktor:ktor-$module:1.1.3"
+
+fun DependencyHandler.kotlinx(
+    module: String,
+    version: String? = null
+) = "org.jetbrains.kotlinx:kotlinx-$module${version?.let { ":$it" } ?: ""}"
+
+fun DependencyHandler.kotlinPoet() = "com.squareup:kotlinpoet:1.2.0"
+
 fun DependencyHandler.dokka() = "org.jetbrains.dokka:dokka-gradle-plugin:0.9.17"
 inline val PluginDependenciesSpec.dokka get() = id("org.jetbrains.dokka")
 
