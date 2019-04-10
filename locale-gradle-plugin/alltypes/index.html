@@ -10,18 +10,23 @@
 <tbody>
 <tr>
 <td>
+<a href="../com.hendraanggrian.locale/-base-locale-builder/index.html">com.hendraanggrian.locale.BaseLocaleBuilder</a></td>
+<td>
+<p>Base interface used to configure localization content.</p>
+</td>
+</tr>
+<tr>
+<td>
 <a href="../com.hendraanggrian.locale/-locale-builder/index.html">com.hendraanggrian.locale.LocaleBuilder</a></td>
 <td>
-<p>Main interface used to configure localization content.
-All locales are based on <code>https://github.com/umpirsky/locale-list/tree/master/data</code>.
-Locales with code other than language and country code are excluded.</p>
+<p>Generated interface based on <code>https://github.com/umpirsky/locale-list</code>.</p>
 </td>
 </tr>
 <tr>
 <td>
 <a href="../com.hendraanggrian.locale/-locale-extension/index.html">com.hendraanggrian.locale.LocaleExtension</a></td>
 <td>
-<p>Gradle extension to configure localization, any changes made here will take affect in <a href="../com.hendraanggrian.locale/-write-locale-task/index.html">WriteLocaleTask</a>.</p>
+<p>Gradle extension to configure localization, any changes made here will take affect in <a href="../com.hendraanggrian.locale/-localize-task/index.html">LocalizeTask</a>.</p>
 </td>
 </tr>
 <tr>
@@ -32,23 +37,23 @@ Locales with code other than language and country code are excluded.</p>
 </tr>
 <tr>
 <td>
-<a href="../com.hendraanggrian.locale/-write-android-resources-task/index.html">com.hendraanggrian.locale.WriteAndroidResourcesTask</a></td>
+<a href="../com.hendraanggrian.locale/-localize-android-task/index.html">com.hendraanggrian.locale.LocalizeAndroidTask</a></td>
 <td>
 <p>Task to write Android string resources files.</p>
 </td>
 </tr>
 <tr>
 <td>
-<a href="../com.hendraanggrian.locale/-write-locale-task/index.html">com.hendraanggrian.locale.WriteLocaleTask</a></td>
+<a href="../com.hendraanggrian.locale/-localize-java-task/index.html">com.hendraanggrian.locale.LocalizeJavaTask</a></td>
 <td>
-<p>Non-platform specific locale writer task.</p>
+<p>Task to write properties files which will then be used as <a href="http://docs.oracle.com/javase/6/docs/api/java/util/ResourceBundle.html">java.util.ResourceBundle</a>.</p>
 </td>
 </tr>
 <tr>
 <td>
-<a href="../com.hendraanggrian.locale/-write-resource-bundle-task/index.html">com.hendraanggrian.locale.WriteResourceBundleTask</a></td>
+<a href="../com.hendraanggrian.locale/-localize-task/index.html">com.hendraanggrian.locale.LocalizeTask</a></td>
 <td>
-<p>Task to write properties files which will then be used as <a href="http://docs.oracle.com/javase/6/docs/api/java/util/ResourceBundle.html">java.util.ResourceBundle</a>.</p>
+<p>Non-platform specific locale writer task.</p>
 </td>
 </tr>
 </tbody>

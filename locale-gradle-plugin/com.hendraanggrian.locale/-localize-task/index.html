@@ -1,14 +1,14 @@
 <HTML>
 <HEAD>
 <meta charset="UTF-8">
-<title>WriteLocaleTask - locale-gradle-plugin</title>
+<title>LocalizeTask - locale-gradle-plugin</title>
 <link rel="stylesheet" href="../../../style.css">
 </HEAD>
 <BODY>
-<a href="../../index.html">locale-gradle-plugin</a>&nbsp;/&nbsp;<a href="../index.html">com.hendraanggrian.locale</a>&nbsp;/&nbsp;<a href="./index.html">WriteLocaleTask</a><br/>
+<a href="../../index.html">locale-gradle-plugin</a>&nbsp;/&nbsp;<a href="../index.html">com.hendraanggrian.locale</a>&nbsp;/&nbsp;<a href="./index.html">LocalizeTask</a><br/>
 <br/>
-<h1>WriteLocaleTask</h1>
-<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">WriteLocaleTask</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">DefaultTask</span></code>
+<h1>LocalizeTask</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">LocalizeTask</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">DefaultTask</span></code>
 <p>Non-platform specific locale writer task.</p>
 <h3>Constructors</h3>
 <table>
@@ -18,7 +18,7 @@
 <p><a href="-init-.html">&lt;init&gt;</a></p>
 </td>
 <td>
-<code><span class="identifier">WriteLocaleTask</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<code><span class="identifier">LocalizeTask</span><span class="symbol">(</span><span class="symbol">)</span></code>
 <p>Non-platform specific locale writer task.</p>
 </td>
 </tr>
@@ -32,7 +32,7 @@
 <p><a href="default-locale.html">defaultLocale</a></p>
 </td>
 <td>
-<code><span class="keyword">lateinit</span> <span class="keyword">var </span><span class="identifier">defaultLocale</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/util/Locale.html"><span class="identifier">Locale</span></a></code>
+<code><span class="keyword">var </span><span class="identifier">defaultLocale</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/util/Locale.html"><span class="identifier">Locale</span></a><span class="symbol">?</span></code>
 <p>Default locale, when matching localization is found, file name suffix is removed.</p>
 </td>
 </tr>
@@ -41,7 +41,7 @@
 <p><a href="output-dir.html">outputDir</a></p>
 </td>
 <td>
-<code><span class="keyword">lateinit</span> <span class="keyword">var </span><span class="identifier">outputDir</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html"><span class="identifier">File</span></a></code>
+<code><span class="keyword">var </span><span class="identifier">outputDir</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html"><span class="identifier">File</span></a><span class="symbol">?</span></code>
 <p>Path that localization files will be generated to.</p>
 </td>
 </tr>
@@ -59,7 +59,7 @@
 <p><a href="resource-name.html">resourceName</a></p>
 </td>
 <td>
-<code><span class="keyword">lateinit</span> <span class="keyword">var </span><span class="identifier">resourceName</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<code><span class="keyword">var </span><span class="identifier">resourceName</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
 <p>Localization resource name.</p>
 </td>
 </tr>
@@ -96,19 +96,19 @@
 <tbody>
 <tr>
 <td>
-<p><a href="../-write-android-resources-task/index.html">WriteAndroidResourcesTask</a></p>
+<p><a href="../-localize-android-task/index.html">LocalizeAndroidTask</a></p>
 </td>
 <td>
-<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">WriteAndroidResourcesTask</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">WriteLocaleTask</span></a></code>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">LocalizeAndroidTask</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">LocalizeTask</span></a></code>
 <p>Task to write Android string resources files.</p>
 </td>
 </tr>
 <tr>
 <td>
-<p><a href="../-write-resource-bundle-task/index.html">WriteResourceBundleTask</a></p>
+<p><a href="../-localize-java-task/index.html">LocalizeJavaTask</a></p>
 </td>
 <td>
-<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">WriteResourceBundleTask</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">WriteLocaleTask</span></a></code>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">LocalizeJavaTask</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">LocalizeTask</span></a></code>
 <p>Task to write properties files which will then be used as <a href="http://docs.oracle.com/javase/6/docs/api/java/util/ResourceBundle.html">java.util.ResourceBundle</a>.</p>
 </td>
 </tr>
