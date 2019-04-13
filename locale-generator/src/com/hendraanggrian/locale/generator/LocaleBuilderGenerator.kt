@@ -42,7 +42,7 @@ object LocaleBuilderGenerator {
                         .addFunction(
                             FunSpec.builder("noGetter")
                                 .returns(ClassName("kotlin", "Nothing"))
-                                .addStatement("throw UnsupportedOperationException(NO_GETTER)")
+                                .addStatement("return throw UnsupportedOperationException(NO_GETTER)")
                                 .build()
                         )
                         .build()

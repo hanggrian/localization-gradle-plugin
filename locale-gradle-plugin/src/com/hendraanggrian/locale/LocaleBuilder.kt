@@ -5588,8 +5588,6 @@ interface LocaleBuilder : BaseLocaleBuilder {
     private companion object {
         const val NO_GETTER: String = "Property does not have a getter."
 
-        fun noGetter(): Nothing {
-            throw UnsupportedOperationException(NO_GETTER)
-        }
+        fun noGetter(): Nothing = throw UnsupportedOperationException(NO_GETTER)
     }
 }
