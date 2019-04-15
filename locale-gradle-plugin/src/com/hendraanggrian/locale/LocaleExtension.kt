@@ -11,7 +11,7 @@ open class LocaleExtension {
     private val impl = LocaleBuilderImpl()
 
     var resourceName: String = "strings"
-    var defaultLocale: Locale = Locale.ENGLISH
+    var defaultLocale: Locale? = null
 
     /** Opening closure to modify content of [key]. */
     fun configure(key: String, action: Action<LocaleBuilder>) {

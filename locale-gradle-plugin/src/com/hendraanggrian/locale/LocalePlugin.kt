@@ -26,7 +26,7 @@ class LocalePlugin : Plugin<Project> {
                 if (resourceName == null) {
                     resourceName = ext.resourceName
                 }
-                if (defaultLocale == null) {
+                if (defaultLocale == null && ext.defaultLocale != null) {
                     defaultLocale = ext.defaultLocale
                 }
             }
@@ -39,7 +39,7 @@ class LocalePlugin : Plugin<Project> {
                 if (resourceName == null) {
                     resourceName = ext.resourceName
                 }
-                if (defaultLocale == null) {
+                if (defaultLocale == null && ext.defaultLocale != null) {
                     defaultLocale = ext.defaultLocale
                 }
             }
