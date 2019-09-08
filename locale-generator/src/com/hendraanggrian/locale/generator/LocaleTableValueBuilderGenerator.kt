@@ -10,9 +10,9 @@ import com.squareup.kotlinpoet.TypeSpec
 import kotlinx.coroutines.runBlocking
 import java.io.File
 
-object LocaleBuilderGenerator {
+object LocaleTableValueBuilderGenerator {
     private const val PACKAGE_NAME = "com.hendraanggrian.locale"
-    private const val CLASS_NAME = "LocaleBuilder"
+    private const val CLASS_NAME = "LocaleTableValueBuilder"
 
     @JvmStatic
     fun main(@Suppress("UnusedMainParameter") args: Array<String>) {
@@ -21,6 +21,7 @@ object LocaleBuilderGenerator {
 
         println("writing...")
         FileSpec.builder(PACKAGE_NAME, CLASS_NAME)
+            .indent("\t")
             .addType(TypeSpec.interfaceBuilder(CLASS_NAME)
                 .addKdoc("Generated interface based on `https://github.com/umpirsky/locale-list`.")
                 .addAnnotation(

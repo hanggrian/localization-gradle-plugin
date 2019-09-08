@@ -5,8 +5,8 @@ import org.gradle.api.Project
 import org.gradle.kotlin.dsl.create
 import org.gradle.kotlin.dsl.getValue
 import org.gradle.kotlin.dsl.invoke
+import org.gradle.kotlin.dsl.provideDelegate
 import org.gradle.kotlin.dsl.registering
-import org.gradle.kotlin.dsl.provideDelegate // ktlint-disable
 
 class LocalePlugin : Plugin<Project> {
 
@@ -19,7 +19,7 @@ class LocalePlugin : Plugin<Project> {
         project.tasks {
             val localizeJava by registering(LocalizeJavaTask::class) {
                 group = GROUP_NAME
-                setTable(ext.table)
+                setTable(ext.javaTable)
                 if (outputDir == null) {
                     outputDir = project.projectDir.resolve("src/main/resources")
                 }
@@ -32,7 +32,7 @@ class LocalePlugin : Plugin<Project> {
             }
             val localizeAndroid by registering(LocalizeAndroidTask::class) {
                 group = GROUP_NAME
-                setTable(ext.table)
+                setTable(ext.androidTable)
                 if (outputDir == null) {
                     outputDir = project.projectDir.resolve("src/main/resources")
                 }

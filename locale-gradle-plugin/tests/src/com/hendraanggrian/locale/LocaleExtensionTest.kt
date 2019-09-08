@@ -20,9 +20,10 @@ class LocaleExtensionTest {
                 id = "Tentang"
             }
         }
-        assertEquals("Home", ext.table["home", Locale.ENGLISH])
-        assertEquals("Beranda", ext.table["home", bahasa])
-        assertEquals("About", ext.table["about", Locale.ENGLISH])
-        assertEquals("Tentang", ext.table["about", bahasa])
+        val table = ext.javaTable
+        assertEquals("Home", table["home", Locale.ENGLISH])
+        assertEquals("Beranda", table["home", bahasa])
+        assertEquals("About", table["about", Locale.ENGLISH])
+        assertEquals("Tentang", table["about", bahasa])
     }
 }

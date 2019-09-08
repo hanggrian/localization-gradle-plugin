@@ -4,7 +4,7 @@ buildscript {
     }
     dependencies {
         classpath files('../locale-gradle-plugin-0.1.jar')
-        classpath 'com.google.guava:guava:27.1-jre'
+        classpath 'com.google.guava:guava:28.1-jre'
     }
 }
 

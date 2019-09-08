@@ -5,8 +5,8 @@ buildscript {
     }
     dependencies {
         classpath files('../locale-gradle-plugin-0.1.jar')
-        classpath 'com.google.guava:guava:27.1-jre'
-        classpath 'com.android.tools.build:gradle:3.5.0-alpha11'
+        classpath 'com.google.guava:guava:28.1-jre'
+        classpath 'com.android.tools.build:gradle:3.5.0'
     }
 }
 
@@ -27,6 +27,18 @@ locale {
     configure('home') {
         en = 'Home'
         id = 'Beranda'
+    }
+    configureJavaOnly {
+        configure('java_only_text') {
+            it.en = 'Java only'
+            it.id = 'Hanya di Java'
+        }
+    }
+    configureAndroidOnly {
+        configure('android_only_text') {
+            it.en = 'Android only'
+            it.id = 'Hanya di Android'
+        }
     }
 }
 

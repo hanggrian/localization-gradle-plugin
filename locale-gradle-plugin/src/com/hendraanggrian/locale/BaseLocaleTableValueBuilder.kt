@@ -3,7 +3,7 @@ package com.hendraanggrian.locale
 import java.util.Locale
 
 /** Base interface used to configure localization content. */
-interface BaseLocaleBuilder {
+interface BaseLocaleTableValueBuilder {
 
     /** Register localization value to specified [locale]. */
     fun add(locale: Locale, value: String)

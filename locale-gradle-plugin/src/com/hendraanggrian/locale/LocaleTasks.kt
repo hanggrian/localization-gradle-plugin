@@ -1,6 +1,5 @@
 package com.hendraanggrian.locale
 
-import com.google.common.collect.RowSortedTable
 import org.gradle.api.DefaultTask
 import org.gradle.api.logging.LogLevel
 import org.gradle.api.tasks.Input
@@ -22,7 +21,7 @@ import javax.xml.transform.stream.StreamResult
 /** Non-platform specific locale writer task. */
 abstract class LocalizeTask : DefaultTask() {
 
-    @Internal protected lateinit var table: RowSortedTable<String, Locale, String>
+    @Internal protected lateinit var table: LocaleTable
 
     /** Localization resource name, default is `strings`. */
     @Input var resourceName: String? = null
@@ -45,14 +44,14 @@ abstract class LocalizeTask : DefaultTask() {
     fun generate() {
         logger.log(LogLevel.INFO, "Preparing localization")
         outputDir!!.mkdirs()
-
         logger.log(LogLevel.INFO, "Writing localization")
         write()
+        logger.log(LogLevel.INFO, "Localization done")
     }
 
     abstract fun write()
 
-    internal fun setTable(table: RowSortedTable<String, Locale, String>) {
+    internal fun setTable(table: LocaleTable) {
         this.table = table
     }
 
@@ -98,7 +97,8 @@ open class LocalizeAndroidTask : LocalizeTask() {
         setAttribute("indent-number", 4)
     }.newTransformer().apply {
         setOutputProperty(OutputKeys.INDENT, "yes")
-        setOutputProperty(OutputKeys.DOCTYPE_PUBLIC, "yes") // http://stackoverflow.com/a/18251901/3375325
+        // http://stackoverflow.com/a/18251901/3375325
+        setOutputProperty(OutputKeys.DOCTYPE_PUBLIC, "yes")
     }
 
     override fun write() = table.columnKeySet().forEach { locale ->

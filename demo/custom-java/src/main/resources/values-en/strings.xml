@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--Generated file by locale-gradle-plugin, do not edit manually.--><resources>
     <string name="about">About</string>
-    <string name="android_only_text">Android only</string>
     <string name="home">Home</string>
 </resources>
