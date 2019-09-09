@@ -4,7 +4,7 @@ import com.google.common.collect.TreeBasedTable
 import java.util.Locale
 
 /**
- * Locale values configured within [LocaleBuilder] is kept in a Guava table,
+ * Locale configurations are kept in a Guava row sorted table,
  * below are structure example of the table:
  *
  * ```
@@ -20,3 +20,7 @@ import java.util.Locale
  * ```
  */
 internal typealias LocaleTable = TreeBasedTable<String, Locale, String>
+
+internal const val NO_GETTER: String = "Property does not have a getter."
+
+internal fun noGetter(): Nothing = throw UnsupportedOperationException(NO_GETTER)

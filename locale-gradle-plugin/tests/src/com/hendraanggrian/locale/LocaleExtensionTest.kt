@@ -15,9 +15,11 @@ class LocaleExtensionTest {
                 en = "Home"
                 id = "Beranda"
             }
-            "about" {
-                en = "About"
-                id = "Tentang"
+            javaOnly {
+                "about" {
+                    en = "About"
+                    id = "Tentang"
+                }
             }
         }
         val table = ext.javaTable

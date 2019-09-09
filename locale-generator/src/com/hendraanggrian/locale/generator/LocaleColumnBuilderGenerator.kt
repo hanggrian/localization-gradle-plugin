@@ -10,9 +10,9 @@ import com.squareup.kotlinpoet.TypeSpec
 import kotlinx.coroutines.runBlocking
 import java.io.File
 
-object LocaleTableValueBuilderGenerator {
+object LocaleColumnBuilderGenerator {
     private const val PACKAGE_NAME = "com.hendraanggrian.locale"
-    private const val CLASS_NAME = "LocaleTableValueBuilder"
+    private const val CLASS_NAME = "LocaleColumnBuilder"
 
     @JvmStatic
     fun main(@Suppress("UnusedMainParameter") args: Array<String>) {
