@@ -1,11 +1,5 @@
 package com.hendraanggrian.locale
 
-import org.gradle.api.DefaultTask
-import org.gradle.api.tasks.Input
-import org.gradle.api.tasks.Internal
-import org.gradle.api.tasks.Optional
-import org.gradle.api.tasks.OutputDirectory
-import org.gradle.api.tasks.TaskAction
 import java.io.File
 import java.io.FileWriter
 import java.util.Locale
@@ -15,6 +9,12 @@ import javax.xml.transform.OutputKeys
 import javax.xml.transform.TransformerFactory
 import javax.xml.transform.dom.DOMSource
 import javax.xml.transform.stream.StreamResult
+import org.gradle.api.DefaultTask
+import org.gradle.api.tasks.Input
+import org.gradle.api.tasks.Internal
+import org.gradle.api.tasks.Optional
+import org.gradle.api.tasks.OutputDirectory
+import org.gradle.api.tasks.TaskAction
 
 /** Non-platform specific locale writer task. */
 sealed class LocalizeTask : DefaultTask() {
@@ -36,6 +36,11 @@ sealed class LocalizeTask : DefaultTask() {
         set(value) {
             outputDir = project.projectDir.resolve(value)
         }
+
+    init {
+        // always consider this task out of date
+        outputs.upToDateWhen { false }
+    }
 
     @TaskAction
     fun generate() {
@@ -93,13 +98,13 @@ open class LocalizeJavaTask : LocalizeTask() {
 /** Task to write Android string resources files. */
 open class LocalizeAndroidTask : LocalizeTask() {
     private val docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder()
-    private val transformer = TransformerFactory.newInstance().apply {
-        setAttribute("indent-number", 4)
-    }.newTransformer().apply {
-        setOutputProperty(OutputKeys.INDENT, "yes")
-        // http://stackoverflow.com/a/18251901/3375325
-        setOutputProperty(OutputKeys.DOCTYPE_PUBLIC, "yes")
-    }
+    private val transformer = TransformerFactory
+        .newInstance().apply { setAttribute("indent-number", 4) }
+        .newTransformer().apply {
+            setOutputProperty(OutputKeys.INDENT, "yes")
+            // http://stackoverflow.com/a/18251901/3375325
+            setOutputProperty(OutputKeys.DOCTYPE_PUBLIC, "yes")
+        }
 
     override fun write() = table.columnKeySet().forEach { locale ->
         val doc = docBuilder.newDocument().apply { xmlStandalone = true }
