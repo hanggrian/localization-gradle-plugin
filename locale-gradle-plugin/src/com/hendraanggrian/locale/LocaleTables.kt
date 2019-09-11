@@ -5,7 +5,7 @@ import java.util.Locale
 
 /**
  * Locale configurations are kept in a Guava row sorted table,
- * below are structure example of the table:
+ * below are data structure example of the table.
  *
  * ```
  * +----------+----------+---------+
@@ -19,8 +19,10 @@ import java.util.Locale
  * +----------+----------+---------+
  * ```
  */
-internal typealias LocaleTable = TreeBasedTable<String, Locale, String>
+typealias LocaleTable = TreeBasedTable<String, Locale, String>
 
-internal const val NO_GETTER: String = "Property does not have a getter."
+interface LocaleTableScope {
 
-internal fun noGetter(): Nothing = throw UnsupportedOperationException(NO_GETTER)
+    /** Data source containing localization configuration. */
+    val table: LocaleTable
+}
