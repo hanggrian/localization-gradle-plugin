@@ -3,7 +3,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath files('../locale-gradle-plugin-0.1.jar')
+        classpath files('../locale-gradle-plugin-0.2.jar')
         classpath 'com.google.guava:guava:28.1-jre'
     }
 }
@@ -14,14 +14,21 @@ apply plugin: 'com.hendraanggrian.locale'
 group 'com.example'
 version '1.0'
 
-sourceSets['main'].resources.srcDir('res')
+sourceSets {
+    getByName('main') {
+        resources.srcDir('res')
+    }
+    getByName('test') {
+        java.srcDir('tests/src')
+    }
+}
 
 locale {
-    configure('about') {
+    row('about') {
         en = 'About'
         id = 'Tentang'
     }
-    configure('home') {
+    row('home') {
         en = 'Home'
         id = 'Beranda'
     }

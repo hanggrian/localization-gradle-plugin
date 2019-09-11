@@ -3,12 +3,12 @@ package com.hendraanggrian.locale
 import java.util.Locale
 
 /**
- * Second/last phase of localization configuration, used only within [LocaleRowBuilder] scope.
+ * Second/last phase of localization configuration, used only within [LocaleTableRowBuilder] scope.
  *
- * However, this interface often isn't directly used, as [LocaleColumnBuilder] offers convenient
+ * However, this interface often isn't directly used, as [LocaleTableColumnBuilder] offers convenient
  * method on each possible localization.
  */
-interface BaseLocaleColumnBuilder : LocaleTableScope {
+interface BaseLocaleTableColumnBuilder : LocaleTableScope {
 
     /**
      * Register localization value to specified [locale].

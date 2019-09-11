@@ -8,6 +8,7 @@ import org.gradle.kotlin.dsl.invoke
 import org.gradle.kotlin.dsl.provideDelegate
 import org.gradle.kotlin.dsl.registering
 
+/** Gradle localization plugin with Kotlin DSL declaration. */
 class LocalePlugin : Plugin<Project> {
 
     companion object {
@@ -19,7 +20,7 @@ class LocalePlugin : Plugin<Project> {
         project.tasks {
             val localizeJava by registering(LocalizeJavaTask::class) {
                 group = GROUP_NAME
-                setTable(ext.javaTable)
+                table = ext.javaTable
                 if (outputDir == null) {
                     outputDir = project.projectDir.resolve("src/main/resources")
                 }
@@ -32,7 +33,7 @@ class LocalePlugin : Plugin<Project> {
             }
             val localizeAndroid by registering(LocalizeAndroidTask::class) {
                 group = GROUP_NAME
-                setTable(ext.androidTable)
+                table = ext.androidTable
                 if (outputDir == null) {
                     outputDir = project.projectDir.resolve("src/main/resources")
                 }

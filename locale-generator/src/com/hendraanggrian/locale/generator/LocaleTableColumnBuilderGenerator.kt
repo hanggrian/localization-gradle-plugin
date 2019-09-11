@@ -7,12 +7,12 @@ import com.squareup.kotlinpoet.FunSpec
 import com.squareup.kotlinpoet.KModifier
 import com.squareup.kotlinpoet.PropertySpec
 import com.squareup.kotlinpoet.TypeSpec
-import kotlinx.coroutines.runBlocking
 import java.io.File
+import kotlinx.coroutines.runBlocking
 
-object LocaleColumnBuilderGenerator {
+object LocaleTableColumnBuilderGenerator {
     private const val PACKAGE_NAME = "com.hendraanggrian.locale"
-    private const val CLASS_NAME = "LocaleColumnBuilder"
+    private const val CLASS_NAME = "LocaleTableColumnBuilder"
 
     @JvmStatic
     fun main(@Suppress("UnusedMainParameter") args: Array<String>) {
@@ -78,7 +78,7 @@ object LocaleColumnBuilderGenerator {
                                     FunSpec.setterBuilder()
                                         .addParameter("value", String::class)
                                         .addStatement(buildString {
-                                            append("return add(")
+                                            append("return column(")
                                             append(
                                                 when {
                                                     language == "en" && country == null -> "java.util.Locale.ENGLISH"

@@ -21,6 +21,12 @@ import java.util.Locale
  */
 typealias LocaleTable = TreeBasedTable<String, Locale, String>
 
+/**
+ * Superinterface of table builders.
+ *
+ * @see LocaleTableColumnBuilder
+ * @see LocaleTableRowBuilder
+ */
 interface LocaleTableScope {
 
     /** Data source containing localization configuration. */

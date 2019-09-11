@@ -4,7 +4,7 @@ buildscript {
         google()
     }
     dependencies {
-        classpath files('../locale-gradle-plugin-0.1.jar')
+        classpath files('../locale-gradle-plugin-0.2.jar')
         classpath 'com.google.guava:guava:28.1-jre'
         classpath 'com.android.tools.build:gradle:3.5.0'
     }
@@ -20,22 +20,22 @@ allprojects {
 apply plugin: 'com.hendraanggrian.locale'
 
 locale {
-    configure('about') {
+    row('about') {
         en = 'About'
         id = 'Tentang'
     }
-    configure('home') {
+    row('home') {
         en = 'Home'
         id = 'Beranda'
     }
     configureJavaOnly {
-        configure('java_only_text') {
+        row('java_only_text') {
             it.en = 'Java only'
             it.id = 'Hanya di Java'
         }
     }
     configureAndroidOnly {
-        configure('android_only_text') {
+        row('android_only_text') {
             it.en = 'Android only'
             it.id = 'Hanya di Android'
         }

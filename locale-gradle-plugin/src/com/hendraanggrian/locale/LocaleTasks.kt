@@ -1,12 +1,5 @@
 package com.hendraanggrian.locale
 
-import org.gradle.api.DefaultTask
-import org.gradle.api.logging.LogLevel
-import org.gradle.api.tasks.Input
-import org.gradle.api.tasks.Internal
-import org.gradle.api.tasks.Optional
-import org.gradle.api.tasks.OutputDirectory
-import org.gradle.api.tasks.TaskAction
 import java.io.File
 import java.io.FileWriter
 import java.io.IOException
@@ -17,11 +10,18 @@ import javax.xml.transform.OutputKeys
 import javax.xml.transform.TransformerFactory
 import javax.xml.transform.dom.DOMSource
 import javax.xml.transform.stream.StreamResult
+import org.gradle.api.DefaultTask
+import org.gradle.api.logging.LogLevel
+import org.gradle.api.tasks.Input
+import org.gradle.api.tasks.Internal
+import org.gradle.api.tasks.Optional
+import org.gradle.api.tasks.OutputDirectory
+import org.gradle.api.tasks.TaskAction
 
 /** Non-platform specific locale writer task. */
 abstract class LocalizeTask : DefaultTask() {
 
-    @Internal protected lateinit var table: LocaleTable
+    @Internal lateinit var table: LocaleTable
 
     /** Localization resource name, default is `strings`. */
     @Input var resourceName: String? = null
@@ -42,6 +42,9 @@ abstract class LocalizeTask : DefaultTask() {
     @TaskAction
     @Throws(IOException::class)
     fun generate() {
+        require(!resourceName.isNullOrBlank()) { "Resource name cannot be blank" }
+        require(outputDir != null && outputDir!!.isDirectory) { "Output directory is not valid" }
+
         logger.log(LogLevel.INFO, "Preparing localization")
         outputDir!!.mkdirs()
         logger.log(LogLevel.INFO, "Writing localization")
@@ -49,12 +52,10 @@ abstract class LocalizeTask : DefaultTask() {
         logger.log(LogLevel.INFO, "Localization done")
     }
 
+    /** Actual file writing process goes here. */
     abstract fun write()
 
-    internal fun setTable(table: LocaleTable) {
-        this.table = table
-    }
-
+    @Internal
     internal fun Locale.toSuffix(separator: Char): String = buildString {
         if (this@toSuffix == defaultLocale) {
             return@buildString
@@ -65,13 +66,15 @@ abstract class LocalizeTask : DefaultTask() {
         }
     }
 
+    @Internal
     internal fun File.deleteIfExists() {
         if (exists()) {
             delete()
         }
     }
 
-    internal val fileComment: String @Internal get() = "Generated file by locale-gradle-plugin, do not edit manually."
+    internal val fileComment: String
+        @Internal get() = "Generated file by locale-gradle-plugin, do not edit manually."
 }
 
 /** Task to write properties files which will then be used as [java.util.ResourceBundle]. */
