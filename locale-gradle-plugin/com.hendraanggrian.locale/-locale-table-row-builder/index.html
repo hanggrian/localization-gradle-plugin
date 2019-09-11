@@ -1,0 +1,71 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>LocaleTableRowBuilder - locale-gradle-plugin</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">locale-gradle-plugin</a>&nbsp;/&nbsp;<a href="../index.html">com.hendraanggrian.locale</a>&nbsp;/&nbsp;<a href="./index.html">LocaleTableRowBuilder</a><br/>
+<br/>
+<h1>LocaleTableRowBuilder</h1>
+<code><span class="keyword">interface </span><span class="identifier">LocaleTableRowBuilder</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-locale-table-scope/index.html"><span class="identifier">LocaleTableScope</span></a></code>
+<p>Starting point of localization configuration.</p>
+<p><strong>See Also</strong><br/>
+<p><a href="../-locale-extension/index.html">LocaleExtension</a></p>
+<p><a href="../-locale-extension/configure-android-only.html">LocaleExtension.configureAndroidOnly</a></p>
+<p><a href="../-locale-extension/configure-java-only.html">LocaleExtension.configureJavaOnly</a></p>
+</p>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-locale-table-scope/table.html">table</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">table</span><span class="symbol">: </span><a href="../-locale-table.html"><span class="identifier">LocaleTable</span></a></code>
+<p>Data source containing localization configuration.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="invoke.html">invoke</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">operator</span> <span class="keyword">fun </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">.</span><span class="identifier">invoke</span><span class="symbol">(</span><span class="identifier" id="com.hendraanggrian.locale.LocaleTableRowBuilder$invoke(kotlin.String, kotlin.Function1((com.hendraanggrian.locale.LocaleTableColumnBuilder, kotlin.Unit)))/action">action</span><span class="symbol">:</span>&nbsp;<a href="../-locale-table-column-builder/index.html"><span class="identifier">LocaleTableColumnBuilder</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Alias of <a href="row.html">row</a> for Gradle Kotlin DSL.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="row.html">row</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">row</span><span class="symbol">(</span><span class="identifier" id="com.hendraanggrian.locale.LocaleTableRowBuilder$row(kotlin.String, org.gradle.api.Action((com.hendraanggrian.locale.LocaleTableColumnBuilder)))/key">key</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.hendraanggrian.locale.LocaleTableRowBuilder$row(kotlin.String, org.gradle.api.Action((com.hendraanggrian.locale.LocaleTableColumnBuilder)))/action">action</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action</span><span class="symbol">&lt;</span><a href="../-locale-table-column-builder/index.html"><span class="identifier">LocaleTableColumnBuilder</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Marks <a href="row.html#com.hendraanggrian.locale.LocaleTableRowBuilder$row(kotlin.String, org.gradle.api.Action((com.hendraanggrian.locale.LocaleTableColumnBuilder)))/key">key</a> as current row and opening closure to modify that row.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-locale-extension/index.html">LocaleExtension</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">LocaleExtension</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">LocaleTableRowBuilder</span></a></code>
+<p>Gradle extension to configure localization,
+any changes made here will take affect in <a href="../-localize-task/index.html">LocalizeTask</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

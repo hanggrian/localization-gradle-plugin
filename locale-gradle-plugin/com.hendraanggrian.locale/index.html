@@ -13,20 +13,11 @@
 <tbody>
 <tr>
 <td>
-<p><a href="-base-locale-builder/index.html">BaseLocaleBuilder</a></p>
+<p><a href="-base-locale-table-column-builder/index.html">BaseLocaleTableColumnBuilder</a></p>
 </td>
 <td>
-<code><span class="keyword">interface </span><span class="identifier">BaseLocaleBuilder</span></code>
-<p>Base interface used to configure localization content.</p>
-</td>
-</tr>
-<tr>
-<td>
-<p><a href="-locale-builder/index.html">LocaleBuilder</a></p>
-</td>
-<td>
-<code><span class="keyword">interface </span><span class="identifier">LocaleBuilder</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-base-locale-builder/index.html"><span class="identifier">BaseLocaleBuilder</span></a></code>
-<p>Generated interface based on <code>https://github.com/umpirsky/locale-list</code>.</p>
+<code><span class="keyword">interface </span><span class="identifier">BaseLocaleTableColumnBuilder</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-locale-table-scope/index.html"><span class="identifier">LocaleTableScope</span></a></code>
+<p>Second/last phase of localization configuration, used only within <a href="-locale-table-row-builder/index.html">LocaleTableRowBuilder</a> scope.</p>
 </td>
 </tr>
 <tr>
@@ -34,8 +25,9 @@
 <p><a href="-locale-extension/index.html">LocaleExtension</a></p>
 </td>
 <td>
-<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">LocaleExtension</span></code>
-<p>Gradle extension to configure localization, any changes made here will take affect in <a href="-localize-task/index.html">LocalizeTask</a>.</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">LocaleExtension</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-locale-table-row-builder/index.html"><span class="identifier">LocaleTableRowBuilder</span></a></code>
+<p>Gradle extension to configure localization,
+any changes made here will take affect in <a href="-localize-task/index.html">LocalizeTask</a>.</p>
 </td>
 </tr>
 <tr>
@@ -43,7 +35,36 @@
 <p><a href="-locale-plugin/index.html">LocalePlugin</a></p>
 </td>
 <td>
-<code><span class="keyword">class </span><span class="identifier">LocalePlugin</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Plugin</span><span class="symbol">&lt;</span><span class="identifier">Project</span><span class="symbol">&gt;</span></code></td>
+<code><span class="keyword">class </span><span class="identifier">LocalePlugin</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Plugin</span><span class="symbol">&lt;</span><span class="identifier">Project</span><span class="symbol">&gt;</span></code>
+<p>Gradle localization plugin with Kotlin DSL declaration.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-locale-table-column-builder/index.html">LocaleTableColumnBuilder</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">LocaleTableColumnBuilder</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-base-locale-table-column-builder/index.html"><span class="identifier">BaseLocaleTableColumnBuilder</span></a></code>
+<p>Generated interface based on <code>https://github.com/umpirsky/locale-list</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-locale-table-row-builder/index.html">LocaleTableRowBuilder</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">LocaleTableRowBuilder</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-locale-table-scope/index.html"><span class="identifier">LocaleTableScope</span></a></code>
+<p>Starting point of localization configuration.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-locale-table-scope/index.html">LocaleTableScope</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">LocaleTableScope</span></code>
+<p>Superinterface of table builders.</p>
+</td>
 </tr>
 <tr>
 <td>
@@ -60,7 +81,7 @@
 </td>
 <td>
 <code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">LocalizeJavaTask</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-localize-task/index.html"><span class="identifier">LocalizeTask</span></a></code>
-<p>Task to write properties files which will then be used as <a href="http://docs.oracle.com/javase/6/docs/api/java/util/ResourceBundle.html">java.util.ResourceBundle</a>.</p>
+<p>Task to write properties files which will then be used as <a href="https://docs.oracle.com/javase/6/docs/api/java/util/ResourceBundle.html">java.util.ResourceBundle</a>.</p>
 </td>
 </tr>
 <tr>
@@ -70,6 +91,21 @@
 <td>
 <code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">LocalizeTask</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">DefaultTask</span></code>
 <p>Non-platform specific locale writer task.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Type Aliases</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-locale-table.html">LocaleTable</a></p>
+</td>
+<td>
+<code><span class="keyword">typealias </span><span class="identifier">LocaleTable</span>&nbsp;<span class="symbol">=</span>&nbsp;<span class="identifier">TreeBasedTable</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">,</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/util/Locale.html"><span class="identifier">Locale</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code>
+<p>Locale configurations are kept in a Guava row sorted table,
+below are data structure example of the table.</p>
 </td>
 </tr>
 </tbody>

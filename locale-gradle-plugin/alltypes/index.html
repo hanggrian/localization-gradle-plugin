@@ -10,29 +10,53 @@
 <tbody>
 <tr>
 <td>
-<a href="../com.hendraanggrian.locale/-base-locale-builder/index.html">com.hendraanggrian.locale.BaseLocaleBuilder</a></td>
+<a href="../com.hendraanggrian.locale/-base-locale-table-column-builder/index.html">com.hendraanggrian.locale.BaseLocaleTableColumnBuilder</a></td>
 <td>
-<p>Base interface used to configure localization content.</p>
-</td>
-</tr>
-<tr>
-<td>
-<a href="../com.hendraanggrian.locale/-locale-builder/index.html">com.hendraanggrian.locale.LocaleBuilder</a></td>
-<td>
-<p>Generated interface based on <code>https://github.com/umpirsky/locale-list</code>.</p>
+<p>Second/last phase of localization configuration, used only within <a href="../com.hendraanggrian.locale/-locale-table-row-builder/index.html">LocaleTableRowBuilder</a> scope.</p>
 </td>
 </tr>
 <tr>
 <td>
 <a href="../com.hendraanggrian.locale/-locale-extension/index.html">com.hendraanggrian.locale.LocaleExtension</a></td>
 <td>
-<p>Gradle extension to configure localization, any changes made here will take affect in <a href="../com.hendraanggrian.locale/-localize-task/index.html">LocalizeTask</a>.</p>
+<p>Gradle extension to configure localization,
+any changes made here will take affect in <a href="../com.hendraanggrian.locale/-localize-task/index.html">LocalizeTask</a>.</p>
 </td>
 </tr>
 <tr>
 <td>
 <a href="../com.hendraanggrian.locale/-locale-plugin/index.html">com.hendraanggrian.locale.LocalePlugin</a></td>
 <td>
+<p>Gradle localization plugin with Kotlin DSL declaration.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.hendraanggrian.locale/-locale-table.html">com.hendraanggrian.locale.LocaleTable</a></td>
+<td>
+<p>Locale configurations are kept in a Guava row sorted table,
+below are data structure example of the table.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.hendraanggrian.locale/-locale-table-column-builder/index.html">com.hendraanggrian.locale.LocaleTableColumnBuilder</a></td>
+<td>
+<p>Generated interface based on <code>https://github.com/umpirsky/locale-list</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.hendraanggrian.locale/-locale-table-row-builder/index.html">com.hendraanggrian.locale.LocaleTableRowBuilder</a></td>
+<td>
+<p>Starting point of localization configuration.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.hendraanggrian.locale/-locale-table-scope/index.html">com.hendraanggrian.locale.LocaleTableScope</a></td>
+<td>
+<p>Superinterface of table builders.</p>
 </td>
 </tr>
 <tr>
@@ -46,7 +70,7 @@
 <td>
 <a href="../com.hendraanggrian.locale/-localize-java-task/index.html">com.hendraanggrian.locale.LocalizeJavaTask</a></td>
 <td>
-<p>Task to write properties files which will then be used as <a href="http://docs.oracle.com/javase/6/docs/api/java/util/ResourceBundle.html">java.util.ResourceBundle</a>.</p>
+<p>Task to write properties files which will then be used as <a href="https://docs.oracle.com/javase/6/docs/api/java/util/ResourceBundle.html">java.util.ResourceBundle</a>.</p>
 </td>
 </tr>
 <tr>
