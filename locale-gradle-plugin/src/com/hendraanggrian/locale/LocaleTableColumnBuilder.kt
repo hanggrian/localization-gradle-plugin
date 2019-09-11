@@ -1,7 +1,6 @@
 package com.hendraanggrian.locale
 
 import kotlin.Deprecated
-import kotlin.Nothing
 import kotlin.String
 import kotlin.Suppress
 
@@ -5589,10 +5588,4 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
         )
         get() = noGetter()
         set(value) = column("zu", "ZA", value)
-
-    private companion object {
-        const val NO_GETTER: String = "Property does not have a getter."
-
-        fun noGetter(): Nothing = throw UnsupportedOperationException(NO_GETTER)
-    }
 }

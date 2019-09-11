@@ -38,8 +38,10 @@ dependencies {
 tasks {
     register("deploy") {
         dependsOn("build")
-        projectDir.resolve("build/libs")?.listFiles()?.forEach {
-            it.renameTo(File(rootDir.resolve("demo"), it.name))
+        projectDir.resolve("build/libs/$RELEASE_ARTIFACT-$RELEASE_VERSION.jar").let {
+            if (it.exists()) {
+                it.renameTo(rootDir.resolve("demo/${it.name}"))
+            }
         }
     }
 

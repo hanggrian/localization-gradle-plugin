@@ -1,8 +1,13 @@
 package com.hendraanggrian.locale
 
+import org.gradle.api.DefaultTask
+import org.gradle.api.tasks.Input
+import org.gradle.api.tasks.Internal
+import org.gradle.api.tasks.Optional
+import org.gradle.api.tasks.OutputDirectory
+import org.gradle.api.tasks.TaskAction
 import java.io.File
 import java.io.FileWriter
-import java.io.IOException
 import java.util.Locale
 import java.util.Properties
 import javax.xml.parsers.DocumentBuilderFactory
@@ -10,18 +15,11 @@ import javax.xml.transform.OutputKeys
 import javax.xml.transform.TransformerFactory
 import javax.xml.transform.dom.DOMSource
 import javax.xml.transform.stream.StreamResult
-import org.gradle.api.DefaultTask
-import org.gradle.api.logging.LogLevel
-import org.gradle.api.tasks.Input
-import org.gradle.api.tasks.Internal
-import org.gradle.api.tasks.Optional
-import org.gradle.api.tasks.OutputDirectory
-import org.gradle.api.tasks.TaskAction
 
 /** Non-platform specific locale writer task. */
-abstract class LocalizeTask : DefaultTask() {
+sealed class LocalizeTask : DefaultTask() {
 
-    @Internal lateinit var table: LocaleTable
+    @Internal internal lateinit var table: LocaleTable
 
     /** Localization resource name, default is `strings`. */
     @Input var resourceName: String? = null
@@ -34,22 +32,21 @@ abstract class LocalizeTask : DefaultTask() {
 
     /** Convenient method to set output directory from file path, relative to project directory. */
     var outputDirectory: String
-        @OutputDirectory get() = outputDir!!.absolutePath
+        @Deprecated(NO_GETTER, level = DeprecationLevel.ERROR) get() = noGetter()
         set(value) {
             outputDir = project.projectDir.resolve(value)
         }
 
     @TaskAction
-    @Throws(IOException::class)
     fun generate() {
         require(!resourceName.isNullOrBlank()) { "Resource name cannot be blank" }
-        require(outputDir != null && outputDir!!.isDirectory) { "Output directory is not valid" }
+        requireNotNull(outputDir) { "Output directory is null" }
 
-        logger.log(LogLevel.INFO, "Preparing localization")
+        logger.info("Preparing localization...")
         outputDir!!.mkdirs()
-        logger.log(LogLevel.INFO, "Writing localization")
+        logger.info("Writing localization...")
         write()
-        logger.log(LogLevel.INFO, "Localization done")
+        logger.info("Localization done!")
     }
 
     /** Actual file writing process goes here. */
@@ -67,9 +64,9 @@ abstract class LocalizeTask : DefaultTask() {
     }
 
     @Internal
-    internal fun File.deleteIfExists() {
-        if (exists()) {
-            delete()
+    internal fun File.deleteAndInfo() {
+        if (delete()) {
+            logger.info("Deleting old `$path`...")
         }
     }
 
@@ -86,7 +83,7 @@ open class LocalizeJavaTask : LocalizeTask() {
             properties[key] = table[key, locale]
         }
         val outputFile = outputDir!!.resolve("$resourceName${locale.toSuffix('_')}.properties")
-        outputFile.deleteIfExists()
+        outputFile.deleteAndInfo()
         outputFile.outputStream().use {
             properties.store(it, fileComment)
         }
@@ -117,7 +114,7 @@ open class LocalizeAndroidTask : LocalizeTask() {
         val innerOutputDir = outputDir!!.resolve("values${locale.toSuffix('-')}")
         innerOutputDir.mkdirs()
         val outputFile = innerOutputDir.resolve("$resourceName.xml")
-        outputFile.deleteIfExists()
+        outputFile.deleteAndInfo()
         transformer.transform(DOMSource(doc), StreamResult(FileWriter(outputFile)))
     }
 }

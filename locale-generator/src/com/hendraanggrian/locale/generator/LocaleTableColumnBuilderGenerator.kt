@@ -4,7 +4,6 @@ import com.squareup.kotlinpoet.AnnotationSpec
 import com.squareup.kotlinpoet.ClassName
 import com.squareup.kotlinpoet.FileSpec
 import com.squareup.kotlinpoet.FunSpec
-import com.squareup.kotlinpoet.KModifier
 import com.squareup.kotlinpoet.PropertySpec
 import com.squareup.kotlinpoet.TypeSpec
 import java.io.File
@@ -31,23 +30,6 @@ object LocaleTableColumnBuilderGenerator {
                         .build()
                 )
                 .addSuperinterface(ClassName(PACKAGE_NAME, "Base$CLASS_NAME"))
-                .addType(
-                    TypeSpec.companionObjectBuilder()
-                        .addModifiers(KModifier.PRIVATE)
-                        .addProperty(
-                            PropertySpec.builder("NO_GETTER", String::class)
-                                .initializer("%S", "Property does not have a getter.")
-                                .addModifiers(KModifier.CONST)
-                                .build()
-                        )
-                        .addFunction(
-                            FunSpec.builder("noGetter")
-                                .returns(ClassName("kotlin", "Nothing"))
-                                .addStatement("return throw UnsupportedOperationException(NO_GETTER)")
-                                .build()
-                        )
-                        .build()
-                )
                 .apply {
                     locales.forEach { locale ->
                         val split = locale.split('_')

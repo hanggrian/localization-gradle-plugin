@@ -9,8 +9,8 @@ import org.gradle.kotlin.dsl.invoke
  * any changes made here will take affect in [LocalizeTask].
  */
 open class LocaleExtension : LocaleTableRowBuilder by LocaleRowBuilderImpl() {
-    private val javaRowImpl = LocaleRowBuilderImpl()
-    private val androidRowImpl = LocaleRowBuilderImpl()
+    private val javaRow = LocaleRowBuilderImpl()
+    private val androidRow = LocaleRowBuilderImpl()
 
     /** Intended localization file name prefix, must not be empty. */
     var resourceName: String = "strings"
@@ -20,7 +20,7 @@ open class LocaleExtension : LocaleTableRowBuilder by LocaleRowBuilderImpl() {
 
     /** Opening closure to populate Java-only localization table. */
     fun configureJavaOnly(action: Action<LocaleTableRowBuilder>): Unit =
-        action(javaRowImpl)
+        action(javaRow)
 
     /** Alias of [configureJavaOnly] for Gradle Kotlin DSL. */
     fun javaOnly(action: LocaleTableRowBuilder.() -> Unit): Unit =
@@ -28,32 +28,32 @@ open class LocaleExtension : LocaleTableRowBuilder by LocaleRowBuilderImpl() {
 
     /** Opening closure to populate Android-only localization table. */
     fun configureAndroidOnly(action: Action<LocaleTableRowBuilder>): Unit =
-        action(androidRowImpl)
+        action(androidRow)
 
     /** Alias of [configureAndroidOnly] for Gradle Kotlin DSL. */
     fun androidOnly(action: LocaleTableRowBuilder.() -> Unit): Unit =
         configureAndroidOnly(action)
 
     internal val javaTable: LocaleTable
-        get() = LocaleTable.create(table).apply { putAll(javaRowImpl.table) }
+        get() = LocaleTable.create(table).apply { putAll(javaRow.table) }
 
     internal val androidTable: LocaleTable
-        get() = LocaleTable.create(table).apply { putAll(androidRowImpl.table) }
+        get() = LocaleTable.create(table).apply { putAll(androidRow.table) }
 
     private class LocaleRowBuilderImpl : LocaleTableRowBuilder {
-        private val columnImpl = LocaleColumnBuilderImpl()
+        private val column = LocaleColumnBuilderImpl()
 
         override val table: LocaleTable
-            get() = columnImpl.table
+            get() = column.table
 
         override fun row(key: String, action: Action<LocaleTableColumnBuilder>) {
-            columnImpl.currentRow = key
-            action(columnImpl)
+            column.currentRow = key
+            action(column)
         }
     }
 
     private class LocaleColumnBuilderImpl : LocaleTableColumnBuilder {
-        private companion object {
+        companion object {
             private val LOCALE_MAP: MutableMap<String, Locale> = mutableMapOf()
         }
 
