@@ -57,9 +57,7 @@ open class LocaleExtension : LocaleTableRowBuilder by LocaleRowBuilderImpl() {
             private val LOCALE_MAP: MutableMap<String, Locale> = mutableMapOf()
         }
 
-        override val table: LocaleTable = LocaleTable.create(
-            { o1, o2 -> o1.compareTo(o2) },
-            { o1, o2 -> o1.language.compareTo(o2.language) })
+        override val table: LocaleTable = localeTableOf()
         lateinit var currentRow: String
 
         override fun column(locale: Locale, value: String) {

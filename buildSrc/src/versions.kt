@@ -6,6 +6,7 @@ internal const val VERSION_KTOR = "1.2.4"
 internal const val VERSION_KOTLINPOET = "1.3.0"
 internal const val VERSION_GUAVA = "28.1"
 
+internal const val VERSION_TRUTH = "1.0"
 internal const val VERSION_DOKKA = "0.9.18"
 internal const val VERSION_BINTRAY_RELEASE = "0.9.1"
 internal const val VERSION_GIT_PUBLISH = "0.3.3"

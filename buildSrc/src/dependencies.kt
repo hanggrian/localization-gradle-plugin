@@ -10,6 +10,8 @@ fun DependencyHandler.kotlinx(
 
 fun DependencyHandler.kotlinPoet() = "com.squareup:kotlinpoet:$VERSION_KOTLINPOET"
 
+fun DependencyHandler.truth() = "com.google.truth:truth:$VERSION_TRUTH"
+
 fun DependencyHandler.dokka() = "org.jetbrains.dokka:dokka-gradle-plugin:$VERSION_DOKKA"
 inline val PluginDependenciesSpec.dokka get() = id("org.jetbrains.dokka")
 

@@ -38,4 +38,5 @@ tasks.withType(com.hendraanggrian.locale.LocalizeJavaTask) {
     resourceName 'my_strings'
     defaultLocale new Locale("id")
     outputDirectory 'res'
+    sortRows false
 }
