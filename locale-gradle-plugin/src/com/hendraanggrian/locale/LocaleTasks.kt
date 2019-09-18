@@ -40,7 +40,7 @@ sealed class LocalizeTask : DefaultTask() {
 
     /** Convenient method to set output directory from file path, relative to project directory. */
     var outputDirectory: String
-        @Internal @Deprecated(NO_GETTER, level = DeprecationLevel.ERROR) get() = noGetter()
+        @OutputDirectory get() = outputDir!!.absolutePath
         set(value) {
             outputDir = project.projectDir.resolve(value)
         }
@@ -109,7 +109,7 @@ sealed class LocalizeTask : DefaultTask() {
 open class LocalizeJavaTask : LocalizeTask() {
 
     override fun write() = table.columnKeySet().forEach { locale ->
-        val properties = if (sortRows) SortedProperties() else Properties()
+        val properties = SortedProperties()
         forEachRow { key ->
             properties[key] = table[key, locale]
         }
@@ -121,8 +121,9 @@ open class LocalizeJavaTask : LocalizeTask() {
     }
 
     /**
-     * Sorted properties that only works on Java 8.
-     * Obtained from [StackOverflow](https://stackoverflow.com/a/52127284/1567541).
+     * Sorted properties that reportedly only works on Java 8.
+     *
+     * @see [StackOverflow](https://stackoverflow.com/a/52127284/1567541)
      */
     private class SortedProperties : Properties() {
         companion object {

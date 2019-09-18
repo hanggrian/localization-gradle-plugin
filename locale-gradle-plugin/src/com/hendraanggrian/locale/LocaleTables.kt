@@ -21,6 +21,10 @@ import java.util.Locale
  */
 typealias LocaleTable = TreeBasedTable<String, Locale, String>
 
+internal fun localeTableOf(): LocaleTable = LocaleTable.create(
+    { o1, o2 -> o1.compareTo(o2) },
+    { o1, o2 -> o1.language.compareTo(o2.language) })
+
 /**
  * Superinterface of table builders.
  *
