@@ -13,6 +13,7 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
+        mavenCentral()
         maven("https://kotlin.bintray.com/kotlinx")
     }
     tasks {

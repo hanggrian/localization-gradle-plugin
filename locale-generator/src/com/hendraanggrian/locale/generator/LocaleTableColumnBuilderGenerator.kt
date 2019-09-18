@@ -7,8 +7,8 @@ import com.squareup.kotlinpoet.FunSpec
 import com.squareup.kotlinpoet.KModifier
 import com.squareup.kotlinpoet.PropertySpec
 import com.squareup.kotlinpoet.TypeSpec
-import kotlinx.coroutines.runBlocking
 import java.io.File
+import kotlinx.coroutines.runBlocking
 
 object LocaleTableColumnBuilderGenerator {
     private const val PACKAGE_NAME = "com.hendraanggrian.locale"
