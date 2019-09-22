@@ -8,7 +8,7 @@ fun DependencyHandler.kotlinx(
     version: String? = null
 ) = "org.jetbrains.kotlinx:kotlinx-$module${version?.let { ":$it" } ?: ""}"
 
-fun DependencyHandler.kotlinPoet() = "com.squareup:kotlinpoet:$VERSION_KOTLINPOET"
+fun DependencyHandler.kotlinPoetKTX() = "com.hendraanggrian:kotlinpoet-ktx:$VERSION_KOTLINPOET_KTX"
 
 fun DependencyHandler.truth() = "com.google.truth:truth:$VERSION_TRUTH"
 
