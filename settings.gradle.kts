@@ -1,7 +1,7 @@
 include(RELEASE_ARTIFACT)
 include("locale-generator")
 include("website")
-includeDir("demo")
+includeDir("integration-tests")
 
 fun includeDir(dir: String) = file(dir)
     .listFiles()

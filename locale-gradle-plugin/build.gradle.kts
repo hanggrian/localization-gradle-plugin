@@ -1,7 +1,7 @@
 plugins {
     `java-gradle-plugin`
     `kotlin-dsl`
-    dokka
+    dokka()
     `bintray-release`
 }
 
@@ -26,10 +26,10 @@ val ktlint by configurations.registering
 
 dependencies {
     implementation(kotlin("stdlib", VERSION_KOTLIN))
-    implementation(guava())
+    implementation(google("guava", VERSION_GUAVA))
 
     testImplementation(kotlin("test-junit"))
-    testImplementation(truth())
+    testImplementation(google("truth", VERSION_TRUTH))
 
     ktlint {
         invoke(ktlint())
