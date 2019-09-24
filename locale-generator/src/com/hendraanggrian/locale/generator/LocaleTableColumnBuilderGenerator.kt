@@ -5,6 +5,7 @@ import com.squareup.kotlinpoet.ClassName
 import com.squareup.kotlinpoet.KModifier
 import com.squareup.kotlinpoet.NOTHING
 import java.io.File
+import kotlin.system.exitProcess
 import kotlinx.coroutines.runBlocking
 
 object LocaleTableColumnBuilderGenerator {
@@ -13,12 +14,13 @@ object LocaleTableColumnBuilderGenerator {
 
     @JvmStatic
     fun main(@Suppress("UnusedMainParameter") args: Array<String>) {
-        println("fetching...")
+        println("Fetching...")
         val locales = runBlocking { GitHubApi.getLocales() }
 
-        println("writing...")
+        println("Writing...")
         buildFile(PACKAGE_NAME, CLASS_NAME) {
             indentCount = 4
+            addImport("java.util", "Locale")
             types.addInterface(CLASS_NAME) {
                 kdoc.append("Generated interface based on `https://github.com/umpirsky/locale-list`.")
                 annotations.add<Suppress> {
@@ -43,13 +45,15 @@ object LocaleTableColumnBuilderGenerator {
                     val country = split.getOrNull(1)
                     properties.add<String>(locale) {
                         isMutable = true
-                        kdoc.append(buildString {
+                        kdoc {
                             append("Set locale value with language `$language`")
-                            when (country) {
-                                null -> append('.')
-                                else -> append(" and country `$country`.")
-                            }
-                        })
+                            append(
+                                when (country) {
+                                    null -> "."
+                                    else -> " and country `$country`."
+                                }
+                            )
+                        }
                         getter {
                             annotations.add<Deprecated> {
                                 addMember("NO_GETTER")
@@ -59,40 +63,39 @@ object LocaleTableColumnBuilderGenerator {
                         }
                         setter {
                             parameters.add<String>("value")
-                            appendln(buildString {
-                                append("return column(")
-                                append(
-                                    when {
-                                        language == "en" && country == null -> "java.util.Locale.ENGLISH"
-                                        language == "fr" && country == null -> "java.util.Locale.FRENCH"
-                                        language == "de" && country == null -> "java.util.Locale.GERMAN"
-                                        language == "it" && country == null -> "java.util.Locale.ITALIAN"
-                                        language == "ja" && country == null -> "java.util.Locale.JAPANESE"
-                                        language == "ko" && country == null -> "java.util.Locale.KOREAN"
-                                        language == "zh" && country == null -> "java.util.Locale.CHINESE"
-                                        language == "zh" && country == "CN" -> "java.util.Locale.CHINA"
-                                        language == "zh" && country == "TW" -> "java.util.Locale.TAIWAN"
-                                        language == "fr" && country == "FR" -> "java.util.Locale.FRANCE"
-                                        language == "de" && country == "DE" -> "java.util.Locale.GERMANY"
-                                        language == "it" && country == "IT" -> "java.util.Locale.ITALY"
-                                        language == "ja" && country == "JP" -> "java.util.Locale.JAPAN"
-                                        language == "ko" && country == "KR" -> "java.util.Locale.KOREA"
-                                        language == "en" && country == "GB" -> "java.util.Locale.UK"
-                                        language == "en" && country == "US" -> "java.util.Locale.US"
-                                        language == "en" && country == "CA" -> "java.util.Locale.CANADA"
-                                        language == "fr" && country == "CA" -> "java.util.Locale.CANADA_FRENCH"
-                                        country == null -> "\"$language\", null"
-                                        else -> "\"$language\", \"$country\""
-                                    }
-                                )
-                                append(", value)")
-                            })
+                            append("return column(")
+                            append(
+                                when {
+                                    language == "en" && country == null -> "Locale.ENGLISH"
+                                    language == "fr" && country == null -> "Locale.FRENCH"
+                                    language == "de" && country == null -> "Locale.GERMAN"
+                                    language == "it" && country == null -> "Locale.ITALIAN"
+                                    language == "ja" && country == null -> "Locale.JAPANESE"
+                                    language == "ko" && country == null -> "Locale.KOREAN"
+                                    language == "zh" && country == null -> "Locale.CHINESE"
+                                    language == "zh" && country == "CN" -> "Locale.CHINA"
+                                    language == "zh" && country == "TW" -> "Locale.TAIWAN"
+                                    language == "fr" && country == "FR" -> "Locale.FRANCE"
+                                    language == "de" && country == "DE" -> "Locale.GERMANY"
+                                    language == "it" && country == "IT" -> "Locale.ITALY"
+                                    language == "ja" && country == "JP" -> "Locale.JAPAN"
+                                    language == "ko" && country == "KR" -> "Locale.KOREA"
+                                    language == "en" && country == "GB" -> "Locale.UK"
+                                    language == "en" && country == "US" -> "Locale.US"
+                                    language == "en" && country == "CA" -> "Locale.CANADA"
+                                    language == "fr" && country == "CA" -> "Locale.CANADA_FRENCH"
+                                    country == null -> "\"$language\", null"
+                                    else -> "\"$language\", \"$country\""
+                                }
+                            )
+                            append(", value)\n")
                         }
                     }
                 }
             }
         }.writeTo(File("locale-gradle-plugin/src"))
 
-        println("done!")
+        println("Done!")
+        exitProcess(0)
     }
 }

@@ -1,5 +1,6 @@
 package com.hendraanggrian.locale
 
+import java.util.Locale
 import kotlin.Deprecated
 import kotlin.Nothing
 import kotlin.String
@@ -759,7 +760,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column(java.util.Locale.GERMAN, value)
+        set(value) = column(Locale.GERMAN, value)
 
     /**
      * Set locale value with language `de` and country `AT`.
@@ -803,7 +804,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column(java.util.Locale.GERMANY, value)
+        set(value) = column(Locale.GERMANY, value)
 
     /**
      * Set locale value with language `de` and country `LI`.
@@ -924,7 +925,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column(java.util.Locale.ENGLISH, value)
+        set(value) = column(Locale.ENGLISH, value)
 
     /**
      * Set locale value with language `en` and country `AG`.
@@ -1045,7 +1046,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column(java.util.Locale.CANADA, value)
+        set(value) = column(Locale.CANADA, value)
 
     /**
      * Set locale value with language `en` and country `CC`.
@@ -1166,7 +1167,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column(java.util.Locale.UK, value)
+        set(value) = column(Locale.UK, value)
 
     /**
      * Set locale value with language `en` and country `GD`.
@@ -1837,7 +1838,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column(java.util.Locale.US, value)
+        set(value) = column(Locale.US, value)
 
     /**
      * Set locale value with language `en` and country `VC`.
@@ -2409,7 +2410,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column(java.util.Locale.FRENCH, value)
+        set(value) = column(Locale.FRENCH, value)
 
     /**
      * Set locale value with language `fr` and country `BE`.
@@ -2475,7 +2476,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column(java.util.Locale.CANADA_FRENCH, value)
+        set(value) = column(Locale.CANADA_FRENCH, value)
 
     /**
      * Set locale value with language `fr` and country `CD`.
@@ -2574,7 +2575,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column(java.util.Locale.FRANCE, value)
+        set(value) = column(Locale.FRANCE, value)
 
     /**
      * Set locale value with language `fr` and country `GA`.
@@ -3311,7 +3312,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column(java.util.Locale.ITALIAN, value)
+        set(value) = column(Locale.ITALIAN, value)
 
     /**
      * Set locale value with language `it` and country `CH`.
@@ -3333,7 +3334,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column(java.util.Locale.ITALY, value)
+        set(value) = column(Locale.ITALY, value)
 
     /**
      * Set locale value with language `it` and country `SM`.
@@ -3355,7 +3356,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column(java.util.Locale.JAPANESE, value)
+        set(value) = column(Locale.JAPANESE, value)
 
     /**
      * Set locale value with language `ja` and country `JP`.
@@ -3366,7 +3367,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column(java.util.Locale.JAPAN, value)
+        set(value) = column(Locale.JAPAN, value)
 
     /**
      * Set locale value with language `ka`.
@@ -3509,7 +3510,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column(java.util.Locale.KOREAN, value)
+        set(value) = column(Locale.KOREAN, value)
 
     /**
      * Set locale value with language `ko` and country `KP`.
@@ -3531,7 +3532,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column(java.util.Locale.KOREA, value)
+        set(value) = column(Locale.KOREA, value)
 
     /**
      * Set locale value with language `ks`.
@@ -5511,7 +5512,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column(java.util.Locale.CHINESE, value)
+        set(value) = column(Locale.CHINESE, value)
 
     /**
      * Set locale value with language `zh` and country `CN`.
@@ -5522,7 +5523,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column(java.util.Locale.CHINA, value)
+        set(value) = column(Locale.CHINA, value)
 
     /**
      * Set locale value with language `zh` and country `HK`.
@@ -5566,7 +5567,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column(java.util.Locale.TAIWAN, value)
+        set(value) = column(Locale.TAIWAN, value)
 
     /**
      * Set locale value with language `zu`.
