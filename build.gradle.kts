@@ -15,7 +15,6 @@ allprojects {
         jcenter()
         mavenCentral()
         maven("https://kotlin.bintray.com/kotlinx")
-        maven("https://dl.bintray.com/hendraanggrian/maven")
     }
     tasks {
         withType<Delete> {

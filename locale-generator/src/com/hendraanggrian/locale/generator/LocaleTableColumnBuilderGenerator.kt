@@ -1,15 +1,9 @@
 package com.hendraanggrian.locale.generator
 
 import com.hendraanggrian.kotlinpoet.buildFile
-import com.squareup.kotlinpoet.AnnotationSpec
 import com.squareup.kotlinpoet.ClassName
-import com.squareup.kotlinpoet.FileSpec
-import com.squareup.kotlinpoet.FunSpec
 import com.squareup.kotlinpoet.KModifier
 import com.squareup.kotlinpoet.NOTHING
-import com.squareup.kotlinpoet.PropertySpec
-import com.squareup.kotlinpoet.STRING
-import com.squareup.kotlinpoet.TypeSpec
 import java.io.File
 import kotlinx.coroutines.runBlocking
 
@@ -34,7 +28,7 @@ object LocaleTableColumnBuilderGenerator {
                 addSuperInterface(ClassName(PACKAGE_NAME, "Base$CLASS_NAME"))
                 types.addCompanionObject {
                     addModifiers(KModifier.PRIVATE)
-                    properties.add("NO_GETTER", STRING) {
+                    properties.add<String>("NO_GETTER") {
                         initializer("%S", "Property does not have a getter.")
                         addModifiers(KModifier.CONST)
                     }
@@ -47,7 +41,7 @@ object LocaleTableColumnBuilderGenerator {
                     val split = locale.split('_')
                     val language = split[0]
                     val country = split.getOrNull(1)
-                    properties.add(locale, STRING) {
+                    properties.add<String>(locale) {
                         isMutable = true
                         kdoc.append(buildString {
                             append("Set locale value with language `$language`")
@@ -64,7 +58,7 @@ object LocaleTableColumnBuilderGenerator {
                             appendln("return noGetter()")
                         }
                         setter {
-                            parameters.add("value", STRING)
+                            parameters.add<String>("value")
                             appendln(buildString {
                                 append("return column(")
                                 append(
