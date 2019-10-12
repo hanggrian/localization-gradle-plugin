@@ -1,6 +1,4 @@
-import org.gradle.api.artifacts.dsl.DependencyHandler
+private const val VERSION_KTLINT = "0.34.2"
 
-internal const val VERSION_KTLINT = "0.34.2"
-
-fun DependencyHandler.ktlint(): String =
+fun Dependencies.ktlint() =
     "com.pinterest:ktlint:$VERSION_KTLINT"
