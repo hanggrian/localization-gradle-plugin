@@ -15,39 +15,50 @@
 <tbody>
 <tr>
 <td>
-<p><a href="default-locale.html">defaultLocale</a></p>
+<h4><a href="default-locale.html">defaultLocale</a></h4>
 </td>
 <td>
-<code><span class="keyword">var </span><span class="identifier">defaultLocale</span><span class="symbol">: </span><a href="https://docs.oracle.com/javase/6/docs/api/java/util/Locale.html"><span class="identifier">Locale</span></a><span class="symbol">?</span></code>
 <p>Default locale, when matching localization is found, file name suffix is removed.</p>
-</td>
+<code><span class="keyword">var </span><span class="identifier">defaultLocale</span><span class="symbol">: </span><a href="https://docs.oracle.com/javase/6/docs/api/java/util/Locale.html"><span class="identifier">Locale</span></a><span class="symbol">?</span></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="output-dir.html">outputDir</a></p>
+<h4><a href="output-dir.html">outputDir</a></h4>
 </td>
 <td>
-<code><span class="keyword">var </span><span class="identifier">outputDir</span><span class="symbol">: </span><a href="https://docs.oracle.com/javase/6/docs/api/java/io/File.html"><span class="identifier">File</span></a><span class="symbol">?</span></code>
 <p>Path that localization files will be generated to.</p>
-</td>
+<code><span class="keyword">var </span><span class="identifier">outputDir</span><span class="symbol">: </span><a href="https://docs.oracle.com/javase/6/docs/api/java/io/File.html"><span class="identifier">File</span></a><span class="symbol">?</span></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="output-directory.html">outputDirectory</a></p>
+<h4><a href="output-directory.html">outputDirectory</a></h4>
 </td>
 <td>
-<code><span class="keyword">var </span><span class="identifier">outputDirectory</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
 <p>Convenient method to set output directory from file path, relative to project directory.</p>
-</td>
+<code><span class="keyword">var </span><span class="identifier">outputDirectory</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="resource-name.html">resourceName</a></p>
+<h4><a href="resource-name.html">resourceName</a></h4>
 </td>
 <td>
-<code><span class="keyword">var </span><span class="identifier">resourceName</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
 <p>Localization resource name, default is <code>strings</code>.</p>
+<code><span class="keyword">var </span><span class="identifier">resourceName</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="sort-rows.html">sortRows</a></h4>
 </td>
+<td>
+<p>When enabled, generated localization will maintain its alphabetical order.</p>
+<code><span class="keyword">var </span><span class="identifier">sortRows</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="table.html">table</a></h4>
+</td>
+<td>
+<code><span class="keyword">lateinit</span> <span class="keyword">var </span><span class="identifier">table</span><span class="symbol">: </span><a href="../-locale-table.html"><span class="identifier">LocaleTable</span></a></code></td>
 </tr>
 </tbody>
 </table>
@@ -56,19 +67,50 @@
 <tbody>
 <tr>
 <td>
-<p><a href="generate.html">generate</a></p>
+<h4><a href="delete-if-exists.html">deleteIfExists</a></h4>
+</td>
+<td>
+<p>Delete old file, if necessary.</p>
+<code><span class="keyword">fun </span><a href="https://docs.oracle.com/javase/6/docs/api/java/io/File.html"><span class="identifier">File</span></a><span class="symbol">.</span><span class="identifier">deleteIfExists</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="for-each-row.html">forEachRow</a></h4>
+</td>
+<td>
+<p>Iterate each row, sorted if necessary.</p>
+<code><span class="keyword">fun </span><span class="identifier">forEachRow</span><span class="symbol">(</span><span class="identifier" id="com.hendraanggrian.locale.LocalizeTask$forEachRow(kotlin.Function1((kotlin.String, kotlin.Unit)))/action">action</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="generate.html">generate</a></h4>
 </td>
 <td>
 <code><span class="keyword">fun </span><span class="identifier">generate</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="write.html">write</a></p>
+<h4><a href="get-file-comment.html">getFileComment</a></h4>
 </td>
 <td>
-<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">write</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
-<p>Actual file writing process goes here.</p>
+<p>Top-level file comment with optional timestamp. Properties file already have a timestamp.</p>
+<code><span class="keyword">fun </span><span class="identifier">getFileComment</span><span class="symbol">(</span><span class="identifier" id="com.hendraanggrian.locale.LocalizeTask$getFileComment(kotlin.Boolean)/withTimestamp">withTimestamp</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-suffix.html">toSuffix</a></h4>
 </td>
+<td>
+<p>File name suffix. For example, <code>-en</code> and <code>-id</code> considering <code>-</code> is the <a href="to-suffix.html#com.hendraanggrian.locale.LocalizeTask$toSuffix(java.util.Locale, kotlin.Char)/separator">separator</a>.</p>
+<code><span class="keyword">fun </span><a href="https://docs.oracle.com/javase/6/docs/api/java/util/Locale.html"><span class="identifier">Locale</span></a><span class="symbol">.</span><span class="identifier">toSuffix</span><span class="symbol">(</span><span class="identifier" id="com.hendraanggrian.locale.LocalizeTask$toSuffix(java.util.Locale, kotlin.Char)/separator">separator</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char/index.html"><span class="identifier">Char</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write.html">write</a></h4>
+</td>
+<td>
+<p>Actual file writing process goes here.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">write</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 </tbody>
 </table>
@@ -77,21 +119,19 @@
 <tbody>
 <tr>
 <td>
-<p><a href="../-localize-android-task/index.html">LocalizeAndroidTask</a></p>
+<h4><a href="../-localize-android-task/index.html">LocalizeAndroidTask</a></h4>
 </td>
 <td>
-<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">LocalizeAndroidTask</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">LocalizeTask</span></a></code>
-<p>Task to write Android string resources files.</p>
-</td>
+<p>Task to write Android string resources XML files.</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">LocalizeAndroidTask</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">LocalizeTask</span></a></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="../-localize-java-task/index.html">LocalizeJavaTask</a></p>
+<h4><a href="../-localize-java-task/index.html">LocalizeJavaTask</a></h4>
 </td>
 <td>
-<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">LocalizeJavaTask</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">LocalizeTask</span></a></code>
 <p>Task to write properties files which will then be used as <a href="https://docs.oracle.com/javase/6/docs/api/java/util/ResourceBundle.html">java.util.ResourceBundle</a>.</p>
-</td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">LocalizeJavaTask</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">LocalizeTask</span></a></code></td>
 </tr>
 </tbody>
 </table>

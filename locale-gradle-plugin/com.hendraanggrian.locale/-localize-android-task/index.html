@@ -9,59 +9,17 @@
 <br/>
 <h1>LocalizeAndroidTask</h1>
 <code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">LocalizeAndroidTask</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-localize-task/index.html"><span class="identifier">LocalizeTask</span></a></code>
-<p>Task to write Android string resources files.</p>
+<p>Task to write Android string resources XML files.</p>
 <h3>Constructors</h3>
 <table>
 <tbody>
 <tr>
 <td>
-<p><a href="-init-.html">&lt;init&gt;</a></p>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
 </td>
 <td>
-<code><span class="identifier">LocalizeAndroidTask</span><span class="symbol">(</span><span class="symbol">)</span></code>
-<p>Task to write Android string resources files.</p>
-</td>
-</tr>
-</tbody>
-</table>
-<h3>Inherited Properties</h3>
-<table>
-<tbody>
-<tr>
-<td>
-<p><a href="../-localize-task/default-locale.html">defaultLocale</a></p>
-</td>
-<td>
-<code><span class="keyword">var </span><span class="identifier">defaultLocale</span><span class="symbol">: </span><a href="https://docs.oracle.com/javase/6/docs/api/java/util/Locale.html"><span class="identifier">Locale</span></a><span class="symbol">?</span></code>
-<p>Default locale, when matching localization is found, file name suffix is removed.</p>
-</td>
-</tr>
-<tr>
-<td>
-<p><a href="../-localize-task/output-dir.html">outputDir</a></p>
-</td>
-<td>
-<code><span class="keyword">var </span><span class="identifier">outputDir</span><span class="symbol">: </span><a href="https://docs.oracle.com/javase/6/docs/api/java/io/File.html"><span class="identifier">File</span></a><span class="symbol">?</span></code>
-<p>Path that localization files will be generated to.</p>
-</td>
-</tr>
-<tr>
-<td>
-<p><a href="../-localize-task/output-directory.html">outputDirectory</a></p>
-</td>
-<td>
-<code><span class="keyword">var </span><span class="identifier">outputDirectory</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
-<p>Convenient method to set output directory from file path, relative to project directory.</p>
-</td>
-</tr>
-<tr>
-<td>
-<p><a href="../-localize-task/resource-name.html">resourceName</a></p>
-</td>
-<td>
-<code><span class="keyword">var </span><span class="identifier">resourceName</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
-<p>Localization resource name, default is <code>strings</code>.</p>
-</td>
+<p>Task to write Android string resources XML files.</p>
+<code><span class="identifier">LocalizeAndroidTask</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
 </tr>
 </tbody>
 </table>
@@ -70,24 +28,11 @@
 <tbody>
 <tr>
 <td>
-<p><a href="write.html">write</a></p>
+<h4><a href="write.html">write</a></h4>
 </td>
 <td>
-<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">write</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
 <p>Actual file writing process goes here.</p>
-</td>
-</tr>
-</tbody>
-</table>
-<h3>Inherited Functions</h3>
-<table>
-<tbody>
-<tr>
-<td>
-<p><a href="../-localize-task/generate.html">generate</a></p>
-</td>
-<td>
-<code><span class="keyword">fun </span><span class="identifier">generate</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">write</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 </tbody>
 </table>

@@ -12,33 +12,18 @@
 <p>Second/last phase of localization configuration, used only within <a href="../-locale-table-row-builder/index.html">LocaleTableRowBuilder</a> scope.</p>
 <p>However, this interface often isn't directly used, as <a href="../-locale-table-column-builder/index.html">LocaleTableColumnBuilder</a> offers convenient
 method on each possible localization.</p>
-<h3>Inherited Properties</h3>
-<table>
-<tbody>
-<tr>
-<td>
-<p><a href="../-locale-table-scope/table.html">table</a></p>
-</td>
-<td>
-<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">table</span><span class="symbol">: </span><a href="../-locale-table.html"><span class="identifier">LocaleTable</span></a></code>
-<p>Data source containing localization configuration.</p>
-</td>
-</tr>
-</tbody>
-</table>
 <h3>Functions</h3>
 <table>
 <tbody>
 <tr>
 <td>
-<p><a href="column.html">column</a></p>
+<h4><a href="column.html">column</a></h4>
 </td>
 <td>
-<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">column</span><span class="symbol">(</span><span class="identifier" id="com.hendraanggrian.locale.BaseLocaleTableColumnBuilder$column(java.util.Locale, kotlin.String)/locale">locale</span><span class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/util/Locale.html"><span class="identifier">Locale</span></a><span class="symbol">, </span><span class="identifier" id="com.hendraanggrian.locale.BaseLocaleTableColumnBuilder$column(java.util.Locale, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
 <p>Register localization value to specified <a href="column.html#com.hendraanggrian.locale.BaseLocaleTableColumnBuilder$column(java.util.Locale, kotlin.String)/locale">locale</a>.</p>
-<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">column</span><span class="symbol">(</span><span class="identifier" id="com.hendraanggrian.locale.BaseLocaleTableColumnBuilder$column(kotlin.String, kotlin.String, kotlin.String)/language">language</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.hendraanggrian.locale.BaseLocaleTableColumnBuilder$column(kotlin.String, kotlin.String, kotlin.String)/country">country</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.hendraanggrian.locale.BaseLocaleTableColumnBuilder$column(kotlin.String, kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">column</span><span class="symbol">(</span><span class="identifier" id="com.hendraanggrian.locale.BaseLocaleTableColumnBuilder$column(java.util.Locale, kotlin.String)/locale">locale</span><span class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/util/Locale.html"><span class="identifier">Locale</span></a><span class="symbol">, </span><span class="identifier" id="com.hendraanggrian.locale.BaseLocaleTableColumnBuilder$column(java.util.Locale, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
 <p>Register localization value to locale with specified <a href="column.html#com.hendraanggrian.locale.BaseLocaleTableColumnBuilder$column(kotlin.String, kotlin.String, kotlin.String)/language">language</a> and <a href="column.html#com.hendraanggrian.locale.BaseLocaleTableColumnBuilder$column(kotlin.String, kotlin.String, kotlin.String)/country">country</a>.</p>
-</td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">column</span><span class="symbol">(</span><span class="identifier" id="com.hendraanggrian.locale.BaseLocaleTableColumnBuilder$column(kotlin.String, kotlin.String, kotlin.String)/language">language</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.hendraanggrian.locale.BaseLocaleTableColumnBuilder$column(kotlin.String, kotlin.String, kotlin.String)/country">country</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.hendraanggrian.locale.BaseLocaleTableColumnBuilder$column(kotlin.String, kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 </tbody>
 </table>
@@ -47,12 +32,11 @@ method on each possible localization.</p>
 <tbody>
 <tr>
 <td>
-<p><a href="../-locale-table-column-builder/index.html">LocaleTableColumnBuilder</a></p>
+<h4><a href="../-locale-table-column-builder/index.html">LocaleTableColumnBuilder</a></h4>
 </td>
 <td>
-<code><span class="keyword">interface </span><span class="identifier">LocaleTableColumnBuilder</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">BaseLocaleTableColumnBuilder</span></a></code>
 <p>Generated interface based on <code>https://github.com/umpirsky/locale-list</code>.</p>
-</td>
+<code><span class="keyword">interface </span><span class="identifier">LocaleTableColumnBuilder</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">BaseLocaleTableColumnBuilder</span></a></code></td>
 </tr>
 </tbody>
 </table>
