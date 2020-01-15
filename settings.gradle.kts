@@ -1,4 +1,4 @@
-include(RELEASE_ARTIFACT)
+include("locale-gradle-plugin")
 include("locale-generator")
 include("website")
 includeDir("integration-tests")
