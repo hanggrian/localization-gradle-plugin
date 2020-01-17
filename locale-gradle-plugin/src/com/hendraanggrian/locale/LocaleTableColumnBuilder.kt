@@ -1,3 +1,4 @@
+// Generated file, do not modify manually.
 package com.hendraanggrian.locale
 
 import java.util.Locale
@@ -7,7 +8,8 @@ import kotlin.String
 import kotlin.Suppress
 
 /**
- * Generated interface based on `https://github.com/umpirsky/locale-list`.
+ * Locales listed below are based on [umpirsky's
+ * locale-list](https://github.com/umpirsky/locale-list).
  */
 @Suppress(
     "unused",

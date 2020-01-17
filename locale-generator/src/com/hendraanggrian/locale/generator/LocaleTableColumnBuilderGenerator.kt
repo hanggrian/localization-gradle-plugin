@@ -12,17 +12,17 @@ object LocaleTableColumnBuilderGenerator {
     private const val PACKAGE_NAME = "com.hendraanggrian.locale"
     private const val CLASS_NAME = "LocaleTableColumnBuilder"
 
-    @JvmStatic
-    fun main(@Suppress("UnusedMainParameter") args: Array<String>) {
+    @JvmStatic fun main(@Suppress("UnusedMainParameter") args: Array<String>) {
         println("Fetching...")
         val locales = runBlocking { GitHubApi.getLocales() }
 
         println("Writing...")
         buildFile(PACKAGE_NAME, CLASS_NAME) {
             indentCount = 4
+            addComment("Generated file, do not modify manually.")
             addImport("java.util", "Locale")
             types.addInterface(CLASS_NAME) {
-                kdoc.append("Generated interface based on `https://github.com/umpirsky/locale-list`.")
+                kdoc.append("Locales listed below are based on [umpirsky's locale-list](https://github.com/umpirsky/locale-list).")
                 annotations.add<Suppress> {
                     addMember("%S", "unused")
                     addMember("%S", "PropertyName")
