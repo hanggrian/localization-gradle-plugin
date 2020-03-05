@@ -1,7 +1,7 @@
 package com.hendraanggrian.locale.generator
 
 import com.hendraanggrian.kotlinpoet.buildFile
-import com.squareup.kotlinpoet.ClassName
+import com.hendraanggrian.kotlinpoet.classOf
 import com.squareup.kotlinpoet.KModifier
 import com.squareup.kotlinpoet.NOTHING
 import java.io.File
@@ -18,16 +18,16 @@ object LocaleTableColumnBuilderGenerator {
 
         println("Writing...")
         buildFile(PACKAGE_NAME, CLASS_NAME) {
-            indentCount = 4
+            indentSize = 4
             addComment("Generated file, do not modify manually.")
             addImport("java.util", "Locale")
             types.addInterface(CLASS_NAME) {
-                kdoc.append("Locales listed below are based on [umpirsky's locale-list](https://github.com/umpirsky/locale-list).")
+                kdoc += "Locales listed below are based on [umpirsky's locale-list](https://github.com/umpirsky/locale-list)."
                 annotations.add<Suppress> {
                     addMember("%S", "unused")
                     addMember("%S", "PropertyName")
                 }
-                addSuperInterface(ClassName(PACKAGE_NAME, "Base$CLASS_NAME"))
+                addSuperInterface(PACKAGE_NAME.classOf("Base$CLASS_NAME"))
                 types.addCompanionObject {
                     addModifiers(KModifier.PRIVATE)
                     properties.add<String>("NO_GETTER") {
