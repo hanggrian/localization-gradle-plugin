@@ -1,6 +1,6 @@
 package com.hendraanggrian.locale.generator
 
-import com.hendraanggrian.kotlinpoet.buildFile
+import com.hendraanggrian.kotlinpoet.buildFileSpec
 import com.hendraanggrian.kotlinpoet.classOf
 import com.squareup.kotlinpoet.KModifier
 import com.squareup.kotlinpoet.NOTHING
@@ -12,12 +12,12 @@ object LocaleTableColumnBuilderGenerator {
     private const val PACKAGE_NAME = "com.hendraanggrian.locale"
     private const val CLASS_NAME = "LocaleTableColumnBuilder"
 
-    @JvmStatic fun main(@Suppress("UnusedMainParameter") args: Array<String>) {
+    @JvmStatic fun main(args: Array<String>) {
         println("Fetching...")
         val locales = runBlocking { GitHubApi.getLocales() }
 
         println("Writing...")
-        buildFile(PACKAGE_NAME, CLASS_NAME) {
+        buildFileSpec(PACKAGE_NAME, CLASS_NAME) {
             indentSize = 4
             addComment("Generated file, do not modify manually.")
             addImport("java.util", "Locale")
@@ -47,12 +47,8 @@ object LocaleTableColumnBuilderGenerator {
                         isMutable = true
                         kdoc {
                             append("Set locale value with language `$language`")
-                            append(
-                                when (country) {
-                                    null -> "."
-                                    else -> " and country `$country`."
-                                }
-                            )
+                            if (country != null) append(" and country `$country`")
+                            append(".")
                         }
                         getter {
                             annotations.add<Deprecated> {
