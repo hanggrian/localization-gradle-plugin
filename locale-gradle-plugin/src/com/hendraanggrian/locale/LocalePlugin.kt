@@ -16,7 +16,7 @@ class LocalePlugin : Plugin<Project> {
     }
 
     override fun apply(project: Project) {
-        val ext = project.extensions.create<LocaleExtension>(GROUP_NAME)
+        val ext = project.extensions.create<LocaleExtension>("locale")
         project.tasks {
             val localizeJava by registering(LocalizeJavaTask::class) {
                 group = GROUP_NAME

@@ -7,8 +7,7 @@ import kotlin.test.fail
 
 class GitHubApiTest {
 
-    @Test
-    fun getLocales() {
+    @Test fun getLocales() {
         runBlocking { GitHubApi.getLocales() }.forEach { locale ->
             locale.split('_').forEachIndexed { index, s ->
                 when (index) {

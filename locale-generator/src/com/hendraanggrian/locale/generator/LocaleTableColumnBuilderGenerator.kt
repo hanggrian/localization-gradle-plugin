@@ -27,7 +27,7 @@ object LocaleTableColumnBuilderGenerator {
                     addMember("%S", "unused")
                     addMember("%S", "PropertyName")
                 }
-                addSuperInterface(PACKAGE_NAME.classOf("Base$CLASS_NAME"))
+                superinterfaces[PACKAGE_NAME.classOf("Base$CLASS_NAME")] = null
                 types.addCompanionObject {
                     addModifiers(KModifier.PRIVATE)
                     properties.add<String>("NO_GETTER") {

@@ -6,8 +6,7 @@ import kotlin.test.assertEquals
 
 class LocaleExtensionTest {
 
-    @Test
-    fun test() {
+    @Test fun test() {
         val bahasa = Locale("id")
         val ext = LocaleExtension()
         ext.run {

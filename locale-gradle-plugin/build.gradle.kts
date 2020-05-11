@@ -41,7 +41,7 @@ tasks {
         mustRunAfter("build")
         projectDir.resolve("build/libs/$RELEASE_ARTIFACT-$RELEASE_VERSION.jar").let {
             if (it.exists()) {
-                it.renameTo(rootDir.resolve("demo/${it.name}"))
+                it.renameTo(rootDir.resolve("integration-tests/${it.name}"))
             }
         }
     }

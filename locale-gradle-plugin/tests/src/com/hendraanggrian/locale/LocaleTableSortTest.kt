@@ -6,8 +6,7 @@ import kotlin.test.Test
 
 class LocaleTableSortTest {
 
-    @Test
-    fun test() {
+    @Test fun test() {
         val table = localeTableOf()
         val locale = Locale.ENGLISH
         table.put("z", locale, "")

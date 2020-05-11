@@ -131,7 +131,7 @@ open class LocalizeJavaTask : LocalizeTask() {
         }
 
         override val keys: MutableSet<Any>
-            get() = Collections.unmodifiableSet(TreeSet<Any>(super.keys))
+            get() = Collections.unmodifiableSet(TreeSet(super.keys))
 
         override val entries: MutableSet<MutableMap.MutableEntry<Any, Any>>
             get() {
@@ -144,7 +144,7 @@ open class LocalizeJavaTask : LocalizeTask() {
             }
 
         override fun keys(): Enumeration<Any> =
-            Collections.enumeration(TreeSet<Any>(super.keys))
+            Collections.enumeration(TreeSet(super.keys))
     }
 }
 
