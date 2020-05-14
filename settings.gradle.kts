@@ -1,5 +1,5 @@
 include("locale-gradle-plugin")
-include("locale-generator")
+include("codegen")
 include("website")
 includeDir("integration-tests")
 

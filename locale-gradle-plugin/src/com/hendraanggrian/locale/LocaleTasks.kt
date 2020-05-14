@@ -1,5 +1,11 @@
 package com.hendraanggrian.locale
 
+import org.gradle.api.DefaultTask
+import org.gradle.api.tasks.Input
+import org.gradle.api.tasks.Internal
+import org.gradle.api.tasks.Optional
+import org.gradle.api.tasks.OutputDirectory
+import org.gradle.api.tasks.TaskAction
 import java.io.File
 import java.io.FileWriter
 import java.time.LocalDateTime
@@ -14,12 +20,6 @@ import javax.xml.transform.OutputKeys
 import javax.xml.transform.TransformerFactory
 import javax.xml.transform.dom.DOMSource
 import javax.xml.transform.stream.StreamResult
-import org.gradle.api.DefaultTask
-import org.gradle.api.tasks.Input
-import org.gradle.api.tasks.Internal
-import org.gradle.api.tasks.Optional
-import org.gradle.api.tasks.OutputDirectory
-import org.gradle.api.tasks.TaskAction
 
 /** Non-platform specific locale writer task. */
 sealed class LocalizeTask : DefaultTask() {
@@ -33,7 +33,7 @@ sealed class LocalizeTask : DefaultTask() {
     @Input @Optional var defaultLocale: Locale? = null
 
     /** When enabled, generated localization will maintain its alphabetical order. */
-    @Input var sortRows: Boolean = true
+    @Input var isSorted: Boolean = true
 
     /** Path that localization files will be generated to. */
     @OutputDirectory var outputDir: File? = null
@@ -88,7 +88,7 @@ sealed class LocalizeTask : DefaultTask() {
 
     /** Top-level file comment with optional timestamp. Properties file already have a timestamp. */
     protected fun getFileComment(withTimestamp: Boolean): String = buildString {
-        append("Generated file by locale-gradle-plugin, do not edit manually.")
+        append("Generated file by locale-gradle-plugin, do not edit manually!")
         if (withTimestamp) {
             appendln()
             append(DateTimeFormatter.ofPattern("yyyy-MM-dd HH.mm").format(LocalDateTime.now()))
@@ -98,7 +98,7 @@ sealed class LocalizeTask : DefaultTask() {
     /** Iterate each row, sorted if necessary. */
     protected fun forEachRow(action: (String) -> Unit) {
         var collection: Collection<String> = table.rowKeySet()
-        if (sortRows) {
+        if (isSorted) {
             collection = collection.sorted()
         }
         collection.forEach(action)
@@ -137,9 +137,11 @@ open class LocalizeJavaTask : LocalizeTask() {
             get() {
                 val set1 = super.entries
                 val set2 = LinkedHashSet<MutableMap.MutableEntry<Any, Any>>(set1.size)
-                set1.sortedWith(Comparator<MutableMap.MutableEntry<Any, Any>> { o1, o2 ->
-                    o1.key.toString().compareTo(o2.key.toString())
-                }).forEach(set2::add)
+                set1
+                    .sortedWith(Comparator<MutableMap.MutableEntry<Any, Any>> { o1, o2 ->
+                        "${o1.key}".compareTo("${o2.key}")
+                    })
+                    .forEach(set2::add)
                 return set2
             }
 

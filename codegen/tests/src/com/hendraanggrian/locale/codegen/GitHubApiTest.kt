@@ -1,4 +1,4 @@
-package com.hendraanggrian.locale.generator
+package com.hendraanggrian.locale.codegen
 
 import kotlinx.coroutines.runBlocking
 import kotlin.test.Test

@@ -1,4 +1,4 @@
-package com.hendraanggrian.locale.generator
+package com.hendraanggrian.locale.codegen
 
 import com.hendraanggrian.kotlinpoet.buildFileSpec
 import com.hendraanggrian.kotlinpoet.classOf
