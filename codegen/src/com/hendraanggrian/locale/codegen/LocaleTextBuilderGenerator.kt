@@ -8,9 +8,9 @@ import java.io.File
 import kotlin.system.exitProcess
 import kotlinx.coroutines.runBlocking
 
-object LocaleTableColumnBuilderGenerator {
+object LocaleTextBuilderGenerator {
     private const val PACKAGE_NAME = "com.hendraanggrian.locale"
-    private const val CLASS_NAME = "LocaleTableColumnBuilder"
+    private const val CLASS_NAME = "LocaleTextBuilder"
 
     @JvmStatic fun main(args: Array<String>) {
         println("Fetching...")
@@ -59,7 +59,7 @@ object LocaleTableColumnBuilderGenerator {
                         }
                         setter {
                             parameters.add<String>("value")
-                            append("return column(")
+                            append("return add(")
                             append(
                                 when {
                                     language == "en" && country == null -> "Locale.ENGLISH"

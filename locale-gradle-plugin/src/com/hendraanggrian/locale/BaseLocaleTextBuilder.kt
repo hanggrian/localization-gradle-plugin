@@ -3,12 +3,12 @@ package com.hendraanggrian.locale
 import java.util.Locale
 
 /**
- * Second/last phase of localization configuration, used only within [LocaleTableRowBuilder] scope.
+ * Second/last phase of localization configuration, used only within [LocaleTableBuilder] scope.
  *
  * However, this interface often isn't directly used, as [LocaleTableColumnBuilder] offers convenient
  * method on each possible localization.
  */
-interface BaseLocaleTableColumnBuilder : LocaleTableScope {
+interface BaseLocaleTextBuilder : LocaleTableScope {
 
     /**
      * Register localization value to specified [locale].
@@ -16,7 +16,7 @@ interface BaseLocaleTableColumnBuilder : LocaleTableScope {
      * @param locale column in the table.
      * @param value cell in the table.
      */
-    fun column(locale: Locale, value: String)
+    fun add(locale: Locale, value: String)
 
     /**
      * Register localization value to locale with specified [language] and [country].
@@ -25,5 +25,5 @@ interface BaseLocaleTableColumnBuilder : LocaleTableScope {
      * @param country 2-digit code that will be used as [Locale]'s country.
      * @param value cell in the table.
      */
-    fun column(language: String, country: String?, value: String)
+    fun add(language: String, country: String?, value: String)
 }

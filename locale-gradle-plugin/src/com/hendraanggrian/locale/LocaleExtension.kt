@@ -1,3 +1,5 @@
+@file:Suppress("NOTHING_TO_INLINE")
+
 package com.hendraanggrian.locale
 
 import java.util.Locale
@@ -8,9 +10,9 @@ import org.gradle.kotlin.dsl.invoke
  * Gradle extension to configure localization,
  * any changes made here will take affect in [LocalizeTask].
  */
-open class LocaleExtension : LocaleTableRowBuilder by LocaleRowBuilderImpl() {
-    private val javaRow = LocaleRowBuilderImpl()
-    private val androidRow = LocaleRowBuilderImpl()
+open class LocaleExtension : LocaleTableBuilder by LocaleTableBuilderImpl() {
+    private val _javaTable = LocaleTableBuilderImpl()
+    private val _androidTable = LocaleTableBuilderImpl()
 
     /** Intended localization file name prefix, must not be empty. */
     var resourceName: String = "strings"
@@ -19,54 +21,47 @@ open class LocaleExtension : LocaleTableRowBuilder by LocaleRowBuilderImpl() {
     var defaultLocale: Locale? = null
 
     /** Opening closure to populate Java-only localization table. */
-    fun configureJavaOnly(action: Action<LocaleTableRowBuilder>): Unit =
-        action(javaRow)
+    fun configureJavaOnly(configuration: Action<LocaleTableBuilder>): Unit =
+        configuration(_javaTable)
 
     /** Alias of [configureJavaOnly] for Gradle Kotlin DSL. */
-    fun javaOnly(action: LocaleTableRowBuilder.() -> Unit): Unit =
-        configureJavaOnly(action)
+    inline fun javaOnly(noinline configuration: LocaleTableBuilder.() -> Unit): Unit =
+        configureJavaOnly(configuration)
 
     /** Opening closure to populate Android-only localization table. */
-    fun configureAndroidOnly(action: Action<LocaleTableRowBuilder>): Unit =
-        action(androidRow)
+    fun configureAndroidOnly(configuration: Action<LocaleTableBuilder>): Unit =
+        configuration(_androidTable)
 
     /** Alias of [configureAndroidOnly] for Gradle Kotlin DSL. */
-    fun androidOnly(action: LocaleTableRowBuilder.() -> Unit): Unit =
-        configureAndroidOnly(action)
+    inline fun androidOnly(noinline configuration: LocaleTableBuilder.() -> Unit): Unit =
+        configureAndroidOnly(configuration)
 
     internal val javaTable: LocaleTable
-        get() = LocaleTable.create(table).apply { putAll(javaRow.table) }
+        get() = LocaleTable.create(table).apply { putAll(_javaTable.table) }
 
     internal val androidTable: LocaleTable
-        get() = LocaleTable.create(table).apply { putAll(androidRow.table) }
+        get() = LocaleTable.create(table).apply { putAll(_androidTable.table) }
 
-    private class LocaleRowBuilderImpl : LocaleTableRowBuilder {
-        private val column = LocaleColumnBuilderImpl()
-
-        override val table: LocaleTable
-            get() = column.table
-
-        override fun row(key: String, action: Action<LocaleTableColumnBuilder>) {
-            column.currentRow = key
-            action(column)
-        }
-    }
-
-    private class LocaleColumnBuilderImpl : LocaleTableColumnBuilder {
+    private class LocaleTableBuilderImpl : LocaleTableBuilder, LocaleTextBuilder {
         companion object {
-            private val LOCALE_MAP: MutableMap<String, Locale> = mutableMapOf()
+            val LOCALE_MAP: MutableMap<String, Locale> = mutableMapOf()
         }
 
         override val table: LocaleTable = localeTableOf()
-        lateinit var currentRow: String
+        lateinit var currentKey: String
 
-        override fun column(locale: Locale, value: String) {
-            table.put(currentRow, locale, value)
+        override fun text(key: String, configuration: Action<LocaleTextBuilder>) {
+            currentKey = key
+            configuration(this)
         }
 
-        override fun column(language: String, country: String?, value: String) {
+        override fun add(locale: Locale, value: String) {
+            table.put(currentKey, locale, value)
+        }
+
+        override fun add(language: String, country: String?, value: String) {
             val isCountryAvailable = country?.isNotBlank() ?: false
-            column(
+            add(
                 LOCALE_MAP.getOrPut(
                     when {
                         isCountryAvailable -> "$language-$country"

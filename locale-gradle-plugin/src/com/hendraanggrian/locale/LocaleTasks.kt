@@ -1,11 +1,5 @@
 package com.hendraanggrian.locale
 
-import org.gradle.api.DefaultTask
-import org.gradle.api.tasks.Input
-import org.gradle.api.tasks.Internal
-import org.gradle.api.tasks.Optional
-import org.gradle.api.tasks.OutputDirectory
-import org.gradle.api.tasks.TaskAction
 import java.io.File
 import java.io.FileWriter
 import java.time.LocalDateTime
@@ -20,6 +14,12 @@ import javax.xml.transform.OutputKeys
 import javax.xml.transform.TransformerFactory
 import javax.xml.transform.dom.DOMSource
 import javax.xml.transform.stream.StreamResult
+import org.gradle.api.DefaultTask
+import org.gradle.api.tasks.Input
+import org.gradle.api.tasks.Internal
+import org.gradle.api.tasks.Optional
+import org.gradle.api.tasks.OutputDirectory
+import org.gradle.api.tasks.TaskAction
 
 /** Non-platform specific locale writer task. */
 sealed class LocalizeTask : DefaultTask() {
@@ -33,7 +33,7 @@ sealed class LocalizeTask : DefaultTask() {
     @Input @Optional var defaultLocale: Locale? = null
 
     /** When enabled, generated localization will maintain its alphabetical order. */
-    @Input var isSorted: Boolean = true
+    var isSorted: Boolean = true @Input get
 
     /** Path that localization files will be generated to. */
     @OutputDirectory var outputDir: File? = null

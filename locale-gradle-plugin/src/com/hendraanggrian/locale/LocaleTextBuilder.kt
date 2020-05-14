@@ -15,7 +15,7 @@ import kotlin.Suppress
     "unused",
     "PropertyName"
 )
-interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
+interface LocaleTextBuilder : BaseLocaleTextBuilder {
     /**
      * Set locale value with language `af`.
      */
@@ -25,7 +25,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("af", null, value)
+        set(value) = add("af", null, value)
 
     /**
      * Set locale value with language `af` and country `NA`.
@@ -36,7 +36,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("af", "NA", value)
+        set(value) = add("af", "NA", value)
 
     /**
      * Set locale value with language `af` and country `ZA`.
@@ -47,7 +47,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("af", "ZA", value)
+        set(value) = add("af", "ZA", value)
 
     /**
      * Set locale value with language `ak`.
@@ -58,7 +58,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ak", null, value)
+        set(value) = add("ak", null, value)
 
     /**
      * Set locale value with language `ak` and country `GH`.
@@ -69,7 +69,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ak", "GH", value)
+        set(value) = add("ak", "GH", value)
 
     /**
      * Set locale value with language `am`.
@@ -80,7 +80,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("am", null, value)
+        set(value) = add("am", null, value)
 
     /**
      * Set locale value with language `am` and country `ET`.
@@ -91,7 +91,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("am", "ET", value)
+        set(value) = add("am", "ET", value)
 
     /**
      * Set locale value with language `ar`.
@@ -102,7 +102,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ar", null, value)
+        set(value) = add("ar", null, value)
 
     /**
      * Set locale value with language `ar` and country `AE`.
@@ -113,7 +113,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ar", "AE", value)
+        set(value) = add("ar", "AE", value)
 
     /**
      * Set locale value with language `ar` and country `BH`.
@@ -124,7 +124,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ar", "BH", value)
+        set(value) = add("ar", "BH", value)
 
     /**
      * Set locale value with language `ar` and country `DJ`.
@@ -135,7 +135,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ar", "DJ", value)
+        set(value) = add("ar", "DJ", value)
 
     /**
      * Set locale value with language `ar` and country `DZ`.
@@ -146,7 +146,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ar", "DZ", value)
+        set(value) = add("ar", "DZ", value)
 
     /**
      * Set locale value with language `ar` and country `EG`.
@@ -157,7 +157,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ar", "EG", value)
+        set(value) = add("ar", "EG", value)
 
     /**
      * Set locale value with language `ar` and country `EH`.
@@ -168,7 +168,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ar", "EH", value)
+        set(value) = add("ar", "EH", value)
 
     /**
      * Set locale value with language `ar` and country `ER`.
@@ -179,7 +179,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ar", "ER", value)
+        set(value) = add("ar", "ER", value)
 
     /**
      * Set locale value with language `ar` and country `IL`.
@@ -190,7 +190,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ar", "IL", value)
+        set(value) = add("ar", "IL", value)
 
     /**
      * Set locale value with language `ar` and country `IQ`.
@@ -201,7 +201,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ar", "IQ", value)
+        set(value) = add("ar", "IQ", value)
 
     /**
      * Set locale value with language `ar` and country `JO`.
@@ -212,7 +212,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ar", "JO", value)
+        set(value) = add("ar", "JO", value)
 
     /**
      * Set locale value with language `ar` and country `KM`.
@@ -223,7 +223,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ar", "KM", value)
+        set(value) = add("ar", "KM", value)
 
     /**
      * Set locale value with language `ar` and country `KW`.
@@ -234,7 +234,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ar", "KW", value)
+        set(value) = add("ar", "KW", value)
 
     /**
      * Set locale value with language `ar` and country `LB`.
@@ -245,7 +245,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ar", "LB", value)
+        set(value) = add("ar", "LB", value)
 
     /**
      * Set locale value with language `ar` and country `LY`.
@@ -256,7 +256,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ar", "LY", value)
+        set(value) = add("ar", "LY", value)
 
     /**
      * Set locale value with language `ar` and country `MA`.
@@ -267,7 +267,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ar", "MA", value)
+        set(value) = add("ar", "MA", value)
 
     /**
      * Set locale value with language `ar` and country `MR`.
@@ -278,7 +278,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ar", "MR", value)
+        set(value) = add("ar", "MR", value)
 
     /**
      * Set locale value with language `ar` and country `OM`.
@@ -289,7 +289,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ar", "OM", value)
+        set(value) = add("ar", "OM", value)
 
     /**
      * Set locale value with language `ar` and country `PS`.
@@ -300,7 +300,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ar", "PS", value)
+        set(value) = add("ar", "PS", value)
 
     /**
      * Set locale value with language `ar` and country `QA`.
@@ -311,7 +311,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ar", "QA", value)
+        set(value) = add("ar", "QA", value)
 
     /**
      * Set locale value with language `ar` and country `SA`.
@@ -322,7 +322,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ar", "SA", value)
+        set(value) = add("ar", "SA", value)
 
     /**
      * Set locale value with language `ar` and country `SD`.
@@ -333,7 +333,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ar", "SD", value)
+        set(value) = add("ar", "SD", value)
 
     /**
      * Set locale value with language `ar` and country `SO`.
@@ -344,7 +344,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ar", "SO", value)
+        set(value) = add("ar", "SO", value)
 
     /**
      * Set locale value with language `ar` and country `SS`.
@@ -355,7 +355,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ar", "SS", value)
+        set(value) = add("ar", "SS", value)
 
     /**
      * Set locale value with language `ar` and country `SY`.
@@ -366,7 +366,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ar", "SY", value)
+        set(value) = add("ar", "SY", value)
 
     /**
      * Set locale value with language `ar` and country `TD`.
@@ -377,7 +377,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ar", "TD", value)
+        set(value) = add("ar", "TD", value)
 
     /**
      * Set locale value with language `ar` and country `TN`.
@@ -388,7 +388,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ar", "TN", value)
+        set(value) = add("ar", "TN", value)
 
     /**
      * Set locale value with language `ar` and country `YE`.
@@ -399,7 +399,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ar", "YE", value)
+        set(value) = add("ar", "YE", value)
 
     /**
      * Set locale value with language `as`.
@@ -410,7 +410,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("as", null, value)
+        set(value) = add("as", null, value)
 
     /**
      * Set locale value with language `as` and country `IN`.
@@ -421,7 +421,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("as", "IN", value)
+        set(value) = add("as", "IN", value)
 
     /**
      * Set locale value with language `az`.
@@ -432,7 +432,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("az", null, value)
+        set(value) = add("az", null, value)
 
     /**
      * Set locale value with language `az` and country `AZ`.
@@ -443,7 +443,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("az", "AZ", value)
+        set(value) = add("az", "AZ", value)
 
     /**
      * Set locale value with language `be`.
@@ -454,7 +454,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("be", null, value)
+        set(value) = add("be", null, value)
 
     /**
      * Set locale value with language `be` and country `BY`.
@@ -465,7 +465,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("be", "BY", value)
+        set(value) = add("be", "BY", value)
 
     /**
      * Set locale value with language `bg`.
@@ -476,7 +476,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("bg", null, value)
+        set(value) = add("bg", null, value)
 
     /**
      * Set locale value with language `bg` and country `BG`.
@@ -487,7 +487,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("bg", "BG", value)
+        set(value) = add("bg", "BG", value)
 
     /**
      * Set locale value with language `bm`.
@@ -498,7 +498,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("bm", null, value)
+        set(value) = add("bm", null, value)
 
     /**
      * Set locale value with language `bm` and country `ML`.
@@ -509,7 +509,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("bm", "ML", value)
+        set(value) = add("bm", "ML", value)
 
     /**
      * Set locale value with language `bn`.
@@ -520,7 +520,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("bn", null, value)
+        set(value) = add("bn", null, value)
 
     /**
      * Set locale value with language `bn` and country `BD`.
@@ -531,7 +531,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("bn", "BD", value)
+        set(value) = add("bn", "BD", value)
 
     /**
      * Set locale value with language `bn` and country `IN`.
@@ -542,7 +542,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("bn", "IN", value)
+        set(value) = add("bn", "IN", value)
 
     /**
      * Set locale value with language `bo`.
@@ -553,7 +553,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("bo", null, value)
+        set(value) = add("bo", null, value)
 
     /**
      * Set locale value with language `bo` and country `CN`.
@@ -564,7 +564,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("bo", "CN", value)
+        set(value) = add("bo", "CN", value)
 
     /**
      * Set locale value with language `bo` and country `IN`.
@@ -575,7 +575,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("bo", "IN", value)
+        set(value) = add("bo", "IN", value)
 
     /**
      * Set locale value with language `br`.
@@ -586,7 +586,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("br", null, value)
+        set(value) = add("br", null, value)
 
     /**
      * Set locale value with language `br` and country `FR`.
@@ -597,7 +597,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("br", "FR", value)
+        set(value) = add("br", "FR", value)
 
     /**
      * Set locale value with language `bs`.
@@ -608,7 +608,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("bs", null, value)
+        set(value) = add("bs", null, value)
 
     /**
      * Set locale value with language `bs` and country `BA`.
@@ -619,7 +619,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("bs", "BA", value)
+        set(value) = add("bs", "BA", value)
 
     /**
      * Set locale value with language `ca`.
@@ -630,7 +630,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ca", null, value)
+        set(value) = add("ca", null, value)
 
     /**
      * Set locale value with language `ca` and country `AD`.
@@ -641,7 +641,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ca", "AD", value)
+        set(value) = add("ca", "AD", value)
 
     /**
      * Set locale value with language `ca` and country `ES`.
@@ -652,7 +652,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ca", "ES", value)
+        set(value) = add("ca", "ES", value)
 
     /**
      * Set locale value with language `ca` and country `FR`.
@@ -663,7 +663,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ca", "FR", value)
+        set(value) = add("ca", "FR", value)
 
     /**
      * Set locale value with language `ca` and country `IT`.
@@ -674,7 +674,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ca", "IT", value)
+        set(value) = add("ca", "IT", value)
 
     /**
      * Set locale value with language `cs`.
@@ -685,7 +685,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("cs", null, value)
+        set(value) = add("cs", null, value)
 
     /**
      * Set locale value with language `cs` and country `CZ`.
@@ -696,7 +696,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("cs", "CZ", value)
+        set(value) = add("cs", "CZ", value)
 
     /**
      * Set locale value with language `cy`.
@@ -707,7 +707,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("cy", null, value)
+        set(value) = add("cy", null, value)
 
     /**
      * Set locale value with language `cy` and country `GB`.
@@ -718,7 +718,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("cy", "GB", value)
+        set(value) = add("cy", "GB", value)
 
     /**
      * Set locale value with language `da`.
@@ -729,7 +729,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("da", null, value)
+        set(value) = add("da", null, value)
 
     /**
      * Set locale value with language `da` and country `DK`.
@@ -740,7 +740,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("da", "DK", value)
+        set(value) = add("da", "DK", value)
 
     /**
      * Set locale value with language `da` and country `GL`.
@@ -751,7 +751,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("da", "GL", value)
+        set(value) = add("da", "GL", value)
 
     /**
      * Set locale value with language `de`.
@@ -762,7 +762,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column(Locale.GERMAN, value)
+        set(value) = add(Locale.GERMAN, value)
 
     /**
      * Set locale value with language `de` and country `AT`.
@@ -773,7 +773,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("de", "AT", value)
+        set(value) = add("de", "AT", value)
 
     /**
      * Set locale value with language `de` and country `BE`.
@@ -784,7 +784,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("de", "BE", value)
+        set(value) = add("de", "BE", value)
 
     /**
      * Set locale value with language `de` and country `CH`.
@@ -795,7 +795,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("de", "CH", value)
+        set(value) = add("de", "CH", value)
 
     /**
      * Set locale value with language `de` and country `DE`.
@@ -806,7 +806,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column(Locale.GERMANY, value)
+        set(value) = add(Locale.GERMANY, value)
 
     /**
      * Set locale value with language `de` and country `LI`.
@@ -817,7 +817,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("de", "LI", value)
+        set(value) = add("de", "LI", value)
 
     /**
      * Set locale value with language `de` and country `LU`.
@@ -828,7 +828,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("de", "LU", value)
+        set(value) = add("de", "LU", value)
 
     /**
      * Set locale value with language `dz`.
@@ -839,7 +839,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("dz", null, value)
+        set(value) = add("dz", null, value)
 
     /**
      * Set locale value with language `dz` and country `BT`.
@@ -850,7 +850,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("dz", "BT", value)
+        set(value) = add("dz", "BT", value)
 
     /**
      * Set locale value with language `ee`.
@@ -861,7 +861,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ee", null, value)
+        set(value) = add("ee", null, value)
 
     /**
      * Set locale value with language `ee` and country `GH`.
@@ -872,7 +872,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ee", "GH", value)
+        set(value) = add("ee", "GH", value)
 
     /**
      * Set locale value with language `ee` and country `TG`.
@@ -883,7 +883,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ee", "TG", value)
+        set(value) = add("ee", "TG", value)
 
     /**
      * Set locale value with language `el`.
@@ -894,7 +894,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("el", null, value)
+        set(value) = add("el", null, value)
 
     /**
      * Set locale value with language `el` and country `CY`.
@@ -905,7 +905,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("el", "CY", value)
+        set(value) = add("el", "CY", value)
 
     /**
      * Set locale value with language `el` and country `GR`.
@@ -916,7 +916,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("el", "GR", value)
+        set(value) = add("el", "GR", value)
 
     /**
      * Set locale value with language `en`.
@@ -927,7 +927,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column(Locale.ENGLISH, value)
+        set(value) = add(Locale.ENGLISH, value)
 
     /**
      * Set locale value with language `en` and country `AG`.
@@ -938,7 +938,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "AG", value)
+        set(value) = add("en", "AG", value)
 
     /**
      * Set locale value with language `en` and country `AI`.
@@ -949,7 +949,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "AI", value)
+        set(value) = add("en", "AI", value)
 
     /**
      * Set locale value with language `en` and country `AS`.
@@ -960,7 +960,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "AS", value)
+        set(value) = add("en", "AS", value)
 
     /**
      * Set locale value with language `en` and country `AU`.
@@ -971,7 +971,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "AU", value)
+        set(value) = add("en", "AU", value)
 
     /**
      * Set locale value with language `en` and country `BB`.
@@ -982,7 +982,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "BB", value)
+        set(value) = add("en", "BB", value)
 
     /**
      * Set locale value with language `en` and country `BE`.
@@ -993,7 +993,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "BE", value)
+        set(value) = add("en", "BE", value)
 
     /**
      * Set locale value with language `en` and country `BM`.
@@ -1004,7 +1004,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "BM", value)
+        set(value) = add("en", "BM", value)
 
     /**
      * Set locale value with language `en` and country `BS`.
@@ -1015,7 +1015,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "BS", value)
+        set(value) = add("en", "BS", value)
 
     /**
      * Set locale value with language `en` and country `BW`.
@@ -1026,7 +1026,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "BW", value)
+        set(value) = add("en", "BW", value)
 
     /**
      * Set locale value with language `en` and country `BZ`.
@@ -1037,7 +1037,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "BZ", value)
+        set(value) = add("en", "BZ", value)
 
     /**
      * Set locale value with language `en` and country `CA`.
@@ -1048,7 +1048,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column(Locale.CANADA, value)
+        set(value) = add(Locale.CANADA, value)
 
     /**
      * Set locale value with language `en` and country `CC`.
@@ -1059,7 +1059,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "CC", value)
+        set(value) = add("en", "CC", value)
 
     /**
      * Set locale value with language `en` and country `CK`.
@@ -1070,7 +1070,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "CK", value)
+        set(value) = add("en", "CK", value)
 
     /**
      * Set locale value with language `en` and country `CM`.
@@ -1081,7 +1081,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "CM", value)
+        set(value) = add("en", "CM", value)
 
     /**
      * Set locale value with language `en` and country `CX`.
@@ -1092,7 +1092,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "CX", value)
+        set(value) = add("en", "CX", value)
 
     /**
      * Set locale value with language `en` and country `DG`.
@@ -1103,7 +1103,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "DG", value)
+        set(value) = add("en", "DG", value)
 
     /**
      * Set locale value with language `en` and country `DM`.
@@ -1114,7 +1114,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "DM", value)
+        set(value) = add("en", "DM", value)
 
     /**
      * Set locale value with language `en` and country `ER`.
@@ -1125,7 +1125,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "ER", value)
+        set(value) = add("en", "ER", value)
 
     /**
      * Set locale value with language `en` and country `FJ`.
@@ -1136,7 +1136,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "FJ", value)
+        set(value) = add("en", "FJ", value)
 
     /**
      * Set locale value with language `en` and country `FK`.
@@ -1147,7 +1147,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "FK", value)
+        set(value) = add("en", "FK", value)
 
     /**
      * Set locale value with language `en` and country `FM`.
@@ -1158,7 +1158,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "FM", value)
+        set(value) = add("en", "FM", value)
 
     /**
      * Set locale value with language `en` and country `GB`.
@@ -1169,7 +1169,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column(Locale.UK, value)
+        set(value) = add(Locale.UK, value)
 
     /**
      * Set locale value with language `en` and country `GD`.
@@ -1180,7 +1180,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "GD", value)
+        set(value) = add("en", "GD", value)
 
     /**
      * Set locale value with language `en` and country `GG`.
@@ -1191,7 +1191,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "GG", value)
+        set(value) = add("en", "GG", value)
 
     /**
      * Set locale value with language `en` and country `GH`.
@@ -1202,7 +1202,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "GH", value)
+        set(value) = add("en", "GH", value)
 
     /**
      * Set locale value with language `en` and country `GI`.
@@ -1213,7 +1213,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "GI", value)
+        set(value) = add("en", "GI", value)
 
     /**
      * Set locale value with language `en` and country `GM`.
@@ -1224,7 +1224,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "GM", value)
+        set(value) = add("en", "GM", value)
 
     /**
      * Set locale value with language `en` and country `GU`.
@@ -1235,7 +1235,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "GU", value)
+        set(value) = add("en", "GU", value)
 
     /**
      * Set locale value with language `en` and country `GY`.
@@ -1246,7 +1246,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "GY", value)
+        set(value) = add("en", "GY", value)
 
     /**
      * Set locale value with language `en` and country `HK`.
@@ -1257,7 +1257,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "HK", value)
+        set(value) = add("en", "HK", value)
 
     /**
      * Set locale value with language `en` and country `IE`.
@@ -1268,7 +1268,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "IE", value)
+        set(value) = add("en", "IE", value)
 
     /**
      * Set locale value with language `en` and country `IM`.
@@ -1279,7 +1279,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "IM", value)
+        set(value) = add("en", "IM", value)
 
     /**
      * Set locale value with language `en` and country `IN`.
@@ -1290,7 +1290,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "IN", value)
+        set(value) = add("en", "IN", value)
 
     /**
      * Set locale value with language `en` and country `IO`.
@@ -1301,7 +1301,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "IO", value)
+        set(value) = add("en", "IO", value)
 
     /**
      * Set locale value with language `en` and country `JE`.
@@ -1312,7 +1312,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "JE", value)
+        set(value) = add("en", "JE", value)
 
     /**
      * Set locale value with language `en` and country `JM`.
@@ -1323,7 +1323,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "JM", value)
+        set(value) = add("en", "JM", value)
 
     /**
      * Set locale value with language `en` and country `KE`.
@@ -1334,7 +1334,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "KE", value)
+        set(value) = add("en", "KE", value)
 
     /**
      * Set locale value with language `en` and country `KI`.
@@ -1345,7 +1345,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "KI", value)
+        set(value) = add("en", "KI", value)
 
     /**
      * Set locale value with language `en` and country `KN`.
@@ -1356,7 +1356,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "KN", value)
+        set(value) = add("en", "KN", value)
 
     /**
      * Set locale value with language `en` and country `KY`.
@@ -1367,7 +1367,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "KY", value)
+        set(value) = add("en", "KY", value)
 
     /**
      * Set locale value with language `en` and country `LC`.
@@ -1378,7 +1378,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "LC", value)
+        set(value) = add("en", "LC", value)
 
     /**
      * Set locale value with language `en` and country `LR`.
@@ -1389,7 +1389,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "LR", value)
+        set(value) = add("en", "LR", value)
 
     /**
      * Set locale value with language `en` and country `LS`.
@@ -1400,7 +1400,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "LS", value)
+        set(value) = add("en", "LS", value)
 
     /**
      * Set locale value with language `en` and country `MG`.
@@ -1411,7 +1411,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "MG", value)
+        set(value) = add("en", "MG", value)
 
     /**
      * Set locale value with language `en` and country `MH`.
@@ -1422,7 +1422,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "MH", value)
+        set(value) = add("en", "MH", value)
 
     /**
      * Set locale value with language `en` and country `MO`.
@@ -1433,7 +1433,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "MO", value)
+        set(value) = add("en", "MO", value)
 
     /**
      * Set locale value with language `en` and country `MP`.
@@ -1444,7 +1444,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "MP", value)
+        set(value) = add("en", "MP", value)
 
     /**
      * Set locale value with language `en` and country `MS`.
@@ -1455,7 +1455,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "MS", value)
+        set(value) = add("en", "MS", value)
 
     /**
      * Set locale value with language `en` and country `MT`.
@@ -1466,7 +1466,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "MT", value)
+        set(value) = add("en", "MT", value)
 
     /**
      * Set locale value with language `en` and country `MU`.
@@ -1477,7 +1477,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "MU", value)
+        set(value) = add("en", "MU", value)
 
     /**
      * Set locale value with language `en` and country `MW`.
@@ -1488,7 +1488,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "MW", value)
+        set(value) = add("en", "MW", value)
 
     /**
      * Set locale value with language `en` and country `MY`.
@@ -1499,7 +1499,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "MY", value)
+        set(value) = add("en", "MY", value)
 
     /**
      * Set locale value with language `en` and country `NA`.
@@ -1510,7 +1510,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "NA", value)
+        set(value) = add("en", "NA", value)
 
     /**
      * Set locale value with language `en` and country `NF`.
@@ -1521,7 +1521,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "NF", value)
+        set(value) = add("en", "NF", value)
 
     /**
      * Set locale value with language `en` and country `NG`.
@@ -1532,7 +1532,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "NG", value)
+        set(value) = add("en", "NG", value)
 
     /**
      * Set locale value with language `en` and country `NR`.
@@ -1543,7 +1543,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "NR", value)
+        set(value) = add("en", "NR", value)
 
     /**
      * Set locale value with language `en` and country `NU`.
@@ -1554,7 +1554,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "NU", value)
+        set(value) = add("en", "NU", value)
 
     /**
      * Set locale value with language `en` and country `NZ`.
@@ -1565,7 +1565,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "NZ", value)
+        set(value) = add("en", "NZ", value)
 
     /**
      * Set locale value with language `en` and country `PG`.
@@ -1576,7 +1576,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "PG", value)
+        set(value) = add("en", "PG", value)
 
     /**
      * Set locale value with language `en` and country `PH`.
@@ -1587,7 +1587,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "PH", value)
+        set(value) = add("en", "PH", value)
 
     /**
      * Set locale value with language `en` and country `PK`.
@@ -1598,7 +1598,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "PK", value)
+        set(value) = add("en", "PK", value)
 
     /**
      * Set locale value with language `en` and country `PN`.
@@ -1609,7 +1609,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "PN", value)
+        set(value) = add("en", "PN", value)
 
     /**
      * Set locale value with language `en` and country `PR`.
@@ -1620,7 +1620,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "PR", value)
+        set(value) = add("en", "PR", value)
 
     /**
      * Set locale value with language `en` and country `PW`.
@@ -1631,7 +1631,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "PW", value)
+        set(value) = add("en", "PW", value)
 
     /**
      * Set locale value with language `en` and country `RW`.
@@ -1642,7 +1642,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "RW", value)
+        set(value) = add("en", "RW", value)
 
     /**
      * Set locale value with language `en` and country `SB`.
@@ -1653,7 +1653,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "SB", value)
+        set(value) = add("en", "SB", value)
 
     /**
      * Set locale value with language `en` and country `SC`.
@@ -1664,7 +1664,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "SC", value)
+        set(value) = add("en", "SC", value)
 
     /**
      * Set locale value with language `en` and country `SD`.
@@ -1675,7 +1675,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "SD", value)
+        set(value) = add("en", "SD", value)
 
     /**
      * Set locale value with language `en` and country `SG`.
@@ -1686,7 +1686,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "SG", value)
+        set(value) = add("en", "SG", value)
 
     /**
      * Set locale value with language `en` and country `SH`.
@@ -1697,7 +1697,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "SH", value)
+        set(value) = add("en", "SH", value)
 
     /**
      * Set locale value with language `en` and country `SL`.
@@ -1708,7 +1708,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "SL", value)
+        set(value) = add("en", "SL", value)
 
     /**
      * Set locale value with language `en` and country `SS`.
@@ -1719,7 +1719,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "SS", value)
+        set(value) = add("en", "SS", value)
 
     /**
      * Set locale value with language `en` and country `SX`.
@@ -1730,7 +1730,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "SX", value)
+        set(value) = add("en", "SX", value)
 
     /**
      * Set locale value with language `en` and country `SZ`.
@@ -1741,7 +1741,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "SZ", value)
+        set(value) = add("en", "SZ", value)
 
     /**
      * Set locale value with language `en` and country `TC`.
@@ -1752,7 +1752,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "TC", value)
+        set(value) = add("en", "TC", value)
 
     /**
      * Set locale value with language `en` and country `TK`.
@@ -1763,7 +1763,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "TK", value)
+        set(value) = add("en", "TK", value)
 
     /**
      * Set locale value with language `en` and country `TO`.
@@ -1774,7 +1774,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "TO", value)
+        set(value) = add("en", "TO", value)
 
     /**
      * Set locale value with language `en` and country `TT`.
@@ -1785,7 +1785,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "TT", value)
+        set(value) = add("en", "TT", value)
 
     /**
      * Set locale value with language `en` and country `TV`.
@@ -1796,7 +1796,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "TV", value)
+        set(value) = add("en", "TV", value)
 
     /**
      * Set locale value with language `en` and country `TZ`.
@@ -1807,7 +1807,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "TZ", value)
+        set(value) = add("en", "TZ", value)
 
     /**
      * Set locale value with language `en` and country `UG`.
@@ -1818,7 +1818,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "UG", value)
+        set(value) = add("en", "UG", value)
 
     /**
      * Set locale value with language `en` and country `UM`.
@@ -1829,7 +1829,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "UM", value)
+        set(value) = add("en", "UM", value)
 
     /**
      * Set locale value with language `en` and country `US`.
@@ -1840,7 +1840,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column(Locale.US, value)
+        set(value) = add(Locale.US, value)
 
     /**
      * Set locale value with language `en` and country `VC`.
@@ -1851,7 +1851,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "VC", value)
+        set(value) = add("en", "VC", value)
 
     /**
      * Set locale value with language `en` and country `VG`.
@@ -1862,7 +1862,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "VG", value)
+        set(value) = add("en", "VG", value)
 
     /**
      * Set locale value with language `en` and country `VI`.
@@ -1873,7 +1873,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "VI", value)
+        set(value) = add("en", "VI", value)
 
     /**
      * Set locale value with language `en` and country `VU`.
@@ -1884,7 +1884,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "VU", value)
+        set(value) = add("en", "VU", value)
 
     /**
      * Set locale value with language `en` and country `WS`.
@@ -1895,7 +1895,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "WS", value)
+        set(value) = add("en", "WS", value)
 
     /**
      * Set locale value with language `en` and country `ZA`.
@@ -1906,7 +1906,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "ZA", value)
+        set(value) = add("en", "ZA", value)
 
     /**
      * Set locale value with language `en` and country `ZM`.
@@ -1917,7 +1917,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "ZM", value)
+        set(value) = add("en", "ZM", value)
 
     /**
      * Set locale value with language `en` and country `ZW`.
@@ -1928,7 +1928,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("en", "ZW", value)
+        set(value) = add("en", "ZW", value)
 
     /**
      * Set locale value with language `eo`.
@@ -1939,7 +1939,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("eo", null, value)
+        set(value) = add("eo", null, value)
 
     /**
      * Set locale value with language `es`.
@@ -1950,7 +1950,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("es", null, value)
+        set(value) = add("es", null, value)
 
     /**
      * Set locale value with language `es` and country `AR`.
@@ -1961,7 +1961,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("es", "AR", value)
+        set(value) = add("es", "AR", value)
 
     /**
      * Set locale value with language `es` and country `BO`.
@@ -1972,7 +1972,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("es", "BO", value)
+        set(value) = add("es", "BO", value)
 
     /**
      * Set locale value with language `es` and country `CL`.
@@ -1983,7 +1983,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("es", "CL", value)
+        set(value) = add("es", "CL", value)
 
     /**
      * Set locale value with language `es` and country `CO`.
@@ -1994,7 +1994,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("es", "CO", value)
+        set(value) = add("es", "CO", value)
 
     /**
      * Set locale value with language `es` and country `CR`.
@@ -2005,7 +2005,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("es", "CR", value)
+        set(value) = add("es", "CR", value)
 
     /**
      * Set locale value with language `es` and country `CU`.
@@ -2016,7 +2016,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("es", "CU", value)
+        set(value) = add("es", "CU", value)
 
     /**
      * Set locale value with language `es` and country `DO`.
@@ -2027,7 +2027,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("es", "DO", value)
+        set(value) = add("es", "DO", value)
 
     /**
      * Set locale value with language `es` and country `EA`.
@@ -2038,7 +2038,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("es", "EA", value)
+        set(value) = add("es", "EA", value)
 
     /**
      * Set locale value with language `es` and country `EC`.
@@ -2049,7 +2049,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("es", "EC", value)
+        set(value) = add("es", "EC", value)
 
     /**
      * Set locale value with language `es` and country `ES`.
@@ -2060,7 +2060,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("es", "ES", value)
+        set(value) = add("es", "ES", value)
 
     /**
      * Set locale value with language `es` and country `GQ`.
@@ -2071,7 +2071,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("es", "GQ", value)
+        set(value) = add("es", "GQ", value)
 
     /**
      * Set locale value with language `es` and country `GT`.
@@ -2082,7 +2082,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("es", "GT", value)
+        set(value) = add("es", "GT", value)
 
     /**
      * Set locale value with language `es` and country `HN`.
@@ -2093,7 +2093,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("es", "HN", value)
+        set(value) = add("es", "HN", value)
 
     /**
      * Set locale value with language `es` and country `IC`.
@@ -2104,7 +2104,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("es", "IC", value)
+        set(value) = add("es", "IC", value)
 
     /**
      * Set locale value with language `es` and country `MX`.
@@ -2115,7 +2115,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("es", "MX", value)
+        set(value) = add("es", "MX", value)
 
     /**
      * Set locale value with language `es` and country `NI`.
@@ -2126,7 +2126,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("es", "NI", value)
+        set(value) = add("es", "NI", value)
 
     /**
      * Set locale value with language `es` and country `PA`.
@@ -2137,7 +2137,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("es", "PA", value)
+        set(value) = add("es", "PA", value)
 
     /**
      * Set locale value with language `es` and country `PE`.
@@ -2148,7 +2148,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("es", "PE", value)
+        set(value) = add("es", "PE", value)
 
     /**
      * Set locale value with language `es` and country `PH`.
@@ -2159,7 +2159,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("es", "PH", value)
+        set(value) = add("es", "PH", value)
 
     /**
      * Set locale value with language `es` and country `PR`.
@@ -2170,7 +2170,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("es", "PR", value)
+        set(value) = add("es", "PR", value)
 
     /**
      * Set locale value with language `es` and country `PY`.
@@ -2181,7 +2181,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("es", "PY", value)
+        set(value) = add("es", "PY", value)
 
     /**
      * Set locale value with language `es` and country `SV`.
@@ -2192,7 +2192,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("es", "SV", value)
+        set(value) = add("es", "SV", value)
 
     /**
      * Set locale value with language `es` and country `US`.
@@ -2203,7 +2203,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("es", "US", value)
+        set(value) = add("es", "US", value)
 
     /**
      * Set locale value with language `es` and country `UY`.
@@ -2214,7 +2214,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("es", "UY", value)
+        set(value) = add("es", "UY", value)
 
     /**
      * Set locale value with language `es` and country `VE`.
@@ -2225,7 +2225,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("es", "VE", value)
+        set(value) = add("es", "VE", value)
 
     /**
      * Set locale value with language `et`.
@@ -2236,7 +2236,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("et", null, value)
+        set(value) = add("et", null, value)
 
     /**
      * Set locale value with language `et` and country `EE`.
@@ -2247,7 +2247,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("et", "EE", value)
+        set(value) = add("et", "EE", value)
 
     /**
      * Set locale value with language `eu`.
@@ -2258,7 +2258,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("eu", null, value)
+        set(value) = add("eu", null, value)
 
     /**
      * Set locale value with language `eu` and country `ES`.
@@ -2269,7 +2269,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("eu", "ES", value)
+        set(value) = add("eu", "ES", value)
 
     /**
      * Set locale value with language `fa`.
@@ -2280,7 +2280,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fa", null, value)
+        set(value) = add("fa", null, value)
 
     /**
      * Set locale value with language `fa` and country `AF`.
@@ -2291,7 +2291,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fa", "AF", value)
+        set(value) = add("fa", "AF", value)
 
     /**
      * Set locale value with language `fa` and country `IR`.
@@ -2302,7 +2302,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fa", "IR", value)
+        set(value) = add("fa", "IR", value)
 
     /**
      * Set locale value with language `ff`.
@@ -2313,7 +2313,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ff", null, value)
+        set(value) = add("ff", null, value)
 
     /**
      * Set locale value with language `ff` and country `CM`.
@@ -2324,7 +2324,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ff", "CM", value)
+        set(value) = add("ff", "CM", value)
 
     /**
      * Set locale value with language `ff` and country `GN`.
@@ -2335,7 +2335,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ff", "GN", value)
+        set(value) = add("ff", "GN", value)
 
     /**
      * Set locale value with language `ff` and country `MR`.
@@ -2346,7 +2346,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ff", "MR", value)
+        set(value) = add("ff", "MR", value)
 
     /**
      * Set locale value with language `ff` and country `SN`.
@@ -2357,7 +2357,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ff", "SN", value)
+        set(value) = add("ff", "SN", value)
 
     /**
      * Set locale value with language `fi`.
@@ -2368,7 +2368,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fi", null, value)
+        set(value) = add("fi", null, value)
 
     /**
      * Set locale value with language `fi` and country `FI`.
@@ -2379,7 +2379,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fi", "FI", value)
+        set(value) = add("fi", "FI", value)
 
     /**
      * Set locale value with language `fo`.
@@ -2390,7 +2390,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fo", null, value)
+        set(value) = add("fo", null, value)
 
     /**
      * Set locale value with language `fo` and country `FO`.
@@ -2401,7 +2401,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fo", "FO", value)
+        set(value) = add("fo", "FO", value)
 
     /**
      * Set locale value with language `fr`.
@@ -2412,7 +2412,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column(Locale.FRENCH, value)
+        set(value) = add(Locale.FRENCH, value)
 
     /**
      * Set locale value with language `fr` and country `BE`.
@@ -2423,7 +2423,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fr", "BE", value)
+        set(value) = add("fr", "BE", value)
 
     /**
      * Set locale value with language `fr` and country `BF`.
@@ -2434,7 +2434,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fr", "BF", value)
+        set(value) = add("fr", "BF", value)
 
     /**
      * Set locale value with language `fr` and country `BI`.
@@ -2445,7 +2445,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fr", "BI", value)
+        set(value) = add("fr", "BI", value)
 
     /**
      * Set locale value with language `fr` and country `BJ`.
@@ -2456,7 +2456,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fr", "BJ", value)
+        set(value) = add("fr", "BJ", value)
 
     /**
      * Set locale value with language `fr` and country `BL`.
@@ -2467,7 +2467,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fr", "BL", value)
+        set(value) = add("fr", "BL", value)
 
     /**
      * Set locale value with language `fr` and country `CA`.
@@ -2478,7 +2478,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column(Locale.CANADA_FRENCH, value)
+        set(value) = add(Locale.CANADA_FRENCH, value)
 
     /**
      * Set locale value with language `fr` and country `CD`.
@@ -2489,7 +2489,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fr", "CD", value)
+        set(value) = add("fr", "CD", value)
 
     /**
      * Set locale value with language `fr` and country `CF`.
@@ -2500,7 +2500,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fr", "CF", value)
+        set(value) = add("fr", "CF", value)
 
     /**
      * Set locale value with language `fr` and country `CG`.
@@ -2511,7 +2511,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fr", "CG", value)
+        set(value) = add("fr", "CG", value)
 
     /**
      * Set locale value with language `fr` and country `CH`.
@@ -2522,7 +2522,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fr", "CH", value)
+        set(value) = add("fr", "CH", value)
 
     /**
      * Set locale value with language `fr` and country `CI`.
@@ -2533,7 +2533,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fr", "CI", value)
+        set(value) = add("fr", "CI", value)
 
     /**
      * Set locale value with language `fr` and country `CM`.
@@ -2544,7 +2544,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fr", "CM", value)
+        set(value) = add("fr", "CM", value)
 
     /**
      * Set locale value with language `fr` and country `DJ`.
@@ -2555,7 +2555,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fr", "DJ", value)
+        set(value) = add("fr", "DJ", value)
 
     /**
      * Set locale value with language `fr` and country `DZ`.
@@ -2566,7 +2566,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fr", "DZ", value)
+        set(value) = add("fr", "DZ", value)
 
     /**
      * Set locale value with language `fr` and country `FR`.
@@ -2577,7 +2577,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column(Locale.FRANCE, value)
+        set(value) = add(Locale.FRANCE, value)
 
     /**
      * Set locale value with language `fr` and country `GA`.
@@ -2588,7 +2588,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fr", "GA", value)
+        set(value) = add("fr", "GA", value)
 
     /**
      * Set locale value with language `fr` and country `GF`.
@@ -2599,7 +2599,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fr", "GF", value)
+        set(value) = add("fr", "GF", value)
 
     /**
      * Set locale value with language `fr` and country `GN`.
@@ -2610,7 +2610,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fr", "GN", value)
+        set(value) = add("fr", "GN", value)
 
     /**
      * Set locale value with language `fr` and country `GP`.
@@ -2621,7 +2621,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fr", "GP", value)
+        set(value) = add("fr", "GP", value)
 
     /**
      * Set locale value with language `fr` and country `GQ`.
@@ -2632,7 +2632,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fr", "GQ", value)
+        set(value) = add("fr", "GQ", value)
 
     /**
      * Set locale value with language `fr` and country `HT`.
@@ -2643,7 +2643,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fr", "HT", value)
+        set(value) = add("fr", "HT", value)
 
     /**
      * Set locale value with language `fr` and country `KM`.
@@ -2654,7 +2654,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fr", "KM", value)
+        set(value) = add("fr", "KM", value)
 
     /**
      * Set locale value with language `fr` and country `LU`.
@@ -2665,7 +2665,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fr", "LU", value)
+        set(value) = add("fr", "LU", value)
 
     /**
      * Set locale value with language `fr` and country `MA`.
@@ -2676,7 +2676,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fr", "MA", value)
+        set(value) = add("fr", "MA", value)
 
     /**
      * Set locale value with language `fr` and country `MC`.
@@ -2687,7 +2687,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fr", "MC", value)
+        set(value) = add("fr", "MC", value)
 
     /**
      * Set locale value with language `fr` and country `MF`.
@@ -2698,7 +2698,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fr", "MF", value)
+        set(value) = add("fr", "MF", value)
 
     /**
      * Set locale value with language `fr` and country `MG`.
@@ -2709,7 +2709,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fr", "MG", value)
+        set(value) = add("fr", "MG", value)
 
     /**
      * Set locale value with language `fr` and country `ML`.
@@ -2720,7 +2720,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fr", "ML", value)
+        set(value) = add("fr", "ML", value)
 
     /**
      * Set locale value with language `fr` and country `MQ`.
@@ -2731,7 +2731,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fr", "MQ", value)
+        set(value) = add("fr", "MQ", value)
 
     /**
      * Set locale value with language `fr` and country `MR`.
@@ -2742,7 +2742,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fr", "MR", value)
+        set(value) = add("fr", "MR", value)
 
     /**
      * Set locale value with language `fr` and country `MU`.
@@ -2753,7 +2753,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fr", "MU", value)
+        set(value) = add("fr", "MU", value)
 
     /**
      * Set locale value with language `fr` and country `NC`.
@@ -2764,7 +2764,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fr", "NC", value)
+        set(value) = add("fr", "NC", value)
 
     /**
      * Set locale value with language `fr` and country `NE`.
@@ -2775,7 +2775,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fr", "NE", value)
+        set(value) = add("fr", "NE", value)
 
     /**
      * Set locale value with language `fr` and country `PF`.
@@ -2786,7 +2786,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fr", "PF", value)
+        set(value) = add("fr", "PF", value)
 
     /**
      * Set locale value with language `fr` and country `PM`.
@@ -2797,7 +2797,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fr", "PM", value)
+        set(value) = add("fr", "PM", value)
 
     /**
      * Set locale value with language `fr` and country `RE`.
@@ -2808,7 +2808,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fr", "RE", value)
+        set(value) = add("fr", "RE", value)
 
     /**
      * Set locale value with language `fr` and country `RW`.
@@ -2819,7 +2819,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fr", "RW", value)
+        set(value) = add("fr", "RW", value)
 
     /**
      * Set locale value with language `fr` and country `SC`.
@@ -2830,7 +2830,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fr", "SC", value)
+        set(value) = add("fr", "SC", value)
 
     /**
      * Set locale value with language `fr` and country `SN`.
@@ -2841,7 +2841,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fr", "SN", value)
+        set(value) = add("fr", "SN", value)
 
     /**
      * Set locale value with language `fr` and country `SY`.
@@ -2852,7 +2852,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fr", "SY", value)
+        set(value) = add("fr", "SY", value)
 
     /**
      * Set locale value with language `fr` and country `TD`.
@@ -2863,7 +2863,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fr", "TD", value)
+        set(value) = add("fr", "TD", value)
 
     /**
      * Set locale value with language `fr` and country `TG`.
@@ -2874,7 +2874,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fr", "TG", value)
+        set(value) = add("fr", "TG", value)
 
     /**
      * Set locale value with language `fr` and country `TN`.
@@ -2885,7 +2885,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fr", "TN", value)
+        set(value) = add("fr", "TN", value)
 
     /**
      * Set locale value with language `fr` and country `VU`.
@@ -2896,7 +2896,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fr", "VU", value)
+        set(value) = add("fr", "VU", value)
 
     /**
      * Set locale value with language `fr` and country `WF`.
@@ -2907,7 +2907,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fr", "WF", value)
+        set(value) = add("fr", "WF", value)
 
     /**
      * Set locale value with language `fr` and country `YT`.
@@ -2918,7 +2918,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fr", "YT", value)
+        set(value) = add("fr", "YT", value)
 
     /**
      * Set locale value with language `fy`.
@@ -2929,7 +2929,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fy", null, value)
+        set(value) = add("fy", null, value)
 
     /**
      * Set locale value with language `fy` and country `NL`.
@@ -2940,7 +2940,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("fy", "NL", value)
+        set(value) = add("fy", "NL", value)
 
     /**
      * Set locale value with language `ga`.
@@ -2951,7 +2951,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ga", null, value)
+        set(value) = add("ga", null, value)
 
     /**
      * Set locale value with language `ga` and country `IE`.
@@ -2962,7 +2962,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ga", "IE", value)
+        set(value) = add("ga", "IE", value)
 
     /**
      * Set locale value with language `gd`.
@@ -2973,7 +2973,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("gd", null, value)
+        set(value) = add("gd", null, value)
 
     /**
      * Set locale value with language `gd` and country `GB`.
@@ -2984,7 +2984,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("gd", "GB", value)
+        set(value) = add("gd", "GB", value)
 
     /**
      * Set locale value with language `gl`.
@@ -2995,7 +2995,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("gl", null, value)
+        set(value) = add("gl", null, value)
 
     /**
      * Set locale value with language `gl` and country `ES`.
@@ -3006,7 +3006,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("gl", "ES", value)
+        set(value) = add("gl", "ES", value)
 
     /**
      * Set locale value with language `gu`.
@@ -3017,7 +3017,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("gu", null, value)
+        set(value) = add("gu", null, value)
 
     /**
      * Set locale value with language `gu` and country `IN`.
@@ -3028,7 +3028,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("gu", "IN", value)
+        set(value) = add("gu", "IN", value)
 
     /**
      * Set locale value with language `gv`.
@@ -3039,7 +3039,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("gv", null, value)
+        set(value) = add("gv", null, value)
 
     /**
      * Set locale value with language `gv` and country `IM`.
@@ -3050,7 +3050,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("gv", "IM", value)
+        set(value) = add("gv", "IM", value)
 
     /**
      * Set locale value with language `ha`.
@@ -3061,7 +3061,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ha", null, value)
+        set(value) = add("ha", null, value)
 
     /**
      * Set locale value with language `ha` and country `GH`.
@@ -3072,7 +3072,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ha", "GH", value)
+        set(value) = add("ha", "GH", value)
 
     /**
      * Set locale value with language `ha` and country `NE`.
@@ -3083,7 +3083,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ha", "NE", value)
+        set(value) = add("ha", "NE", value)
 
     /**
      * Set locale value with language `ha` and country `NG`.
@@ -3094,7 +3094,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ha", "NG", value)
+        set(value) = add("ha", "NG", value)
 
     /**
      * Set locale value with language `he`.
@@ -3105,7 +3105,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("he", null, value)
+        set(value) = add("he", null, value)
 
     /**
      * Set locale value with language `he` and country `IL`.
@@ -3116,7 +3116,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("he", "IL", value)
+        set(value) = add("he", "IL", value)
 
     /**
      * Set locale value with language `hi`.
@@ -3127,7 +3127,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("hi", null, value)
+        set(value) = add("hi", null, value)
 
     /**
      * Set locale value with language `hi` and country `IN`.
@@ -3138,7 +3138,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("hi", "IN", value)
+        set(value) = add("hi", "IN", value)
 
     /**
      * Set locale value with language `hr`.
@@ -3149,7 +3149,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("hr", null, value)
+        set(value) = add("hr", null, value)
 
     /**
      * Set locale value with language `hr` and country `BA`.
@@ -3160,7 +3160,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("hr", "BA", value)
+        set(value) = add("hr", "BA", value)
 
     /**
      * Set locale value with language `hr` and country `HR`.
@@ -3171,7 +3171,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("hr", "HR", value)
+        set(value) = add("hr", "HR", value)
 
     /**
      * Set locale value with language `hu`.
@@ -3182,7 +3182,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("hu", null, value)
+        set(value) = add("hu", null, value)
 
     /**
      * Set locale value with language `hu` and country `HU`.
@@ -3193,7 +3193,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("hu", "HU", value)
+        set(value) = add("hu", "HU", value)
 
     /**
      * Set locale value with language `hy`.
@@ -3204,7 +3204,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("hy", null, value)
+        set(value) = add("hy", null, value)
 
     /**
      * Set locale value with language `hy` and country `AM`.
@@ -3215,7 +3215,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("hy", "AM", value)
+        set(value) = add("hy", "AM", value)
 
     /**
      * Set locale value with language `id`.
@@ -3226,7 +3226,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("id", null, value)
+        set(value) = add("id", null, value)
 
     /**
      * Set locale value with language `id` and country `ID`.
@@ -3237,7 +3237,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("id", "ID", value)
+        set(value) = add("id", "ID", value)
 
     /**
      * Set locale value with language `ig`.
@@ -3248,7 +3248,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ig", null, value)
+        set(value) = add("ig", null, value)
 
     /**
      * Set locale value with language `ig` and country `NG`.
@@ -3259,7 +3259,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ig", "NG", value)
+        set(value) = add("ig", "NG", value)
 
     /**
      * Set locale value with language `ii`.
@@ -3270,7 +3270,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ii", null, value)
+        set(value) = add("ii", null, value)
 
     /**
      * Set locale value with language `ii` and country `CN`.
@@ -3281,7 +3281,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ii", "CN", value)
+        set(value) = add("ii", "CN", value)
 
     /**
      * Set locale value with language `is`.
@@ -3292,7 +3292,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("is", null, value)
+        set(value) = add("is", null, value)
 
     /**
      * Set locale value with language `is` and country `IS`.
@@ -3303,7 +3303,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("is", "IS", value)
+        set(value) = add("is", "IS", value)
 
     /**
      * Set locale value with language `it`.
@@ -3314,7 +3314,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column(Locale.ITALIAN, value)
+        set(value) = add(Locale.ITALIAN, value)
 
     /**
      * Set locale value with language `it` and country `CH`.
@@ -3325,7 +3325,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("it", "CH", value)
+        set(value) = add("it", "CH", value)
 
     /**
      * Set locale value with language `it` and country `IT`.
@@ -3336,7 +3336,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column(Locale.ITALY, value)
+        set(value) = add(Locale.ITALY, value)
 
     /**
      * Set locale value with language `it` and country `SM`.
@@ -3347,7 +3347,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("it", "SM", value)
+        set(value) = add("it", "SM", value)
 
     /**
      * Set locale value with language `ja`.
@@ -3358,7 +3358,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column(Locale.JAPANESE, value)
+        set(value) = add(Locale.JAPANESE, value)
 
     /**
      * Set locale value with language `ja` and country `JP`.
@@ -3369,7 +3369,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column(Locale.JAPAN, value)
+        set(value) = add(Locale.JAPAN, value)
 
     /**
      * Set locale value with language `ka`.
@@ -3380,7 +3380,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ka", null, value)
+        set(value) = add("ka", null, value)
 
     /**
      * Set locale value with language `ka` and country `GE`.
@@ -3391,7 +3391,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ka", "GE", value)
+        set(value) = add("ka", "GE", value)
 
     /**
      * Set locale value with language `ki`.
@@ -3402,7 +3402,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ki", null, value)
+        set(value) = add("ki", null, value)
 
     /**
      * Set locale value with language `ki` and country `KE`.
@@ -3413,7 +3413,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ki", "KE", value)
+        set(value) = add("ki", "KE", value)
 
     /**
      * Set locale value with language `kk`.
@@ -3424,7 +3424,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("kk", null, value)
+        set(value) = add("kk", null, value)
 
     /**
      * Set locale value with language `kk` and country `KZ`.
@@ -3435,7 +3435,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("kk", "KZ", value)
+        set(value) = add("kk", "KZ", value)
 
     /**
      * Set locale value with language `kl`.
@@ -3446,7 +3446,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("kl", null, value)
+        set(value) = add("kl", null, value)
 
     /**
      * Set locale value with language `kl` and country `GL`.
@@ -3457,7 +3457,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("kl", "GL", value)
+        set(value) = add("kl", "GL", value)
 
     /**
      * Set locale value with language `km`.
@@ -3468,7 +3468,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("km", null, value)
+        set(value) = add("km", null, value)
 
     /**
      * Set locale value with language `km` and country `KH`.
@@ -3479,7 +3479,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("km", "KH", value)
+        set(value) = add("km", "KH", value)
 
     /**
      * Set locale value with language `kn`.
@@ -3490,7 +3490,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("kn", null, value)
+        set(value) = add("kn", null, value)
 
     /**
      * Set locale value with language `kn` and country `IN`.
@@ -3501,7 +3501,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("kn", "IN", value)
+        set(value) = add("kn", "IN", value)
 
     /**
      * Set locale value with language `ko`.
@@ -3512,7 +3512,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column(Locale.KOREAN, value)
+        set(value) = add(Locale.KOREAN, value)
 
     /**
      * Set locale value with language `ko` and country `KP`.
@@ -3523,7 +3523,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ko", "KP", value)
+        set(value) = add("ko", "KP", value)
 
     /**
      * Set locale value with language `ko` and country `KR`.
@@ -3534,7 +3534,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column(Locale.KOREA, value)
+        set(value) = add(Locale.KOREA, value)
 
     /**
      * Set locale value with language `ks`.
@@ -3545,7 +3545,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ks", null, value)
+        set(value) = add("ks", null, value)
 
     /**
      * Set locale value with language `ks` and country `IN`.
@@ -3556,7 +3556,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ks", "IN", value)
+        set(value) = add("ks", "IN", value)
 
     /**
      * Set locale value with language `kw`.
@@ -3567,7 +3567,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("kw", null, value)
+        set(value) = add("kw", null, value)
 
     /**
      * Set locale value with language `kw` and country `GB`.
@@ -3578,7 +3578,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("kw", "GB", value)
+        set(value) = add("kw", "GB", value)
 
     /**
      * Set locale value with language `ky`.
@@ -3589,7 +3589,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ky", null, value)
+        set(value) = add("ky", null, value)
 
     /**
      * Set locale value with language `ky` and country `KG`.
@@ -3600,7 +3600,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ky", "KG", value)
+        set(value) = add("ky", "KG", value)
 
     /**
      * Set locale value with language `lb`.
@@ -3611,7 +3611,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("lb", null, value)
+        set(value) = add("lb", null, value)
 
     /**
      * Set locale value with language `lb` and country `LU`.
@@ -3622,7 +3622,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("lb", "LU", value)
+        set(value) = add("lb", "LU", value)
 
     /**
      * Set locale value with language `lg`.
@@ -3633,7 +3633,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("lg", null, value)
+        set(value) = add("lg", null, value)
 
     /**
      * Set locale value with language `lg` and country `UG`.
@@ -3644,7 +3644,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("lg", "UG", value)
+        set(value) = add("lg", "UG", value)
 
     /**
      * Set locale value with language `ln`.
@@ -3655,7 +3655,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ln", null, value)
+        set(value) = add("ln", null, value)
 
     /**
      * Set locale value with language `ln` and country `AO`.
@@ -3666,7 +3666,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ln", "AO", value)
+        set(value) = add("ln", "AO", value)
 
     /**
      * Set locale value with language `ln` and country `CD`.
@@ -3677,7 +3677,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ln", "CD", value)
+        set(value) = add("ln", "CD", value)
 
     /**
      * Set locale value with language `ln` and country `CF`.
@@ -3688,7 +3688,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ln", "CF", value)
+        set(value) = add("ln", "CF", value)
 
     /**
      * Set locale value with language `ln` and country `CG`.
@@ -3699,7 +3699,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ln", "CG", value)
+        set(value) = add("ln", "CG", value)
 
     /**
      * Set locale value with language `lo`.
@@ -3710,7 +3710,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("lo", null, value)
+        set(value) = add("lo", null, value)
 
     /**
      * Set locale value with language `lo` and country `LA`.
@@ -3721,7 +3721,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("lo", "LA", value)
+        set(value) = add("lo", "LA", value)
 
     /**
      * Set locale value with language `lt`.
@@ -3732,7 +3732,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("lt", null, value)
+        set(value) = add("lt", null, value)
 
     /**
      * Set locale value with language `lt` and country `LT`.
@@ -3743,7 +3743,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("lt", "LT", value)
+        set(value) = add("lt", "LT", value)
 
     /**
      * Set locale value with language `lu`.
@@ -3754,7 +3754,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("lu", null, value)
+        set(value) = add("lu", null, value)
 
     /**
      * Set locale value with language `lu` and country `CD`.
@@ -3765,7 +3765,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("lu", "CD", value)
+        set(value) = add("lu", "CD", value)
 
     /**
      * Set locale value with language `lv`.
@@ -3776,7 +3776,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("lv", null, value)
+        set(value) = add("lv", null, value)
 
     /**
      * Set locale value with language `lv` and country `LV`.
@@ -3787,7 +3787,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("lv", "LV", value)
+        set(value) = add("lv", "LV", value)
 
     /**
      * Set locale value with language `mg`.
@@ -3798,7 +3798,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("mg", null, value)
+        set(value) = add("mg", null, value)
 
     /**
      * Set locale value with language `mg` and country `MG`.
@@ -3809,7 +3809,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("mg", "MG", value)
+        set(value) = add("mg", "MG", value)
 
     /**
      * Set locale value with language `mk`.
@@ -3820,7 +3820,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("mk", null, value)
+        set(value) = add("mk", null, value)
 
     /**
      * Set locale value with language `mk` and country `MK`.
@@ -3831,7 +3831,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("mk", "MK", value)
+        set(value) = add("mk", "MK", value)
 
     /**
      * Set locale value with language `ml`.
@@ -3842,7 +3842,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ml", null, value)
+        set(value) = add("ml", null, value)
 
     /**
      * Set locale value with language `ml` and country `IN`.
@@ -3853,7 +3853,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ml", "IN", value)
+        set(value) = add("ml", "IN", value)
 
     /**
      * Set locale value with language `mn`.
@@ -3864,7 +3864,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("mn", null, value)
+        set(value) = add("mn", null, value)
 
     /**
      * Set locale value with language `mn` and country `MN`.
@@ -3875,7 +3875,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("mn", "MN", value)
+        set(value) = add("mn", "MN", value)
 
     /**
      * Set locale value with language `mr`.
@@ -3886,7 +3886,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("mr", null, value)
+        set(value) = add("mr", null, value)
 
     /**
      * Set locale value with language `mr` and country `IN`.
@@ -3897,7 +3897,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("mr", "IN", value)
+        set(value) = add("mr", "IN", value)
 
     /**
      * Set locale value with language `ms`.
@@ -3908,7 +3908,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ms", null, value)
+        set(value) = add("ms", null, value)
 
     /**
      * Set locale value with language `ms` and country `BN`.
@@ -3919,7 +3919,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ms", "BN", value)
+        set(value) = add("ms", "BN", value)
 
     /**
      * Set locale value with language `ms` and country `MY`.
@@ -3930,7 +3930,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ms", "MY", value)
+        set(value) = add("ms", "MY", value)
 
     /**
      * Set locale value with language `ms` and country `SG`.
@@ -3941,7 +3941,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ms", "SG", value)
+        set(value) = add("ms", "SG", value)
 
     /**
      * Set locale value with language `mt`.
@@ -3952,7 +3952,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("mt", null, value)
+        set(value) = add("mt", null, value)
 
     /**
      * Set locale value with language `mt` and country `MT`.
@@ -3963,7 +3963,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("mt", "MT", value)
+        set(value) = add("mt", "MT", value)
 
     /**
      * Set locale value with language `my`.
@@ -3974,7 +3974,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("my", null, value)
+        set(value) = add("my", null, value)
 
     /**
      * Set locale value with language `my` and country `MM`.
@@ -3985,7 +3985,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("my", "MM", value)
+        set(value) = add("my", "MM", value)
 
     /**
      * Set locale value with language `nb`.
@@ -3996,7 +3996,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("nb", null, value)
+        set(value) = add("nb", null, value)
 
     /**
      * Set locale value with language `nb` and country `NO`.
@@ -4007,7 +4007,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("nb", "NO", value)
+        set(value) = add("nb", "NO", value)
 
     /**
      * Set locale value with language `nb` and country `SJ`.
@@ -4018,7 +4018,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("nb", "SJ", value)
+        set(value) = add("nb", "SJ", value)
 
     /**
      * Set locale value with language `nd`.
@@ -4029,7 +4029,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("nd", null, value)
+        set(value) = add("nd", null, value)
 
     /**
      * Set locale value with language `nd` and country `ZW`.
@@ -4040,7 +4040,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("nd", "ZW", value)
+        set(value) = add("nd", "ZW", value)
 
     /**
      * Set locale value with language `ne`.
@@ -4051,7 +4051,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ne", null, value)
+        set(value) = add("ne", null, value)
 
     /**
      * Set locale value with language `ne` and country `IN`.
@@ -4062,7 +4062,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ne", "IN", value)
+        set(value) = add("ne", "IN", value)
 
     /**
      * Set locale value with language `ne` and country `NP`.
@@ -4073,7 +4073,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ne", "NP", value)
+        set(value) = add("ne", "NP", value)
 
     /**
      * Set locale value with language `nl`.
@@ -4084,7 +4084,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("nl", null, value)
+        set(value) = add("nl", null, value)
 
     /**
      * Set locale value with language `nl` and country `AW`.
@@ -4095,7 +4095,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("nl", "AW", value)
+        set(value) = add("nl", "AW", value)
 
     /**
      * Set locale value with language `nl` and country `BE`.
@@ -4106,7 +4106,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("nl", "BE", value)
+        set(value) = add("nl", "BE", value)
 
     /**
      * Set locale value with language `nl` and country `BQ`.
@@ -4117,7 +4117,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("nl", "BQ", value)
+        set(value) = add("nl", "BQ", value)
 
     /**
      * Set locale value with language `nl` and country `CW`.
@@ -4128,7 +4128,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("nl", "CW", value)
+        set(value) = add("nl", "CW", value)
 
     /**
      * Set locale value with language `nl` and country `NL`.
@@ -4139,7 +4139,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("nl", "NL", value)
+        set(value) = add("nl", "NL", value)
 
     /**
      * Set locale value with language `nl` and country `SR`.
@@ -4150,7 +4150,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("nl", "SR", value)
+        set(value) = add("nl", "SR", value)
 
     /**
      * Set locale value with language `nl` and country `SX`.
@@ -4161,7 +4161,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("nl", "SX", value)
+        set(value) = add("nl", "SX", value)
 
     /**
      * Set locale value with language `nn`.
@@ -4172,7 +4172,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("nn", null, value)
+        set(value) = add("nn", null, value)
 
     /**
      * Set locale value with language `nn` and country `NO`.
@@ -4183,7 +4183,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("nn", "NO", value)
+        set(value) = add("nn", "NO", value)
 
     /**
      * Set locale value with language `no`.
@@ -4194,7 +4194,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("no", null, value)
+        set(value) = add("no", null, value)
 
     /**
      * Set locale value with language `no` and country `NO`.
@@ -4205,7 +4205,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("no", "NO", value)
+        set(value) = add("no", "NO", value)
 
     /**
      * Set locale value with language `om`.
@@ -4216,7 +4216,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("om", null, value)
+        set(value) = add("om", null, value)
 
     /**
      * Set locale value with language `om` and country `ET`.
@@ -4227,7 +4227,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("om", "ET", value)
+        set(value) = add("om", "ET", value)
 
     /**
      * Set locale value with language `om` and country `KE`.
@@ -4238,7 +4238,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("om", "KE", value)
+        set(value) = add("om", "KE", value)
 
     /**
      * Set locale value with language `or`.
@@ -4249,7 +4249,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("or", null, value)
+        set(value) = add("or", null, value)
 
     /**
      * Set locale value with language `or` and country `IN`.
@@ -4260,7 +4260,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("or", "IN", value)
+        set(value) = add("or", "IN", value)
 
     /**
      * Set locale value with language `os`.
@@ -4271,7 +4271,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("os", null, value)
+        set(value) = add("os", null, value)
 
     /**
      * Set locale value with language `os` and country `GE`.
@@ -4282,7 +4282,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("os", "GE", value)
+        set(value) = add("os", "GE", value)
 
     /**
      * Set locale value with language `os` and country `RU`.
@@ -4293,7 +4293,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("os", "RU", value)
+        set(value) = add("os", "RU", value)
 
     /**
      * Set locale value with language `pa`.
@@ -4304,7 +4304,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("pa", null, value)
+        set(value) = add("pa", null, value)
 
     /**
      * Set locale value with language `pa` and country `PK`.
@@ -4315,7 +4315,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("pa", "PK", value)
+        set(value) = add("pa", "PK", value)
 
     /**
      * Set locale value with language `pa` and country `IN`.
@@ -4326,7 +4326,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("pa", "IN", value)
+        set(value) = add("pa", "IN", value)
 
     /**
      * Set locale value with language `pl`.
@@ -4337,7 +4337,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("pl", null, value)
+        set(value) = add("pl", null, value)
 
     /**
      * Set locale value with language `pl` and country `PL`.
@@ -4348,7 +4348,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("pl", "PL", value)
+        set(value) = add("pl", "PL", value)
 
     /**
      * Set locale value with language `ps`.
@@ -4359,7 +4359,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ps", null, value)
+        set(value) = add("ps", null, value)
 
     /**
      * Set locale value with language `ps` and country `AF`.
@@ -4370,7 +4370,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ps", "AF", value)
+        set(value) = add("ps", "AF", value)
 
     /**
      * Set locale value with language `pt`.
@@ -4381,7 +4381,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("pt", null, value)
+        set(value) = add("pt", null, value)
 
     /**
      * Set locale value with language `pt` and country `AO`.
@@ -4392,7 +4392,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("pt", "AO", value)
+        set(value) = add("pt", "AO", value)
 
     /**
      * Set locale value with language `pt` and country `BR`.
@@ -4403,7 +4403,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("pt", "BR", value)
+        set(value) = add("pt", "BR", value)
 
     /**
      * Set locale value with language `pt` and country `CV`.
@@ -4414,7 +4414,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("pt", "CV", value)
+        set(value) = add("pt", "CV", value)
 
     /**
      * Set locale value with language `pt` and country `GW`.
@@ -4425,7 +4425,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("pt", "GW", value)
+        set(value) = add("pt", "GW", value)
 
     /**
      * Set locale value with language `pt` and country `MO`.
@@ -4436,7 +4436,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("pt", "MO", value)
+        set(value) = add("pt", "MO", value)
 
     /**
      * Set locale value with language `pt` and country `MZ`.
@@ -4447,7 +4447,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("pt", "MZ", value)
+        set(value) = add("pt", "MZ", value)
 
     /**
      * Set locale value with language `pt` and country `PT`.
@@ -4458,7 +4458,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("pt", "PT", value)
+        set(value) = add("pt", "PT", value)
 
     /**
      * Set locale value with language `pt` and country `ST`.
@@ -4469,7 +4469,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("pt", "ST", value)
+        set(value) = add("pt", "ST", value)
 
     /**
      * Set locale value with language `pt` and country `TL`.
@@ -4480,7 +4480,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("pt", "TL", value)
+        set(value) = add("pt", "TL", value)
 
     /**
      * Set locale value with language `qu`.
@@ -4491,7 +4491,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("qu", null, value)
+        set(value) = add("qu", null, value)
 
     /**
      * Set locale value with language `qu` and country `BO`.
@@ -4502,7 +4502,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("qu", "BO", value)
+        set(value) = add("qu", "BO", value)
 
     /**
      * Set locale value with language `qu` and country `EC`.
@@ -4513,7 +4513,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("qu", "EC", value)
+        set(value) = add("qu", "EC", value)
 
     /**
      * Set locale value with language `qu` and country `PE`.
@@ -4524,7 +4524,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("qu", "PE", value)
+        set(value) = add("qu", "PE", value)
 
     /**
      * Set locale value with language `rm`.
@@ -4535,7 +4535,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("rm", null, value)
+        set(value) = add("rm", null, value)
 
     /**
      * Set locale value with language `rm` and country `CH`.
@@ -4546,7 +4546,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("rm", "CH", value)
+        set(value) = add("rm", "CH", value)
 
     /**
      * Set locale value with language `rn`.
@@ -4557,7 +4557,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("rn", null, value)
+        set(value) = add("rn", null, value)
 
     /**
      * Set locale value with language `rn` and country `BI`.
@@ -4568,7 +4568,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("rn", "BI", value)
+        set(value) = add("rn", "BI", value)
 
     /**
      * Set locale value with language `ro`.
@@ -4579,7 +4579,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ro", null, value)
+        set(value) = add("ro", null, value)
 
     /**
      * Set locale value with language `ro` and country `MD`.
@@ -4590,7 +4590,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ro", "MD", value)
+        set(value) = add("ro", "MD", value)
 
     /**
      * Set locale value with language `ro` and country `RO`.
@@ -4601,7 +4601,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ro", "RO", value)
+        set(value) = add("ro", "RO", value)
 
     /**
      * Set locale value with language `ru`.
@@ -4612,7 +4612,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ru", null, value)
+        set(value) = add("ru", null, value)
 
     /**
      * Set locale value with language `ru` and country `BY`.
@@ -4623,7 +4623,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ru", "BY", value)
+        set(value) = add("ru", "BY", value)
 
     /**
      * Set locale value with language `ru` and country `KG`.
@@ -4634,7 +4634,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ru", "KG", value)
+        set(value) = add("ru", "KG", value)
 
     /**
      * Set locale value with language `ru` and country `KZ`.
@@ -4645,7 +4645,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ru", "KZ", value)
+        set(value) = add("ru", "KZ", value)
 
     /**
      * Set locale value with language `ru` and country `MD`.
@@ -4656,7 +4656,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ru", "MD", value)
+        set(value) = add("ru", "MD", value)
 
     /**
      * Set locale value with language `ru` and country `RU`.
@@ -4667,7 +4667,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ru", "RU", value)
+        set(value) = add("ru", "RU", value)
 
     /**
      * Set locale value with language `ru` and country `UA`.
@@ -4678,7 +4678,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ru", "UA", value)
+        set(value) = add("ru", "UA", value)
 
     /**
      * Set locale value with language `rw`.
@@ -4689,7 +4689,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("rw", null, value)
+        set(value) = add("rw", null, value)
 
     /**
      * Set locale value with language `rw` and country `RW`.
@@ -4700,7 +4700,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("rw", "RW", value)
+        set(value) = add("rw", "RW", value)
 
     /**
      * Set locale value with language `se`.
@@ -4711,7 +4711,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("se", null, value)
+        set(value) = add("se", null, value)
 
     /**
      * Set locale value with language `se` and country `FI`.
@@ -4722,7 +4722,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("se", "FI", value)
+        set(value) = add("se", "FI", value)
 
     /**
      * Set locale value with language `se` and country `NO`.
@@ -4733,7 +4733,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("se", "NO", value)
+        set(value) = add("se", "NO", value)
 
     /**
      * Set locale value with language `se` and country `SE`.
@@ -4744,7 +4744,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("se", "SE", value)
+        set(value) = add("se", "SE", value)
 
     /**
      * Set locale value with language `sg`.
@@ -4755,7 +4755,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("sg", null, value)
+        set(value) = add("sg", null, value)
 
     /**
      * Set locale value with language `sg` and country `CF`.
@@ -4766,7 +4766,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("sg", "CF", value)
+        set(value) = add("sg", "CF", value)
 
     /**
      * Set locale value with language `sh`.
@@ -4777,7 +4777,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("sh", null, value)
+        set(value) = add("sh", null, value)
 
     /**
      * Set locale value with language `sh` and country `BA`.
@@ -4788,7 +4788,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("sh", "BA", value)
+        set(value) = add("sh", "BA", value)
 
     /**
      * Set locale value with language `si`.
@@ -4799,7 +4799,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("si", null, value)
+        set(value) = add("si", null, value)
 
     /**
      * Set locale value with language `si` and country `LK`.
@@ -4810,7 +4810,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("si", "LK", value)
+        set(value) = add("si", "LK", value)
 
     /**
      * Set locale value with language `sk`.
@@ -4821,7 +4821,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("sk", null, value)
+        set(value) = add("sk", null, value)
 
     /**
      * Set locale value with language `sk` and country `SK`.
@@ -4832,7 +4832,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("sk", "SK", value)
+        set(value) = add("sk", "SK", value)
 
     /**
      * Set locale value with language `sl`.
@@ -4843,7 +4843,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("sl", null, value)
+        set(value) = add("sl", null, value)
 
     /**
      * Set locale value with language `sl` and country `SI`.
@@ -4854,7 +4854,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("sl", "SI", value)
+        set(value) = add("sl", "SI", value)
 
     /**
      * Set locale value with language `sn`.
@@ -4865,7 +4865,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("sn", null, value)
+        set(value) = add("sn", null, value)
 
     /**
      * Set locale value with language `sn` and country `ZW`.
@@ -4876,7 +4876,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("sn", "ZW", value)
+        set(value) = add("sn", "ZW", value)
 
     /**
      * Set locale value with language `so`.
@@ -4887,7 +4887,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("so", null, value)
+        set(value) = add("so", null, value)
 
     /**
      * Set locale value with language `so` and country `DJ`.
@@ -4898,7 +4898,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("so", "DJ", value)
+        set(value) = add("so", "DJ", value)
 
     /**
      * Set locale value with language `so` and country `ET`.
@@ -4909,7 +4909,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("so", "ET", value)
+        set(value) = add("so", "ET", value)
 
     /**
      * Set locale value with language `so` and country `KE`.
@@ -4920,7 +4920,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("so", "KE", value)
+        set(value) = add("so", "KE", value)
 
     /**
      * Set locale value with language `so` and country `SO`.
@@ -4931,7 +4931,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("so", "SO", value)
+        set(value) = add("so", "SO", value)
 
     /**
      * Set locale value with language `sq`.
@@ -4942,7 +4942,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("sq", null, value)
+        set(value) = add("sq", null, value)
 
     /**
      * Set locale value with language `sq` and country `AL`.
@@ -4953,7 +4953,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("sq", "AL", value)
+        set(value) = add("sq", "AL", value)
 
     /**
      * Set locale value with language `sq` and country `MK`.
@@ -4964,7 +4964,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("sq", "MK", value)
+        set(value) = add("sq", "MK", value)
 
     /**
      * Set locale value with language `sq` and country `XK`.
@@ -4975,7 +4975,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("sq", "XK", value)
+        set(value) = add("sq", "XK", value)
 
     /**
      * Set locale value with language `sr`.
@@ -4986,7 +4986,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("sr", null, value)
+        set(value) = add("sr", null, value)
 
     /**
      * Set locale value with language `sr` and country `BA`.
@@ -4997,7 +4997,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("sr", "BA", value)
+        set(value) = add("sr", "BA", value)
 
     /**
      * Set locale value with language `sr` and country `ME`.
@@ -5008,7 +5008,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("sr", "ME", value)
+        set(value) = add("sr", "ME", value)
 
     /**
      * Set locale value with language `sr` and country `RS`.
@@ -5019,7 +5019,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("sr", "RS", value)
+        set(value) = add("sr", "RS", value)
 
     /**
      * Set locale value with language `sr` and country `XK`.
@@ -5030,7 +5030,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("sr", "XK", value)
+        set(value) = add("sr", "XK", value)
 
     /**
      * Set locale value with language `sv`.
@@ -5041,7 +5041,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("sv", null, value)
+        set(value) = add("sv", null, value)
 
     /**
      * Set locale value with language `sv` and country `AX`.
@@ -5052,7 +5052,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("sv", "AX", value)
+        set(value) = add("sv", "AX", value)
 
     /**
      * Set locale value with language `sv` and country `FI`.
@@ -5063,7 +5063,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("sv", "FI", value)
+        set(value) = add("sv", "FI", value)
 
     /**
      * Set locale value with language `sv` and country `SE`.
@@ -5074,7 +5074,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("sv", "SE", value)
+        set(value) = add("sv", "SE", value)
 
     /**
      * Set locale value with language `sw`.
@@ -5085,7 +5085,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("sw", null, value)
+        set(value) = add("sw", null, value)
 
     /**
      * Set locale value with language `sw` and country `KE`.
@@ -5096,7 +5096,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("sw", "KE", value)
+        set(value) = add("sw", "KE", value)
 
     /**
      * Set locale value with language `sw` and country `TZ`.
@@ -5107,7 +5107,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("sw", "TZ", value)
+        set(value) = add("sw", "TZ", value)
 
     /**
      * Set locale value with language `sw` and country `UG`.
@@ -5118,7 +5118,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("sw", "UG", value)
+        set(value) = add("sw", "UG", value)
 
     /**
      * Set locale value with language `ta`.
@@ -5129,7 +5129,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ta", null, value)
+        set(value) = add("ta", null, value)
 
     /**
      * Set locale value with language `ta` and country `IN`.
@@ -5140,7 +5140,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ta", "IN", value)
+        set(value) = add("ta", "IN", value)
 
     /**
      * Set locale value with language `ta` and country `LK`.
@@ -5151,7 +5151,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ta", "LK", value)
+        set(value) = add("ta", "LK", value)
 
     /**
      * Set locale value with language `ta` and country `MY`.
@@ -5162,7 +5162,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ta", "MY", value)
+        set(value) = add("ta", "MY", value)
 
     /**
      * Set locale value with language `ta` and country `SG`.
@@ -5173,7 +5173,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ta", "SG", value)
+        set(value) = add("ta", "SG", value)
 
     /**
      * Set locale value with language `te`.
@@ -5184,7 +5184,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("te", null, value)
+        set(value) = add("te", null, value)
 
     /**
      * Set locale value with language `te` and country `IN`.
@@ -5195,7 +5195,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("te", "IN", value)
+        set(value) = add("te", "IN", value)
 
     /**
      * Set locale value with language `th`.
@@ -5206,7 +5206,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("th", null, value)
+        set(value) = add("th", null, value)
 
     /**
      * Set locale value with language `th` and country `TH`.
@@ -5217,7 +5217,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("th", "TH", value)
+        set(value) = add("th", "TH", value)
 
     /**
      * Set locale value with language `ti`.
@@ -5228,7 +5228,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ti", null, value)
+        set(value) = add("ti", null, value)
 
     /**
      * Set locale value with language `ti` and country `ER`.
@@ -5239,7 +5239,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ti", "ER", value)
+        set(value) = add("ti", "ER", value)
 
     /**
      * Set locale value with language `ti` and country `ET`.
@@ -5250,7 +5250,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ti", "ET", value)
+        set(value) = add("ti", "ET", value)
 
     /**
      * Set locale value with language `tl`.
@@ -5261,7 +5261,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("tl", null, value)
+        set(value) = add("tl", null, value)
 
     /**
      * Set locale value with language `tl` and country `PH`.
@@ -5272,7 +5272,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("tl", "PH", value)
+        set(value) = add("tl", "PH", value)
 
     /**
      * Set locale value with language `to`.
@@ -5283,7 +5283,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("to", null, value)
+        set(value) = add("to", null, value)
 
     /**
      * Set locale value with language `to` and country `TO`.
@@ -5294,7 +5294,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("to", "TO", value)
+        set(value) = add("to", "TO", value)
 
     /**
      * Set locale value with language `tr`.
@@ -5305,7 +5305,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("tr", null, value)
+        set(value) = add("tr", null, value)
 
     /**
      * Set locale value with language `tr` and country `CY`.
@@ -5316,7 +5316,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("tr", "CY", value)
+        set(value) = add("tr", "CY", value)
 
     /**
      * Set locale value with language `tr` and country `TR`.
@@ -5327,7 +5327,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("tr", "TR", value)
+        set(value) = add("tr", "TR", value)
 
     /**
      * Set locale value with language `ug`.
@@ -5338,7 +5338,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ug", null, value)
+        set(value) = add("ug", null, value)
 
     /**
      * Set locale value with language `ug` and country `CN`.
@@ -5349,7 +5349,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ug", "CN", value)
+        set(value) = add("ug", "CN", value)
 
     /**
      * Set locale value with language `uk`.
@@ -5360,7 +5360,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("uk", null, value)
+        set(value) = add("uk", null, value)
 
     /**
      * Set locale value with language `uk` and country `UA`.
@@ -5371,7 +5371,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("uk", "UA", value)
+        set(value) = add("uk", "UA", value)
 
     /**
      * Set locale value with language `ur`.
@@ -5382,7 +5382,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ur", null, value)
+        set(value) = add("ur", null, value)
 
     /**
      * Set locale value with language `ur` and country `IN`.
@@ -5393,7 +5393,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ur", "IN", value)
+        set(value) = add("ur", "IN", value)
 
     /**
      * Set locale value with language `ur` and country `PK`.
@@ -5404,7 +5404,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("ur", "PK", value)
+        set(value) = add("ur", "PK", value)
 
     /**
      * Set locale value with language `uz`.
@@ -5415,7 +5415,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("uz", null, value)
+        set(value) = add("uz", null, value)
 
     /**
      * Set locale value with language `uz` and country `AF`.
@@ -5426,7 +5426,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("uz", "AF", value)
+        set(value) = add("uz", "AF", value)
 
     /**
      * Set locale value with language `uz` and country `UZ`.
@@ -5437,7 +5437,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("uz", "UZ", value)
+        set(value) = add("uz", "UZ", value)
 
     /**
      * Set locale value with language `vi`.
@@ -5448,7 +5448,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("vi", null, value)
+        set(value) = add("vi", null, value)
 
     /**
      * Set locale value with language `vi` and country `VN`.
@@ -5459,7 +5459,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("vi", "VN", value)
+        set(value) = add("vi", "VN", value)
 
     /**
      * Set locale value with language `yi`.
@@ -5470,7 +5470,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("yi", null, value)
+        set(value) = add("yi", null, value)
 
     /**
      * Set locale value with language `yo`.
@@ -5481,7 +5481,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("yo", null, value)
+        set(value) = add("yo", null, value)
 
     /**
      * Set locale value with language `yo` and country `BJ`.
@@ -5492,7 +5492,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("yo", "BJ", value)
+        set(value) = add("yo", "BJ", value)
 
     /**
      * Set locale value with language `yo` and country `NG`.
@@ -5503,7 +5503,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("yo", "NG", value)
+        set(value) = add("yo", "NG", value)
 
     /**
      * Set locale value with language `zh`.
@@ -5514,7 +5514,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column(Locale.CHINESE, value)
+        set(value) = add(Locale.CHINESE, value)
 
     /**
      * Set locale value with language `zh` and country `CN`.
@@ -5525,7 +5525,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column(Locale.CHINA, value)
+        set(value) = add(Locale.CHINA, value)
 
     /**
      * Set locale value with language `zh` and country `HK`.
@@ -5536,7 +5536,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("zh", "HK", value)
+        set(value) = add("zh", "HK", value)
 
     /**
      * Set locale value with language `zh` and country `MO`.
@@ -5547,7 +5547,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("zh", "MO", value)
+        set(value) = add("zh", "MO", value)
 
     /**
      * Set locale value with language `zh` and country `SG`.
@@ -5558,7 +5558,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("zh", "SG", value)
+        set(value) = add("zh", "SG", value)
 
     /**
      * Set locale value with language `zh` and country `TW`.
@@ -5569,7 +5569,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column(Locale.TAIWAN, value)
+        set(value) = add(Locale.TAIWAN, value)
 
     /**
      * Set locale value with language `zu`.
@@ -5580,7 +5580,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("zu", null, value)
+        set(value) = add("zu", null, value)
 
     /**
      * Set locale value with language `zu` and country `ZA`.
@@ -5591,7 +5591,7 @@ interface LocaleTableColumnBuilder : BaseLocaleTableColumnBuilder {
             level = DeprecationLevel.ERROR
         )
         get() = noGetter()
-        set(value) = column("zu", "ZA", value)
+        set(value) = add("zu", "ZA", value)
 
     private companion object {
         const val NO_GETTER: String = "Property does not have a getter."

@@ -4,7 +4,7 @@ buildscript {
     }
     dependencies {
         classpath files('../locale-gradle-plugin-0.2.jar')
-        classpath 'com.google.guava:guava:28.1-jre'
+        classpath 'com.google.guava:guava:29.0-jre'
     }
 }
 
@@ -15,11 +15,11 @@ group 'com.example'
 version '1.0'
 
 locale {
-    row('about') {
+    text('about') {
         en = 'About'
         id = 'Tentang'
     }
-    row('home') {
+    text('home') {
         en = 'Home'
         id = 'Beranda'
     }
