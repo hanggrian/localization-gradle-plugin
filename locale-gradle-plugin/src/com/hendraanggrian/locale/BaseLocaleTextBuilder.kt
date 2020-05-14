@@ -5,10 +5,10 @@ import java.util.Locale
 /**
  * Second/last phase of localization configuration, used only within [LocaleTableBuilder] scope.
  *
- * However, this interface often isn't directly used, as [LocaleTableColumnBuilder] offers convenient
- * method on each possible localization.
+ * However, this interface often isn't directly used,
+ * as [LocaleTextBuilder] offers convenient method on each possible localization.
  */
-interface BaseLocaleTextBuilder : LocaleTableScope {
+interface BaseLocaleTextBuilder {
 
     /**
      * Register localization value to specified [locale].

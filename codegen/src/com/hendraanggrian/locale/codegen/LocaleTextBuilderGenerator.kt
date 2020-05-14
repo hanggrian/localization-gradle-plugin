@@ -19,10 +19,13 @@ object LocaleTextBuilderGenerator {
         println("Writing...")
         buildFileSpec(PACKAGE_NAME, CLASS_NAME) {
             indentSize = 4
-            addComment("Generated file, do not modify manually.")
             addImport("java.util", "Locale")
             types.addInterface(CLASS_NAME) {
-                kdoc += "Locales listed below are based on [umpirsky's locale-list](https://github.com/umpirsky/locale-list)."
+                kdoc {
+                    appendln("Locales listed below are based on [umpirsky's locale-list](https://github.com/umpirsky/locale-list).")
+                    appendln()
+                    appendln("This is a generated class from `codegen` module.")
+                }
                 annotations.add<Suppress> {
                     addMember("%S", "unused")
                     addMember("%S", "PropertyName")

@@ -14,35 +14,31 @@ import javax.xml.transform.OutputKeys
 import javax.xml.transform.TransformerFactory
 import javax.xml.transform.dom.DOMSource
 import javax.xml.transform.stream.StreamResult
+import org.gradle.api.Action
 import org.gradle.api.DefaultTask
 import org.gradle.api.tasks.Input
 import org.gradle.api.tasks.Internal
 import org.gradle.api.tasks.Optional
 import org.gradle.api.tasks.OutputDirectory
 import org.gradle.api.tasks.TaskAction
+import org.gradle.kotlin.dsl.invoke
 
 /** Non-platform specific locale writer task. */
-sealed class LocalizeTask : DefaultTask() {
+sealed class LocalizeTask : DefaultTask(), LocaleConfiguration, LocaleTableBuilder {
+    private val textBuilder = LocaleTextBuilderImpl()
 
-    @Internal protected lateinit var table: LocaleTable
+    internal val table: LocaleTable @Internal get() = textBuilder.table
+    override val projectDir: File @Internal get() = project.projectDir
 
-    /** Localization resource name, default is `strings`. */
-    @Input var resourceName: String? = null
+    @Input override lateinit var resourceName: String
+    @Input @Optional override var defaultLocale: Locale? = null
+    override var isSorted: Boolean = true @Input get
 
-    /** Default locale, when matching localization is found, file name suffix is removed. */
-    @Input @Optional var defaultLocale: Locale? = null
-
-    /** When enabled, generated localization will maintain its alphabetical order. */
-    var isSorted: Boolean = true @Input get
-
-    /** Path that localization files will be generated to. */
-    @OutputDirectory var outputDir: File? = null
-
-    /** Convenient method to set output directory from file path, relative to project directory. */
-    var outputDirectory: String
-        @OutputDirectory get() = outputDir!!.absolutePath
+    @OutputDirectory override lateinit var outputDir: File
+    override var outputDirectory: String
+        @Input get() = super.outputDirectory
         set(value) {
-            outputDir = project.projectDir.resolve(value)
+            super.outputDirectory = value
         }
 
     init {
@@ -50,10 +46,15 @@ sealed class LocalizeTask : DefaultTask() {
         outputs.upToDateWhen { false }
     }
 
+    override fun text(key: String, configuration: Action<LocaleTextBuilder>) {
+        textBuilder.currentRow = key
+        configuration(textBuilder)
+    }
+
     @TaskAction
     fun generate() {
         logger.info("Preparing localization...")
-        outputDir!!.mkdirs()
+        outputDir.mkdirs()
 
         logger.info("Writing localization...")
         write()
@@ -63,10 +64,6 @@ sealed class LocalizeTask : DefaultTask() {
 
     /** Actual file writing process goes here. */
     abstract fun write()
-
-    internal fun setTable(table: LocaleTable) {
-        this.table = table
-    }
 
     /** File name suffix. For example, `-en` and `-id` considering `-` is the [separator]. */
     protected fun Locale.toSuffix(separator: Char): String = buildString {
@@ -113,7 +110,7 @@ open class LocalizeJavaTask : LocalizeTask() {
         forEachRow { key ->
             properties[key] = table[key, locale]
         }
-        val outputFile = outputDir!!.resolve("$resourceName${locale.toSuffix('_')}.properties")
+        val outputFile = outputDir.resolve("$resourceName${locale.toSuffix('_')}.properties")
         outputFile.deleteIfExists()
         outputFile.outputStream().use {
             properties.store(it, getFileComment(false))
@@ -171,7 +168,7 @@ open class LocalizeAndroidTask : LocalizeTask() {
             s.appendChild(doc.createTextNode(table[key, locale]))
             resources.appendChild(s)
         }
-        val innerOutputDir = outputDir!!.resolve("values${locale.toSuffix('-')}")
+        val innerOutputDir = outputDir.resolve("values${locale.toSuffix('-')}")
         innerOutputDir.mkdirs()
         val outputFile = innerOutputDir.resolve("$resourceName.xml")
         outputFile.deleteIfExists()

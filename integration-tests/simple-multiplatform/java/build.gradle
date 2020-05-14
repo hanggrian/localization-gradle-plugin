@@ -2,3 +2,7 @@ apply plugin: 'java'
 
 group 'com.example'
 version '1.0'
+
+dependencies {
+    testImplementation "junit:junit:4.12"
+}

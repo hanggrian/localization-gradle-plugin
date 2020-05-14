@@ -16,36 +16,27 @@ class LocalePlugin : Plugin<Project> {
     }
 
     override fun apply(project: Project) {
-        val ext = project.extensions.create<LocaleExtension>("locale")
+        val ext = project.extensions.create<LocaleExtension>("locale", project.projectDir)
+        ext.outputDir = project.projectDir.resolve("src/main/resources")
+
         project.tasks {
             val localizeJava by registering(LocalizeJavaTask::class) {
                 group = GROUP_NAME
                 description = "Write localization Java Properties file."
-                setTable(ext.javaTable)
-                if (outputDir == null) {
-                    outputDir = project.projectDir.resolve("src/main/resources")
-                }
-                if (resourceName == null) {
-                    resourceName = ext.resourceName
-                }
-                if (defaultLocale == null && ext.defaultLocale != null) {
-                    defaultLocale = ext.defaultLocale
-                }
+                table.putAll(ext.table)
+                outputDir = ext.outputDir
+                resourceName = ext.resourceName
+                defaultLocale = ext.defaultLocale
             }
             val localizeAndroid by registering(LocalizeAndroidTask::class) {
                 group = GROUP_NAME
                 description = "Write localization Android XML files."
-                setTable(ext.androidTable)
-                if (outputDir == null) {
-                    outputDir = project.projectDir.resolve("src/main/resources")
-                }
-                if (resourceName == null) {
-                    resourceName = ext.resourceName
-                }
-                if (defaultLocale == null && ext.defaultLocale != null) {
-                    defaultLocale = ext.defaultLocale
-                }
+                table.putAll(ext.table)
+                outputDir = ext.outputDir
+                resourceName = ext.resourceName
+                defaultLocale = ext.defaultLocale
             }
+
             @Suppress("UNUSED_VARIABLE")
             val localizeAll by registering {
                 group = GROUP_NAME

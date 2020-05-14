@@ -1,4 +1,3 @@
-// Generated file, do not modify manually.
 package com.hendraanggrian.locale
 
 import java.util.Locale
@@ -10,6 +9,8 @@ import kotlin.Suppress
 /**
  * Locales listed below are based on [umpirsky's
  * locale-list](https://github.com/umpirsky/locale-list).
+ *
+ * This is a generated class from `codegen` module.
  */
 @Suppress(
     "unused",

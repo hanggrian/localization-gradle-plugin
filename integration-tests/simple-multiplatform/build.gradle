@@ -28,24 +28,20 @@ locale {
         en = 'Home'
         id = 'Beranda'
     }
-    configureJavaOnly {
-        text('java_only_text') {
-            it.en = 'Java only'
-            it.id = 'Hanya di Java'
-        }
-    }
-    configureAndroidOnly {
-        text('android_only_text') {
-            it.en = 'Android only'
-            it.id = 'Hanya di Android'
-        }
+}
+
+tasks.withType(com.hendraanggrian.locale.LocalizeJavaTask) {
+    outputDirectory 'java/src/main/resources'
+    text('java_only_text') {
+        it.en = 'Java only'
+        it.id = 'Hanya di Java'
     }
 }
 
 tasks.withType(com.hendraanggrian.locale.LocalizeAndroidTask) {
     outputDirectory 'android/src/main/resources'
-}
-
-tasks.withType(com.hendraanggrian.locale.LocalizeJavaTask) {
-    outputDirectory 'java/src/main/resources'
+    text('android_only_text') {
+        it.en = 'Android only'
+        it.id = 'Hanya di Android'
+    }
 }

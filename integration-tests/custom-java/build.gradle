@@ -23,7 +23,15 @@ sourceSets {
     }
 }
 
+dependencies {
+    testImplementation "junit:junit:4.12"
+}
+
 locale {
+    resourceName 'my_strings'
+    defaultLocale new Locale("id")
+    sorted false
+    outputDirectory 'res'
     text('about') {
         en = 'About'
         id = 'Tentang'
@@ -32,11 +40,4 @@ locale {
         en = 'Home'
         id = 'Beranda'
     }
-}
-
-tasks.withType(com.hendraanggrian.locale.LocalizeJavaTask) {
-    resourceName 'my_strings'
-    defaultLocale new Locale("id")
-    outputDirectory 'res'
-    sorted false
 }

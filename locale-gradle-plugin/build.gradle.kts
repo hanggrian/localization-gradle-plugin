@@ -10,7 +10,10 @@ version = RELEASE_VERSION
 
 sourceSets {
     get("main").java.srcDir("src")
-    get("test").java.srcDir("tests/src")
+    getByName("test") {
+        java.srcDir("tests/src")
+        resources.srcDir("tests/res")
+    }
 }
 
 gradlePlugin {
@@ -27,6 +30,7 @@ val ktlint by configurations.registering
 dependencies {
     implementation(kotlin("stdlib", VERSION_KOTLIN))
     implementation(google("guava", VERSION_GUAVA))
+    implementation(opencsv())
 
     testImplementation(kotlin("test-junit"))
     testImplementation(google("truth", VERSION_TRUTH))

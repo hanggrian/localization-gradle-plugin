@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Generated file by locale-gradle-plugin, do not edit manually.--><resources>
+<!--Generated file by locale-gradle-plugin, do not edit manually!
+2020-05-15 03.12--><resources>
     <string name="about">Tentang</string>
     <string name="home">Beranda</string>
 </resources>
