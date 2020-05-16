@@ -1,5 +1,6 @@
 package com.hendraanggrian.locale
 
+import com.google.common.collect.Ordering
 import com.google.common.collect.TreeBasedTable
 import java.util.Locale
 
@@ -7,15 +8,14 @@ import java.util.Locale
 internal typealias LocaleTable = TreeBasedTable<String, Locale, String>
 
 internal fun localeTableOf(): LocaleTable = LocaleTable.create(
-    { o1, o2 -> o1.compareTo(o2) },
-    { o1, o2 -> o1.language.compareTo(o2.language) })
+    Ordering.natural(),
+    Ordering.from { o1, o2 -> o1.language.compareTo(o2.language) })
 
-internal class LocaleTextBuilderImpl : LocaleTextBuilder {
-    companion object {
-        private val LOCALE_MAP: MutableMap<String, Locale> = mutableMapOf()
+internal class LocaleTextBuilderImpl(private val table: LocaleTable) : LocaleTextBuilder {
+    private companion object {
+        val LOCALE_MAP: MutableMap<String, Locale> = mutableMapOf()
     }
 
-    val table: LocaleTable = localeTableOf()
     lateinit var currentRow: String
 
     override fun add(locale: Locale, value: String) {

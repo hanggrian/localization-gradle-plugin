@@ -16,13 +16,13 @@ internal interface LocaleConfiguration {
 
     /**
      * Default locale, when matching localization is found, file name suffix is removed.
-     * Default is `null.
+     * Default is `null`.
      */
     var defaultLocale: Locale?
 
     /**
      * When enabled, generated localization will maintain its alphabetical order.
-     * Default is `true`.
+     * Default is `false`.
      */
     var isSorted: Boolean
 

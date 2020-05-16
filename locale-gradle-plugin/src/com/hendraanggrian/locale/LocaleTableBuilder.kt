@@ -34,12 +34,11 @@ interface LocaleTableBuilder {
      */
     fun importCSV(file: File) {
         val result = CSVReader(file.inputStream().bufferedReader()).readAll()
-        val headers = result.first().separate()
-        result.drop(1).forEach { line ->
-            val separated = line.separate()
-            text(separated.first()) {
-                separated.drop(1).forEachIndexed { index, value ->
-                    add(headers[index + 1], null, value)
+        val headers = separate(result.first()).drop(1)
+        result.drop(1).map(::separate).forEach { values ->
+            text(values.first()) {
+                values.drop(1).forEachIndexed { index, value ->
+                    add(headers[index], null, value)
                 }
             }
         }
@@ -48,5 +47,6 @@ interface LocaleTableBuilder {
     /** Convenient method to import CSV from file path, relative to project directory. */
     fun importCSV(path: String): Unit = importCSV(projectDir.resolve(path))
 
-    private fun Array<String>.separate() = first().split(';')
+    /** Splitting ["a;b;c",""] into ["a","b","c"]. */
+    private fun separate(line: Array<String>): List<String> = line.first().split(';')
 }
