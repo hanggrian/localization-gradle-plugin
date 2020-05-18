@@ -4,9 +4,9 @@ import com.google.common.truth.Truth
 import java.util.Locale
 import kotlin.test.Test
 
-class LocaleTableSortTest {
+class LocaleTableTest {
 
-    @Test fun test() {
+    @Test fun sort() {
         val table = localeTableOf()
         val locale = Locale.ENGLISH
         table.put("z", locale, "")

@@ -23,19 +23,32 @@ internal class LocaleTextBuilderImpl(private val table: LocaleTable) : LocaleTex
     }
 
     override fun add(language: String, country: String?, value: String) {
-        val isCountryAvailable = country?.isNotBlank() ?: false
+        val countryAvailable = country?.isNotBlank() ?: false
         add(
-            LOCALE_MAP.getOrPut(
-                when {
-                    isCountryAvailable -> "$language-$country"
-                    else -> language
+            LOCALE_MAP.getOrPut(buildString {
+                append(language)
+                if (countryAvailable) {
+                    append("-$country")
                 }
-            ) {
+            }) {
                 when {
-                    isCountryAvailable -> Locale(language, country)
+                    countryAvailable -> Locale(language, country)
                     else -> Locale(language)
                 }
             }, value
         )
+        println(LOCALE_MAP.getOrPut(buildString {
+            append(language)
+            if (countryAvailable) {
+                append("-$country")
+            }
+        }) {
+            when {
+                countryAvailable -> Locale(language, country)
+                else -> Locale(language)
+            }
+        })
+        println(table)
+        println()
     }
 }

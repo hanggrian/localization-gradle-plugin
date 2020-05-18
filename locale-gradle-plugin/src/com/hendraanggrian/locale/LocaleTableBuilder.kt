@@ -1,8 +1,8 @@
 package com.hendraanggrian.locale
 
 import com.opencsv.CSVReader
-import java.io.File
 import org.gradle.api.Action
+import java.io.File
 
 /**
  * Starting point of localization configuration.
@@ -34,11 +34,20 @@ interface LocaleTableBuilder {
      */
     fun importCSV(file: File) {
         val result = CSVReader(file.inputStream().bufferedReader()).readAll()
-        val headers = separate(result.first()).drop(1)
-        result.drop(1).map(::separate).forEach { values ->
-            text(values.first()) {
-                values.drop(1).forEachIndexed { index, value ->
-                    add(headers[index], null, value)
+        val columns = result.first().drop(1)
+        result.drop(1).forEach { line ->
+            val row = line.first()
+            val cells = line.drop(1)
+            text(row) {
+                cells.forEachIndexed { index, value ->
+                    val column = columns[index]
+                    var language: String = column
+                    var country: String? = null
+                    if ('-' in column) {
+                        language = column.substringBefore('-')
+                        country = column.substringAfter('-')
+                    }
+                    add(language, country, value)
                 }
             }
         }
@@ -46,7 +55,4 @@ interface LocaleTableBuilder {
 
     /** Convenient method to import CSV from file path, relative to project directory. */
     fun importCSV(path: String): Unit = importCSV(projectDir.resolve(path))
-
-    /** Splitting ["a;b;c",""] into ["a","b","c"]. */
-    private fun separate(line: Array<String>): List<String> = line.first().split(';')
 }
