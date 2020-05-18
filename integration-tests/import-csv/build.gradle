@@ -3,7 +3,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath files('../locale-gradle-plugin-0.3.jar')
+        classpath files('../locale-gradle-plugin-0.2.jar')
         classpath 'com.google.guava:guava:29.0-jre'
         classpath 'com.opencsv:opencsv:5.1'
     }
@@ -20,5 +20,5 @@ dependencies {
 }
 
 locale {
-    importCSV(file('locale.csv'))
+    importCSV 'locale.csv'
 }

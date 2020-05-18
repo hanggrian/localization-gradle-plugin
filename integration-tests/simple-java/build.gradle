@@ -21,10 +21,12 @@ dependencies {
 locale {
     text('about') {
         en = 'About'
+        en_US = "About2"
         id = 'Tentang'
     }
     text('home') {
         en = 'Home'
+        en_US = "Home2"
         id = 'Beranda'
     }
 }

@@ -21,10 +21,10 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.hendraanggrian.locale'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 28
+        targetSdkVersion 29
         applicationId 'com.example'
         versionCode 1
         versionName '1.0'
@@ -38,10 +38,12 @@ dependencies {
 locale {
     text('about') {
         en = 'About'
+        en_US = "About2"
         id = 'Tentang'
     }
     text('home') {
         en = 'Home'
+        en_US = "Home2"
         id = 'Beranda'
     }
 }

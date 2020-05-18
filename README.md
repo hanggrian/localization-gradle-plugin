@@ -5,10 +5,8 @@
 Locale Gradle Plugin
 ====================
 Cross-platform localization generated in Gradle.
-
-Currently only supports:
- * XML files for Android.
- * Properties files used as `ResourceBundle` for Java.
+* Writes `ResourceBundle` for Java and XML values for Android.
+* Localization data can be placed within Gradle script or CSV file.
 
 Download
 --------
@@ -34,11 +32,11 @@ apply plugin: 'com.hendraanggrian.locale'
 
 locale {
     resourceName 'strings'
-    configure('home') {
+    text('home') {
         en = 'Home'
         id = 'Beranda'
     }
-    configure('about') {
+    text('about') {
         en = 'About'
         id = 'Tentang'
     }

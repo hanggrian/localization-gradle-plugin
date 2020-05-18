@@ -33,15 +33,15 @@ locale {
 tasks.withType(com.hendraanggrian.locale.LocalizeJavaTask) {
     outputDirectory 'java/src/main/resources'
     text('java_only_text') {
-        it.en = 'Java only'
-        it.id = 'Hanya di Java'
+        en = 'Java only'
+        id = 'Hanya di Java'
     }
 }
 
 tasks.withType(com.hendraanggrian.locale.LocalizeAndroidTask) {
     outputDirectory 'android/src/main/resources'
     text('android_only_text') {
-        it.en = 'Android only'
-        it.id = 'Hanya di Android'
+        en = 'Android only'
+        id = 'Hanya di Android'
     }
 }
