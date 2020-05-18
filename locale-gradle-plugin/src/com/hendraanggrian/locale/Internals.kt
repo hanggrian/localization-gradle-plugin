@@ -1,54 +1,60 @@
 package com.hendraanggrian.locale
 
-import com.google.common.collect.Ordering
 import com.google.common.collect.TreeBasedTable
 import java.util.Locale
 
-/** Locale configurations are kept in a Guava row sorted table. */
-internal typealias LocaleTable = TreeBasedTable<String, Locale, String>
+/**
+ * Locale configurations are kept in a Guava row sorted table using the following format:
+ * - Row = text key.
+ * - Column = locale string (either "xx" or "xx-XX") to be converted to [Locale], see [forEachLocale].
+ * - Value = localized string value.
+ */
+internal typealias LocaleTable = TreeBasedTable<String, String, String>
 
-internal fun localeTableOf(): LocaleTable = LocaleTable.create(
-    Ordering.natural(),
-    Ordering.from { o1, o2 -> o1.language.compareTo(o2.language) })
+/** Keep converted locales here for faster reuse. */
+private val LOCALE_MAP = mutableMapOf<String, Locale>()
 
-internal class LocaleTextBuilderImpl(private val table: LocaleTable) : LocaleTextBuilder {
-    private companion object {
-        val LOCALE_MAP: MutableMap<String, Locale> = mutableMapOf()
-    }
-
-    lateinit var currentRow: String
-
-    override fun add(locale: Locale, value: String) {
-        table.put(currentRow, locale, value)
-    }
-
-    override fun add(language: String, country: String?, value: String) {
-        val countryAvailable = country?.isNotBlank() ?: false
-        add(
-            LOCALE_MAP.getOrPut(buildString {
-                append(language)
-                if (countryAvailable) {
-                    append("-$country")
-                }
-            }) {
-                when {
-                    countryAvailable -> Locale(language, country)
-                    else -> Locale(language)
-                }
-            }, value
-        )
-        println(LOCALE_MAP.getOrPut(buildString {
-            append(language)
-            if (countryAvailable) {
-                append("-$country")
-            }
-        }) {
+/** Converting locale string to actual locale is necessary since [Locale] tends to convert old ISO code. */
+internal fun LocaleTable.forEachLocale(action: (column: String, locale: Locale) -> Unit): Unit =
+    columnKeySet().forEach { column ->
+        action(column, LOCALE_MAP.getOrPut(column) {
             when {
-                countryAvailable -> Locale(language, country)
-                else -> Locale(language)
+                '-' !in column -> when (column) {
+                    "en" -> Locale.ENGLISH
+                    "fr" -> Locale.FRENCH
+                    "de" -> Locale.GERMAN
+                    "it" -> Locale.ITALIAN
+                    "ja" -> Locale.JAPANESE
+                    "ko" -> Locale.KOREAN
+                    "zh" -> Locale.CHINESE
+                    else -> Locale(column)
+                }
+                else -> {
+                    val language = column.substringBefore('-')
+                    val country = column.substringAfter('-')
+                    when {
+                        language == "zh" && country == "CN" -> Locale.CHINA
+                        language == "zh" && country == "TW" -> Locale.TAIWAN
+                        language == "fr" && country == "FR" -> Locale.FRANCE
+                        language == "de" && country == "DE" -> Locale.GERMANY
+                        language == "it" && country == "IT" -> Locale.ITALY
+                        language == "ja" && country == "JP" -> Locale.JAPAN
+                        language == "ko" && country == "KR" -> Locale.KOREA
+                        language == "en" && country == "GB" -> Locale.UK
+                        language == "en" && country == "US" -> Locale.US
+                        language == "en" && country == "CA" -> Locale.CANADA
+                        language == "fr" && country == "CA" -> Locale.CANADA_FRENCH
+                        else -> Locale(language, country)
+                    }
+                }
             }
         })
-        println(table)
-        println()
+    }
+
+internal class LocaleTextBuilderImpl(private val table: LocaleTable) : LocaleTextBuilder {
+    lateinit var currentRow: String
+
+    override fun add(language: String, value: String) {
+        table.put(currentRow, language, value)
     }
 }

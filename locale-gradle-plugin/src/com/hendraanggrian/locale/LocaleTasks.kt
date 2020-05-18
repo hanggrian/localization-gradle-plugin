@@ -39,7 +39,7 @@ sealed class LocalizeTask : DefaultTask(), LocaleConfiguration, LocaleTableBuild
             super.outputDirectory = value
         }
 
-    internal val table: LocaleTable = localeTableOf()
+    @get:Internal internal val table: LocaleTable = LocaleTable.create()
     private val textBuilder = LocaleTextBuilderImpl(table)
 
     init {
@@ -67,13 +67,13 @@ sealed class LocalizeTask : DefaultTask(), LocaleConfiguration, LocaleTableBuild
     abstract fun write()
 
     /** File name suffix. For example, `-en` and `-id` considering `-` is the [separator]. */
-    protected fun Locale.toSuffix(separator: Char): String = buildString {
-        if (this@toSuffix == defaultLocale) {
+    protected fun getSuffix(locale: Locale, separator: Char): String = buildString {
+        if (locale == defaultLocale) {
             return@buildString
         }
-        append("$separator$language")
-        if (country.isNotBlank()) {
-            append("$separator$country")
+        append("$separator${locale.language}")
+        if (locale.country.isNotEmpty()) {
+            append("$separator${locale.country}")
         }
     }
 
@@ -94,7 +94,7 @@ sealed class LocalizeTask : DefaultTask(), LocaleConfiguration, LocaleTableBuild
     }
 
     /** Iterate each row, sorted if necessary. */
-    protected fun forEachKey(action: (String) -> Unit) {
+    protected fun forEachRow(action: (String) -> Unit) {
         var collection: Collection<String> = table.rowKeySet()
         if (isSorted) {
             collection = collection.sorted()
@@ -106,10 +106,10 @@ sealed class LocalizeTask : DefaultTask(), LocaleConfiguration, LocaleTableBuild
 /** Task to write properties files which will then be used as [java.util.ResourceBundle]. */
 open class LocalizeJavaTask : LocalizeTask() {
 
-    override fun write() = table.columnKeySet().forEach { locale ->
+    override fun write() = table.forEachLocale { column, locale ->
         val properties = SortedProperties()
-        forEachKey { key -> properties[key] = table[key, locale] }
-        val outputFile = outputDir.resolve("$resourceName${locale.toSuffix('_')}.properties")
+        forEachRow { row -> properties[row] = table[row, column] }
+        val outputFile = outputDir.resolve("$resourceName${getSuffix(locale, '_')}.properties")
         outputFile.deleteIfExists()
         outputFile.outputStream().use { properties.store(it, getFileComment(false)) }
     }
@@ -149,17 +149,17 @@ open class LocalizeAndroidTask : LocalizeTask() {
             setOutputProperty(OutputKeys.DOCTYPE_PUBLIC, "yes")
         }
 
-    override fun write() = table.columnKeySet().forEach { locale ->
+    override fun write() = table.forEachLocale { column, locale ->
         val doc = docBuilder.newDocument().apply { xmlStandalone = true }
         doc.appendChild(doc.createComment(getFileComment(true)))
         val resources = doc.appendChild(doc.createElement("resources"))
-        forEachKey { key ->
+        forEachRow { row ->
             val s = doc.createElement("string")
-            s.setAttribute("name", key)
-            s.appendChild(doc.createTextNode(table[key, locale]))
+            s.setAttribute("name", row)
+            s.appendChild(doc.createTextNode(table[row, column]))
             resources.appendChild(s)
         }
-        val innerOutputDir = outputDir.resolve("values${locale.toSuffix('-')}")
+        val innerOutputDir = outputDir.resolve("values${getSuffix(locale, '-')}")
         innerOutputDir.mkdirs()
         val outputFile = innerOutputDir.resolve("$resourceName.xml")
         outputFile.deleteIfExists()

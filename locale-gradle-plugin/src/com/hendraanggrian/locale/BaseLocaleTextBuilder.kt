@@ -11,12 +11,12 @@ import java.util.Locale
 interface BaseLocaleTextBuilder {
 
     /**
-     * Register localization value to specified [locale].
+     * Register localization value to locale with specified [language].
      *
-     * @param locale column in the table.
+     * @param language 2-digit code that will be used as [Locale]'s language.
      * @param value cell in the table.
      */
-    fun add(locale: Locale, value: String)
+    fun add(language: String, value: String)
 
     /**
      * Register localization value to locale with specified [language] and [country].
@@ -25,5 +25,6 @@ interface BaseLocaleTextBuilder {
      * @param country 2-digit code that will be used as [Locale]'s country.
      * @param value cell in the table.
      */
-    fun add(language: String, country: String?, value: String)
+    fun add(language: String, country: String, value: String): Unit =
+        add("$language-$country", value)
 }

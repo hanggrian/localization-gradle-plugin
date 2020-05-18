@@ -10,7 +10,7 @@ import org.gradle.kotlin.dsl.invoke
 /** Gradle extension to configure localization, any changes made here will take affect in [LocalizeTask]. */
 open class LocaleExtension(override val projectDir: File) : LocaleConfiguration, LocaleTableBuilder {
 
-    internal val table: LocaleTable = localeTableOf()
+    internal val table: LocaleTable = LocaleTable.create()
     private val textBuilder = LocaleTextBuilderImpl(table)
 
     override var resourceName: String = "strings"

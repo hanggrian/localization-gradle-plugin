@@ -62,32 +62,10 @@ object LocaleTextBuilderGenerator {
                         }
                         setter {
                             parameters.add<String>("value")
-                            append("return add(")
-                            append(
-                                when {
-                                    language == "en" && country == null -> "Locale.ENGLISH"
-                                    language == "fr" && country == null -> "Locale.FRENCH"
-                                    language == "de" && country == null -> "Locale.GERMAN"
-                                    language == "it" && country == null -> "Locale.ITALIAN"
-                                    language == "ja" && country == null -> "Locale.JAPANESE"
-                                    language == "ko" && country == null -> "Locale.KOREAN"
-                                    language == "zh" && country == null -> "Locale.CHINESE"
-                                    language == "zh" && country == "CN" -> "Locale.CHINA"
-                                    language == "zh" && country == "TW" -> "Locale.TAIWAN"
-                                    language == "fr" && country == "FR" -> "Locale.FRANCE"
-                                    language == "de" && country == "DE" -> "Locale.GERMANY"
-                                    language == "it" && country == "IT" -> "Locale.ITALY"
-                                    language == "ja" && country == "JP" -> "Locale.JAPAN"
-                                    language == "ko" && country == "KR" -> "Locale.KOREA"
-                                    language == "en" && country == "GB" -> "Locale.UK"
-                                    language == "en" && country == "US" -> "Locale.US"
-                                    language == "en" && country == "CA" -> "Locale.CANADA"
-                                    language == "fr" && country == "CA" -> "Locale.CANADA_FRENCH"
-                                    country == null -> "\"$language\", null"
-                                    else -> "\"$language\", \"$country\""
-                                }
-                            )
-                            append(", value)\n")
+                            when (country) {
+                                null -> appendln("return add(%S, value)", language)
+                                else -> appendln("return add(%S, %S, value)", language, country)
+                            }
                         }
                     }
                 }

@@ -1,8 +1,8 @@
 package com.hendraanggrian.locale
 
 import com.opencsv.CSVReader
-import org.gradle.api.Action
 import java.io.File
+import org.gradle.api.Action
 
 /**
  * Starting point of localization configuration.
@@ -41,13 +41,10 @@ interface LocaleTableBuilder {
             text(row) {
                 cells.forEachIndexed { index, value ->
                     val column = columns[index]
-                    var language: String = column
-                    var country: String? = null
-                    if ('-' in column) {
-                        language = column.substringBefore('-')
-                        country = column.substringAfter('-')
+                    when {
+                        '-' !in column -> add(column, value)
+                        else -> add(column.substringBefore('-'), column.substringAfter('-'), value)
                     }
-                    add(language, country, value)
                 }
             }
         }
