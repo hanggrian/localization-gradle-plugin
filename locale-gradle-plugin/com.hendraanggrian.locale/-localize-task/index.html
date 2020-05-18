@@ -8,7 +8,7 @@
 <a href="../../index.html">locale-gradle-plugin</a>&nbsp;/&nbsp;<a href="../index.html">com.hendraanggrian.locale</a>&nbsp;/&nbsp;<a href="./index.html">LocalizeTask</a><br/>
 <br/>
 <h1>LocalizeTask</h1>
-<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">LocalizeTask</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">DefaultTask</span></code>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">LocalizeTask</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">DefaultTask</span><span class="symbol">, </span><span class="identifier">LocaleConfiguration</span><span class="symbol">, </span><a href="../-locale-table-builder/index.html"><span class="identifier">LocaleTableBuilder</span></a></code>
 <p>Non-platform specific locale writer task.</p>
 <h3>Properties</h3>
 <table>
@@ -18,16 +18,27 @@
 <h4><a href="default-locale.html">defaultLocale</a></h4>
 </td>
 <td>
-<p>Default locale, when matching localization is found, file name suffix is removed.</p>
-<code><span class="keyword">var </span><span class="identifier">defaultLocale</span><span class="symbol">: </span><a href="https://docs.oracle.com/javase/6/docs/api/java/util/Locale.html"><span class="identifier">Locale</span></a><span class="symbol">?</span></code></td>
+<p>Default locale, when matching localization is found, file name suffix is removed.
+Default is <code>null</code>.</p>
+<code><span class="keyword">open</span> <span class="keyword">var </span><span class="identifier">defaultLocale</span><span class="symbol">: </span><a href="https://docs.oracle.com/javase/6/docs/api/java/util/Locale.html"><span class="identifier">Locale</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-sorted.html">isSorted</a></h4>
+</td>
+<td>
+<p>When enabled, generated localization will maintain its alphabetical order.
+Default is <code>false</code>.</p>
+<code><span class="keyword">open</span> <span class="keyword">var </span><span class="identifier">isSorted</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
 </tr>
 <tr>
 <td>
 <h4><a href="output-dir.html">outputDir</a></h4>
 </td>
 <td>
-<p>Path that localization files will be generated to.</p>
-<code><span class="keyword">var </span><span class="identifier">outputDir</span><span class="symbol">: </span><a href="https://docs.oracle.com/javase/6/docs/api/java/io/File.html"><span class="identifier">File</span></a><span class="symbol">?</span></code></td>
+<p>The output directory.
+Default is <code>src/main/resources</code>.</p>
+<code><span class="keyword">open</span> <span class="keyword">lateinit</span> <span class="keyword">var </span><span class="identifier">outputDir</span><span class="symbol">: </span><a href="https://docs.oracle.com/javase/6/docs/api/java/io/File.html"><span class="identifier">File</span></a></code></td>
 </tr>
 <tr>
 <td>
@@ -35,30 +46,24 @@
 </td>
 <td>
 <p>Convenient method to set output directory from file path, relative to project directory.</p>
-<code><span class="keyword">var </span><span class="identifier">outputDirectory</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+<code><span class="keyword">open</span> <span class="keyword">var </span><span class="identifier">outputDirectory</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="project-dir.html">projectDir</a></h4>
+</td>
+<td>
+<p>Working directory of a <a href="#">org.gradle.api.Project</a>.</p>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">projectDir</span><span class="symbol">: </span><a href="https://docs.oracle.com/javase/6/docs/api/java/io/File.html"><span class="identifier">File</span></a></code></td>
 </tr>
 <tr>
 <td>
 <h4><a href="resource-name.html">resourceName</a></h4>
 </td>
 <td>
-<p>Localization resource name, default is <code>strings</code>.</p>
-<code><span class="keyword">var </span><span class="identifier">resourceName</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
-</tr>
-<tr>
-<td>
-<h4><a href="sort-rows.html">sortRows</a></h4>
-</td>
-<td>
-<p>When enabled, generated localization will maintain its alphabetical order.</p>
-<code><span class="keyword">var </span><span class="identifier">sortRows</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
-</tr>
-<tr>
-<td>
-<h4><a href="table.html">table</a></h4>
-</td>
-<td>
-<code><span class="keyword">lateinit</span> <span class="keyword">var </span><span class="identifier">table</span><span class="symbol">: </span><a href="../-locale-table.html"><span class="identifier">LocaleTable</span></a></code></td>
+<p>Localization resource name.
+Default is <code>strings</code>.</p>
+<code><span class="keyword">open</span> <span class="keyword">lateinit</span> <span class="keyword">var </span><span class="identifier">resourceName</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
 </tr>
 </tbody>
 </table>
@@ -98,11 +103,19 @@
 </tr>
 <tr>
 <td>
-<h4><a href="to-suffix.html">toSuffix</a></h4>
+<h4><a href="get-suffix.html">getSuffix</a></h4>
 </td>
 <td>
-<p>File name suffix. For example, <code>-en</code> and <code>-id</code> considering <code>-</code> is the <a href="to-suffix.html#com.hendraanggrian.locale.LocalizeTask$toSuffix(java.util.Locale, kotlin.Char)/separator">separator</a>.</p>
-<code><span class="keyword">fun </span><a href="https://docs.oracle.com/javase/6/docs/api/java/util/Locale.html"><span class="identifier">Locale</span></a><span class="symbol">.</span><span class="identifier">toSuffix</span><span class="symbol">(</span><span class="identifier" id="com.hendraanggrian.locale.LocalizeTask$toSuffix(java.util.Locale, kotlin.Char)/separator">separator</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char/index.html"><span class="identifier">Char</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+<p>File name suffix. For example, <code>-en</code> and <code>-id</code> considering <code>-</code> is the <a href="get-suffix.html#com.hendraanggrian.locale.LocalizeTask$getSuffix(java.util.Locale, kotlin.Char)/separator">separator</a>.</p>
+<code><span class="keyword">fun </span><span class="identifier">getSuffix</span><span class="symbol">(</span><span class="identifier" id="com.hendraanggrian.locale.LocalizeTask$getSuffix(java.util.Locale, kotlin.Char)/locale">locale</span><span class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/util/Locale.html"><span class="identifier">Locale</span></a><span class="symbol">, </span><span class="identifier" id="com.hendraanggrian.locale.LocalizeTask$getSuffix(java.util.Locale, kotlin.Char)/separator">separator</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char/index.html"><span class="identifier">Char</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="text.html">text</a></h4>
+</td>
+<td>
+<p>Marks <a href="../-locale-table-builder/text.html#com.hendraanggrian.locale.LocaleTableBuilder$text(kotlin.String, org.gradle.api.Action((com.hendraanggrian.locale.LocaleTextBuilder)))/key">key</a> as current row and opening closure to modify that row.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">text</span><span class="symbol">(</span><span class="identifier" id="com.hendraanggrian.locale.LocalizeTask$text(kotlin.String, org.gradle.api.Action((com.hendraanggrian.locale.LocaleTextBuilder)))/key">key</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.hendraanggrian.locale.LocalizeTask$text(kotlin.String, org.gradle.api.Action((com.hendraanggrian.locale.LocaleTextBuilder)))/configuration">configuration</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action</span><span class="symbol">&lt;</span><a href="../-locale-text-builder/index.html"><span class="identifier">LocaleTextBuilder</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
 <td>

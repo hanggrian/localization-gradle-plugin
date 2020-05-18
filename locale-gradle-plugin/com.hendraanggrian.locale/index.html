@@ -13,20 +13,19 @@
 <tbody>
 <tr>
 <td>
-<h4><a href="-base-locale-table-column-builder/index.html">BaseLocaleTableColumnBuilder</a></h4>
+<h4><a href="-base-locale-text-builder/index.html">BaseLocaleTextBuilder</a></h4>
 </td>
 <td>
-<p>Second/last phase of localization configuration, used only within <a href="-locale-table-row-builder/index.html">LocaleTableRowBuilder</a> scope.</p>
-<code><span class="keyword">interface </span><span class="identifier">BaseLocaleTableColumnBuilder</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-locale-table-scope/index.html"><span class="identifier">LocaleTableScope</span></a></code></td>
+<p>Second/last phase of localization configuration, used only within <a href="-locale-table-builder/index.html">LocaleTableBuilder</a> scope.</p>
+<code><span class="keyword">interface </span><span class="identifier">BaseLocaleTextBuilder</span></code></td>
 </tr>
 <tr>
 <td>
 <h4><a href="-locale-extension/index.html">LocaleExtension</a></h4>
 </td>
 <td>
-<p>Gradle extension to configure localization,
-any changes made here will take affect in <a href="-localize-task/index.html">LocalizeTask</a>.</p>
-<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">LocaleExtension</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-locale-table-row-builder/index.html"><span class="identifier">LocaleTableRowBuilder</span></a></code></td>
+<p>Gradle extension to configure localization, any changes made here will take affect in <a href="-localize-task/index.html">LocalizeTask</a>.</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">LocaleExtension</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">LocaleConfiguration</span><span class="symbol">, </span><a href="-locale-table-builder/index.html"><span class="identifier">LocaleTableBuilder</span></a></code></td>
 </tr>
 <tr>
 <td>
@@ -38,36 +37,19 @@ any changes made here will take affect in <a href="-localize-task/index.html">Lo
 </tr>
 <tr>
 <td>
-<h4><a href="-locale-table.html">LocaleTable</a></h4>
-</td>
-<td>
-<p>Locale configurations are kept in a Guava row sorted table,
-below are data structure example of the table.</p>
-<code><span class="keyword">typealias </span><span class="identifier">LocaleTable</span>&nbsp;<span class="symbol">=</span>&nbsp;<span class="identifier">TreeBasedTable</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">,</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/util/Locale.html"><span class="identifier">Locale</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code></td>
-</tr>
-<tr>
-<td>
-<h4><a href="-locale-table-column-builder/index.html">LocaleTableColumnBuilder</a></h4>
-</td>
-<td>
-<p>Generated interface based on <code>https://github.com/umpirsky/locale-list</code>.</p>
-<code><span class="keyword">interface </span><span class="identifier">LocaleTableColumnBuilder</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-base-locale-table-column-builder/index.html"><span class="identifier">BaseLocaleTableColumnBuilder</span></a></code></td>
-</tr>
-<tr>
-<td>
-<h4><a href="-locale-table-row-builder/index.html">LocaleTableRowBuilder</a></h4>
+<h4><a href="-locale-table-builder/index.html">LocaleTableBuilder</a></h4>
 </td>
 <td>
 <p>Starting point of localization configuration.</p>
-<code><span class="keyword">interface </span><span class="identifier">LocaleTableRowBuilder</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-locale-table-scope/index.html"><span class="identifier">LocaleTableScope</span></a></code></td>
+<code><span class="keyword">interface </span><span class="identifier">LocaleTableBuilder</span></code></td>
 </tr>
 <tr>
 <td>
-<h4><a href="-locale-table-scope/index.html">LocaleTableScope</a></h4>
+<h4><a href="-locale-text-builder/index.html">LocaleTextBuilder</a></h4>
 </td>
 <td>
-<p>Superinterface of table builders.</p>
-<code><span class="keyword">interface </span><span class="identifier">LocaleTableScope</span></code></td>
+<p>Locales listed below are based on [umpirsky's</p>
+<code><span class="keyword">interface </span><span class="identifier">LocaleTextBuilder</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-base-locale-text-builder/index.html"><span class="identifier">BaseLocaleTextBuilder</span></a></code></td>
 </tr>
 <tr>
 <td>
@@ -91,7 +73,7 @@ below are data structure example of the table.</p>
 </td>
 <td>
 <p>Non-platform specific locale writer task.</p>
-<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">LocalizeTask</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">DefaultTask</span></code></td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">LocalizeTask</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">DefaultTask</span><span class="symbol">, </span><span class="identifier">LocaleConfiguration</span><span class="symbol">, </span><a href="-locale-table-builder/index.html"><span class="identifier">LocaleTableBuilder</span></a></code></td>
 </tr>
 </tbody>
 </table>

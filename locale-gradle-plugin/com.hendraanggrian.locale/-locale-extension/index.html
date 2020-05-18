@@ -8,9 +8,8 @@
 <a href="../../index.html">locale-gradle-plugin</a>&nbsp;/&nbsp;<a href="../index.html">com.hendraanggrian.locale</a>&nbsp;/&nbsp;<a href="./index.html">LocaleExtension</a><br/>
 <br/>
 <h1>LocaleExtension</h1>
-<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">LocaleExtension</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-locale-table-row-builder/index.html"><span class="identifier">LocaleTableRowBuilder</span></a></code>
-<p>Gradle extension to configure localization,
-any changes made here will take affect in <a href="../-localize-task/index.html">LocalizeTask</a>.</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">LocaleExtension</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">LocaleConfiguration</span><span class="symbol">, </span><a href="../-locale-table-builder/index.html"><span class="identifier">LocaleTableBuilder</span></a></code>
+<p>Gradle extension to configure localization, any changes made here will take affect in <a href="../-localize-task/index.html">LocalizeTask</a>.</p>
 <h3>Constructors</h3>
 <table>
 <tbody>
@@ -19,9 +18,8 @@ any changes made here will take affect in <a href="../-localize-task/index.html"
 <h4><a href="-init-.html">&lt;init&gt;</a></h4>
 </td>
 <td>
-<p>Gradle extension to configure localization,
-any changes made here will take affect in <a href="../-localize-task/index.html">LocalizeTask</a>.</p>
-<code><span class="identifier">LocaleExtension</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+<p>Gradle extension to configure localization, any changes made here will take affect in <a href="../-localize-task/index.html">LocalizeTask</a>.</p>
+<code><span class="identifier">LocaleExtension</span><span class="symbol">(</span><span class="identifier" id="com.hendraanggrian.locale.LocaleExtension$<init>(java.io.File)/projectDir">projectDir</span><span class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/io/File.html"><span class="identifier">File</span></a><span class="symbol">)</span></code></td>
 </tr>
 </tbody>
 </table>
@@ -33,16 +31,44 @@ any changes made here will take affect in <a href="../-localize-task/index.html"
 <h4><a href="default-locale.html">defaultLocale</a></h4>
 </td>
 <td>
-<p>Optional default localization. When set, will remove related 2-digit prefix of file name.</p>
-<code><span class="keyword">var </span><span class="identifier">defaultLocale</span><span class="symbol">: </span><a href="https://docs.oracle.com/javase/6/docs/api/java/util/Locale.html"><span class="identifier">Locale</span></a><span class="symbol">?</span></code></td>
+<p>Default locale, when matching localization is found, file name suffix is removed.
+Default is <code>null</code>.</p>
+<code><span class="keyword">open</span> <span class="keyword">var </span><span class="identifier">defaultLocale</span><span class="symbol">: </span><a href="https://docs.oracle.com/javase/6/docs/api/java/util/Locale.html"><span class="identifier">Locale</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-sorted.html">isSorted</a></h4>
+</td>
+<td>
+<p>When enabled, generated localization will maintain its alphabetical order.
+Default is <code>false</code>.</p>
+<code><span class="keyword">open</span> <span class="keyword">var </span><span class="identifier">isSorted</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="output-dir.html">outputDir</a></h4>
+</td>
+<td>
+<p>The output directory.
+Default is <code>src/main/resources</code>.</p>
+<code><span class="keyword">open</span> <span class="keyword">lateinit</span> <span class="keyword">var </span><span class="identifier">outputDir</span><span class="symbol">: </span><a href="https://docs.oracle.com/javase/6/docs/api/java/io/File.html"><span class="identifier">File</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="project-dir.html">projectDir</a></h4>
+</td>
+<td>
+<p>Working directory of a <a href="#">org.gradle.api.Project</a>.</p>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">projectDir</span><span class="symbol">: </span><a href="https://docs.oracle.com/javase/6/docs/api/java/io/File.html"><span class="identifier">File</span></a></code></td>
 </tr>
 <tr>
 <td>
 <h4><a href="resource-name.html">resourceName</a></h4>
 </td>
 <td>
-<p>Intended localization file name prefix, must not be empty.</p>
-<code><span class="keyword">var </span><span class="identifier">resourceName</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+<p>Localization resource name.
+Default is <code>strings</code>.</p>
+<code><span class="keyword">open</span> <span class="keyword">var </span><span class="identifier">resourceName</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
 </tr>
 </tbody>
 </table>
@@ -51,35 +77,11 @@ any changes made here will take affect in <a href="../-localize-task/index.html"
 <tbody>
 <tr>
 <td>
-<h4><a href="android-only.html">androidOnly</a></h4>
+<h4><a href="text.html">text</a></h4>
 </td>
 <td>
-<p>Alias of <a href="configure-android-only.html">configureAndroidOnly</a> for Gradle Kotlin DSL.</p>
-<code><span class="keyword">fun </span><span class="identifier">androidOnly</span><span class="symbol">(</span><span class="identifier" id="com.hendraanggrian.locale.LocaleExtension$androidOnly(kotlin.Function1((com.hendraanggrian.locale.LocaleTableRowBuilder, kotlin.Unit)))/action">action</span><span class="symbol">:</span>&nbsp;<a href="../-locale-table-row-builder/index.html"><span class="identifier">LocaleTableRowBuilder</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
-</tr>
-<tr>
-<td>
-<h4><a href="configure-android-only.html">configureAndroidOnly</a></h4>
-</td>
-<td>
-<p>Opening closure to populate Android-only localization table.</p>
-<code><span class="keyword">fun </span><span class="identifier">configureAndroidOnly</span><span class="symbol">(</span><span class="identifier" id="com.hendraanggrian.locale.LocaleExtension$configureAndroidOnly(org.gradle.api.Action((com.hendraanggrian.locale.LocaleTableRowBuilder)))/action">action</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action</span><span class="symbol">&lt;</span><a href="../-locale-table-row-builder/index.html"><span class="identifier">LocaleTableRowBuilder</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
-</tr>
-<tr>
-<td>
-<h4><a href="configure-java-only.html">configureJavaOnly</a></h4>
-</td>
-<td>
-<p>Opening closure to populate Java-only localization table.</p>
-<code><span class="keyword">fun </span><span class="identifier">configureJavaOnly</span><span class="symbol">(</span><span class="identifier" id="com.hendraanggrian.locale.LocaleExtension$configureJavaOnly(org.gradle.api.Action((com.hendraanggrian.locale.LocaleTableRowBuilder)))/action">action</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action</span><span class="symbol">&lt;</span><a href="../-locale-table-row-builder/index.html"><span class="identifier">LocaleTableRowBuilder</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
-</tr>
-<tr>
-<td>
-<h4><a href="java-only.html">javaOnly</a></h4>
-</td>
-<td>
-<p>Alias of <a href="configure-java-only.html">configureJavaOnly</a> for Gradle Kotlin DSL.</p>
-<code><span class="keyword">fun </span><span class="identifier">javaOnly</span><span class="symbol">(</span><span class="identifier" id="com.hendraanggrian.locale.LocaleExtension$javaOnly(kotlin.Function1((com.hendraanggrian.locale.LocaleTableRowBuilder, kotlin.Unit)))/action">action</span><span class="symbol">:</span>&nbsp;<a href="../-locale-table-row-builder/index.html"><span class="identifier">LocaleTableRowBuilder</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+<p>Marks <a href="../-locale-table-builder/text.html#com.hendraanggrian.locale.LocaleTableBuilder$text(kotlin.String, org.gradle.api.Action((com.hendraanggrian.locale.LocaleTextBuilder)))/key">key</a> as current row and opening closure to modify that row.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">text</span><span class="symbol">(</span><span class="identifier" id="com.hendraanggrian.locale.LocaleExtension$text(kotlin.String, org.gradle.api.Action((com.hendraanggrian.locale.LocaleTextBuilder)))/key">key</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.hendraanggrian.locale.LocaleExtension$text(kotlin.String, org.gradle.api.Action((com.hendraanggrian.locale.LocaleTextBuilder)))/configuration">configuration</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action</span><span class="symbol">&lt;</span><a href="../-locale-text-builder/index.html"><span class="identifier">LocaleTextBuilder</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 </tbody>
 </table>
