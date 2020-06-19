@@ -33,6 +33,14 @@ Default is <code>false</code>.</p>
 </tr>
 <tr>
 <td>
+<h4><a href="logger2.html">logger2</a></h4>
+</td>
+<td>
+<p>Prints debugging messages of CSV import. Named accordingly to avoid name clash with <a href="#">org.gradle.api.Task</a>.</p>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">logger2</span><span class="symbol">: </span><span class="identifier">Logger</span></code></td>
+</tr>
+<tr>
+<td>
 <h4><a href="output-dir.html">outputDir</a></h4>
 </td>
 <td>
@@ -91,7 +99,7 @@ Default is <code>strings</code>.</p>
 <h4><a href="generate.html">generate</a></h4>
 </td>
 <td>
-<code><span class="keyword">fun </span><span class="identifier">generate</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">generate</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
 <td>
@@ -116,14 +124,6 @@ Default is <code>strings</code>.</p>
 <td>
 <p>Marks <a href="../-locale-table-builder/text.html#com.hendraanggrian.locale.LocaleTableBuilder$text(kotlin.String, org.gradle.api.Action((com.hendraanggrian.locale.LocaleTextBuilder)))/key">key</a> as current row and opening closure to modify that row.</p>
 <code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">text</span><span class="symbol">(</span><span class="identifier" id="com.hendraanggrian.locale.LocalizeTask$text(kotlin.String, org.gradle.api.Action((com.hendraanggrian.locale.LocaleTextBuilder)))/key">key</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.hendraanggrian.locale.LocalizeTask$text(kotlin.String, org.gradle.api.Action((com.hendraanggrian.locale.LocaleTextBuilder)))/configuration">configuration</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action</span><span class="symbol">&lt;</span><a href="../-locale-text-builder/index.html"><span class="identifier">LocaleTextBuilder</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
-</tr>
-<tr>
-<td>
-<h4><a href="write.html">write</a></h4>
-</td>
-<td>
-<p>Actual file writing process goes here.</p>
-<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">write</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 </tbody>
 </table>

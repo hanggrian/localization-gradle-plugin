@@ -19,7 +19,7 @@
 </td>
 <td>
 <p>Gradle extension to configure localization, any changes made here will take affect in <a href="../-localize-task/index.html">LocalizeTask</a>.</p>
-<code><span class="identifier">LocaleExtension</span><span class="symbol">(</span><span class="identifier" id="com.hendraanggrian.locale.LocaleExtension$<init>(java.io.File)/projectDir">projectDir</span><span class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/io/File.html"><span class="identifier">File</span></a><span class="symbol">)</span></code></td>
+<code><span class="identifier">LocaleExtension</span><span class="symbol">(</span><span class="identifier" id="com.hendraanggrian.locale.LocaleExtension$<init>(java.io.File, org.gradle.api.logging.Logger)/projectDir">projectDir</span><span class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/io/File.html"><span class="identifier">File</span></a><span class="symbol">, </span><span class="identifier" id="com.hendraanggrian.locale.LocaleExtension$<init>(java.io.File, org.gradle.api.logging.Logger)/logger2">logger2</span><span class="symbol">:</span>&nbsp;<span class="identifier">Logger</span><span class="symbol">)</span></code></td>
 </tr>
 </tbody>
 </table>
@@ -43,6 +43,14 @@ Default is <code>null</code>.</p>
 <p>When enabled, generated localization will maintain its alphabetical order.
 Default is <code>false</code>.</p>
 <code><span class="keyword">open</span> <span class="keyword">var </span><span class="identifier">isSorted</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="logger2.html">logger2</a></h4>
+</td>
+<td>
+<p>Prints debugging messages of CSV import. Named accordingly to avoid name clash with <a href="#">org.gradle.api.Task</a>.</p>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">logger2</span><span class="symbol">: </span><span class="identifier">Logger</span></code></td>
 </tr>
 <tr>
 <td>
