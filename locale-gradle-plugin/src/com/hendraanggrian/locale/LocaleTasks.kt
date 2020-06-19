@@ -1,6 +1,14 @@
 package com.hendraanggrian.locale
 
 import com.google.common.collect.Ordering
+import org.gradle.api.Action
+import org.gradle.api.DefaultTask
+import org.gradle.api.tasks.Input
+import org.gradle.api.tasks.Internal
+import org.gradle.api.tasks.Optional
+import org.gradle.api.tasks.OutputDirectory
+import org.gradle.api.tasks.TaskAction
+import org.gradle.kotlin.dsl.invoke
 import java.io.File
 import java.io.FileWriter
 import java.time.LocalDateTime
@@ -15,14 +23,6 @@ import javax.xml.transform.OutputKeys
 import javax.xml.transform.TransformerFactory
 import javax.xml.transform.dom.DOMSource
 import javax.xml.transform.stream.StreamResult
-import org.gradle.api.Action
-import org.gradle.api.DefaultTask
-import org.gradle.api.tasks.Input
-import org.gradle.api.tasks.Internal
-import org.gradle.api.tasks.Optional
-import org.gradle.api.tasks.OutputDirectory
-import org.gradle.api.tasks.TaskAction
-import org.gradle.kotlin.dsl.invoke
 
 /** Non-platform specific locale writer task. */
 sealed class LocalizeTask : DefaultTask(), LocaleConfiguration, LocaleTableBuilder {
@@ -43,8 +43,7 @@ sealed class LocalizeTask : DefaultTask(), LocaleConfiguration, LocaleTableBuild
     private val textBuilder = LocaleTextBuilderImpl(table)
 
     init {
-        // always consider this task out of date
-        outputs.upToDateWhen { false }
+        outputs.upToDateWhen { false } // always consider this task out of date
     }
 
     override fun text(key: String, configuration: Action<LocaleTextBuilder>) {
@@ -52,19 +51,7 @@ sealed class LocalizeTask : DefaultTask(), LocaleConfiguration, LocaleTableBuild
         configuration(textBuilder)
     }
 
-    @TaskAction
-    fun generate() {
-        logger.info("Preparing localization...")
-        outputDir.mkdirs()
-
-        logger.info("Writing localization...")
-        write()
-
-        logger.info("Localization done!")
-    }
-
-    /** Actual file writing process goes here. */
-    abstract fun write()
+    @TaskAction abstract fun generate()
 
     /** File name suffix. For example, `-en` and `-id` considering `-` is the [separator]. */
     protected fun getSuffix(locale: Locale, separator: Char): String = buildString {
@@ -79,8 +66,9 @@ sealed class LocalizeTask : DefaultTask(), LocaleConfiguration, LocaleTableBuild
 
     /** Delete old file, if necessary. */
     protected fun File.deleteIfExists() {
-        if (exists() && delete()) {
-            logger.info("Deleting old `$path`...")
+        if (exists()) {
+            logger.info("  Existing resource '$path' deleted")
+            delete()
         }
     }
 
@@ -106,12 +94,18 @@ sealed class LocalizeTask : DefaultTask(), LocaleConfiguration, LocaleTableBuild
 /** Task to write properties files which will then be used as [java.util.ResourceBundle]. */
 open class LocalizeJavaTask : LocalizeTask() {
 
-    override fun write() = table.forEachLocale { column, locale ->
-        val properties = SortedProperties()
-        forEachRow { row -> properties[row] = table[row, column] }
-        val outputFile = outputDir.resolve("$resourceName${getSuffix(locale, '_')}.properties")
-        outputFile.deleteIfExists()
-        outputFile.outputStream().use { properties.store(it, getFileComment(false)) }
+    override fun generate() {
+        logger.info("Generating properties files:")
+        table.forEachLocale { column, locale ->
+            val properties = SortedProperties()
+            forEachRow { row -> properties[row] = table[row, column] }
+
+            outputDir.mkdirs()
+            val outputFile = outputDir.resolve("$resourceName${getSuffix(locale, '_')}.properties")
+            outputFile.deleteIfExists()
+            outputFile.outputStream().use { properties.store(it, getFileComment(false)) }
+        }
+        logger.info("  Resources generated")
     }
 
     /**
@@ -149,20 +143,26 @@ open class LocalizeAndroidTask : LocalizeTask() {
             setOutputProperty(OutputKeys.DOCTYPE_PUBLIC, "yes")
         }
 
-    override fun write() = table.forEachLocale { column, locale ->
-        val doc = docBuilder.newDocument().apply { xmlStandalone = true }
-        doc.appendChild(doc.createComment(getFileComment(true)))
-        val resources = doc.appendChild(doc.createElement("resources"))
-        forEachRow { row ->
-            val s = doc.createElement("string")
-            s.setAttribute("name", row)
-            s.appendChild(doc.createTextNode(table[row, column]))
-            resources.appendChild(s)
+    override fun generate() {
+        logger.info("Generating XML files:")
+        table.forEachLocale { column, locale ->
+            val doc = docBuilder.newDocument().apply { xmlStandalone = true }
+            doc.appendChild(doc.createComment(getFileComment(true)))
+            val resources = doc.appendChild(doc.createElement("resources"))
+            forEachRow { row ->
+                val s = doc.createElement("string")
+                s.setAttribute("name", row)
+                s.appendChild(doc.createTextNode(table[row, column]))
+                resources.appendChild(s)
+            }
+
+            outputDir.mkdirs()
+            val innerOutputDir = outputDir.resolve("values${getSuffix(locale, '-')}")
+            innerOutputDir.mkdirs()
+            val outputFile = innerOutputDir.resolve("$resourceName.xml")
+            outputFile.deleteIfExists()
+            transformer.transform(DOMSource(doc), StreamResult(FileWriter(outputFile)))
         }
-        val innerOutputDir = outputDir.resolve("values${getSuffix(locale, '-')}")
-        innerOutputDir.mkdirs()
-        val outputFile = innerOutputDir.resolve("$resourceName.xml")
-        outputFile.deleteIfExists()
-        transformer.transform(DOMSource(doc), StreamResult(FileWriter(outputFile)))
+        logger.info("  Resources generated")
     }
 }

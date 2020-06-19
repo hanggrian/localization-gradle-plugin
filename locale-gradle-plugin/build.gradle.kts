@@ -1,3 +1,5 @@
+import java.nio.file.Files
+
 plugins {
     `java-gradle-plugin`
     `kotlin-dsl`
@@ -43,10 +45,14 @@ dependencies {
 tasks {
     register("deploy") {
         mustRunAfter("build")
-        projectDir.resolve("build/libs/$RELEASE_ARTIFACT-$RELEASE_VERSION.jar").let {
-            if (it.exists()) {
-                it.renameTo(rootDir.resolve("integration-tests/${it.name}"))
+        doLast {
+            val from = buildDir.resolve("libs").listFiles()!!.first()
+            val to = rootDir.resolve("integration-tests/${from.name}")
+            val toPath = to.toPath()
+            if (to.exists()) {
+                Files.delete(toPath)
             }
+            Files.move(from.toPath(), toPath)
         }
     }
 

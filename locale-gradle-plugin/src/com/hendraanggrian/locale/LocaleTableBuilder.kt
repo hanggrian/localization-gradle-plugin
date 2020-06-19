@@ -1,8 +1,8 @@
 package com.hendraanggrian.locale
 
 import com.opencsv.CSVReader
-import java.io.File
 import org.gradle.api.Action
+import java.io.File
 
 /**
  * Starting point of localization configuration.

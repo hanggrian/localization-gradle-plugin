@@ -4,9 +4,9 @@ import com.hendraanggrian.kotlinpoet.buildFileSpec
 import com.hendraanggrian.kotlinpoet.classOf
 import com.squareup.kotlinpoet.KModifier
 import com.squareup.kotlinpoet.NOTHING
+import kotlinx.coroutines.runBlocking
 import java.io.File
 import kotlin.system.exitProcess
-import kotlinx.coroutines.runBlocking
 
 object LocaleTextBuilderGenerator {
     private const val PACKAGE_NAME = "com.hendraanggrian.locale"
