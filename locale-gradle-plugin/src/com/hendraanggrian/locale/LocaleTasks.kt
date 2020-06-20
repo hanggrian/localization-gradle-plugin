@@ -3,6 +3,7 @@ package com.hendraanggrian.locale
 import com.google.common.collect.Ordering
 import org.gradle.api.Action
 import org.gradle.api.DefaultTask
+import org.gradle.api.logging.Logger
 import org.gradle.api.tasks.Input
 import org.gradle.api.tasks.Internal
 import org.gradle.api.tasks.Optional
@@ -10,7 +11,7 @@ import org.gradle.api.tasks.OutputDirectory
 import org.gradle.api.tasks.TaskAction
 import org.gradle.kotlin.dsl.invoke
 import java.io.File
-import java.io.FileWriter
+import java.io.FileOutputStream
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.util.Collections
@@ -28,6 +29,8 @@ import javax.xml.transform.stream.StreamResult
 sealed class LocalizeTask : DefaultTask(), LocaleConfiguration, LocaleTableBuilder {
 
     override val projectDir: File @Internal get() = project.projectDir
+    override val logger2: Logger @Internal get() = logger
+
     @Input override lateinit var resourceName: String
     @Input @Optional override var defaultLocale: Locale? = null
     override var isSorted: Boolean = false @Input get
@@ -51,7 +54,23 @@ sealed class LocalizeTask : DefaultTask(), LocaleConfiguration, LocaleTableBuild
         configuration(textBuilder)
     }
 
-    @TaskAction abstract fun generate()
+    @TaskAction fun generate() {
+        logger.info(
+            "Generating resources with ${when (defaultLocale) {
+                null -> "mo default locale"
+                else -> "default locale '$defaultLocale'"
+            }}:"
+        )
+
+        require(resourceName.isNotBlank()) { "Empty file resource name." }
+
+        logger.info("  Locale table column = ${table.columnKeySet().size}, row = ${table.rowKeySet().size}")
+        table.forEachLocale { column, locale -> onGenerateLocale(column, locale) }
+        logger.info("  All resources generated")
+    }
+
+    /** Where the resources are generated. */
+    abstract fun onGenerateLocale(column: String, locale: Locale)
 
     /** File name suffix. For example, `-en` and `-id` considering `-` is the [separator]. */
     protected fun getSuffix(locale: Locale, separator: Char): String = buildString {
@@ -61,14 +80,6 @@ sealed class LocalizeTask : DefaultTask(), LocaleConfiguration, LocaleTableBuild
         append("$separator${locale.language}")
         if (locale.country.isNotEmpty()) {
             append("$separator${locale.country}")
-        }
-    }
-
-    /** Delete old file, if necessary. */
-    protected fun File.deleteIfExists() {
-        if (exists()) {
-            logger.info("  Existing resource '$path' deleted")
-            delete()
         }
     }
 
@@ -89,23 +100,33 @@ sealed class LocalizeTask : DefaultTask(), LocaleConfiguration, LocaleTableBuild
         }
         collection.forEach(action)
     }
+
+    /** Create individual file, reporting the result to logger. */
+    protected fun File.write(action: (FileOutputStream) -> Unit) {
+        if (exists()) {
+            logger.info("  Existing resource '$name' deleted")
+            delete()
+        }
+        outputStream().use { action(it) }
+        logger.info(
+            "  ${when {
+                exists() -> "Resource '$name' created"
+                else -> "Failed to create resource '$name'"
+            }}"
+        )
+    }
 }
 
 /** Task to write properties files which will then be used as [java.util.ResourceBundle]. */
 open class LocalizeJavaTask : LocalizeTask() {
 
-    override fun generate() {
-        logger.info("Generating properties files:")
-        table.forEachLocale { column, locale ->
-            val properties = SortedProperties()
-            forEachRow { row -> properties[row] = table[row, column] }
+    final override fun onGenerateLocale(column: String, locale: Locale) {
+        val properties = SortedProperties()
+        forEachRow { row -> properties[row] = table[row, column] }
 
-            outputDir.mkdirs()
-            val outputFile = outputDir.resolve("$resourceName${getSuffix(locale, '_')}.properties")
-            outputFile.deleteIfExists()
-            outputFile.outputStream().use { properties.store(it, getFileComment(false)) }
-        }
-        logger.info("  Resources generated")
+        outputDir.mkdirs()
+        val outputFile = outputDir.resolve("$resourceName${getSuffix(locale, '_')}.properties")
+        outputFile.write { properties.store(it, getFileComment(false)) }
     }
 
     /**
@@ -123,8 +144,7 @@ open class LocalizeJavaTask : LocalizeTask() {
             get() {
                 val set1 = super.entries
                 val set2 = LinkedHashSet<MutableMap.MutableEntry<Any, Any>>(set1.size)
-                set1.sortedWith(Ordering.from { o1, o2 -> "${o1.key}".compareTo("${o2.key}") })
-                    .forEach(set2::add)
+                set1.sortedWith(Ordering.from { o1, o2 -> "${o1.key}".compareTo("${o2.key}") }).forEach(set2::add)
                 return set2
             }
 
@@ -143,26 +163,21 @@ open class LocalizeAndroidTask : LocalizeTask() {
             setOutputProperty(OutputKeys.DOCTYPE_PUBLIC, "yes")
         }
 
-    override fun generate() {
-        logger.info("Generating XML files:")
-        table.forEachLocale { column, locale ->
-            val doc = docBuilder.newDocument().apply { xmlStandalone = true }
-            doc.appendChild(doc.createComment(getFileComment(true)))
-            val resources = doc.appendChild(doc.createElement("resources"))
-            forEachRow { row ->
-                val s = doc.createElement("string")
-                s.setAttribute("name", row)
-                s.appendChild(doc.createTextNode(table[row, column]))
-                resources.appendChild(s)
-            }
-
-            outputDir.mkdirs()
-            val innerOutputDir = outputDir.resolve("values${getSuffix(locale, '-')}")
-            innerOutputDir.mkdirs()
-            val outputFile = innerOutputDir.resolve("$resourceName.xml")
-            outputFile.deleteIfExists()
-            transformer.transform(DOMSource(doc), StreamResult(FileWriter(outputFile)))
+    final override fun onGenerateLocale(column: String, locale: Locale) {
+        val doc = docBuilder.newDocument().apply { xmlStandalone = true }
+        doc.appendChild(doc.createComment(getFileComment(true)))
+        val resources = doc.appendChild(doc.createElement("resources"))
+        forEachRow { row ->
+            val s = doc.createElement("string")
+            s.setAttribute("name", row)
+            s.appendChild(doc.createTextNode(table[row, column]))
+            resources.appendChild(s)
         }
-        logger.info("  Resources generated")
+
+        outputDir.mkdirs()
+        val innerOutputDir = outputDir.resolve("values${getSuffix(locale, '-')}")
+        innerOutputDir.mkdirs()
+        val outputFile = innerOutputDir.resolve("$resourceName.xml")
+        outputFile.write { transformer.transform(DOMSource(doc), StreamResult(it)) }
     }
 }

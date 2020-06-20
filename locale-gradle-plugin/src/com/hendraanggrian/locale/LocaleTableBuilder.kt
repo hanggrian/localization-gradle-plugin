@@ -2,6 +2,7 @@ package com.hendraanggrian.locale
 
 import com.opencsv.CSVReader
 import org.gradle.api.Action
+import org.gradle.api.logging.Logger
 import java.io.File
 
 /**
@@ -14,6 +15,9 @@ interface LocaleTableBuilder {
 
     /** Working directory of a [org.gradle.api.Project]. */
     val projectDir: File
+
+    /** Prints debugging messages of CSV import. Named accordingly to avoid name clash with [org.gradle.api.Task]. */
+    val logger2: Logger
 
     /**
      * Marks [key] as current row and opening closure to modify that row.
@@ -33,8 +37,14 @@ interface LocaleTableBuilder {
      * The CSV file in question must have a header with format `key;locale1;...;localeN`
      */
     fun importCSV(file: File) {
+        logger2.debug("Importing '${file.name}'")
+
         val result = CSVReader(file.inputStream().bufferedReader()).readAll()
         val columns = result.first().drop(1)
+        logger2.debug("Columns = $columns")
+
+        val rows = result.drop(1)
+        logger2.debug("Rows = ${rows.size}")
         result.drop(1).forEach { line ->
             val row = line.first()
             val cells = line.drop(1)

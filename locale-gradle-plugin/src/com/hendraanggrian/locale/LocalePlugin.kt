@@ -4,6 +4,7 @@ import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.create
 import org.gradle.kotlin.dsl.getValue
+import org.gradle.kotlin.dsl.invoke
 import org.gradle.kotlin.dsl.provideDelegate
 import org.gradle.kotlin.dsl.registering
 
@@ -15,13 +16,12 @@ class LocalePlugin : Plugin<Project> {
     }
 
     override fun apply(project: Project) {
-        val ext = project.extensions.create<LocaleExtension>("locale", project.projectDir)
+        val ext = project.extensions.create<LocaleExtension>("locale", project.projectDir, project.logger)
         ext.outputDir = project.projectDir.resolve("src/main/resources")
 
         val localizeJava by project.tasks.registering(LocalizeJavaTask::class) {
             group = GROUP_NAME
             description = "Write localization Java Properties file."
-            table.putAll(ext.table)
             outputDir = ext.outputDir
             resourceName = ext.resourceName
             defaultLocale = ext.defaultLocale
@@ -29,7 +29,6 @@ class LocalePlugin : Plugin<Project> {
         val localizeAndroid by project.tasks.registering(LocalizeAndroidTask::class) {
             group = GROUP_NAME
             description = "Write localization Android XML files."
-            table.putAll(ext.table)
             outputDir = ext.outputDir
             resourceName = ext.resourceName
             defaultLocale = ext.defaultLocale
@@ -41,6 +40,15 @@ class LocalePlugin : Plugin<Project> {
                 localizeJava.get(),
                 localizeAndroid.get()
             )
+        }
+
+        project.afterEvaluate {
+            localizeJava {
+                table.putAll(ext.table)
+            }
+            localizeAndroid {
+                table.putAll(ext.table)
+            }
         }
     }
 }

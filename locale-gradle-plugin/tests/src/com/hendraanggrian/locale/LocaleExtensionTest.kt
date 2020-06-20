@@ -1,13 +1,14 @@
 package com.hendraanggrian.locale
 
 import com.google.common.truth.Truth.assertThat
+import org.gradle.api.logging.Logging
 import java.io.File
 import kotlin.test.Test
 
 class LocaleExtensionTest {
 
     @Test fun test() {
-        val ext = LocaleExtension(File(""))
+        val ext = LocaleExtension(FakeDir, Logging.getLogger(LocaleExtensionTest::class.java))
         ext.run {
             "home" {
                 en = "Home"
