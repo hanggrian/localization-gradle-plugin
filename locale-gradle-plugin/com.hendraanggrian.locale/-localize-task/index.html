@@ -80,14 +80,6 @@ Default is <code>strings</code>.</p>
 <tbody>
 <tr>
 <td>
-<h4><a href="delete-if-exists.html">deleteIfExists</a></h4>
-</td>
-<td>
-<p>Delete old file, if necessary.</p>
-<code><span class="keyword">fun </span><a href="https://docs.oracle.com/javase/6/docs/api/java/io/File.html"><span class="identifier">File</span></a><span class="symbol">.</span><span class="identifier">deleteIfExists</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
-</tr>
-<tr>
-<td>
 <h4><a href="for-each-row.html">forEachRow</a></h4>
 </td>
 <td>
@@ -99,7 +91,7 @@ Default is <code>strings</code>.</p>
 <h4><a href="generate.html">generate</a></h4>
 </td>
 <td>
-<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">generate</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+<code><span class="keyword">fun </span><span class="identifier">generate</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
 <td>
@@ -119,11 +111,27 @@ Default is <code>strings</code>.</p>
 </tr>
 <tr>
 <td>
+<h4><a href="on-generate.html">onGenerate</a></h4>
+</td>
+<td>
+<p>Where the resources are generated.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">onGenerate</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
 <h4><a href="text.html">text</a></h4>
 </td>
 <td>
 <p>Marks <a href="../-locale-table-builder/text.html#com.hendraanggrian.locale.LocaleTableBuilder$text(kotlin.String, org.gradle.api.Action((com.hendraanggrian.locale.LocaleTextBuilder)))/key">key</a> as current row and opening closure to modify that row.</p>
 <code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">text</span><span class="symbol">(</span><span class="identifier" id="com.hendraanggrian.locale.LocalizeTask$text(kotlin.String, org.gradle.api.Action((com.hendraanggrian.locale.LocaleTextBuilder)))/key">key</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.hendraanggrian.locale.LocalizeTask$text(kotlin.String, org.gradle.api.Action((com.hendraanggrian.locale.LocaleTextBuilder)))/configuration">configuration</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action</span><span class="symbol">&lt;</span><a href="../-locale-text-builder/index.html"><span class="identifier">LocaleTextBuilder</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write.html">write</a></h4>
+</td>
+<td>
+<p>Create individual file, reporting the result to logger.</p>
+<code><span class="keyword">fun </span><a href="https://docs.oracle.com/javase/6/docs/api/java/io/File.html"><span class="identifier">File</span></a><span class="symbol">.</span><span class="identifier">write</span><span class="symbol">(</span><span class="identifier" id="com.hendraanggrian.locale.LocalizeTask$write(java.io.File, kotlin.Function1((java.io.FileOutputStream, kotlin.Unit)))/action">action</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="https://docs.oracle.com/javase/6/docs/api/java/io/FileOutputStream.html"><span class="identifier">FileOutputStream</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 </tbody>
 </table>
