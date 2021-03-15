@@ -6,7 +6,6 @@ buildscript {
         classpath(kotlin("gradle-plugin", VERSION_KOTLIN))
         classpath(dokka())
         classpath(gitPublish())
-        classpath(bintrayRelease())
     }
 }
 
@@ -14,6 +13,7 @@ allprojects {
     repositories {
         jcenter()
         mavenCentral()
+        maven(REPOSITORIES_URL_SNAPSHOT)
         maven("https://kotlin.bintray.com/kotlinx")
     }
     tasks {

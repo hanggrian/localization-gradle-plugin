@@ -1,3 +1,4 @@
-private const val VERSION_OPENCSV = "5.1"
+const val VERSION_OPENCSV = "5.1"
 
-fun Dependencies.opencsv() = "com.opencsv:opencsv:$VERSION_OPENCSV"
+fun org.gradle.api.artifacts.dsl.DependencyHandler.opencsv() =
+    "com.opencsv:opencsv:$VERSION_OPENCSV"
