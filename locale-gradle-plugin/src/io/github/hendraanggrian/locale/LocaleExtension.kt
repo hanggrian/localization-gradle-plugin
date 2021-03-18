@@ -1,26 +1,39 @@
-@file:Suppress("NOTHING_TO_INLINE")
+@file:Suppress("UnstableApiUsage")
 
 package io.github.hendraanggrian.locale
 
 import org.gradle.api.Action
+import org.gradle.api.Project
+import org.gradle.api.file.DirectoryProperty
 import org.gradle.api.logging.Logger
+import org.gradle.api.provider.Property
 import org.gradle.kotlin.dsl.invoke
+import org.gradle.kotlin.dsl.property
 import java.io.File
 import java.util.Locale
 
-/** Gradle extension to configure localization, any changes made here will take affect in [LocalizeTask]. */
-open class LocaleExtension(
-    override val projectDir: File,
-    override val logger2: Logger
-) : LocaleConfiguration, LocaleTableBuilder {
+/** Gradle extension to configure localization, any changes made here will take affect in [AbstractLocalizeTask]. */
+open class LocaleExtension(private val project: Project) : LocaleConfiguration, LocaleTableBuilder {
 
     internal val table: LocaleTable = LocaleTable.create()
     private val textBuilder = LocaleTextBuilderImpl(table)
 
-    override var resourceName: String = "strings"
-    override var defaultLocale: Locale? = null
-    override var isSorted: Boolean = false
-    override lateinit var outputDir: File
+    override fun getLogger(): Logger = project.logger
+
+    override val resourceName: Property<String> = project.objects.property<String>()
+        .convention("strings")
+
+    override val defaultLocale: Property<Locale> = project.objects.property<Locale>()
+        .convention(null)
+
+    override val sortValues: Property<Boolean> = project.objects.property<Boolean>()
+        .convention(false)
+
+    override val outputDirectory: DirectoryProperty = project.objects.directoryProperty()
+        .convention(
+            project.layout.projectDirectory
+                .dir("src${File.separator}main${File.separator}resources")
+        )
 
     override fun text(key: String, configuration: Action<LocaleTextBuilder>) {
         textBuilder.currentRow = key

@@ -1,15 +1,20 @@
+@file:Suppress("UnstableApiUsage")
+
 package io.github.hendraanggrian.locale
 
 import com.google.common.collect.Ordering
 import org.gradle.api.Action
 import org.gradle.api.DefaultTask
+import org.gradle.api.file.DirectoryProperty
 import org.gradle.api.logging.Logger
+import org.gradle.api.provider.Property
 import org.gradle.api.tasks.Input
 import org.gradle.api.tasks.Internal
 import org.gradle.api.tasks.Optional
 import org.gradle.api.tasks.OutputDirectory
 import org.gradle.api.tasks.TaskAction
 import org.gradle.kotlin.dsl.invoke
+import org.gradle.kotlin.dsl.property
 import java.io.File
 import java.io.FileOutputStream
 import java.time.LocalDateTime
@@ -26,23 +31,26 @@ import javax.xml.transform.dom.DOMSource
 import javax.xml.transform.stream.StreamResult
 
 /** Non-platform specific locale writer task. */
-sealed class LocalizeTask : DefaultTask(), LocaleConfiguration, LocaleTableBuilder {
+sealed class AbstractLocalizeTask : DefaultTask(), LocaleConfiguration, LocaleTableBuilder {
 
-    override val projectDir: File @Internal get() = project.projectDir
-    override val logger2: Logger @Internal get() = logger
+    @Internal
+    override fun getLogger(): Logger = super.getLogger()
 
-    @Input override lateinit var resourceName: String
-    @Input @Optional override var defaultLocale: Locale? = null
-    override var isSorted: Boolean = false @Input get
+    @Input
+    override val resourceName: Property<String> = project.objects.property()
 
-    @OutputDirectory override lateinit var outputDir: File
-    override var outputDirectory: String
-        @Input get() = super.outputDirectory
-        set(value) {
-            super.outputDirectory = value
-        }
+    @Optional
+    @Input
+    override val defaultLocale: Property<Locale> = project.objects.property()
 
-    @get:Internal internal val table: LocaleTable = LocaleTable.create()
+    @Input
+    override val sortValues: Property<Boolean> = project.objects.property()
+
+    @OutputDirectory
+    override val outputDirectory: DirectoryProperty = project.objects.directoryProperty()
+
+    @get:Internal
+    internal val table: LocaleTable = LocaleTable.create()
     private val textBuilder = LocaleTextBuilderImpl(table)
 
     init {
@@ -54,15 +62,18 @@ sealed class LocalizeTask : DefaultTask(), LocaleConfiguration, LocaleTableBuild
         configuration(textBuilder)
     }
 
-    @TaskAction fun generate() {
+    @TaskAction
+    fun generate() {
         logger.info(
-            "Generating resources with ${when (defaultLocale) {
-                null -> "mo default locale"
-                else -> "default locale '$defaultLocale'"
-            }}:"
+            "Generating resources with ${
+            when {
+                defaultLocale.isPresent -> "default locale '${defaultLocale.get()}'"
+                else -> "no default locale"
+            }
+            }:"
         )
 
-        require(resourceName.isNotBlank()) { "Empty file resource name." }
+        require(resourceName.get().isNotBlank()) { "Empty file resource name." }
 
         logger.info("  Locale table column = ${table.columnKeySet().size}, row = ${table.rowKeySet().size}")
         table.forEachLocale { column, locale -> onGenerateLocale(column, locale) }
@@ -74,7 +85,7 @@ sealed class LocalizeTask : DefaultTask(), LocaleConfiguration, LocaleTableBuild
 
     /** File name suffix. For example, `-en` and `-id` considering `-` is the [separator]. */
     protected fun getSuffix(locale: Locale, separator: Char): String = buildString {
-        if (locale == defaultLocale) {
+        if (defaultLocale.isPresent && locale == defaultLocale.get()) {
             return@buildString
         }
         append("$separator${locale.language}")
@@ -87,6 +98,7 @@ sealed class LocalizeTask : DefaultTask(), LocaleConfiguration, LocaleTableBuild
     protected fun getFileComment(withTimestamp: Boolean): String = buildString {
         append("Generated file by locale-gradle-plugin, do not edit manually!")
         if (withTimestamp) {
+            @Suppress("DEPRECATION")
             appendln()
             append(DateTimeFormatter.ofPattern("yyyy-MM-dd HH.mm").format(LocalDateTime.now()))
         }
@@ -95,7 +107,7 @@ sealed class LocalizeTask : DefaultTask(), LocaleConfiguration, LocaleTableBuild
     /** Iterate each row, sorted if necessary. */
     protected fun forEachRow(action: (String) -> Unit) {
         var collection: Collection<String> = table.rowKeySet()
-        if (isSorted) {
+        if (sortValues.get()) {
             collection = collection.sorted()
         }
         collection.forEach(action)
@@ -109,23 +121,28 @@ sealed class LocalizeTask : DefaultTask(), LocaleConfiguration, LocaleTableBuild
         }
         outputStream().use { action(it) }
         logger.info(
-            "  ${when {
+            "  ${
+            when {
                 exists() -> "Resource '$name' created"
                 else -> "Failed to create resource '$name'"
-            }}"
+            }
+            }"
         )
     }
+
+    protected val outputDir: File @Internal get() = outputDirectory.get().asFile
 }
 
 /** Task to write properties files which will then be used as [java.util.ResourceBundle]. */
-open class LocalizeJavaTask : LocalizeTask() {
+open class LocalizeJvmTask : AbstractLocalizeTask() {
 
     final override fun onGenerateLocale(column: String, locale: Locale) {
         val properties = SortedProperties()
         forEachRow { row -> properties[row] = table[row, column] }
 
         outputDir.mkdirs()
-        val outputFile = outputDir.resolve("$resourceName${getSuffix(locale, '_')}.properties")
+        val outputFile = outputDir
+            .resolve("${resourceName.get()}${getSuffix(locale, '_')}.properties")
         outputFile.write { properties.store(it, getFileComment(false)) }
     }
 
@@ -144,7 +161,8 @@ open class LocalizeJavaTask : LocalizeTask() {
             get() {
                 val set1 = super.entries
                 val set2 = LinkedHashSet<MutableMap.MutableEntry<Any, Any>>(set1.size)
-                set1.sortedWith(Ordering.from { o1, o2 -> "${o1.key}".compareTo("${o2.key}") }).forEach { set2.add(it) }
+                set1.sortedWith(Ordering.from { o1, o2 -> "${o1.key}".compareTo("${o2.key}") })
+                    .forEach { set2.add(it) }
                 return set2
             }
 
@@ -153,7 +171,7 @@ open class LocalizeJavaTask : LocalizeTask() {
 }
 
 /** Task to write Android string resources XML files. */
-open class LocalizeAndroidTask : LocalizeTask() {
+open class LocalizeAndroidTask : AbstractLocalizeTask() {
     private val docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder()
     private val transformer = TransformerFactory
         .newInstance().apply { setAttribute("indent-number", 4) }
@@ -177,7 +195,7 @@ open class LocalizeAndroidTask : LocalizeTask() {
         outputDir.mkdirs()
         val innerOutputDir = outputDir.resolve("values${getSuffix(locale, '-')}")
         innerOutputDir.mkdirs()
-        val outputFile = innerOutputDir.resolve("$resourceName.xml")
+        val outputFile = innerOutputDir.resolve("${resourceName.get()}.xml")
         outputFile.write { transformer.transform(DOMSource(doc), StreamResult(it)) }
     }
 }

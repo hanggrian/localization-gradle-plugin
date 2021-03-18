@@ -1,7 +1,8 @@
 package io.github.hendraanggrian.locale.codegen
 
-import com.squareup.kotlinpoet.KModifier
 import com.squareup.kotlinpoet.NOTHING
+import io.github.hendraanggrian.kotlinpoet.CONST
+import io.github.hendraanggrian.kotlinpoet.PRIVATE
 import io.github.hendraanggrian.kotlinpoet.buildFileSpec
 import io.github.hendraanggrian.kotlinpoet.classOf
 import kotlinx.coroutines.runBlocking
@@ -32,10 +33,10 @@ object LocaleTextBuilderGenerator {
                 }
                 superinterfaces[PACKAGE_NAME.classOf("Base$CLASS_NAME")] = null
                 types.addCompanionObject {
-                    addModifiers(KModifier.PRIVATE)
+                    addModifiers(PRIVATE)
                     properties.add<String>("NO_GETTER") {
                         initializer("%S", "Property does not have a getter.")
-                        addModifiers(KModifier.CONST)
+                        addModifiers(CONST)
                     }
                     functions.add("noGetter") {
                         returns = NOTHING

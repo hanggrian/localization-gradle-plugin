@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--Generated file by locale-gradle-plugin, do not edit manually!
-2020-06-20 21.09--><resources>
-<string name="about">About</string>
-<string name="home">Home</string>
+2021-03-19 00.35--><resources>
+    <string name="about">About</string>
+    <string name="home">Home</string>
 </resources>

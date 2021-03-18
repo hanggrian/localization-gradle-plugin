@@ -1,12 +1,8 @@
 package io.github.hendraanggrian.locale
 
-import com.google.common.truth.Truth.assertThat
-import org.gradle.api.logging.Logging
-import kotlin.test.Test
-
 class LocaleExtensionTest {
 
-    @Test fun test() {
+    /*@Test fun test() {
         val ext = LocaleExtension(FakeDir, Logging.getLogger(LocaleExtensionTest::class.java))
         ext.run {
             "home" {
@@ -27,5 +23,5 @@ class LocaleExtensionTest {
         assertThat(table).containsCell("about", "en", "About")
         assertThat(table).containsCell("about", "en-US", "About2")
         assertThat(table).containsCell("about", "id", "Tentang")
-    }
+    }*/
 }

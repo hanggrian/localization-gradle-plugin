@@ -4,9 +4,9 @@ buildscript {
         google()
     }
     dependencies {
-        classpath files('../locale-gradle-plugin-0.2.jar')
+        classpath files('../locale-gradle-plugin-0.1-SNAPSHOT.jar')
         classpath 'com.google.guava:guava:29.0-jre'
-        classpath 'com.android.tools.build:gradle:4.0.0'
+        classpath 'com.android.tools.build:gradle:4.1.2'
     }
 }
 
@@ -21,10 +21,10 @@ apply plugin: 'com.android.application'
 apply plugin: 'io.github.hendraanggrian.locale'
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 30
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 29
+        targetSdkVersion 30
         applicationId 'com.example'
         versionCode 1
         versionName '1.0'
@@ -32,7 +32,7 @@ android {
 }
 
 dependencies {
-    testImplementation "junit:junit:4.12"
+    testImplementation 'junit:junit:4.13.1'
 }
 
 locale {

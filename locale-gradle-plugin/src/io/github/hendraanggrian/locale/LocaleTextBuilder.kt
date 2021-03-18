@@ -1,10 +1,5 @@
 package io.github.hendraanggrian.locale
 
-import kotlin.Deprecated
-import kotlin.Nothing
-import kotlin.String
-import kotlin.Suppress
-
 /**
  * Locales listed below are based on [umpirsky's
  * locale-list](https://github.com/umpirsky/locale-list).

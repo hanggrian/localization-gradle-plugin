@@ -16,39 +16,33 @@ class LocalePlugin : Plugin<Project> {
     }
 
     override fun apply(project: Project) {
-        val ext = project.extensions.create<LocaleExtension>("locale", project.projectDir, project.logger)
-        ext.outputDir = project.projectDir.resolve("src/main/resources")
+        val ext = project.extensions.create<LocaleExtension>("locale", project)
 
-        val localizeJava by project.tasks.registering(LocalizeJavaTask::class) {
+        val localizeJvm by project.tasks.registering(LocalizeJvmTask::class) {
             group = GROUP_NAME
             description = "Write localization Java Properties file."
-            outputDir = ext.outputDir
-            resourceName = ext.resourceName
-            defaultLocale = ext.defaultLocale
+            resourceName.set(ext.resourceName)
+            defaultLocale.set(ext.defaultLocale)
+            sortValues.set(ext.sortValues)
+            outputDirectory.set(ext.outputDirectory)
         }
         val localizeAndroid by project.tasks.registering(LocalizeAndroidTask::class) {
             group = GROUP_NAME
             description = "Write localization Android XML files."
-            outputDir = ext.outputDir
-            resourceName = ext.resourceName
-            defaultLocale = ext.defaultLocale
+            resourceName.set(ext.resourceName)
+            defaultLocale.set(ext.defaultLocale)
+            sortValues.set(ext.sortValues)
+            outputDirectory.set(ext.outputDirectory)
         }
-        project.tasks.register("localizeAll") {
+        val localizeAll by project.tasks.registering {
             group = GROUP_NAME
             description = "Write localization for Java and Android."
-            dependsOn(
-                localizeJava.get(),
-                localizeAndroid.get()
-            )
+            dependsOn(localizeJvm, localizeAndroid)
         }
 
         project.afterEvaluate {
-            localizeJava {
-                table.putAll(ext.table)
-            }
-            localizeAndroid {
-                table.putAll(ext.table)
-            }
+            localizeJvm { table.putAll(ext.table) }
+            localizeAndroid { table.putAll(ext.table) }
         }
     }
 }

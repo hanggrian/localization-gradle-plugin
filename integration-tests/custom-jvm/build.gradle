@@ -1,18 +1,19 @@
 buildscript {
     repositories {
         jcenter()
+        google()
     }
     dependencies {
-        classpath files('../locale-gradle-plugin-0.2.jar')
+        classpath files('../locale-gradle-plugin-0.1-SNAPSHOT.jar')
         classpath 'com.google.guava:guava:29.0-jre'
     }
 }
 
-apply plugin: 'java'
-apply plugin: 'io.github.hendraanggrian.locale'
-
 group 'com.example'
 version '1.0'
+
+apply plugin: 'java'
+apply plugin: 'io.github.hendraanggrian.locale'
 
 sourceSets {
     getByName('main') {
@@ -24,14 +25,14 @@ sourceSets {
 }
 
 dependencies {
-    testImplementation "junit:junit:4.12"
+    testImplementation 'junit:junit:4.13.1'
 }
 
 locale {
-    resourceName 'my_strings'
-    defaultLocale new Locale("id")
-    sorted false
-    outputDirectory 'res'
+    resourceName.set('my_strings')
+    defaultLocale.set(new Locale('id'))
+    sortValues.set(false)
+    outputDirectory.set(new File(projectDir, 'res'))
     text('about') {
         en = 'About'
         id = 'Tentang'
