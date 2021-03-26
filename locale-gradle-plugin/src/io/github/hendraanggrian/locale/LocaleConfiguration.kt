@@ -19,12 +19,6 @@ internal interface LocaleConfiguration {
     val defaultLocale: Property<Locale>
 
     /**
-     * When enabled, generated localization will maintain its alphabetical order.
-     * Default is `false`.
-     */
-    val sortValues: Property<Boolean>
-
-    /**
      * The output directory.
      * Default is `src/main/resources`.
      */

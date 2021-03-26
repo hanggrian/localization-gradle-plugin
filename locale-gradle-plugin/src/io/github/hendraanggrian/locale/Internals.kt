@@ -1,6 +1,6 @@
 package io.github.hendraanggrian.locale
 
-import com.google.common.collect.TreeBasedTable
+import com.google.common.collect.HashBasedTable
 import java.util.Locale
 
 /**
@@ -9,7 +9,7 @@ import java.util.Locale
  * - Column = locale string (either "xx" or "xx-XX") to be converted to [Locale], see [forEachLocale].
  * - Value = localized string value.
  */
-internal typealias LocaleTable = TreeBasedTable<String, String, String>
+internal typealias LocaleTable = HashBasedTable<String, String, String>
 
 /** Keep converted locales here for faster reuse. */
 private val LOCALE_MAP = mutableMapOf<String, Locale>()

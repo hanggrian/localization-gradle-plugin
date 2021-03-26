@@ -7,7 +7,6 @@ import java.io.File
 
 /**
  * Starting point of localization configuration.
- *
  * @see LocaleExtension
  * @see AbstractLocalizeTask
  */
@@ -18,7 +17,6 @@ interface LocaleTableBuilder {
 
     /**
      * Marks [key] as current row and opening closure to modify that row.
-     *
      * @param key specified row.
      * @param configuration closure to populate localization table.
      */

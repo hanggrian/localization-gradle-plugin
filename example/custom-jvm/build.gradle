@@ -31,7 +31,6 @@ dependencies {
 locale {
     resourceName.set('my_strings')
     defaultLocale.set(new Locale('id'))
-    sortValues.set(false)
     outputDirectory.set(new File(projectDir, 'res'))
     text('about') {
         en = 'About'

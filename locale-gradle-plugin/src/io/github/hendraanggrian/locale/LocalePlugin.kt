@@ -23,7 +23,6 @@ class LocalePlugin : Plugin<Project> {
             description = "Write localization Java Properties file."
             resourceName.set(ext.resourceName)
             defaultLocale.set(ext.defaultLocale)
-            sortValues.set(ext.sortValues)
             outputDirectory.set(ext.outputDirectory)
         }
         val localizeAndroid by project.tasks.registering(LocalizeAndroidTask::class) {
@@ -31,7 +30,6 @@ class LocalePlugin : Plugin<Project> {
             description = "Write localization Android XML files."
             resourceName.set(ext.resourceName)
             defaultLocale.set(ext.defaultLocale)
-            sortValues.set(ext.sortValues)
             outputDirectory.set(ext.outputDirectory)
         }
         val localizeAll by project.tasks.registering {

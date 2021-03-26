@@ -12,7 +12,6 @@ interface BaseLocaleTextBuilder {
 
     /**
      * Register localization value to locale with specified [language].
-     *
      * @param language 2-digit code that will be used as [Locale]'s language.
      * @param value cell in the table.
      */
@@ -20,7 +19,6 @@ interface BaseLocaleTextBuilder {
 
     /**
      * Register localization value to locale with specified [language] and [country].
-     *
      * @param language 2-digit code that will be used as [Locale]'s language.
      * @param country 2-digit code that will be used as [Locale]'s country.
      * @param value cell in the table.

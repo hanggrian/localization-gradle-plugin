@@ -26,9 +26,6 @@ open class LocaleExtension(private val project: Project) : LocaleConfiguration, 
     override val defaultLocale: Property<Locale> = project.objects.property<Locale>()
         .convention(null)
 
-    override val sortValues: Property<Boolean> = project.objects.property<Boolean>()
-        .convention(false)
-
     override val outputDirectory: DirectoryProperty = project.objects.directoryProperty()
         .convention(
             project.layout.projectDirectory

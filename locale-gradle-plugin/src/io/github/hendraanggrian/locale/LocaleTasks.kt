@@ -43,9 +43,6 @@ sealed class AbstractLocalizeTask : DefaultTask(), LocaleConfiguration, LocaleTa
     @Input
     override val defaultLocale: Property<Locale> = project.objects.property()
 
-    @Input
-    override val sortValues: Property<Boolean> = project.objects.property()
-
     @OutputDirectory
     override val outputDirectory: DirectoryProperty = project.objects.directoryProperty()
 
@@ -104,15 +101,6 @@ sealed class AbstractLocalizeTask : DefaultTask(), LocaleConfiguration, LocaleTa
         }
     }
 
-    /** Iterate each row, sorted if necessary. */
-    protected fun forEachRow(action: (String) -> Unit) {
-        var collection: Collection<String> = table.rowKeySet()
-        if (sortValues.get()) {
-            collection = collection.sorted()
-        }
-        collection.forEach(action)
-    }
-
     /** Create individual file, reporting the result to logger. */
     protected fun File.write(action: (FileOutputStream) -> Unit) {
         if (exists()) {
@@ -129,8 +117,6 @@ sealed class AbstractLocalizeTask : DefaultTask(), LocaleConfiguration, LocaleTa
             }"
         )
     }
-
-    protected val outputDir: File @Internal get() = outputDirectory.get().asFile
 }
 
 /** Task to write properties files which will then be used as [java.util.ResourceBundle]. */
@@ -138,11 +124,12 @@ open class LocalizeJvmTask : AbstractLocalizeTask() {
 
     final override fun onGenerateLocale(column: String, locale: Locale) {
         val properties = SortedProperties()
-        forEachRow { row -> properties[row] = table[row, column] }
+        table.rowKeySet().forEach { row -> properties[row] = table[row, column] }
 
-        outputDir.mkdirs()
-        val outputFile = outputDir
-            .resolve("${resourceName.get()}${getSuffix(locale, '_')}.properties")
+        outputDirectory.get().asFile.mkdirs()
+        val outputFile = outputDirectory
+            .dir("${resourceName.get()}${getSuffix(locale, '_')}.properties")
+            .get().asFile
         outputFile.write { properties.store(it, getFileComment(false)) }
     }
 
@@ -185,17 +172,20 @@ open class LocalizeAndroidTask : AbstractLocalizeTask() {
         val doc = docBuilder.newDocument().apply { xmlStandalone = true }
         doc.appendChild(doc.createComment(getFileComment(true)))
         val resources = doc.appendChild(doc.createElement("resources"))
-        forEachRow { row ->
+        table.rowKeySet().forEach { row ->
             val s = doc.createElement("string")
             s.setAttribute("name", row)
             s.appendChild(doc.createTextNode(table[row, column]))
             resources.appendChild(s)
         }
 
-        outputDir.mkdirs()
-        val innerOutputDir = outputDir.resolve("values${getSuffix(locale, '-')}")
-        innerOutputDir.mkdirs()
-        val outputFile = innerOutputDir.resolve("${resourceName.get()}.xml")
+        outputDirectory.get().asFile.mkdirs()
+        val innerOutputDirectory = outputDirectory
+            .dir("values${getSuffix(locale, '-')}")
+            .get().asFile
+        innerOutputDirectory.mkdirs()
+        val outputFile = innerOutputDirectory
+            .resolve("${resourceName.get()}.xml")
         outputFile.write { transformer.transform(DOMSource(doc), StreamResult(it)) }
     }
 }

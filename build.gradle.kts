@@ -12,7 +12,6 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
-        mavenCentral()
         maven(REPOSITORIES_URL_SNAPSHOT)
         maven("https://kotlin.bintray.com/kotlinx")
     }
