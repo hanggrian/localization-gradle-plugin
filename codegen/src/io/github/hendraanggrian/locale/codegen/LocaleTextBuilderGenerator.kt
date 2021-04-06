@@ -13,7 +13,8 @@ object LocaleTextBuilderGenerator {
     private const val PACKAGE_NAME = "io.github.hendraanggrian.locale"
     private const val CLASS_NAME = "LocaleTextBuilder"
 
-    @JvmStatic fun main(args: Array<String>) {
+    @JvmStatic
+    fun main(args: Array<String>) {
         println("Fetching...")
         val locales = runBlocking { GitHubApi.getLocales() }
 

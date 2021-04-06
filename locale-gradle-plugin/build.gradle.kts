@@ -5,28 +5,21 @@ plugins {
     `java-gradle-plugin`
     `kotlin-dsl`
     dokka
-    `maven-publish`
-    signing
+    `gradle-publish`
 }
 
 sourceSets {
-    getByName("main") {
+    main {
         java.srcDir("src")
     }
     // unable to create functionalTest in Android Studio
-    getByName("test") {
+    test {
         java.srcDir("tests/src")
         resources.srcDir("tests/res")
     }
 }
 
 gradlePlugin {
-    plugins {
-        register(RELEASE_ARTIFACT) {
-            id = "$RELEASE_GROUP.locale"
-            implementationClass = "$id.LocalePlugin"
-        }
-    }
     testSourceSets(sourceSets["test"])
 }
 
@@ -47,27 +40,9 @@ tasks {
             it.renameTo(File(rootDir.resolve("example"), it.name))
         }
     }
-
-    dokkaJavadoc {
-        dokkaSourceSets {
-            "main" {
-                sourceLink {
-                    localDirectory.set(projectDir.resolve("src"))
-                    remoteUrl.set(getReleaseSourceUrl())
-                    remoteLineSuffix.set("#L")
-                }
-            }
-        }
-    }
-    val dokkaJar by registering(Jar::class) {
-        archiveClassifier.set("javadoc")
-        from(dokkaJavadoc)
-        dependsOn(dokkaJavadoc)
-    }
-    val sourcesJar by registering(Jar::class) {
-        archiveClassifier.set("sources")
-        from(sourceSets.main.get().allSource)
-    }
 }
 
-publishJvm()
+publishPlugin(
+    "Locale Gradle Plugin",
+    "$RELEASE_GROUP.$RELEASE_ARTIFACT.LocalePlugin"
+)

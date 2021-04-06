@@ -1,18 +1,20 @@
 buildscript {
     repositories {
         jcenter()
+        maven(REPO_GRADLE_PORTAL)
     }
     dependencies {
         classpath(kotlin("gradle-plugin", VERSION_KOTLIN))
         classpath(dokka())
         classpath(gitPublish())
+        classpath(gradlePublish())
     }
 }
 
 allprojects {
     repositories {
         jcenter()
-        maven(REPOSITORIES_URL_SNAPSHOT)
+        maven(REPO_OSSRH_SNAPSHOTS)
         maven("https://kotlin.bintray.com/kotlinx")
     }
     tasks {
@@ -23,8 +25,4 @@ allprojects {
             kotlinOptions.jvmTarget = "1.8"
         }
     }
-}
-
-tasks.register<Delete>("clean") {
-    delete(rootProject.buildDir)
 }
