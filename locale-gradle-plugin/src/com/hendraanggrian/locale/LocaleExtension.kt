@@ -1,6 +1,6 @@
 @file:Suppress("UnstableApiUsage")
 
-package io.github.hendraanggrian.locale
+package com.hendraanggrian.locale
 
 import org.gradle.api.Action
 import org.gradle.api.Project

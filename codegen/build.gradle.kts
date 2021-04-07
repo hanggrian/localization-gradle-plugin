@@ -7,7 +7,7 @@ plugins {
 }
 
 application {
-    mainClass.set("$RELEASE_GROUP.locale.codegen.LocaleTextBuilderGenerator")
+    mainClass.set("$RELEASE_GROUP.$RELEASE_ARTIFACT.codegen.LocaleTextBuilderGenerator")
 }
 
 sourceSets {

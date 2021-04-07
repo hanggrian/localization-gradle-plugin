@@ -1,16 +1,16 @@
-package io.github.hendraanggrian.locale.codegen
+package com.hendraanggrian.locale.codegen
 
+import com.hendraanggrian.kotlinpoet.CONST
+import com.hendraanggrian.kotlinpoet.PRIVATE
+import com.hendraanggrian.kotlinpoet.buildFileSpec
+import com.hendraanggrian.kotlinpoet.classOf
 import com.squareup.kotlinpoet.NOTHING
-import io.github.hendraanggrian.kotlinpoet.CONST
-import io.github.hendraanggrian.kotlinpoet.PRIVATE
-import io.github.hendraanggrian.kotlinpoet.buildFileSpec
-import io.github.hendraanggrian.kotlinpoet.classOf
 import kotlinx.coroutines.runBlocking
 import java.io.File
 import kotlin.system.exitProcess
 
 object LocaleTextBuilderGenerator {
-    private const val PACKAGE_NAME = "io.github.hendraanggrian.locale"
+    private const val PACKAGE_NAME = "com.hendraanggrian.locale"
     private const val CLASS_NAME = "LocaleTextBuilder"
 
     @JvmStatic

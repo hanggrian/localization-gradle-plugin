@@ -18,7 +18,7 @@ allprojects {
 }
 
 apply plugin: 'com.android.application'
-apply plugin: 'io.github.hendraanggrian.locale'
+apply plugin: 'com.hendraanggrian.locale'
 
 android {
     compileSdkVersion 30

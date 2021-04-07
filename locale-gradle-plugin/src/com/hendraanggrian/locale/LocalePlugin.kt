@@ -1,4 +1,4 @@
-package io.github.hendraanggrian.locale
+package com.hendraanggrian.locale
 
 import org.gradle.api.Plugin
 import org.gradle.api.Project

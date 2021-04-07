@@ -18,7 +18,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath "io.github.hendraanggrian:locale-gradle-plugin:$version"
+        classpath "com.hendraanggrian:locale-gradle-plugin:$version"
     }
 }
 ```
@@ -28,7 +28,7 @@ Usage
 Apply plugin in your module, and configure `locale` extension like below:
 
 ```gradle
-apply plugin: 'io.github.hendraanggrian.locale'
+apply plugin: 'com.hendraanggrian.locale'
 
 locale {
     resourceName 'strings'
@@ -42,11 +42,11 @@ locale {
     }
 }
 
-task.withTask(io.github.hendraanggrian.locale.LocalizeJavaTask) {
+task.withTask(com.hendraanggrian.locale.LocalizeJavaTask) {
     outputDirectory 'src/main/resources'
 }
 
-task.withTask(io.github.hendraanggrian.locale.LocalizeAndroidTask) {
+task.withTask(com.hendraanggrian.locale.LocalizeAndroidTask) {
     outputDirectory 'my/custom/directory'
 }
 ```

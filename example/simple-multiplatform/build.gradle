@@ -17,7 +17,7 @@ allprojects {
     }
 }
 
-apply plugin: 'io.github.hendraanggrian.locale'
+apply plugin: 'com.hendraanggrian.locale'
 
 locale {
     text('about') {
@@ -30,7 +30,7 @@ locale {
     }
 }
 
-tasks.withType(io.github.hendraanggrian.locale.LocalizeJvmTask) {
+tasks.withType(com.hendraanggrian.locale.LocalizeJvmTask) {
     outputDirectory.set(new File(projectDir, 'jvm/src/main/resources'))
     text('java_only_text') {
         en = 'Java only'
@@ -38,7 +38,7 @@ tasks.withType(io.github.hendraanggrian.locale.LocalizeJvmTask) {
     }
 }
 
-tasks.withType(io.github.hendraanggrian.locale.LocalizeAndroidTask) {
+tasks.withType(com.hendraanggrian.locale.LocalizeAndroidTask) {
     outputDirectory.set(new File(projectDir, 'android/src/main/resources'))
     text('android_only_text') {
         en = 'Android only'

@@ -1,4 +1,4 @@
-package io.github.hendraanggrian.locale
+package com.hendraanggrian.locale
 
 /**
  * Locales listed below are based on [umpirsky's

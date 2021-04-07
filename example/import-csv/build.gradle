@@ -14,7 +14,7 @@ group 'com.example'
 version '1.0'
 
 apply plugin: 'java'
-apply plugin: 'io.github.hendraanggrian.locale'
+apply plugin: 'com.hendraanggrian.locale'
 
 dependencies {
     testImplementation 'junit:junit:4.13.1'

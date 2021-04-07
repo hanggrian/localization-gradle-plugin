@@ -1,5 +1,6 @@
-package io.github.hendraanggrian.locale.codegen
+package com.hendraanggrian
 
+import com.hendraanggrian.locale.codegen.GitHubApi
 import kotlinx.coroutines.runBlocking
 import kotlin.test.Test
 import kotlin.test.assertTrue
@@ -7,7 +8,8 @@ import kotlin.test.fail
 
 class GitHubApiTest {
 
-    @Test fun getLocales() {
+    @Test
+    fun getLocales() {
         runBlocking { GitHubApi.getLocales() }.forEach { locale ->
             locale.split('_').forEachIndexed { index, s ->
                 when (index) {

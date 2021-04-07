@@ -1,5 +1,5 @@
 const val RELEASE_USER = "hendraanggrian"
-const val RELEASE_GROUP = "io.github.$RELEASE_USER"
+const val RELEASE_GROUP = "com.$RELEASE_USER"
 const val RELEASE_ARTIFACT = "locale"
 const val RELEASE_VERSION = "0.1-SNAPSHOT"
 const val RELEASE_DESCRIPTION = "Cross-platform localization generated in Gradle"

@@ -1,4 +1,4 @@
-package io.github.hendraanggrian.locale
+package com.hendraanggrian.locale
 
 import org.gradle.testkit.runner.GradleRunner
 import org.gradle.testkit.runner.TaskOutcome
@@ -41,7 +41,7 @@ class LocaleExtensionTaskTest {
             plugins {
                 java
                 idea
-                id("io.github.hendraanggrian.locale")
+                id("com.hendraanggrian.locale")
             }
             locale {
                 "hi" {
@@ -71,7 +71,7 @@ class LocaleExtensionTaskTest {
             plugins {
                 java
                 idea
-                id("io.github.hendraanggrian.locale")
+                id("com.hendraanggrian.locale")
             }
             locale {
                 resourceName.set("my_strings")

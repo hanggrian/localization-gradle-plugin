@@ -1,4 +1,4 @@
-package io.github.hendraanggrian.locale
+package com.hendraanggrian.locale
 
 import org.gradle.api.file.DirectoryProperty
 import org.gradle.api.provider.Property

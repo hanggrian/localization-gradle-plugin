@@ -1,4 +1,4 @@
-package io.github.hendraanggrian.locale
+package com.hendraanggrian.locale
 
 import com.google.common.collect.HashBasedTable
 import java.util.Locale
