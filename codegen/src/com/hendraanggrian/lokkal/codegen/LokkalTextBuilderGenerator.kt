@@ -1,4 +1,4 @@
-package com.hendraanggrian.locale.codegen
+package com.hendraanggrian.lokkal.codegen
 
 import com.hendraanggrian.kotlinpoet.CONST
 import com.hendraanggrian.kotlinpoet.PRIVATE
@@ -9,9 +9,9 @@ import kotlinx.coroutines.runBlocking
 import java.io.File
 import kotlin.system.exitProcess
 
-object LocaleTextBuilderGenerator {
-    private const val PACKAGE_NAME = "com.hendraanggrian.locale"
-    private const val CLASS_NAME = "LocaleTextBuilder"
+object LokkalTextBuilderGenerator {
+    private const val PACKAGE_NAME = "com.hendraanggrian.lokkal"
+    private const val CLASS_NAME = "LokkalTextBuilder"
 
     @JvmStatic
     fun main(args: Array<String>) {
@@ -72,7 +72,7 @@ object LocaleTextBuilderGenerator {
                     }
                 }
             }
-        }.writeTo(File("locale-gradle-plugin/src"))
+        }.writeTo(File("lokkal/src"))
 
         println("Done!")
         exitProcess(0)

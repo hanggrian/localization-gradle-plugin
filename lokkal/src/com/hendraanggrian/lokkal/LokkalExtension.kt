@@ -1,6 +1,6 @@
 @file:Suppress("UnstableApiUsage")
 
-package com.hendraanggrian.locale
+package com.hendraanggrian.lokkal
 
 import org.gradle.api.Action
 import org.gradle.api.Project
@@ -13,10 +13,10 @@ import java.io.File
 import java.util.Locale
 
 /** Gradle extension to configure localization, any changes made here will take affect in [AbstractLocalizeTask]. */
-open class LocaleExtension(private val project: Project) : LocaleConfiguration, LocaleTableBuilder {
+open class LokkalExtension(private val project: Project) : LokkalConfiguration, LokkalTableBuilder {
 
     internal val table: LocaleTable = LocaleTable.create()
-    private val textBuilder = LocaleTextBuilderImpl(table)
+    private val textBuilder = LokkalTextBuilderImpl(table)
 
     override fun getLogger(): Logger = project.logger
 
@@ -32,7 +32,7 @@ open class LocaleExtension(private val project: Project) : LocaleConfiguration, 
                 .dir("src${File.separator}main${File.separator}resources")
         )
 
-    override fun text(key: String, configuration: Action<LocaleTextBuilder>) {
+    override fun text(key: String, configuration: Action<LokkalTextBuilder>) {
         textBuilder.currentRow = key
         configuration(textBuilder)
     }

@@ -1,4 +1,4 @@
-package com.hendraanggrian.locale
+package com.hendraanggrian.lokkal
 
 import com.opencsv.CSVReader
 import org.gradle.api.Action
@@ -7,10 +7,10 @@ import java.io.File
 
 /**
  * Starting point of localization configuration.
- * @see LocaleExtension
+ * @see LokkalExtension
  * @see AbstractLocalizeTask
  */
-interface LocaleTableBuilder {
+interface LokkalTableBuilder {
 
     /** Prints debugging messages of CSV import. Named accordingly to avoid name clash with [org.gradle.api.Task]. */
     fun getLogger(): Logger
@@ -20,10 +20,10 @@ interface LocaleTableBuilder {
      * @param key specified row.
      * @param configuration closure to populate localization table.
      */
-    fun text(key: String, configuration: Action<LocaleTextBuilder>)
+    fun text(key: String, configuration: Action<LokkalTextBuilder>)
 
     /** Alias of [text] for Gradle Kotlin DSL. */
-    operator fun String.invoke(configuration: LocaleTextBuilder.() -> Unit): Unit =
+    operator fun String.invoke(configuration: LokkalTextBuilder.() -> Unit): Unit =
         text(this, configuration)
 
     /**

@@ -1,4 +1,4 @@
-include("locale-gradle-plugin")
+include("lokkal")
 include("codegen")
 include("website")
 //includeDir("example")

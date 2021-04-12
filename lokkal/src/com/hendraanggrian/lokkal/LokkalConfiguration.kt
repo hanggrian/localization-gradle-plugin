@@ -1,10 +1,10 @@
-package com.hendraanggrian.locale
+package com.hendraanggrian.lokkal
 
 import org.gradle.api.file.DirectoryProperty
 import org.gradle.api.provider.Property
 import java.util.Locale
 
-internal interface LocaleConfiguration {
+internal interface LokkalConfiguration {
 
     /**
      * Localization resource name.

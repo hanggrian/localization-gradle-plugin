@@ -1,4 +1,4 @@
-package com.hendraanggrian.locale
+package com.hendraanggrian.lokkal
 
 import org.gradle.testkit.runner.GradleRunner
 import org.gradle.testkit.runner.TaskOutcome
@@ -11,7 +11,7 @@ import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
 
-class LocaleExtensionTaskTest {
+class LokkalExtensionTaskTest {
 
     @Rule @JvmField val testProjectDir = TemporaryFolder()
     private lateinit var settingsFile: File
@@ -41,9 +41,9 @@ class LocaleExtensionTaskTest {
             plugins {
                 java
                 idea
-                id("com.hendraanggrian.locale")
+                id("com.hendraanggrian.lokkal")
             }
-            locale {
+            lokkal {
                 "hi" {
                     en = "Hi"
                     id = "Hai"
@@ -71,9 +71,9 @@ class LocaleExtensionTaskTest {
             plugins {
                 java
                 idea
-                id("com.hendraanggrian.locale")
+                id("com.hendraanggrian.lokkal")
             }
-            locale {
+            lokkal {
                 resourceName.set("my_strings")
                 defaultLocale.set(`java.util`.Locale.ENGLISH)
                 outputDirectory.set(projectDir.resolve("res"))

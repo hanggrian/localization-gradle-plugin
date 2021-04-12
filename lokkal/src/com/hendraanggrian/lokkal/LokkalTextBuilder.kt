@@ -1,6 +1,5 @@
-package io.github.hendraanggrian.locale
+package com.hendraanggrian.lokkal
 
-import java.util.Locale
 import kotlin.Deprecated
 import kotlin.Nothing
 import kotlin.String
@@ -16,7 +15,7 @@ import kotlin.Suppress
     "unused",
     "PropertyName"
 )
-public interface LocaleTextBuilder : BaseLocaleTextBuilder {
+public interface LokkalTextBuilder : BaseLokkalTextBuilder {
     /**
      * Set locale value with language `af`.
      */

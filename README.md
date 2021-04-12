@@ -2,7 +2,7 @@
 [![ktlint](https://img.shields.io/badge/code%20style-%E2%9D%A4-FF4081.svg)](https://ktlint.github.io/)
 [![license](https://img.shields.io/github/license/hendraanggrian/locale-gradle-plugin)](http://www.apache.org/licenses/LICENSE-2.0)
 
-Locale Gradle Plugin
+Lokkal Gradle Plugin
 ====================
 An write-once-run-anywhere approach to localization in multiple platform project.
 * Writes `ResourceBundle` for Java and XML values for Android.
@@ -28,9 +28,9 @@ Usage
 Apply plugin in your module, and configure `locale` extension like below:
 
 ```gradle
-apply plugin: 'com.hendraanggrian.locale'
+apply plugin: 'com.hendraanggrian.lokkal'
 
-locale {
+lokkal {
     resourceName 'strings'
     text('home') {
         en = 'Home'
@@ -42,11 +42,11 @@ locale {
     }
 }
 
-task.withTask(com.hendraanggrian.locale.LocalizeJavaTask) {
+task.withTask(com.hendraanggrian.lokkal.LocalizeJavaTask) {
     outputDirectory 'src/main/resources'
 }
 
-task.withTask(com.hendraanggrian.locale.LocalizeAndroidTask) {
+task.withTask(com.hendraanggrian.lokkal.LocalizeAndroidTask) {
     outputDirectory 'my/custom/directory'
 }
 ```
@@ -54,7 +54,7 @@ task.withTask(com.hendraanggrian.locale.LocalizeAndroidTask) {
 It's even simpler with Gradle Kotlin DSL.
 
 ```gradle
-locale {
+lokkal {
     "home" {
         en = "Home"
         id = "Beranda"

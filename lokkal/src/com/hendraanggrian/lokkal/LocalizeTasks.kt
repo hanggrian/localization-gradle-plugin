@@ -1,6 +1,6 @@
 @file:Suppress("UnstableApiUsage")
 
-package com.hendraanggrian.locale
+package com.hendraanggrian.lokkal
 
 import com.google.common.collect.Ordering
 import org.gradle.api.Action
@@ -31,7 +31,7 @@ import javax.xml.transform.dom.DOMSource
 import javax.xml.transform.stream.StreamResult
 
 /** Non-platform specific locale writer task. */
-sealed class AbstractLocalizeTask : DefaultTask(), LocaleConfiguration, LocaleTableBuilder {
+sealed class AbstractLocalizeTask : DefaultTask(), LokkalConfiguration, LokkalTableBuilder {
 
     @Internal
     override fun getLogger(): Logger = super.getLogger()
@@ -48,13 +48,13 @@ sealed class AbstractLocalizeTask : DefaultTask(), LocaleConfiguration, LocaleTa
 
     @get:Internal
     internal val table: LocaleTable = LocaleTable.create()
-    private val textBuilder = LocaleTextBuilderImpl(table)
+    private val textBuilder = LokkalTextBuilderImpl(table)
 
     init {
         outputs.upToDateWhen { false } // always consider this task out of date
     }
 
-    override fun text(key: String, configuration: Action<LocaleTextBuilder>) {
+    override fun text(key: String, configuration: Action<LokkalTextBuilder>) {
         textBuilder.currentRow = key
         configuration(textBuilder)
     }

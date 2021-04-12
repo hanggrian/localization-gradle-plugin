@@ -1,4 +1,4 @@
-package com.hendraanggrian.locale.codegen
+package com.hendraanggrian.lokkal.codegen
 
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.okhttp.OkHttp

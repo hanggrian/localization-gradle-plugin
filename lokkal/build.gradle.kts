@@ -20,6 +20,14 @@ sourceSets {
 }
 
 gradlePlugin {
+    plugins {
+        register(RELEASE_ARTIFACT) {
+            id = "$RELEASE_GROUP.$RELEASE_ARTIFACT"
+            implementationClass = "$id.LokkalPlugin"
+            displayName = "Lokkal Gradle Plugin"
+            description = RELEASE_DESCRIPTION
+        }
+    }
     testSourceSets(sourceSets["test"])
 }
 
@@ -34,7 +42,7 @@ dependencies {
 ktlint()
 
 tasks {
-    val deploy by registering {
+    register("deploy") {
         dependsOn("build")
         projectDir.resolve("build/libs").listFiles()?.forEach {
             it.renameTo(File(rootDir.resolve("example"), it.name))
@@ -42,7 +50,4 @@ tasks {
     }
 }
 
-publishPlugin(
-    "Locale Gradle Plugin",
-    "$RELEASE_GROUP.$RELEASE_ARTIFACT.LocalePlugin"
-)
+publishPlugin()
