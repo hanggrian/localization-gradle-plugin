@@ -1,14 +1,14 @@
-package com.hendraanggrian.lokkal
+package com.hendraanggrian.localization
 
 import java.util.Locale
 
 /**
- * Second/last phase of localization configuration, used only within [LokkalTableBuilder] scope.
+ * Second/last phase of localization configuration, used only within [LocalizationTableBuilder] scope.
  *
  * However, this interface often isn't directly used,
- * as [LokkalTextBuilder] offers convenient method on each possible localization.
+ * as [LocalizationTextBuilder] offers convenient method on each possible localization.
  */
-interface BaseLokkalTextBuilder {
+interface BaseLocalizationTextBuilder {
 
     /**
      * Register localization value to locale with specified [language].

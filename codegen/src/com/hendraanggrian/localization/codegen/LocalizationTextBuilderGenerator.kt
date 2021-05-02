@@ -1,4 +1,4 @@
-package com.hendraanggrian.lokkal.codegen
+package com.hendraanggrian.localization.codegen
 
 import com.hendraanggrian.kotlinpoet.CONST
 import com.hendraanggrian.kotlinpoet.PRIVATE
@@ -9,9 +9,9 @@ import kotlinx.coroutines.runBlocking
 import java.io.File
 import kotlin.system.exitProcess
 
-object LokkalTextBuilderGenerator {
-    private const val PACKAGE_NAME = "com.hendraanggrian.lokkal"
-    private const val CLASS_NAME = "LokkalTextBuilder"
+object LocalizationTextBuilderGenerator {
+    private const val PACKAGE_NAME = "com.hendraanggrian.localization"
+    private const val CLASS_NAME = "LocalizationTextBuilder"
 
     @JvmStatic
     fun main(args: Array<String>) {
@@ -28,10 +28,10 @@ object LokkalTextBuilderGenerator {
                     appendLine()
                     appendLine("This is a generated class from `codegen` module.")
                 }
-                annotations.add<Suppress> {
+                /*annotations.add<Suppress> {
                     addMember("%S", "unused")
                     addMember("%S", "PropertyName")
-                }
+                }*/
                 superinterfaces[PACKAGE_NAME.classOf("Base$CLASS_NAME")] = null
                 types.addCompanionObject {
                     addModifiers(PRIVATE)
@@ -72,7 +72,7 @@ object LokkalTextBuilderGenerator {
                     }
                 }
             }
-        }.writeTo(File("lokkal/src"))
+        }.writeTo(File("localization/src"))
 
         println("Done!")
         exitProcess(0)

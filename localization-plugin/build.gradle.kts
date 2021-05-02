@@ -12,7 +12,7 @@ sourceSets {
     main {
         java.srcDir("src")
     }
-    // unable to create functionalTest in Android Studio
+    // TODO: unable to create functionalTest in Android Studio
     test {
         java.srcDir("tests/src")
         resources.srcDir("tests/res")
@@ -20,16 +20,16 @@ sourceSets {
 }
 
 gradlePlugin {
-    plugins {
-        register(RELEASE_ARTIFACT) {
-            id = "$RELEASE_GROUP.$RELEASE_ARTIFACT"
-            implementationClass = "$id.LokkalPlugin"
-            displayName = "Lokkal Gradle Plugin"
-            description = RELEASE_DESCRIPTION
-        }
+    val localizationPlugin by plugins.registering {
+        id = "$RELEASE_GROUP.localization"
+        implementationClass = "$RELEASE_GROUP.localization.LocalizationPlugin"
+        displayName = "Localization Gradle Plugin"
+        description = RELEASE_DESCRIPTION
     }
     testSourceSets(sourceSets["test"])
 }
+
+ktlint()
 
 dependencies {
     implementation(kotlin("stdlib", VERSION_KOTLIN))
@@ -39,15 +39,9 @@ dependencies {
     testImplementation(kotlin("test-junit", VERSION_KOTLIN))
 }
 
-ktlint()
-
-tasks {
-    register("deploy") {
-        dependsOn("build")
-        projectDir.resolve("build/libs").listFiles()?.forEach {
-            it.renameTo(File(rootDir.resolve("example"), it.name))
-        }
-    }
+pluginBundle {
+    website = RELEASE_GITHUB
+    vcsUrl = RELEASE_GITHUB
+    description = RELEASE_DESCRIPTION
+    tags = listOf("localization", "locale")
 }
-
-publishPlugin()

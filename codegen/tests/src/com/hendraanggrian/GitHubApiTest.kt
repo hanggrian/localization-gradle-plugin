@@ -1,6 +1,6 @@
 package com.hendraanggrian
 
-import com.hendraanggrian.lokkal.codegen.GitHubApi
+import com.hendraanggrian.localization.codegen.GitHubApi
 import kotlinx.coroutines.runBlocking
 import kotlin.test.Test
 import kotlin.test.assertTrue

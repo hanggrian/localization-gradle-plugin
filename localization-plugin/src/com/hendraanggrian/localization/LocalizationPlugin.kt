@@ -1,4 +1,4 @@
-package com.hendraanggrian.lokkal
+package com.hendraanggrian.localization
 
 import org.gradle.api.Plugin
 import org.gradle.api.Project
@@ -9,14 +9,14 @@ import org.gradle.kotlin.dsl.provideDelegate
 import org.gradle.kotlin.dsl.registering
 
 /** Gradle localization plugin with Kotlin DSL declaration. */
-class LokkalPlugin : Plugin<Project> {
+class LocalizationPlugin : Plugin<Project> {
 
     companion object {
         const val GROUP_NAME = "localization"
     }
 
     override fun apply(project: Project) {
-        val ext = project.extensions.create<LokkalExtension>("lokkal", project)
+        val ext = project.extensions.create<LocalizationExtension>("lokkal", project)
 
         val localizeJvm by project.tasks.registering(LocalizeJvmTask::class) {
             group = GROUP_NAME

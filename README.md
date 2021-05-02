@@ -28,7 +28,7 @@ Usage
 Apply plugin in your module, and configure `locale` extension like below:
 
 ```gradle
-apply plugin: 'com.hendraanggrian.lokkal'
+apply plugin: 'com.hendraanggrian.localization'
 
 lokkal {
     resourceName 'strings'
@@ -42,11 +42,11 @@ lokkal {
     }
 }
 
-task.withTask(com.hendraanggrian.lokkal.LocalizeJavaTask) {
+task.withTask(com.hendraanggrian.localization.LocalizeJavaTask) {
     outputDirectory 'src/main/resources'
 }
 
-task.withTask(com.hendraanggrian.lokkal.LocalizeAndroidTask) {
+task.withTask(com.hendraanggrian.localization.LocalizeAndroidTask) {
     outputDirectory 'my/custom/directory'
 }
 ```

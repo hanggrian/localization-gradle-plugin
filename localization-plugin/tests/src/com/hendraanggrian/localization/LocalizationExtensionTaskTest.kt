@@ -1,4 +1,4 @@
-package com.hendraanggrian.lokkal
+package com.hendraanggrian.localization
 
 import org.gradle.testkit.runner.GradleRunner
 import org.gradle.testkit.runner.TaskOutcome
@@ -11,7 +11,7 @@ import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
 
-class LokkalExtensionTaskTest {
+class LocalizationExtensionTaskTest {
 
     @Rule @JvmField val testProjectDir = TemporaryFolder()
     private lateinit var settingsFile: File
@@ -41,7 +41,7 @@ class LokkalExtensionTaskTest {
             plugins {
                 java
                 idea
-                id("com.hendraanggrian.lokkal")
+                id("com.hendraanggrian.localization-plugin")
             }
             lokkal {
                 "hi" {
@@ -71,7 +71,7 @@ class LokkalExtensionTaskTest {
             plugins {
                 java
                 idea
-                id("com.hendraanggrian.lokkal")
+                id("com.hendraanggrian.localization")
             }
             lokkal {
                 resourceName.set("my_strings")

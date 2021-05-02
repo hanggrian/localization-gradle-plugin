@@ -1,9 +1,4 @@
-package com.hendraanggrian.lokkal
-
-import kotlin.Deprecated
-import kotlin.Nothing
-import kotlin.String
-import kotlin.Suppress
+package com.hendraanggrian.localization
 
 /**
  * Locales listed below are based on [umpirsky's
@@ -11,11 +6,7 @@ import kotlin.Suppress
  *
  * This is a generated class from `codegen` module.
  */
-@Suppress(
-    "unused",
-    "PropertyName"
-)
-public interface LokkalTextBuilder : BaseLokkalTextBuilder {
+public interface LocalizationTextBuilder : BaseLocalizationTextBuilder {
     /**
      * Set locale value with language `af`.
      */

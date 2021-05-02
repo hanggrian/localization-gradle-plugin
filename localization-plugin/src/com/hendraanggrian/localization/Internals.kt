@@ -1,4 +1,4 @@
-package com.hendraanggrian.lokkal
+package com.hendraanggrian.localization
 
 import com.google.common.collect.HashBasedTable
 import java.util.Locale
@@ -54,7 +54,7 @@ internal fun LocaleTable.forEachLocale(action: (column: String, locale: Locale) 
         )
     }
 
-internal class LokkalTextBuilderImpl(private val table: LocaleTable) : LokkalTextBuilder {
+internal class LocalizationTextBuilderImpl(private val table: LocaleTable) : LocalizationTextBuilder {
     lateinit var currentRow: String
 
     override fun add(language: String, value: String) {

@@ -7,7 +7,7 @@ plugins {
 }
 
 application {
-    mainClass.set("$RELEASE_GROUP.$RELEASE_ARTIFACT.codegen.LokkalTextBuilderGenerator")
+    mainClass.set("$RELEASE_GROUP.$RELEASE_ARTIFACT.codegen.LocalizationTextBuilderGenerator")
 }
 
 sourceSets {
@@ -19,6 +19,8 @@ sourceSets {
     }
 }
 
+ktlint()
+
 dependencies {
     implementation(kotlin("stdlib", VERSION_KOTLIN))
     implementation(kotlinx("coroutines-core", VERSION_COROUTINES))
@@ -27,5 +29,3 @@ dependencies {
     implementation(hendraanggrian("kotlinpoet-ktx", VERSION_KOTLINPOET_KTX))
     testImplementation(kotlin("test-junit"))
 }
-
-ktlint()
