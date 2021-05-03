@@ -28,10 +28,6 @@ object LocalizationTextBuilderGenerator {
                     appendLine()
                     appendLine("This is a generated class from `codegen` module.")
                 }
-                /*annotations.add<Suppress> {
-                    addMember("%S", "unused")
-                    addMember("%S", "PropertyName")
-                }*/
                 superinterfaces[PACKAGE_NAME.classOf("Base$CLASS_NAME")] = null
                 types.addCompanionObject {
                     addModifiers(PRIVATE)
@@ -72,7 +68,7 @@ object LocalizationTextBuilderGenerator {
                     }
                 }
             }
-        }.writeTo(File("localization/src"))
+        }.writeTo(File("localization-gradle-plugin/src"))
 
         println("Done!")
         exitProcess(0)

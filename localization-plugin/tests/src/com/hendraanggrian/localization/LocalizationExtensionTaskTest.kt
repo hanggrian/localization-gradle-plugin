@@ -41,9 +41,9 @@ class LocalizationExtensionTaskTest {
             plugins {
                 java
                 idea
-                id("com.hendraanggrian.localization-plugin")
+                id("com.hendraanggrian.localization")
             }
-            lokkal {
+            localization {
                 "hi" {
                     en = "Hi"
                     id = "Hai"
@@ -54,11 +54,11 @@ class LocalizationExtensionTaskTest {
         runner.withArguments("localizeJvm").build().let {
             assertEquals(TaskOutcome.SUCCESS, it.task(":localizeJvm")!!.outcome)
             val enLines = testProjectDir.root.resolve("src")
-                .resolve("main${File.separator}resources${File.separator}strings_en.properties")
+                .resolve("main/resources/strings_en.properties")
                 .readLines()
             assertTrue("hi=Hi" in enLines)
             val idLines = testProjectDir.root.resolve("src")
-                .resolve("main${File.separator}resources${File.separator}strings_in.properties")
+                .resolve("main/resources/strings_in.properties")
                 .readLines()
             assertTrue("hi=Hai" in idLines)
         }
@@ -73,7 +73,7 @@ class LocalizationExtensionTaskTest {
                 idea
                 id("com.hendraanggrian.localization")
             }
-            lokkal {
+            localization {
                 resourceName.set("my_strings")
                 defaultLocale.set(`java.util`.Locale.ENGLISH)
                 outputDirectory.set(projectDir.resolve("res"))

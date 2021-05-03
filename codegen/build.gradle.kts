@@ -7,7 +7,7 @@ plugins {
 }
 
 application {
-    mainClass.set("$RELEASE_GROUP.$RELEASE_ARTIFACT.codegen.LocalizationTextBuilderGenerator")
+    mainClass.set("$RELEASE_GROUP.localization.codegen.LocalizationTextBuilderGenerator")
 }
 
 sourceSets {

@@ -23,7 +23,7 @@ gradlePlugin {
     val localizationPlugin by plugins.registering {
         id = "$RELEASE_GROUP.localization"
         implementationClass = "$RELEASE_GROUP.localization.LocalizationPlugin"
-        displayName = "Localization Gradle Plugin"
+        displayName = "Localization Plugin"
         description = RELEASE_DESCRIPTION
     }
     testSourceSets(sourceSets["test"])

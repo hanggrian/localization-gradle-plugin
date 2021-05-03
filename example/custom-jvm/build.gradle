@@ -4,7 +4,7 @@ buildscript {
         google()
     }
     dependencies {
-        classpath files('../locale-gradle-plugin-0.1-SNAPSHOT.jar')
+        classpath files('../localization-plugin-0.1-SNAPSHOT.jar')
         classpath 'com.google.guava:guava:29.0-jre'
     }
 }
@@ -13,7 +13,7 @@ group 'com.example'
 version '1.0'
 
 apply plugin: 'java'
-apply plugin: 'com.hendraanggrian.locale'
+apply plugin: 'com.hendraanggrian.localization'
 
 sourceSets {
     getByName('main') {
@@ -28,7 +28,7 @@ dependencies {
     testImplementation 'junit:junit:4.13.1'
 }
 
-locale {
+localization {
     resourceName.set('my_strings')
     defaultLocale.set(new Locale('id'))
     outputDirectory.set(new File(projectDir, 'res'))
