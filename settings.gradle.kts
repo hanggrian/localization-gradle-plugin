@@ -1,4 +1,4 @@
-include("localization-plugin")
+include("localization-gradle-plugin")
 include("codegen")
 include("website")
 // includeDir("example")
