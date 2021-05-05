@@ -3,7 +3,7 @@ package com.hendraanggrian.localization
 import java.util.Locale
 
 /**
- * Second/last phase of localization configuration, used only within [LocalizationTableBuilder] scope.
+ * Second/last phase of localization configuration, used only within [LocalizeSpec] scope.
  *
  * However, this interface often isn't directly used,
  * as [LocalizationTextBuilder] offers convenient method on each possible localization.

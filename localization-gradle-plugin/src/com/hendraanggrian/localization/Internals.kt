@@ -1,6 +1,7 @@
 package com.hendraanggrian.localization
 
 import com.google.common.collect.HashBasedTable
+import org.gradle.api.provider.Property
 import java.util.Locale
 
 /**
@@ -54,10 +55,10 @@ internal fun LocaleTable.forEachLocale(action: (column: String, locale: Locale) 
         )
     }
 
-internal class LocalizationTextBuilderImpl(private val table: LocaleTable) : LocalizationTextBuilder {
+internal class LocalizationTextBuilderImpl(private val table: Property<LocaleTable>) : LocalizationTextBuilder {
     lateinit var currentRow: String
 
     override fun add(language: String, value: String) {
-        table.put(currentRow, language, value)
+        table.get().put(currentRow, language, value)
     }
 }

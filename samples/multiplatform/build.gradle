@@ -1,0 +1,47 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        google()
+    }
+    dependencies {
+        classpath files('../localization-gradle-plugin-0.1-SNAPSHOT.jar')
+        classpath 'com.google.guava:guava:29.0-jre'
+        classpath 'com.android.tools.build:gradle:4.1.3'
+    }
+}
+
+allprojects {
+    repositories {
+        mavenCentral()
+        google()
+    }
+}
+
+apply plugin: 'com.hendraanggrian.localization'
+
+localization {
+    text('about') {
+        en = 'About'
+        id = 'Tentang'
+    }
+    text('home') {
+        en = 'Home'
+        id = 'Beranda'
+    }
+}
+
+tasks.localizeJvm {
+    outputDirectory.set(new File(projectDir, 'jvm/src/main/resources'))
+    text('java_only_text') {
+        en = 'Java only'
+        id = 'Hanya di Java'
+    }
+}
+
+tasks.localizeAndroid {
+    outputDirectory.set(new File(projectDir, 'android/src/main/resources'))
+    text('android_only_text') {
+        en = 'Android only'
+        id = 'Hanya di Android'
+    }
+}

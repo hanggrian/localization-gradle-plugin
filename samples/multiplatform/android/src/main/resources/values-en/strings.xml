@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Generated file by locale-gradle-plugin, do not edit manually!
+2021-05-06 03.32--><resources>
+    <string name="about">About</string>
+    <string name="home">Home</string>
+    <string name="java_only_text">Java only</string>
+    <string name="android_only_text">Android only</string>
+</resources>

@@ -1,5 +1,3 @@
-@file:Suppress("UnstableApiUsage")
-
 package com.hendraanggrian.localization
 
 import com.google.common.collect.Ordering
@@ -10,7 +8,6 @@ import org.gradle.api.logging.Logger
 import org.gradle.api.provider.Property
 import org.gradle.api.tasks.Input
 import org.gradle.api.tasks.Internal
-import org.gradle.api.tasks.Optional
 import org.gradle.api.tasks.OutputDirectory
 import org.gradle.api.tasks.TaskAction
 import org.gradle.kotlin.dsl.invoke
@@ -31,7 +28,13 @@ import javax.xml.transform.dom.DOMSource
 import javax.xml.transform.stream.StreamResult
 
 /** Non-platform specific locale writer task. */
-sealed class AbstractLocalizeTask : DefaultTask(), LocalizationConfiguration, LocalizationTableBuilder {
+sealed class AbstractLocalizeTask : DefaultTask(), LocalizeSpec {
+
+    @Internal
+    val defaultLocale: Property<Locale> = project.objects.property()
+
+    @Internal
+    final override val table: Property<LocaleTable> = project.objects.property()
 
     @Internal
     override fun getLogger(): Logger = super.getLogger()
@@ -39,15 +42,9 @@ sealed class AbstractLocalizeTask : DefaultTask(), LocalizationConfiguration, Lo
     @Input
     override val resourceName: Property<String> = project.objects.property()
 
-    @Optional
-    @Input
-    override val defaultLocale: Property<Locale> = project.objects.property()
-
     @OutputDirectory
-    override val outputDirectory: DirectoryProperty = project.objects.directoryProperty()
+    val outputDirectory: DirectoryProperty = project.objects.directoryProperty()
 
-    @get:Internal
-    internal val table: LocaleTable = LocaleTable.create()
     private val textBuilder = LocalizationTextBuilderImpl(table)
 
     init {
@@ -72,8 +69,8 @@ sealed class AbstractLocalizeTask : DefaultTask(), LocalizationConfiguration, Lo
 
         require(resourceName.get().isNotBlank()) { "Empty file resource name." }
 
-        logger.info("  Locale table column = ${table.columnKeySet().size}, row = ${table.rowKeySet().size}")
-        table.forEachLocale { column, locale -> onGenerateLocale(column, locale) }
+        logger.info("  Locale table column = ${table.get().columnKeySet().size}, row = ${table.get().rowKeySet().size}")
+        table.get().forEachLocale { column, locale -> onGenerateLocale(column, locale) }
         logger.info("  All resources generated")
     }
 
@@ -124,7 +121,7 @@ open class LocalizeJvmTask : AbstractLocalizeTask() {
 
     final override fun onGenerateLocale(column: String, locale: Locale) {
         val properties = SortedProperties()
-        table.rowKeySet().forEach { row -> properties[row] = table[row, column] }
+        table.get().rowKeySet().forEach { row -> properties[row] = table.get()[row, column] }
 
         outputDirectory.get().asFile.mkdirs()
         val outputFile = outputDirectory
@@ -172,10 +169,10 @@ open class LocalizeAndroidTask : AbstractLocalizeTask() {
         val doc = docBuilder.newDocument().apply { xmlStandalone = true }
         doc.appendChild(doc.createComment(getFileComment(true)))
         val resources = doc.appendChild(doc.createElement("resources"))
-        table.rowKeySet().forEach { row ->
+        table.get().rowKeySet().forEach { row ->
             val s = doc.createElement("string")
             s.setAttribute("name", row)
-            s.appendChild(doc.createTextNode(table[row, column]))
+            s.appendChild(doc.createTextNode(table.get()[row, column]))
             resources.appendChild(s)
         }
 

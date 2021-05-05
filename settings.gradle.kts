@@ -1,7 +1,7 @@
 include("localization-gradle-plugin")
 include("codegen")
 include("website")
-//includeDir("samples")
+includeDir("samples")
 
 fun includeDir(dir: String) = file(dir)
     .listFiles()!!
