@@ -1,11 +1,12 @@
 buildscript {
     repositories {
-        jcenter()
+        mavenCentral()
         google()
     }
     dependencies {
-        classpath files('../localization-plugin-0.1-SNAPSHOT.jar')
+        classpath files('../localization-gradle-plugin-0.1-SNAPSHOT.jar')
         classpath 'com.google.guava:guava:29.0-jre'
+        classpath 'com.opencsv:opencsv:5.1'
     }
 }
 
@@ -20,14 +21,5 @@ dependencies {
 }
 
 localization {
-    text('about') {
-        en = 'About'
-        en_US = "About2"
-        id = 'Tentang'
-    }
-    text('home') {
-        en = 'Home'
-        en_US = "Home2"
-        id = 'Beranda'
-    }
+    importCSV new File(projectDir, 'locale.csv')
 }
