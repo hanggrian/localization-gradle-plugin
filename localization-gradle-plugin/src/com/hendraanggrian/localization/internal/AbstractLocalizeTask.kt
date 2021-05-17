@@ -1,6 +1,10 @@
-package com.hendraanggrian.localization
+package com.hendraanggrian.localization.internal
 
-import com.google.common.collect.Ordering
+import com.hendraanggrian.localization.LocaleTable
+import com.hendraanggrian.localization.LocalizationTextBuilder
+import com.hendraanggrian.localization.LocalizationTextBuilderImpl
+import com.hendraanggrian.localization.LocalizeSpec
+import com.hendraanggrian.localization.forEachLocale
 import org.gradle.api.Action
 import org.gradle.api.DefaultTask
 import org.gradle.api.file.DirectoryProperty
@@ -16,19 +20,10 @@ import java.io.File
 import java.io.FileOutputStream
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
-import java.util.Collections
-import java.util.Enumeration
 import java.util.Locale
-import java.util.Properties
-import java.util.TreeSet
-import javax.xml.parsers.DocumentBuilderFactory
-import javax.xml.transform.OutputKeys
-import javax.xml.transform.TransformerFactory
-import javax.xml.transform.dom.DOMSource
-import javax.xml.transform.stream.StreamResult
 
 /** Non-platform specific locale writer task. */
-sealed class AbstractLocalizeTask : DefaultTask(), LocalizeSpec {
+abstract class AbstractLocalizeTask : DefaultTask(), LocalizeSpec {
 
     @Internal
     val defaultLocale: Property<Locale> = project.objects.property()
@@ -44,6 +39,7 @@ sealed class AbstractLocalizeTask : DefaultTask(), LocalizeSpec {
 
     @OutputDirectory
     val outputDirectory: DirectoryProperty = project.objects.directoryProperty()
+        .convention(project.layout.projectDirectory.dir("src/main/resources"))
 
     private val textBuilder = LocalizationTextBuilderImpl(table)
 
@@ -113,76 +109,5 @@ sealed class AbstractLocalizeTask : DefaultTask(), LocalizeSpec {
             }
             }"
         )
-    }
-}
-
-/** Task to write properties files which will then be used as [java.util.ResourceBundle]. */
-open class LocalizeJvmTask : AbstractLocalizeTask() {
-
-    final override fun onGenerateLocale(column: String, locale: Locale) {
-        val properties = SortedProperties()
-        table.get().rowKeySet().forEach { row -> properties[row] = table.get()[row, column] }
-
-        outputDirectory.get().asFile.mkdirs()
-        val outputFile = outputDirectory
-            .dir("${resourceName.get()}${getSuffix(locale, '_')}.properties")
-            .get().asFile
-        outputFile.write { properties.store(it, getFileComment(false)) }
-    }
-
-    /**
-     * Sorted properties that reportedly only works on Java 8.
-     * See [StackOverflow](https://stackoverflow.com/a/52127284/1567541).
-     */
-    private class SortedProperties : Properties() {
-        companion object {
-            const val serialVersionUID = 1L
-        }
-
-        override val keys: MutableSet<Any> get() = Collections.unmodifiableSet(TreeSet(super.keys))
-
-        override val entries: MutableSet<MutableMap.MutableEntry<Any, Any>>
-            get() {
-                val set1 = super.entries
-                val set2 = LinkedHashSet<MutableMap.MutableEntry<Any, Any>>(set1.size)
-                set1.sortedWith(Ordering.from { o1, o2 -> "${o1.key}".compareTo("${o2.key}") })
-                    .forEach { set2.add(it) }
-                return set2
-            }
-
-        override fun keys(): Enumeration<Any> = Collections.enumeration(TreeSet(super.keys))
-    }
-}
-
-/** Task to write Android string resources XML files. */
-open class LocalizeAndroidTask : AbstractLocalizeTask() {
-    private val docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder()
-    private val transformer = TransformerFactory
-        .newInstance().apply { setAttribute("indent-number", 4) }
-        .newTransformer().apply {
-            setOutputProperty(OutputKeys.INDENT, "yes")
-            // http://stackoverflow.com/a/18251901/3375325
-            setOutputProperty(OutputKeys.DOCTYPE_PUBLIC, "yes")
-        }
-
-    final override fun onGenerateLocale(column: String, locale: Locale) {
-        val doc = docBuilder.newDocument().apply { xmlStandalone = true }
-        doc.appendChild(doc.createComment(getFileComment(true)))
-        val resources = doc.appendChild(doc.createElement("resources"))
-        table.get().rowKeySet().forEach { row ->
-            val s = doc.createElement("string")
-            s.setAttribute("name", row)
-            s.appendChild(doc.createTextNode(table.get()[row, column]))
-            resources.appendChild(s)
-        }
-
-        outputDirectory.get().asFile.mkdirs()
-        val innerOutputDirectory = outputDirectory
-            .dir("values${getSuffix(locale, '-')}")
-            .get().asFile
-        innerOutputDirectory.mkdirs()
-        val outputFile = innerOutputDirectory
-            .resolve("${resourceName.get()}.xml")
-        outputFile.write { transformer.transform(DOMSource(doc), StreamResult(it)) }
     }
 }

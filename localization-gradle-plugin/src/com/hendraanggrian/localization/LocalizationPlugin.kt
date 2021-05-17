@@ -1,12 +1,13 @@
 package com.hendraanggrian.localization
 
+import com.hendraanggrian.localization.internal.AbstractLocalizeTask
 import com.hendraanggrian.localization.internal.DefaultLocalizationExtension
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.tasks.SourceSetContainer
 import org.gradle.kotlin.dsl.create
 import org.gradle.kotlin.dsl.get
-import org.gradle.kotlin.dsl.getByType
+import org.gradle.kotlin.dsl.getByName
 import org.gradle.kotlin.dsl.getValue
 import org.gradle.kotlin.dsl.invoke
 import org.gradle.kotlin.dsl.provideDelegate
@@ -23,7 +24,7 @@ class LocalizationPlugin : Plugin<Project> {
     private lateinit var extension: LocalizationExtension
 
     override fun apply(project: Project) {
-        hasJavaPlugin = project.pluginManager.hasPlugin("java")
+        hasJavaPlugin = project.pluginManager.hasPlugin("java") || project.pluginManager.hasPlugin("java-library")
         extension = project.extensions.create(
             LocalizationExtension::class, "localization",
             DefaultLocalizationExtension::class, project
@@ -38,7 +39,7 @@ class LocalizationPlugin : Plugin<Project> {
 
         project.afterEvaluate {
             if (hasJavaPlugin) {
-                val sourceSets = project.extensions.getByType<SourceSetContainer>()
+                val sourceSets = project.extensions.getByName<SourceSetContainer>("sourceSets")
                 localizeJvm { outputDirectory.set(sourceSets["main"].resources.srcDirs.last()) }
             }
             val availableTasks = listOf(localizeJvm, localizeAndroid)

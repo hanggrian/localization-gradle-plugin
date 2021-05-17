@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--Generated file by locale-gradle-plugin, do not edit manually!
-2021-05-06 03.32--><resources>
+2021-05-16 22.29--><resources>
     <string name="about">Tentang</string>
     <string name="home">Beranda</string>
     <string name="java_only_text">Hanya di Java</string>
