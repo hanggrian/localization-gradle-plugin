@@ -41,7 +41,7 @@ dependencies {
 
 pluginBundle {
     website = RELEASE_GITHUB
-    vcsUrl = RELEASE_GITHUB
+    vcsUrl = "$RELEASE_GITHUB.git"
     description = RELEASE_DESCRIPTION
     tags = listOf("localization", "locale")
 }
