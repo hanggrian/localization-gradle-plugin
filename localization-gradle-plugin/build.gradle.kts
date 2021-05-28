@@ -23,7 +23,7 @@ gradlePlugin {
     val localizationPlugin by plugins.registering {
         id = "$RELEASE_GROUP.localization"
         implementationClass = "$RELEASE_GROUP.localization.LocalizationPlugin"
-        displayName = "Localization Plugin"
+        displayName = "Localization plugin"
         description = RELEASE_DESCRIPTION
     }
     testSourceSets(sourceSets["test"])
@@ -44,4 +44,8 @@ pluginBundle {
     vcsUrl = "$RELEASE_GITHUB.git"
     description = RELEASE_DESCRIPTION
     tags = listOf("localization", "locale")
+    mavenCoordinates {
+        groupId = RELEASE_GROUP
+        artifactId = RELEASE_ARTIFACT
+    }
 }

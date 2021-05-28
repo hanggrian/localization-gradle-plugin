@@ -1,37 +1,45 @@
-[![version](https://img.shields.io/maven-metadata/v?label=plugin-portal&metadataUrl=https%3A%2F%2Fplugins.gradle.org%2Fm2%2Forg%2Fjetbrains%2Fkotlin%2Fjvm%2Forg.jetbrains.kotlin.jvm.gradle.plugin%2Fmaven-metadata.xml)](https://plugins.gradle.org/plugin/org.jetbrains.kotlin.jvm)
+[![version](https://img.shields.io/maven-metadata/v?label=plugin-portal&metadataUrl=https%3A%2F%2Fplugins.gradle.org%2Fm2%2Fcom%2Fhendraanggrian%2Flocalization%2Fcom.hendraanggrian.localization.gradle.plugin%2Fmaven-metadata.xml)](https://plugins.gradle.org/plugin/com.hendraanggrian.localization)
 [![analysis](https://img.shields.io/badge/code%20style-%E2%9D%A4-FF4081.svg)](https://ktlint.github.io/)
-[![license](https://img.shields.io/github/license/hendraanggrian/buildconfig-gradle-plugin)](https://www.apache.org/licenses/LICENSE-2.0)
+[![license](https://img.shields.io/github/license/hendraanggrian/localization-gradle-plugin)](https://www.apache.org/licenses/LICENSE-2.0)
 
-Lokkal Gradle Plugin
-====================
+Localization Gradle Plugin
+==========================
 An write-once-run-anywhere approach to localization in multiple platform project.
 * Writes `ResourceBundle` for Java and XML values for Android.
 * Localization data can be placed within Gradle script or CSV file.
 
 Download
 --------
-Add plugin to buildscript:
+Using plugins DSL:
+
+```gradle
+plugins {
+    id('com.hendraanggrian.localization') version "${version}"
+}
+```
+
+Using legacy plugin application:
 
 ```gradle
 buildscript {
     repositories {
-        jcenter()
+        gradlePluginPortal()
     }
     dependencies {
-        classpath "com.hendraanggrian:locale-gradle-plugin:$version"
+        classpath("com.hendraanggrian:localization-gradle-plugin:${version}")
     }
 }
+
+apply plugin: 'com.hendraanggrian.localization'
 ```
 
 Usage
 -----
-Apply plugin in your module, and configure `locale` extension like below:
+Apply plugin in your module, and configure `localization` extension like below:
 
 ```gradle
-apply plugin: 'com.hendraanggrian.localization'
-
-lokkal {
-    resourceName 'strings'
+localization {
+    resourceName.set('strings')
     text('home') {
         en = 'Home'
         id = 'Beranda'
@@ -42,19 +50,20 @@ lokkal {
     }
 }
 
-task.withTask(com.hendraanggrian.localization.LocalizeJavaTask) {
-    outputDirectory 'src/main/resources'
-}
-
-task.withTask(com.hendraanggrian.localization.LocalizeAndroidTask) {
-    outputDirectory 'my/custom/directory'
+tasks {
+    localizeJvm {
+        outputDirectory.set(new File('src/main/resources'))
+    }
+    localizeAndroid {
+        outputDirectory.set(new File('my/custom/directory'))
+    }
 }
 ```
 
 It's even simpler with Gradle Kotlin DSL.
 
-```gradle
-lokkal {
+```kotlin
+localization {
     "home" {
         en = "Home"
         id = "Beranda"
@@ -66,4 +75,4 @@ lokkal {
 }
 ```
 
-Then use command `localizeAndroid` or `localizeJava` to write localization files into their respective directory.
+Then use command `localizeJvm` or `localizeAndroid` to write localization files into their respective directory.
