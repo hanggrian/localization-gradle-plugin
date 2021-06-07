@@ -1,15 +1,17 @@
 [![version](https://img.shields.io/maven-metadata/v?label=plugin-portal&metadataUrl=https%3A%2F%2Fplugins.gradle.org%2Fm2%2Fcom%2Fhendraanggrian%2Flocalization%2Fcom.hendraanggrian.localization.gradle.plugin%2Fmaven-metadata.xml)](https://plugins.gradle.org/plugin/com.hendraanggrian.localization)
-[![analysis](https://img.shields.io/badge/code%20style-%E2%9D%A4-FF4081.svg)](https://ktlint.github.io/)
-[![license](https://img.shields.io/github/license/hendraanggrian/localization-gradle-plugin)](https://www.apache.org/licenses/LICENSE-2.0)
+[![analysis](https://img.shields.io/badge/code%20style-%E2%9D%A4-FF4081)](https://ktlint.github.io)
+[![license](https://img.shields.io/github/license/hendraanggrian/localization-gradle-plugin)](https://github.com/hendraanggrian/localization-gradle-plugin/blob/main/LICENSE)
 
 Localization Gradle Plugin
 ==========================
+
 An write-once-run-anywhere approach to localization in multiple platform project.
 * Writes `ResourceBundle` for Java and XML values for Android.
 * Localization data can be placed within Gradle script or CSV file.
 
 Download
 --------
+
 Using plugins DSL:
 
 ```gradle
@@ -35,6 +37,7 @@ apply plugin: 'com.hendraanggrian.localization'
 
 Usage
 -----
+
 Apply plugin in your module, and configure `localization` extension like below:
 
 ```gradle
