@@ -1,6 +1,5 @@
 [![version](https://img.shields.io/maven-metadata/v?label=plugin-portal&metadataUrl=https%3A%2F%2Fplugins.gradle.org%2Fm2%2Fcom%2Fhendraanggrian%2Flocalization%2Fcom.hendraanggrian.localization.gradle.plugin%2Fmaven-metadata.xml)](https://plugins.gradle.org/plugin/com.hendraanggrian.localization)
 [![analysis](https://img.shields.io/badge/code%20style-%E2%9D%A4-FF4081)](https://ktlint.github.io)
-[![license](https://img.shields.io/github/license/hendraanggrian/localization-gradle-plugin)](https://github.com/hendraanggrian/localization-gradle-plugin/blob/main/LICENSE)
 
 Localization Gradle Plugin
 ==========================
