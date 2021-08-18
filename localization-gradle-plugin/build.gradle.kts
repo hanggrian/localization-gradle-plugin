@@ -39,6 +39,12 @@ dependencies {
     testImplementation(kotlin("test-junit", VERSION_KOTLIN))
 }
 
+tasks {
+    dokkaHtml {
+        outputDirectory.set(buildDir.resolve("dokka/$RELEASE_ARTIFACT"))
+    }
+}
+
 pluginBundle {
     website = RELEASE_GITHUB
     vcsUrl = "$RELEASE_GITHUB.git"

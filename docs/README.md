@@ -27,7 +27,7 @@ buildscript {
         gradlePluginPortal()
     }
     dependencies {
-        classpath("com.hendraanggrian:localization-gradle-plugin:${version}")
+        classpath("com.hendraanggrian:localization-gradle-plugin:$version")
     }
 }
 
