@@ -15,7 +15,7 @@ Using plugins DSL:
 
 ```gradle
 plugins {
-    id('com.hendraanggrian.localization') version "${version}"
+    id('com.hendraanggrian.localization') version "$version"
 }
 ```
 

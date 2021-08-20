@@ -26,6 +26,6 @@ dependencies {
     implementation(kotlinx("coroutines-core", VERSION_COROUTINES))
     implementation(ktor("client-okhttp"))
     implementation(ktor("client-gson"))
-    implementation(hendraanggrian("kotlinpoet-ktx", VERSION_KOTLINPOET_KTX))
+    implementation(hendraanggrian("kotlinpoet-ktx", VERSION_KOTLINPOETKTX))
     testImplementation(kotlin("test-junit"))
 }

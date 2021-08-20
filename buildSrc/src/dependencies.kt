@@ -18,7 +18,7 @@ const val VERSION_GUAVA = "30.1.1-jre"
 const val VERSION_TRUTH = "1.0.1"
 fun Dependencies.google(module: String, version: String) = "com.google.$module:$module:$version"
 
-const val VERSION_KOTLINPOET_KTX = "0.1-SNAPSHOT"
+const val VERSION_KOTLINPOETKTX = "0.1-SNAPSHOT"
 fun Dependencies.hendraanggrian(module: String, version: String) = "com.hendraanggrian:$module:$version"
 fun Dependencies.hendraanggrian(repo: String, module: String, version: String) =
     "com.hendraanggrian.$repo:$module:$version"
