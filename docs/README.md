@@ -5,8 +5,8 @@ Localization Gradle Plugin
 ==========================
 
 An write-once-run-anywhere approach to localization in multiple platform project.
-* Writes `ResourceBundle` for Java and XML values for Android.
-* Localization data can be placed within Gradle script or CSV file.
+- Writes `ResourceBundle` for Java and XML values for Android.
+- Localization data can be placed within Gradle script or CSV file.
 
 Download
 --------

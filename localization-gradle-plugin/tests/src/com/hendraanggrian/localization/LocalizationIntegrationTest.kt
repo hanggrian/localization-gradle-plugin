@@ -12,16 +12,15 @@ import kotlin.test.assertEquals
 import kotlin.test.assertTrue
 
 class LocalizationIntegrationTest {
+
     @Rule @JvmField val testProjectDir = TemporaryFolder()
-    private lateinit var settingsFile: File
     private lateinit var buildFile: File
     private lateinit var runner: GradleRunner
 
     @BeforeTest
     @Throws(IOException::class)
     fun setup() {
-        settingsFile = testProjectDir.newFile("settings.gradle.kts")
-        settingsFile.writeText(
+        testProjectDir.newFile("settings.gradle.kts").writeText(
             """
             rootProject.name = "integration-test"
             """.trimIndent()
@@ -53,15 +52,10 @@ class LocalizationIntegrationTest {
             """.trimIndent()
         )
         runner.withArguments("localizeJvm").build().let {
-            // error(testProjectDir.root.listFiles().joinToString(", "))
             assertEquals(TaskOutcome.SUCCESS, it.task(":localizeJvm")!!.outcome)
-            val enLines = testProjectDir.root.resolve("res")
-                .resolve("strings_en.properties")
-                .readLines()
+            val enLines = testProjectDir.root.resolve("res/strings.properties").readLines()
             assertTrue("hi=Hi" in enLines)
-            val idLines = testProjectDir.root.resolve("res")
-                .resolve("strings_in.properties")
-                .readLines()
+            val idLines = testProjectDir.root.resolve("res/strings_id.properties").readLines()
             assertTrue("hi=Hai" in idLines)
         }
     }

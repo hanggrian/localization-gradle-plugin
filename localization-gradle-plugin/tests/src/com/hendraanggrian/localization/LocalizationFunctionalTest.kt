@@ -12,16 +12,15 @@ import kotlin.test.assertEquals
 import kotlin.test.assertTrue
 
 class LocalizationFunctionalTest {
+
     @Rule @JvmField val testProjectDir = TemporaryFolder()
-    private lateinit var settingsFile: File
     private lateinit var buildFile: File
     private lateinit var runner: GradleRunner
 
     @BeforeTest
     @Throws(IOException::class)
     fun setup() {
-        settingsFile = testProjectDir.newFile("settings.gradle.kts")
-        settingsFile.writeText(
+        testProjectDir.newFile("settings.gradle.kts").writeText(
             """
             rootProject.name = "functional-test"
             """.trimIndent()
@@ -46,54 +45,13 @@ class LocalizationFunctionalTest {
                     id = "Hai"
                 }
             }
-            tasks.localizeJvm {
-                outputDirectory.set(projectDir.resolve("src/main/resources"))
-            }
             """.trimIndent()
         )
         runner.withArguments("localizeJvm").build().let {
             assertEquals(TaskOutcome.SUCCESS, it.task(":localizeJvm")!!.outcome)
-            val enLines = testProjectDir.root.resolve("src")
-                .resolve("main/resources/strings_en.properties")
-                .readLines()
+            val enLines = testProjectDir.root.resolve("src/main/resources/strings.properties").readLines()
             assertTrue("hi=Hi" in enLines)
-            val idLines = testProjectDir.root.resolve("src")
-                .resolve("main/resources/strings_in.properties")
-                .readLines()
-            assertTrue("hi=Hai" in idLines)
-        }
-    }
-
-    // @Test
-    fun configureSome() {
-        buildFile.writeText(
-            """
-            plugins {
-                java
-                id("com.hendraanggrian.localization")
-            }
-            localization {
-                resourceName.set("my_strings")
-                defaultLocale.set(`java.util`.Locale.ENGLISH)
-                "hi" {
-                    en = "Hi"
-                    id = "Hai"
-                }
-            }
-            localizeJvm {
-                outputDirectory.set(projectDir.resolve("res"))
-            }
-            """.trimIndent()
-        )
-        runner.withArguments("localizeJvm").build().let {
-            assertEquals(TaskOutcome.SUCCESS, it.task(":localizeJvm")!!.outcome)
-            val enLines = testProjectDir.root.resolve("res")
-                .resolve("my_strings.properties")
-                .readLines()
-            assertTrue("hi=Hi" in enLines)
-            val idLines = testProjectDir.root.resolve("res")
-                .resolve("my_strings_in.properties")
-                .readLines()
+            val idLines = testProjectDir.root.resolve("src/main/resources/strings_id.properties").readLines()
             assertTrue("hi=Hai" in idLines)
         }
     }

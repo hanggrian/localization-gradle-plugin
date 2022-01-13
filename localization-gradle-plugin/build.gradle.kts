@@ -12,7 +12,6 @@ sourceSets {
     main {
         java.srcDir("src")
     }
-    // TODO: unable to create functionalTest in Android Studio
     test {
         java.srcDir("tests/src")
         resources.srcDir("tests/res")
@@ -26,7 +25,7 @@ gradlePlugin {
         displayName = "Localization plugin"
         description = RELEASE_DESCRIPTION
     }
-    testSourceSets(sourceSets["test"])
+    testSourceSets(sourceSets.test.get())
 }
 
 ktlint()
@@ -49,7 +48,7 @@ pluginBundle {
     website = RELEASE_GITHUB
     vcsUrl = "$RELEASE_GITHUB.git"
     description = RELEASE_DESCRIPTION
-    tags = listOf("localization", "locale")
+    tags = listOf("localization", "locale", "language")
     mavenCoordinates {
         groupId = RELEASE_GROUP
         artifactId = RELEASE_ARTIFACT

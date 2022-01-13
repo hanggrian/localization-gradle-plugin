@@ -10,13 +10,15 @@ import static org.junit.Assert.assertEquals;
 
 public class LocalizationTest {
 
-    @Test public void in() {
+    @Test
+    public void in() {
         Properties properties = load("my_strings");
         assertEquals("Tentang", properties.getProperty("about"));
         assertEquals("Beranda", properties.getProperty("home"));
     }
 
-    @Test public void en() {
+    @Test
+    public void en() {
         Properties properties = load("my_strings_en");
         assertEquals("About", properties.getProperty("about"));
         assertEquals("Home", properties.getProperty("home"));

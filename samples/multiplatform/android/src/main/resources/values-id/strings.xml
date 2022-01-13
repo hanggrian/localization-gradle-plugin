@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--Generated file by locale-gradle-plugin, do not edit manually!
-2021-05-16 22.24--><resources>
+2022-01-13 05.11--><resources>
+    <string name="android_only_text">Hanya di Android</string>
     <string name="about">Tentang</string>
     <string name="home">Beranda</string>
 </resources>

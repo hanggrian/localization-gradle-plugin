@@ -15,10 +15,8 @@ open class LocalizeJvmTask : AbstractLocalizeTask() {
         val properties = SortedProperties()
         table.get().rowKeySet().forEach { row -> properties[row] = table.get()[row, column] }
 
-        outputDirectory.get().asFile.mkdirs()
-        val outputFile = outputDirectory
-            .dir("${resourceName.get()}${getSuffix(locale, '_')}.properties")
-            .get().asFile
+        outputDirectory.get().mkdirs()
+        val outputFile = outputDirectory.get().resolve("${resourceName.get()}${getSuffix(locale, '_')}.properties")
         outputFile.write { properties.store(it, getFileComment(false)) }
     }
 

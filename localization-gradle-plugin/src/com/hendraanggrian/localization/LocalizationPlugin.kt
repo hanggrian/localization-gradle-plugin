@@ -1,61 +1,71 @@
 package com.hendraanggrian.localization
 
 import com.hendraanggrian.localization.internal.AbstractLocalizeTask
-import com.hendraanggrian.localization.internal.DefaultLocalizationExtension
+import com.hendraanggrian.localization.internal.DefaultLocalization
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.tasks.SourceSetContainer
+import org.gradle.api.tasks.TaskProvider
 import org.gradle.kotlin.dsl.create
 import org.gradle.kotlin.dsl.get
 import org.gradle.kotlin.dsl.getByName
-import org.gradle.kotlin.dsl.getValue
 import org.gradle.kotlin.dsl.invoke
-import org.gradle.kotlin.dsl.provideDelegate
-import org.gradle.kotlin.dsl.registering
+import org.gradle.kotlin.dsl.register
+import kotlin.reflect.KClass
 
 /** Gradle localization plugin with Kotlin DSL declaration. */
 class LocalizationPlugin : Plugin<Project> {
     companion object {
-        const val PLUGIN_NAME = "localization"
-        const val GROUP_NAME = PLUGIN_NAME
+        const val LOCALIZATION_GROUP = "localization"
+        const val LOCALIZE_JVM_TASK_NAME = "localizeJvm"
+        const val LOCALIZE_ANDROID_TASK_NAME = "localizeAndroid"
+        const val LOCALIZE_ALL_TASK_NAME = "localizeAll"
     }
 
-    private var hasJavaPlugin: Boolean = false
-    private lateinit var extension: LocalizationExtension
-
     override fun apply(project: Project) {
-        hasJavaPlugin = project.pluginManager.hasPlugin("java") || project.pluginManager.hasPlugin("java-library")
-        extension = project.extensions.create(
-            LocalizationExtension::class, "localization",
-            DefaultLocalizationExtension::class, project
-        )
+        val hasJavaPlugin = project.pluginManager.hasPlugin("java") || project.pluginManager.hasPlugin("java-library")
 
-        val localizeJvm by project.tasks.registering(LocalizeJvmTask::class) { setup("Java Properties") }
-        val localizeAndroid by project.tasks.registering(LocalizeAndroidTask::class) { setup("Android XML") }
-        val localizeAll by project.tasks.registering {
-            group = GROUP_NAME
-            description = "Write localization for Java and Android."
+        val localization = project.extensions.create(
+            Localization::class, "localization", DefaultLocalization::class, project
+        )
+        val localizeJvm = createLocalizeTask(project, LOCALIZE_JVM_TASK_NAME, LocalizeJvmTask::class, localization)
+        val localizeAndroid = createLocalizeTask(
+            project, LOCALIZE_ANDROID_TASK_NAME, LocalizeAndroidTask::class, localization
+        )
+        val localizeAll = project.tasks.register(LOCALIZE_ALL_TASK_NAME) {
+            group = LOCALIZATION_GROUP
+            description = "Creates localization files for both JVM and Android."
         }
 
         project.afterEvaluate {
+            modifyLocalizeTask(localizeJvm, localization)
+            modifyLocalizeTask(localizeAndroid, localization)
             if (hasJavaPlugin) {
-                val sourceSets = project.extensions.getByName<SourceSetContainer>("sourceSets")
-                localizeJvm { outputDirectory.set(sourceSets["main"].resources.srcDirs.last()) }
+                localizeJvm {
+                    outputDirectory.convention(
+                        project.extensions.getByName<SourceSetContainer>("sourceSets")["main"].resources.srcDirs.last()
+                    )
+                }
             }
-            val availableTasks = listOf(localizeJvm, localizeAndroid)
-                .filter { it.get().outputDirectory.isPresent }
-            when {
-                availableTasks.isNotEmpty() -> localizeAll { dependsOn(availableTasks) }
-                else -> localizeAll { doFirst { error("No localization configured") } }
-            }
+            localizeAll { dependsOn(localizeJvm, localizeAndroid) }
         }
     }
 
-    private fun AbstractLocalizeTask.setup(target: String) {
-        group = GROUP_NAME
-        description = "Write localization $target file."
-        table.set(extension.table)
-        defaultLocale.set(extension.defaultLocale)
-        resourceName.set(extension.resourceName)
+    private fun <T : AbstractLocalizeTask> createLocalizeTask(
+        project: Project,
+        taskName: String,
+        taskClass: KClass<T>,
+        localization: Localization
+    ): TaskProvider<T> = project.tasks.register(taskName, taskClass) {
+        group = LOCALIZATION_GROUP
+        description = "Creates localization files in platform-specific format."
+        defaultLocale.convention(localization.defaultLocale)
+        resourceName.convention(localization.resourceName)
+    }
+
+    private fun <T : AbstractLocalizeTask> modifyLocalizeTask(task: TaskProvider<T>, localization: Localization) {
+        task {
+            table.get().putAll(localization.table.get())
+        }
     }
 }

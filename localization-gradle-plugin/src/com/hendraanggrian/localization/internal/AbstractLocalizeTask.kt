@@ -7,7 +7,6 @@ import com.hendraanggrian.localization.LocalizeSpec
 import com.hendraanggrian.localization.forEachLocale
 import org.gradle.api.Action
 import org.gradle.api.DefaultTask
-import org.gradle.api.file.DirectoryProperty
 import org.gradle.api.logging.Logger
 import org.gradle.api.provider.Property
 import org.gradle.api.tasks.Input
@@ -29,7 +28,8 @@ abstract class AbstractLocalizeTask : DefaultTask(), LocalizeSpec {
     val defaultLocale: Property<Locale> = project.objects.property()
 
     @Internal
-    final override val table: Property<LocaleTable> = project.objects.property()
+    final override val table: Property<LocaleTable> = project.objects.property<LocaleTable>()
+        .value(LocaleTable.create())
 
     @Internal
     override fun getLogger(): Logger = super.getLogger()
@@ -37,9 +37,13 @@ abstract class AbstractLocalizeTask : DefaultTask(), LocalizeSpec {
     @Input
     override val resourceName: Property<String> = project.objects.property()
 
+    /**
+     * Where localization files will be generated to.
+     * Default is `$projectDir/src/main/resources`.
+     */
     @OutputDirectory
-    val outputDirectory: DirectoryProperty = project.objects.directoryProperty()
-        .convention(project.layout.projectDirectory.dir("src/main/resources"))
+    val outputDirectory: Property<File> = project.objects.property<File>()
+        .convention(project.projectDir.resolve("src/main/resources"))
 
     private val textBuilder = LocalizationTextBuilderImpl(table)
 
@@ -69,6 +73,9 @@ abstract class AbstractLocalizeTask : DefaultTask(), LocalizeSpec {
         table.get().forEachLocale { column, locale -> onGenerateLocale(column, locale) }
         logger.info("  All resources generated")
     }
+
+    /** Returns [outputDirectory] represented as [File]. */
+    val outputDir: File @OutputDirectory get() = outputDirectory.get()
 
     /** Where the resources are generated. */
     abstract fun onGenerateLocale(column: String, locale: Locale)

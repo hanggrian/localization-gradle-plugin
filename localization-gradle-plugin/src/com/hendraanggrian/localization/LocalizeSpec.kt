@@ -8,8 +8,9 @@ import java.io.File
 
 /**
  * Starting point of localization configuration.
- * @see LocalizationExtension
- * @see AbstractLocalizeTask
+ * @see Localization
+ * @see LocalizeJvmTask
+ * @see LocalizeAndroidTask
  */
 interface LocalizeSpec {
 
@@ -19,7 +20,7 @@ interface LocalizeSpec {
     fun getLogger(): Logger
 
     /**
-     * Localization resource name.
+     * Generated resources file or root folder name.
      * Default is `strings`.
      */
     val resourceName: Property<String>

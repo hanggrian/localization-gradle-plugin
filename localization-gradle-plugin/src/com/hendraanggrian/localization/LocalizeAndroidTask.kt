@@ -10,6 +10,7 @@ import javax.xml.transform.stream.StreamResult
 
 /** Task to write Android string resources XML files. */
 open class LocalizeAndroidTask : AbstractLocalizeTask() {
+
     private val docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder()
     private val transformer = TransformerFactory
         .newInstance().apply { setAttribute("indent-number", 4) }
@@ -30,10 +31,8 @@ open class LocalizeAndroidTask : AbstractLocalizeTask() {
             resources.appendChild(s)
         }
 
-        outputDirectory.get().asFile.mkdirs()
-        val innerOutputDirectory = outputDirectory
-            .dir("values${getSuffix(locale, '-')}")
-            .get().asFile
+        outputDirectory.get().mkdirs()
+        val innerOutputDirectory = outputDirectory.get().resolve("values${getSuffix(locale, '-')}")
         innerOutputDirectory.mkdirs()
         val outputFile = innerOutputDirectory
             .resolve("${resourceName.get()}.xml")

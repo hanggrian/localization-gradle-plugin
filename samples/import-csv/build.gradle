@@ -4,9 +4,9 @@ buildscript {
         google()
     }
     dependencies {
-        classpath files('../localization-gradle-plugin-0.1.jar')
-        classpath 'com.google.guava:guava:30.1.1-jre'
-        classpath 'com.opencsv:opencsv:5.1'
+        classpath files('../localization-gradle-plugin-0.2.jar')
+        classpath 'com.google.guava:guava:31.0.1-jre'
+        classpath 'com.opencsv:opencsv:5.5.2'
     }
 }
 
@@ -17,7 +17,7 @@ apply plugin: 'java'
 apply plugin: 'com.hendraanggrian.localization'
 
 dependencies {
-    testImplementation 'junit:junit:4.13.1'
+    testImplementation 'junit:junit:4.13.2'
 }
 
 localization {
