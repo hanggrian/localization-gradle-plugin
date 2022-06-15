@@ -1,56 +1,32 @@
-group = RELEASE_GROUP
-version = RELEASE_VERSION
-
 plugins {
     `java-gradle-plugin`
     `kotlin-dsl`
-    dokka
-    `gradle-publish`
-}
-
-sourceSets {
-    main {
-        java.srcDir("src")
-    }
-    test {
-        java.srcDir("tests/src")
-        resources.srcDir("tests/res")
-    }
+    id("org.jetbrains.dokka")
+    id("com.diffplug.spotless")
+    id("com.gradle.plugin-publish")
 }
 
 gradlePlugin {
-    val localizationPlugin by plugins.registering {
+    plugins.register("localizationPlugin") {
         id = "$RELEASE_GROUP.localization"
-        implementationClass = "$RELEASE_GROUP.localization.LocalizationPlugin"
-        displayName = "Localization plugin"
+        implementationClass = "$id.LocalizationPlugin"
+        displayName = "Localization Plugin"
         description = RELEASE_DESCRIPTION
     }
     testSourceSets(sourceSets.test.get())
 }
 
-ktlint()
-
-dependencies {
-    implementation(kotlin("stdlib", VERSION_KOTLIN))
-    implementation(google("guava", VERSION_GUAVA))
-    implementation(opencsv())
-    testImplementation(gradleTestKit())
-    testImplementation(kotlin("test-junit", VERSION_KOTLIN))
-}
-
-tasks {
-    dokkaHtml {
-        outputDirectory.set(buildDir.resolve("dokka/$RELEASE_ARTIFACT"))
-    }
-}
-
 pluginBundle {
-    website = RELEASE_GITHUB
-    vcsUrl = "$RELEASE_GITHUB.git"
+    website = RELEASE_URL
+    vcsUrl = "$RELEASE_URL.git"
     description = RELEASE_DESCRIPTION
     tags = listOf("localization", "locale", "language")
-    mavenCoordinates {
-        groupId = RELEASE_GROUP
-        artifactId = RELEASE_ARTIFACT
-    }
+}
+
+dependencies {
+    implementation(libs.guava)
+    implementation(libs.guava)
+    implementation(libs.opencsv)
+    testImplementation(gradleTestKit())
+    testImplementation(testLibs.kotlin.junit)
 }

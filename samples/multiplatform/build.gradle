@@ -1,5 +1,6 @@
 buildscript {
     repositories {
+        gradlePluginPortal()
         mavenCentral()
         google()
     }
@@ -7,14 +8,7 @@ buildscript {
         classpath files('../localization-gradle-plugin-0.2.jar')
         classpath 'com.google.guava:guava:31.0.1-jre'
         classpath 'com.opencsv:opencsv:5.5.2'
-        classpath 'com.android.tools.build:gradle:7.0.4'
-    }
-}
-
-allprojects {
-    repositories {
-        mavenCentral()
-        google()
+        classpath 'com.android.tools.build:gradle:7.2.1'
     }
 }
 

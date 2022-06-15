@@ -1,5 +1,6 @@
 buildscript {
     repositories {
+        gradlePluginPortal()
         mavenCentral()
         google()
     }
@@ -9,9 +10,6 @@ buildscript {
         classpath 'com.opencsv:opencsv:5.5.2'
     }
 }
-
-group 'com.example'
-version '1.0'
 
 apply plugin: 'java'
 apply plugin: 'com.hendraanggrian.localization'

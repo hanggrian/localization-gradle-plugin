@@ -1,31 +1,14 @@
-group = RELEASE_GROUP
-version = RELEASE_VERSION
-
 plugins {
     application
     kotlin("jvm")
 }
 
-application {
-    mainClass.set("$RELEASE_GROUP.localization.codegen.LocalizationTextBuilderGenerator")
-}
-
-sourceSets {
-    main {
-        java.srcDir("src")
-    }
-    test {
-        java.srcDir("tests/src")
-    }
-}
-
-ktlint()
+application.mainClass.set("$RELEASE_GROUP.localization.codegen.LocalizationTextBuilderGenerator")
 
 dependencies {
-    implementation(kotlin("stdlib", VERSION_KOTLIN))
-    implementation(kotlinx("coroutines-core", VERSION_COROUTINES))
-    implementation(ktor("client-okhttp"))
-    implementation(ktor("client-gson"))
-    implementation(hendraanggrian("kotlinpoet-ktx", VERSION_KOTLINPOETKTX))
-    testImplementation(kotlin("test-junit"))
+    implementation(libs.kotlinx.coroutines)
+    implementation(libs.ktor.client.okhttp)
+    implementation(libs.ktor.client.gson)
+    implementation(libs.kotlinpoet.dsl)
+    testImplementation(testLibs.kotlin.junit)
 }

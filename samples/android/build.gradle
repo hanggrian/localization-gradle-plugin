@@ -1,5 +1,6 @@
 buildscript {
     repositories {
+        gradlePluginPortal()
         mavenCentral()
         google()
     }
@@ -7,28 +8,30 @@ buildscript {
         classpath files('../localization-gradle-plugin-0.2.jar')
         classpath 'com.google.guava:guava:31.0.1-jre'
         classpath 'com.opencsv:opencsv:5.5.2'
-        classpath 'com.android.tools.build:gradle:7.0.4'
+        classpath 'com.android.tools.build:gradle:7.2.1'
     }
 }
 
-allprojects {
-    repositories {
-        mavenCentral()
-        google()
-    }
+repositories {
+    mavenCentral()
+    google()
 }
 
-apply plugin: 'com.android.application'
 apply plugin: 'com.hendraanggrian.localization'
+apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 31
+    compileSdkVersion 32
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 31
+        targetSdkVersion 32
         applicationId 'com.example'
         versionCode 1
         versionName '1.0'
+    }
+    compileOptions {
+        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_11
     }
 }
 
@@ -39,12 +42,12 @@ dependencies {
 localization {
     text('about') {
         en = 'About'
-        en_US = "About2"
+        en_US = 'About2'
         id = 'Tentang'
     }
     text('home') {
         en = 'Home'
-        en_US = "Home2"
+        en_US = 'Home2'
         id = 'Beranda'
     }
 }

@@ -1,7 +1,7 @@
 buildscript {
     repositories {
+        gradlePluginPortal()
         mavenCentral()
-        google()
     }
     dependencies {
         classpath files('../localization-gradle-plugin-0.2.jar')
@@ -9,9 +9,6 @@ buildscript {
         classpath 'com.opencsv:opencsv:5.5.2'
     }
 }
-
-group 'com.example'
-version '1.0'
 
 apply plugin: 'java'
 apply plugin: 'com.hendraanggrian.localization'

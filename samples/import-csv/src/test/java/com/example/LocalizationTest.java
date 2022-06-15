@@ -9,7 +9,6 @@ import java.io.InputStream;
 import java.util.Properties;
 
 public class LocalizationTest {
-
     @Test
     public void in() {
         Properties properties = load("strings_id");
