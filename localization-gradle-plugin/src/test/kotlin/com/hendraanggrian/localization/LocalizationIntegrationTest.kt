@@ -50,12 +50,16 @@ class LocalizationIntegrationTest {
             }
             """.trimIndent()
         )
-        runner.withArguments("localizeJvm").build().let {
-            assertEquals(TaskOutcome.SUCCESS, it.task(":localizeJvm")!!.outcome)
-            val enLines = testProjectDir.root.resolve("res/strings.properties").readLines()
-            assertTrue("hi=Hi" in enLines)
-            val idLines = testProjectDir.root.resolve("res/strings_id.properties").readLines()
-            assertTrue("hi=Hai" in idLines)
+        assertEquals(
+            TaskOutcome.SUCCESS,
+            runner.withArguments(LocalizationPlugin.TASK_LOCALIZE_JVM).build()
+                .task(":${LocalizationPlugin.TASK_LOCALIZE_JVM}")!!.outcome
+        )
+        testProjectDir.root.resolve("res/strings.properties").readLines().let {
+            assertTrue("hi=Hi" in it)
+        }
+        testProjectDir.root.resolve("res/strings_in.properties").readLines().let {
+            assertTrue("hi=Hai" in it)
         }
     }
 }

@@ -2,7 +2,7 @@ package com.hendraanggrian.localization
 
 import com.google.common.collect.HashBasedTable
 import org.gradle.api.provider.Property
-import java.util.Locale
+import java.util.*
 
 /**
  * Locale configurations are kept in a Guava row sorted table using the following format:
@@ -55,9 +55,8 @@ internal fun LocaleTable.forEachLocale(action: (column: String, locale: Locale) 
         )
     }
 
-internal class LocalizationTextBuilderImpl(private val table: Property<LocaleTable>) : LocalizationTextBuilder {
+internal class LocalizationTextBuilder(private val table: Property<LocaleTable>) : LocalizationTextScope {
     lateinit var currentRow: String
-
     override fun add(language: String, value: String) {
         table.get().put(currentRow, language, value)
     }

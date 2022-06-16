@@ -2,7 +2,7 @@ package com.hendraanggrian.localization.internal
 
 import com.hendraanggrian.localization.LocaleTable
 import com.hendraanggrian.localization.LocalizationTextBuilder
-import com.hendraanggrian.localization.LocalizationTextBuilderImpl
+import com.hendraanggrian.localization.LocalizationTextScope
 import com.hendraanggrian.localization.LocalizeSpec
 import com.hendraanggrian.localization.forEachLocale
 import org.gradle.api.Action
@@ -19,23 +19,22 @@ import java.io.File
 import java.io.FileOutputStream
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
-import java.util.Locale
+import java.util.*
 
 /** Non-platform specific locale writer task. */
 abstract class AbstractLocalizeTask : DefaultTask(), LocalizeSpec {
 
     @Internal
+    final override fun getLogger(): Logger = project.logger
+
+    @Internal
     val defaultLocale: Property<Locale> = project.objects.property()
 
-    @Internal
-    final override val table: Property<LocaleTable> = project.objects.property<LocaleTable>()
-        .value(LocaleTable.create())
-
-    @Internal
-    override fun getLogger(): Logger = super.getLogger()
+    @Input
+    final override val table: Property<LocaleTable> = project.objects.property()
 
     @Input
-    override val resourceName: Property<String> = project.objects.property()
+    final override val resourceName: Property<String> = project.objects.property()
 
     /**
      * Where localization files will be generated to.
@@ -45,13 +44,9 @@ abstract class AbstractLocalizeTask : DefaultTask(), LocalizeSpec {
     val outputDirectory: Property<File> = project.objects.property<File>()
         .convention(project.projectDir.resolve("src/main/resources"))
 
-    private val textBuilder = LocalizationTextBuilderImpl(table)
+    private val textBuilder = LocalizationTextBuilder(table)
 
-    init {
-        outputs.upToDateWhen { false } // always consider this task out of date
-    }
-
-    override fun text(key: String, configuration: Action<LocalizationTextBuilder>) {
+    final override fun text(key: String, configuration: Action<LocalizationTextScope>) {
         textBuilder.currentRow = key
         configuration(textBuilder)
     }
@@ -73,9 +68,6 @@ abstract class AbstractLocalizeTask : DefaultTask(), LocalizeSpec {
         table.get().forEachLocale { column, locale -> onGenerateLocale(column, locale) }
         logger.info("  All resources generated")
     }
-
-    /** Returns [outputDirectory] represented as [File]. */
-    val outputDir: File @OutputDirectory get() = outputDirectory.get()
 
     /** Where the resources are generated. */
     abstract fun onGenerateLocale(column: String, locale: Locale)

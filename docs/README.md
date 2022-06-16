@@ -1,5 +1,5 @@
 [![Plugin Portal](https://img.shields.io/maven-metadata/v?label=plugin-portal&metadataUrl=https%3A%2F%2Fplugins.gradle.org%2Fm2%2Fcom%2Fhendraanggrian%2Flocalization%2Fcom.hendraanggrian.localization.gradle.plugin%2Fmaven-metadata.xml)](https://plugins.gradle.org/plugin/com.hendraanggrian.localization/)
-[![OpenJDK](https://img.shields.io/badge/jdk-1.8+-informational)](https://openjdk.java.net/projects/jdk8/)
+[![OpenJDK](https://img.shields.io/badge/jdk-11+-informational)](https://openjdk.java.net/projects/jdk-11/)
 
 # Localization Gradle Plugin
 

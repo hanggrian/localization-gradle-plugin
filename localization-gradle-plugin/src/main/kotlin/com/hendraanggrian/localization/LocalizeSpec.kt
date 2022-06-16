@@ -6,18 +6,14 @@ import org.gradle.api.logging.Logger
 import org.gradle.api.provider.Property
 import java.io.File
 
-/**
- * Starting point of localization configuration.
- * @see Localization
- * @see LocalizeJvmTask
- * @see LocalizeAndroidTask
- */
+/** A specification for generating localization resources. */
+@LocalizationConfigurationDsl
 interface LocalizeSpec {
-
-    val table: Property<LocaleTable>
-
     /** Prints debugging messages of CSV import. Named accordingly to avoid name clash with [org.gradle.api.Task]. */
     fun getLogger(): Logger
+
+    /** Locale configurations to be written as resources. */
+    val table: Property<LocaleTable>
 
     /**
      * Generated resources file or root folder name.
@@ -30,10 +26,10 @@ interface LocalizeSpec {
      * @param key specified row.
      * @param configuration closure to populate localization table.
      */
-    fun text(key: String, configuration: Action<LocalizationTextBuilder>)
+    fun text(key: String, configuration: Action<LocalizationTextScope>)
 
-    /** Alias of [text] for Gradle Kotlin DSL. */
-    operator fun String.invoke(configuration: LocalizationTextBuilder.() -> Unit): Unit =
+    /** Alias of [text] for Kotlin DSL. */
+    operator fun String.invoke(configuration: LocalizationTextScope.() -> Unit): Unit =
         text(this, configuration)
 
     /**

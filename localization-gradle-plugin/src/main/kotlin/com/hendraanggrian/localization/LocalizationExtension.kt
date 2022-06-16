@@ -4,7 +4,7 @@ import org.gradle.api.provider.Property
 import java.util.*
 
 /** Extension instance when configuring `localization` in Gradle scripts. */
-interface Localization : LocalizeSpec {
+interface LocalizationExtension : LocalizeSpec {
     /**
      * Default locale, when matching localization is found, file name suffix is removed.
      * Default is [Locale.ENGLISH].

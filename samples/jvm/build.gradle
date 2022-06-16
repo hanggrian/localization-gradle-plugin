@@ -5,22 +5,13 @@ buildscript {
     }
     dependencies {
         classpath files('../localization-gradle-plugin-0.2.jar')
-        classpath 'com.google.guava:guava:31.0.1-jre'
-        classpath 'com.opencsv:opencsv:5.5.2'
+        classpath 'com.google.guava:guava:31.1-jre'
+        classpath 'com.opencsv:opencsv:5.6'
     }
 }
 
 apply plugin: 'java'
 apply plugin: 'com.hendraanggrian.localization'
-
-sourceSets {
-    named('main') {
-        resources.srcDir('res')
-    }
-    named('test') {
-        java.srcDir('tests/src')
-    }
-}
 
 dependencies {
     testImplementation 'junit:junit:4.13.2'
@@ -38,3 +29,5 @@ localization {
         id = 'Beranda'
     }
 }
+
+tasks.localizeAndroid.enabled false

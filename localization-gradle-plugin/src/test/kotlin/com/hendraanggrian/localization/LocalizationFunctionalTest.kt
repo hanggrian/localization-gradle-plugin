@@ -46,12 +46,16 @@ class LocalizationFunctionalTest {
             }
             """.trimIndent()
         )
-        runner.withArguments("localizeJvm").build().let {
-            assertEquals(TaskOutcome.SUCCESS, it.task(":localizeJvm")!!.outcome)
-            val enLines = testProjectDir.root.resolve("src/main/resources/strings.properties").readLines()
-            assertTrue("hi=Hi" in enLines)
-            val idLines = testProjectDir.root.resolve("src/main/resources/strings_id.properties").readLines()
-            assertTrue("hi=Hai" in idLines)
+        assertEquals(
+            TaskOutcome.SUCCESS,
+            runner.withArguments(LocalizationPlugin.TASK_LOCALIZE_JVM).build()
+                .task(":${LocalizationPlugin.TASK_LOCALIZE_JVM}")!!.outcome
+        )
+        testProjectDir.root.resolve("src/main/resources/strings.properties").readLines().let {
+            assertTrue("hi=Hi" in it)
+        }
+        testProjectDir.root.resolve("src/main/resources/strings_in.properties").readLines().let {
+            assertTrue("hi=Hai" in it)
         }
     }
 }

@@ -1,14 +1,14 @@
 package com.hendraanggrian.localization
 
-import java.util.Locale
+import java.util.*
 
 /**
  * Second/last phase of localization configuration, used only within [LocalizeSpec] scope.
  *
  * However, this interface often isn't directly used,
- * as [LocalizationTextBuilder] offers convenient method on each possible localization.
+ * as [LocalizationTextScope] offers convenient method on each possible localization.
  */
-interface BaseLocalizationTextBuilder {
+interface BaseLocalizationTextScope {
 
     /**
      * Register localization value to locale with specified [language].

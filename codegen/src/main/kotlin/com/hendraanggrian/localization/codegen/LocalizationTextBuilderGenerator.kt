@@ -4,6 +4,7 @@ import com.hendraanggrian.kotlinpoet.CONST
 import com.hendraanggrian.kotlinpoet.PRIVATE
 import com.hendraanggrian.kotlinpoet.buildFileSpec
 import com.hendraanggrian.kotlinpoet.classNameOf
+import com.squareup.kotlinpoet.ClassName
 import com.squareup.kotlinpoet.NOTHING
 import kotlinx.coroutines.runBlocking
 import java.io.File
@@ -11,7 +12,7 @@ import kotlin.system.exitProcess
 
 object LocalizationTextBuilderGenerator {
     private const val PACKAGE_NAME = "com.hendraanggrian.localization"
-    private const val CLASS_NAME = "LocalizationTextBuilder"
+    private const val CLASS_NAME = "LocalizationTextScope"
 
     @JvmStatic
     fun main(args: Array<String>) {
@@ -29,6 +30,7 @@ object LocalizationTextBuilderGenerator {
                     appendLine("This is a generated class from `codegen` module.")
                 }
                 superinterfaces[classNameOf(PACKAGE_NAME, "Base$CLASS_NAME")] = null
+                annotations.add(ClassName(PACKAGE_NAME, "LocalizationConfigurationDsl"))
                 types.addCompanionObject {
                     addModifiers(PRIVATE)
                     properties.add<String>("NO_GETTER") {

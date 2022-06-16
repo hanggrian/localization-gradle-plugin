@@ -25,7 +25,6 @@ pluginBundle {
 
 dependencies {
     implementation(libs.guava)
-    implementation(libs.guava)
     implementation(libs.opencsv)
     testImplementation(gradleTestKit())
     testImplementation(testLibs.kotlin.junit)

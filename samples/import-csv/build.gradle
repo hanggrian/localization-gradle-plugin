@@ -6,8 +6,8 @@ buildscript {
     }
     dependencies {
         classpath files('../localization-gradle-plugin-0.2.jar')
-        classpath 'com.google.guava:guava:31.0.1-jre'
-        classpath 'com.opencsv:opencsv:5.5.2'
+        classpath 'com.google.guava:guava:31.1-jre'
+        classpath 'com.opencsv:opencsv:5.6'
     }
 }
 
@@ -21,3 +21,5 @@ dependencies {
 localization {
     importCSV new File(projectDir, 'locale.csv')
 }
+
+tasks.localizeAndroid.enabled false

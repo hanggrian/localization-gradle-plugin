@@ -29,8 +29,8 @@ dependencyResolutionManagement {
         register("libs") {
             val coroutinesVersion = "1.6.2"
             val kotlinpoetDslVersion = "0.1"
-            val ktorVersion = "2.0.2"
-            val opencsvVersion = "5.5.2"
+            val ktorVersion = "1.6.7"
+            val opencsvVersion = "5.6"
             val guavaVersion = "31.1-jre"
             library("kotlinx-coroutines", "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion")
             library("kotlinpoet-dsl", "com.hendraanggrian:kotlinpoet-dsl:$kotlinpoetDslVersion")

@@ -13,7 +13,6 @@ import javax.xml.transform.stream.StreamResult
  * It writes Android string resources XML files.
  */
 open class LocalizeAndroidTask : AbstractLocalizeTask() {
-
     private val docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder()
     private val transformer = TransformerFactory
         .newInstance().apply { setAttribute("indent-number", 4) }
