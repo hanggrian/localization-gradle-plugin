@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>LocalizationExtension</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+</head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+            <a href="../../../index.html">
+                    <span>localization-gradle-plugin</span>
+            </a>
+    </div>
+    <div>
+0.2    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageIds="localization-gradle-plugin::com.hendraanggrian.localization/LocalizationExtension///PointingToDeclaration//-1075405972">
+  <div class="breadcrumbs"><a href="../../../index.html">localization-gradle-plugin</a><span class="delimiter">/</span><a href="../index.html">com.hendraanggrian.localization</a><span class="delimiter">/</span><a href="index.html">LocalizationExtension</a></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Localization</span><wbr></wbr><span><span>Extension</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":localization-gradle-plugin:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">LocalizationExtension</a> : <a href="../-localize-spec/index.html">LocalizeSpec</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">Extension instance when configuring <code class="lang-kotlin">localization</code> in Gradle scripts.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button><button class="section-tab" data-togglable="Inheritors">Inheritors</button></div>
+    <div class="tabs-section-body">
+      <h2 class="">Functions</h2>
+      <div class="table" data-togglable="Functions"><a data-name="-203824326%2FFunctions%2F-1075405972" anchor-label="getLogger" id="-203824326%2FFunctions%2F-1075405972" data-filterable-set=":localization-gradle-plugin:dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":localization-gradle-plugin:dokkaHtml/main" data-filterable-set=":localization-gradle-plugin:dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-localize-spec/get-logger.html"><span>get</span><wbr></wbr><span><span>Logger</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-203824326%2FFunctions%2F-1075405972"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":localization-gradle-plugin:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-localize-spec/get-logger.html"><span class="token function">getLogger</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="org.gradle.api.logging/Logger///PointingToDeclaration/">Logger</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Prints debugging messages of CSV import. Named accordingly to avoid name clash with <span data-unresolved-link="org.gradle.api/Task///PointingToDeclaration/">org.gradle.api.Task</span>.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1974167143%2FFunctions%2F-1075405972" anchor-label="importCSV" id="1974167143%2FFunctions%2F-1075405972" data-filterable-set=":localization-gradle-plugin:dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":localization-gradle-plugin:dokkaHtml/main" data-filterable-set=":localization-gradle-plugin:dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-localize-spec/import-c-s-v.html"><span>import</span><wbr></wbr><span><span>CSV</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1974167143%2FFunctions%2F-1075405972"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":localization-gradle-plugin:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-localize-spec/import-c-s-v.html"><span class="token function">importCSV</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">file<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html">File</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Import CSV file and add it to existing table, not replacing them. In this sense, it is possible to import multiple files. The CSV file in question must have a header with format <code class="lang-kotlin">key;locale1;...;localeN</code></p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1755332810%2FFunctions%2F-1075405972" anchor-label="invoke" id="1755332810%2FFunctions%2F-1075405972" data-filterable-set=":localization-gradle-plugin:dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":localization-gradle-plugin:dokkaHtml/main" data-filterable-set=":localization-gradle-plugin:dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-localize-spec/invoke.html"><span><span>invoke</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1755332810%2FFunctions%2F-1075405972"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":localization-gradle-plugin:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">.</span><a href="../-localize-spec/invoke.html"><span class="token function">invoke</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">configuration<span class="token operator">: </span><span class="token keyword"></span><a href="../-localization-text-scope/index.html">LocalizationTextScope</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Alias of <a href="../-localize-spec/text.html">text</a> for Kotlin DSL.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-475846434%2FFunctions%2F-1075405972" anchor-label="text" id="-475846434%2FFunctions%2F-1075405972" data-filterable-set=":localization-gradle-plugin:dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":localization-gradle-plugin:dokkaHtml/main" data-filterable-set=":localization-gradle-plugin:dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-localize-spec/text.html"><span><span>text</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-475846434%2FFunctions%2F-1075405972"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":localization-gradle-plugin:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-localize-spec/text.html"><span class="token function">text</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">configuration<span class="token operator">: </span><span data-unresolved-link="org.gradle.api/Action///PointingToDeclaration/">Action</span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-localization-text-scope/index.html">LocalizationTextScope</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Marks <a href="../-localize-spec/text.html">key</a> as current row and opening closure to modify that row.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Properties</h2>
+      <div class="table" data-togglable="Properties"><a data-name="689094387%2FProperties%2F-1075405972" anchor-label="defaultLocale" id="689094387%2FProperties%2F-1075405972" data-filterable-set=":localization-gradle-plugin:dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":localization-gradle-plugin:dokkaHtml/main" data-filterable-set=":localization-gradle-plugin:dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="default-locale.html">defaultLocale</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="689094387%2FProperties%2F-1075405972"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":localization-gradle-plugin:dokkaHtml/main"><a data-name="689094387%2FProperties%2F-1075405972" anchor-label="defaultLocale" id="689094387%2FProperties%2F-1075405972" data-filterable-set=":localization-gradle-plugin:dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="default-locale.html">defaultLocale</a><span class="token operator">: </span><span data-unresolved-link="org.gradle.api.provider/Property///PointingToDeclaration/">Property</span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html">Locale</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="689094387%2FProperties%2F-1075405972" anchor-label="defaultLocale" id="689094387%2FProperties%2F-1075405972" data-filterable-set=":localization-gradle-plugin:dokkaHtml/main"></a><p class="paragraph">Default locale, when matching localization is found, file name suffix is removed. Default is <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#ENGLISH--">Locale.ENGLISH</a>.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1843304961%2FProperties%2F-1075405972" anchor-label="resourceName" id="1843304961%2FProperties%2F-1075405972" data-filterable-set=":localization-gradle-plugin:dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":localization-gradle-plugin:dokkaHtml/main" data-filterable-set=":localization-gradle-plugin:dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-localize-spec/resource-name.html">resourceName</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1843304961%2FProperties%2F-1075405972"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":localization-gradle-plugin:dokkaHtml/main"><a data-name="1843304961%2FProperties%2F-1075405972" anchor-label="resourceName" id="1843304961%2FProperties%2F-1075405972" data-filterable-set=":localization-gradle-plugin:dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-localize-spec/resource-name.html">resourceName</a><span class="token operator">: </span><span data-unresolved-link="org.gradle.api.provider/Property///PointingToDeclaration/">Property</span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1843304961%2FProperties%2F-1075405972" anchor-label="resourceName" id="1843304961%2FProperties%2F-1075405972" data-filterable-set=":localization-gradle-plugin:dokkaHtml/main"></a><p class="paragraph">Generated resources file or root folder name. Default is <code class="lang-kotlin">strings</code>.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="645962354%2FProperties%2F-1075405972" anchor-label="table" id="645962354%2FProperties%2F-1075405972" data-filterable-set=":localization-gradle-plugin:dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":localization-gradle-plugin:dokkaHtml/main" data-filterable-set=":localization-gradle-plugin:dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-localize-spec/table.html">table</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="645962354%2FProperties%2F-1075405972"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":localization-gradle-plugin:dokkaHtml/main"><a data-name="645962354%2FProperties%2F-1075405972" anchor-label="table" id="645962354%2FProperties%2F-1075405972" data-filterable-set=":localization-gradle-plugin:dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-localize-spec/table.html">table</a><span class="token operator">: </span><span data-unresolved-link="org.gradle.api.provider/Property///PointingToDeclaration/">Property</span><span class="token operator">&lt;</span><span class="token keyword"></span><span data-unresolved-link="com.hendraanggrian.localization/LocaleTable///PointingToDeclaration/">LocaleTable</span><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="645962354%2FProperties%2F-1075405972" anchor-label="table" id="645962354%2FProperties%2F-1075405972" data-filterable-set=":localization-gradle-plugin:dokkaHtml/main"></a><p class="paragraph">Locale configurations to be written as resources.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Inheritors</h2>
+      <div class="table" data-togglable="Inheritors"><a data-name="-1995630111%2FInheritors%2F-1075405972" anchor-label="DefaultLocalizationExtension" id="-1995630111%2FInheritors%2F-1075405972" data-filterable-set=":localization-gradle-plugin:dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":localization-gradle-plugin:dokkaHtml/main" data-filterable-set=":localization-gradle-plugin:dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../../com.hendraanggrian.localization.internal/-default-localization-extension/index.html">DefaultLocalizationExtension</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1995630111%2FInheritors%2F-1075405972"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+        </div>
+    </div>
+</div>
+</body>
+</html>
