@@ -13,9 +13,7 @@ buildscript {
 apply plugin: 'java'
 apply plugin: 'com.hendraanggrian.localization'
 
-dependencies {
-    testImplementation 'junit:junit:4.13.2'
-}
+dependencies.testImplementation 'junit:junit:4.13.2'
 
 localization {
     resourceName.set('my_strings')

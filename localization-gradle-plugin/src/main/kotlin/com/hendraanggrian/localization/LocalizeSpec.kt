@@ -26,7 +26,7 @@ interface LocalizeSpec {
      * @param key specified row.
      * @param configuration closure to populate localization table.
      */
-    fun text(key: String, configuration: Action<LocalizationTextScope>)
+    fun text(key: String, configuration: Action<in LocalizationTextScope>)
 
     /** Alias of [text] for Kotlin DSL. */
     operator fun String.invoke(configuration: LocalizationTextScope.() -> Unit): Unit =

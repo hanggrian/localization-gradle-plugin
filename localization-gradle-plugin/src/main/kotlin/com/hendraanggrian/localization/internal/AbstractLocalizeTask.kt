@@ -46,7 +46,7 @@ abstract class AbstractLocalizeTask : DefaultTask(), LocalizeSpec {
 
     private val textBuilder = LocalizationTextBuilder(table)
 
-    final override fun text(key: String, configuration: Action<LocalizationTextScope>) {
+    final override fun text(key: String, configuration: Action<in LocalizationTextScope>) {
         textBuilder.currentRow = key
         configuration(textBuilder)
     }

@@ -1,6 +1,6 @@
 plugins {
     application
-    kotlin("jvm")
+    alias(plugs.plugins.kotlin.jvm)
 }
 
 application.mainClass.set("$RELEASE_GROUP.localization.codegen.LocalizationTextBuilderGenerator")

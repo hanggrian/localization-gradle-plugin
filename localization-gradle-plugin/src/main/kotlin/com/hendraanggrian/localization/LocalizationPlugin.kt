@@ -29,7 +29,8 @@ class LocalizationPlugin : Plugin<Project> {
         val hasJavaPlugin = project.pluginManager.hasPlugin("java") || project.pluginManager.hasPlugin("java-library")
 
         val localization = project.extensions.create(
-            LocalizationExtension::class, "localization", DefaultLocalizationExtension::class, project
+            LocalizationExtension::class, "localization",
+            DefaultLocalizationExtension::class, project.objects, project.logger
         )
         val localizeJvm = project.createLocalizeTask<LocalizeJvmTask>(TASK_LOCALIZE_JVM, localization)
         val localizeAndroid = project.createLocalizeTask<LocalizeAndroidTask>(TASK_LOCALIZE_ANDROID, localization)
