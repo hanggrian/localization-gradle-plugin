@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--Generated file by locale-gradle-plugin, do not edit manually!
-2022-06-16 05.22--><resources>
+2022-07-12 01.11--><resources>
     <string name="about">About2</string>
     <string name="home">Home2</string>
+    <string name="android_only"/>
 </resources>

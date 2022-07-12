@@ -50,4 +50,12 @@ localization {
     }
 }
 
-tasks.localizeJvm.enabled false
+tasks {
+    localizeJvm.enabled false
+    localizeAndroid {
+        text('android_only') {
+            en = 'Android Only'
+            id = 'Hanya Android'
+        }
+    }
+}

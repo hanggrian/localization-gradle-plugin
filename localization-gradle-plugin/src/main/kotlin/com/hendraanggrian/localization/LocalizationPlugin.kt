@@ -19,10 +19,10 @@ import org.gradle.kotlin.dsl.register
  */
 class LocalizationPlugin : Plugin<Project> {
     companion object {
-        const val GROUP = "localization"
-        const val TASK_LOCALIZE_JVM = "localizeJvm"
-        const val TASK_LOCALIZE_ANDROID = "localizeAndroid"
-        const val TASK_LOCALIZE_ALL = "localizeAll"
+        const val GROUP: String = "localization"
+        const val TASK_LOCALIZE_JVM: String = "localizeJvm"
+        const val TASK_LOCALIZE_ANDROID: String = "localizeAndroid"
+        const val TASK_LOCALIZE_ALL: String = "localizeAll"
     }
 
     override fun apply(project: Project) {

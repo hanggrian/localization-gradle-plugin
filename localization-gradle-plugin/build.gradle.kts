@@ -5,6 +5,7 @@ plugins {
     alias(plugs.plugins.dokka)
     alias(plugs.plugins.spotless)
     alias(plugs.plugins.gradle.publish)
+    `maven-publish`
 }
 
 gradlePlugin {
@@ -18,7 +19,7 @@ gradlePlugin {
 }
 
 kotlin.jvmToolchain {
-    (this as JavaToolchainSpec).languageVersion.set(JavaLanguageVersion.of(sdk.versions.jdk.get()))
+    languageVersion.set(JavaLanguageVersion.of(sdk.versions.jdk.get()))
 }
 
 spotless.kotlin {
