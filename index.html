@@ -20,7 +20,7 @@
                 <h1>localization-gradle-plugin</h1>
                 <p>Cross-platform localization generated in Gradle</p>
                 <p class="view">
-                    <a href="https://github.com/hendraanggrian/localization-gradle-plugin/">View the Project on GitHub <small>hendraanggrian/localization-gradle-plugi</small></a>
+                    <a href="https://github.com/hendraanggrian/localization-gradle-plugin/">View the Project on GitHub <small>hendraanggrian/localization-gradle-plugin</small></a>
                 </p>
                 <ul>
                     <li>
@@ -34,33 +34,33 @@
 <a href="https://plugins.gradle.org/plugin/com.hendraanggrian.localization"><img alt="Plugin Portal" src="https://img.shields.io/maven-metadata/v.svg?label=plugin-portal&amp;metadataUrl=https%3A%2F%2Fplugins.gradle.org%2Fm2%2Fcom%2Fhendraanggrian%2Flocalization%2Fcom.hendraanggrian.localization.gradle.plugin%2Fmaven-metadata.xml"></a>
 <a href="https://openjdk.java.net/projects/jdk/11/"><img alt="OpenJDK" src="https://img.shields.io/badge/jdk-11%2B-informational"></a>
                 </p>
-                
+
                 <h1>Localization Gradle Plugin</h1>
-                
+
                 <p>An write-once-run-anywhere approach to localization in multiple platform project.</p>
-                
+
                 <ul>
-                    
+
                     <li>
                         Writes <code>ResourceBundle</code> for Java and XML values for Android.
                     </li>
-                    
+
                     <li>Localization data can be placed within Gradle script or CSV file.</li>
-                    
+
                 </ul>
-                
+
                 <h2>Download</h2>
-                
+
                 <p>Using plugins DSL:</p>
-                
-                <pre><code class="language-groovy">plugins {
+
+                <pre><code class="language-gradle">plugins {
     id('com.hendraanggrian.localization') version "$version"
 }
 </code></pre>
-                
+
                 <p>Using legacy plugin application:</p>
-                
-                <pre><code class="language-groovy">buildscript {
+
+                <pre><code class="language-gradle">buildscript {
     repositories {
         gradlePluginPortal()
     }
@@ -71,14 +71,14 @@
 
 apply plugin: 'com.hendraanggrian.localization'
 </code></pre>
-                
+
                 <h2>Usage</h2>
-                
+
                 <p>
                     Apply plugin in your module, and configure <code>localization</code> extension like below:
                 </p>
-                
-                <pre><code class="language-groovy">localization {
+
+                <pre><code class="language-gradle">localization {
     resourceName.set('strings')
     text('home') {
         en = 'Home'
@@ -99,9 +99,9 @@ tasks {
     }
 }
 </code></pre>
-                
+
                 <p>It's even simpler with Gradle Kotlin DSL.</p>
-                
+
                 <pre><code class="language-kotlin">localization {
     "home" {
         en = "Home"
@@ -113,11 +113,11 @@ tasks {
     }
 }
 </code></pre>
-                
+
                 <p>
                     Then use command <code>localizeJvm</code> or <code>localizeAndroid</code> to write localization files into their respective directory.
                 </p>
-                
+
             </section>
             <footer>
                 <p>
