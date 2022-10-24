@@ -76,4 +76,5 @@ localization {
 }
 ```
 
-Then use command `localizeJvm` or `localizeAndroid` to write localization files into their respective directory.
+Then use command `localizeJvm` or `localizeAndroid` to write localization files into their
+respective directory.

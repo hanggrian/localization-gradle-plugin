@@ -9,8 +9,8 @@ import javax.xml.transform.dom.DOMSource
 import javax.xml.transform.stream.StreamResult
 
 /**
- * Task to run when `localizeAndroid` command is executed.
- * It writes Android string resources XML files.
+ * Task to run when `localizeAndroid` command is executed. It writes Android string resources XML
+ * files.
  */
 open class LocalizeAndroidTask : AbstractLocalizeTask() {
     private val docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder()

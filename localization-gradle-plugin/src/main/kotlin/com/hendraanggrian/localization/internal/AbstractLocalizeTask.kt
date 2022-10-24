@@ -37,8 +37,8 @@ abstract class AbstractLocalizeTask : DefaultTask(), LocalizeSpec {
     final override val resourceName: Property<String> = project.objects.property()
 
     /**
-     * Where localization files will be generated to.
-     * Default is `$projectDir/src/main/resources`.
+     * Where localization files will be generated to. Default
+     * is `$projectDir/src/main/resources`.
      */
     @OutputDirectory
     val outputDirectory: Property<File> = project.objects.property<File>()
@@ -62,11 +62,14 @@ abstract class AbstractLocalizeTask : DefaultTask(), LocalizeSpec {
             }:"
         )
 
-        require(resourceName.get().isNotBlank()) { "Empty file resource name" }
+        require(resourceName.get().isNotBlank()) { "- Empty file resource name" }
 
-        logger.info("  Locale table column = ${table.get().columnKeySet().size}, row = ${table.get().rowKeySet().size}")
+        logger.info(
+            "- Locale table column = ${table.get().columnKeySet().size}, row = ${
+            table.get().rowKeySet().size
+            }"
+        )
         table.get().forEachLocale { column, locale -> onGenerateLocale(column, locale) }
-        logger.info("  All resources generated")
     }
 
     /** Where the resources are generated. */
@@ -96,15 +99,15 @@ abstract class AbstractLocalizeTask : DefaultTask(), LocalizeSpec {
     /** Create individual file, reporting the result to logger. */
     protected fun File.write(action: (FileOutputStream) -> Unit) {
         if (exists()) {
-            logger.info("  Existing resource '$name' deleted")
+            logger.info("Existing resource '$name' deleted.")
             delete()
         }
         outputStream().use { action(it) }
         logger.info(
             "  ${
             when {
-                exists() -> "Resource '$name' created"
-                else -> "Failed to create resource '$name'"
+                exists() -> "Resource '$name' created."
+                else -> "Failed to create resource '$name.'"
             }
             }"
         )

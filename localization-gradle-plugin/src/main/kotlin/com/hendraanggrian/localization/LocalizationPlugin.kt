@@ -26,14 +26,20 @@ class LocalizationPlugin : Plugin<Project> {
     }
 
     override fun apply(project: Project) {
-        val hasJavaPlugin = project.pluginManager.hasPlugin("java") || project.pluginManager.hasPlugin("java-library")
+        val hasJavaPlugin = project.pluginManager.hasPlugin("java") ||
+            project.pluginManager.hasPlugin("java-library")
 
         val localization = project.extensions.create(
-            LocalizationExtension::class, "localization",
-            DefaultLocalizationExtension::class, project.objects, project.logger
+            LocalizationExtension::class,
+            "localization",
+            DefaultLocalizationExtension::class,
+            project.objects,
+            project.logger
         )
-        val localizeJvm = project.createLocalizeTask<LocalizeJvmTask>(TASK_LOCALIZE_JVM, localization)
-        val localizeAndroid = project.createLocalizeTask<LocalizeAndroidTask>(TASK_LOCALIZE_ANDROID, localization)
+        val localizeJvm = project
+            .createLocalizeTask<LocalizeJvmTask>(TASK_LOCALIZE_JVM, localization)
+        val localizeAndroid = project
+            .createLocalizeTask<LocalizeAndroidTask>(TASK_LOCALIZE_ANDROID, localization)
         project.tasks.register(TASK_LOCALIZE_ALL) {
             group = GROUP
             description = "Creates localization files for both JVM and Android."
@@ -45,7 +51,8 @@ class LocalizationPlugin : Plugin<Project> {
                 localizeJvm {
                     outputDirectory.convention(
                         project.extensions.getByName<SourceSetContainer>("sourceSets")["main"]
-                            .resources.srcDirs.lastOrNull()
+                            .resources.srcDirs
+                            .lastOrNull()
                     )
                 }
             }

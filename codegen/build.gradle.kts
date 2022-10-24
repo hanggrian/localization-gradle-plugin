@@ -1,6 +1,6 @@
 plugins {
     application
-    alias(plugs.plugins.kotlin.jvm)
+    alias(libs.plugins.kotlin.jvm)
 }
 
 application.mainClass.set("$RELEASE_GROUP.localization.codegen.LocalizationTextBuilderGenerator")
@@ -10,5 +10,5 @@ dependencies {
     implementation(libs.ktor.client.okhttp)
     implementation(libs.ktor.client.gson)
     implementation(libs.kotlinpoet.dsl)
-    testImplementation(testLibs.kotlin.junit)
+    testImplementation(libs.kotlin.test.junit)
 }

@@ -1,8 +1,7 @@
 package com.hendraanggrian.localization
 
 /**
- * Locales listed below are based on [umpirsky's
- * locale-list](https://github.com/umpirsky/locale-list).
+ * Locales listed below are based on [umpirsky's locale-list](https://github.com/umpirsky/locale-list).
  *
  * This is a generated class from `codegen` module.
  */
@@ -14,7 +13,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var af: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("af", value)
@@ -25,7 +24,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var af_NA: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("af", "NA", value)
@@ -36,7 +35,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var af_ZA: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("af", "ZA", value)
@@ -47,7 +46,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ak: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ak", value)
@@ -58,7 +57,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ak_GH: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ak", "GH", value)
@@ -69,7 +68,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var am: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("am", value)
@@ -80,7 +79,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var am_ET: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("am", "ET", value)
@@ -91,7 +90,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ar: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ar", value)
@@ -102,7 +101,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ar_AE: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ar", "AE", value)
@@ -113,7 +112,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ar_BH: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ar", "BH", value)
@@ -124,7 +123,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ar_DJ: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ar", "DJ", value)
@@ -135,7 +134,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ar_DZ: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ar", "DZ", value)
@@ -146,7 +145,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ar_EG: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ar", "EG", value)
@@ -157,7 +156,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ar_EH: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ar", "EH", value)
@@ -168,7 +167,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ar_ER: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ar", "ER", value)
@@ -179,7 +178,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ar_IL: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ar", "IL", value)
@@ -190,7 +189,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ar_IQ: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ar", "IQ", value)
@@ -201,7 +200,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ar_JO: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ar", "JO", value)
@@ -212,7 +211,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ar_KM: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ar", "KM", value)
@@ -223,7 +222,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ar_KW: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ar", "KW", value)
@@ -234,7 +233,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ar_LB: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ar", "LB", value)
@@ -245,7 +244,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ar_LY: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ar", "LY", value)
@@ -256,7 +255,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ar_MA: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ar", "MA", value)
@@ -267,7 +266,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ar_MR: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ar", "MR", value)
@@ -278,7 +277,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ar_OM: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ar", "OM", value)
@@ -289,7 +288,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ar_PS: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ar", "PS", value)
@@ -300,7 +299,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ar_QA: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ar", "QA", value)
@@ -311,7 +310,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ar_SA: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ar", "SA", value)
@@ -322,7 +321,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ar_SD: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ar", "SD", value)
@@ -333,7 +332,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ar_SO: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ar", "SO", value)
@@ -344,7 +343,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ar_SS: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ar", "SS", value)
@@ -355,7 +354,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ar_SY: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ar", "SY", value)
@@ -366,7 +365,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ar_TD: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ar", "TD", value)
@@ -377,7 +376,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ar_TN: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ar", "TN", value)
@@ -388,7 +387,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ar_YE: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ar", "YE", value)
@@ -399,7 +398,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var `as`: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("as", value)
@@ -410,7 +409,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var as_IN: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("as", "IN", value)
@@ -421,7 +420,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var az: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("az", value)
@@ -432,7 +431,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var az_AZ: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("az", "AZ", value)
@@ -443,7 +442,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var be: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("be", value)
@@ -454,7 +453,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var be_BY: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("be", "BY", value)
@@ -465,7 +464,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var bg: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("bg", value)
@@ -476,7 +475,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var bg_BG: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("bg", "BG", value)
@@ -487,7 +486,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var bm: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("bm", value)
@@ -498,7 +497,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var bm_ML: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("bm", "ML", value)
@@ -509,7 +508,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var bn: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("bn", value)
@@ -520,7 +519,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var bn_BD: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("bn", "BD", value)
@@ -531,7 +530,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var bn_IN: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("bn", "IN", value)
@@ -542,7 +541,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var bo: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("bo", value)
@@ -553,7 +552,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var bo_CN: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("bo", "CN", value)
@@ -564,7 +563,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var bo_IN: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("bo", "IN", value)
@@ -575,7 +574,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var br: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("br", value)
@@ -586,7 +585,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var br_FR: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("br", "FR", value)
@@ -597,7 +596,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var bs: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("bs", value)
@@ -608,7 +607,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var bs_BA: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("bs", "BA", value)
@@ -619,7 +618,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ca: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ca", value)
@@ -630,7 +629,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ca_AD: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ca", "AD", value)
@@ -641,7 +640,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ca_ES: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ca", "ES", value)
@@ -652,7 +651,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ca_FR: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ca", "FR", value)
@@ -663,7 +662,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ca_IT: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ca", "IT", value)
@@ -674,7 +673,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var cs: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("cs", value)
@@ -685,7 +684,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var cs_CZ: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("cs", "CZ", value)
@@ -696,7 +695,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var cy: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("cy", value)
@@ -707,7 +706,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var cy_GB: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("cy", "GB", value)
@@ -718,7 +717,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var da: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("da", value)
@@ -729,7 +728,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var da_DK: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("da", "DK", value)
@@ -740,7 +739,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var da_GL: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("da", "GL", value)
@@ -751,7 +750,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var de: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("de", value)
@@ -762,7 +761,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var de_AT: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("de", "AT", value)
@@ -773,7 +772,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var de_BE: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("de", "BE", value)
@@ -784,7 +783,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var de_CH: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("de", "CH", value)
@@ -795,7 +794,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var de_DE: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("de", "DE", value)
@@ -806,7 +805,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var de_LI: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("de", "LI", value)
@@ -817,7 +816,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var de_LU: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("de", "LU", value)
@@ -828,7 +827,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var dz: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("dz", value)
@@ -839,7 +838,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var dz_BT: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("dz", "BT", value)
@@ -850,7 +849,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ee: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ee", value)
@@ -861,7 +860,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ee_GH: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ee", "GH", value)
@@ -872,7 +871,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ee_TG: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ee", "TG", value)
@@ -883,7 +882,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var el: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("el", value)
@@ -894,7 +893,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var el_CY: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("el", "CY", value)
@@ -905,7 +904,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var el_GR: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("el", "GR", value)
@@ -916,7 +915,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", value)
@@ -927,7 +926,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_AG: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "AG", value)
@@ -938,7 +937,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_AI: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "AI", value)
@@ -949,7 +948,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_AS: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "AS", value)
@@ -960,7 +959,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_AU: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "AU", value)
@@ -971,7 +970,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_BB: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "BB", value)
@@ -982,7 +981,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_BE: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "BE", value)
@@ -993,7 +992,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_BM: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "BM", value)
@@ -1004,7 +1003,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_BS: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "BS", value)
@@ -1015,7 +1014,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_BW: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "BW", value)
@@ -1026,7 +1025,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_BZ: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "BZ", value)
@@ -1037,7 +1036,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_CA: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "CA", value)
@@ -1048,7 +1047,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_CC: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "CC", value)
@@ -1059,7 +1058,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_CK: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "CK", value)
@@ -1070,7 +1069,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_CM: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "CM", value)
@@ -1081,7 +1080,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_CX: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "CX", value)
@@ -1092,7 +1091,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_DG: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "DG", value)
@@ -1103,7 +1102,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_DM: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "DM", value)
@@ -1114,7 +1113,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_ER: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "ER", value)
@@ -1125,7 +1124,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_FJ: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "FJ", value)
@@ -1136,7 +1135,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_FK: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "FK", value)
@@ -1147,7 +1146,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_FM: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "FM", value)
@@ -1158,7 +1157,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_GB: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "GB", value)
@@ -1169,7 +1168,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_GD: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "GD", value)
@@ -1180,7 +1179,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_GG: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "GG", value)
@@ -1191,7 +1190,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_GH: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "GH", value)
@@ -1202,7 +1201,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_GI: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "GI", value)
@@ -1213,7 +1212,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_GM: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "GM", value)
@@ -1224,7 +1223,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_GU: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "GU", value)
@@ -1235,7 +1234,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_GY: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "GY", value)
@@ -1246,7 +1245,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_HK: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "HK", value)
@@ -1257,7 +1256,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_IE: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "IE", value)
@@ -1268,7 +1267,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_IM: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "IM", value)
@@ -1279,7 +1278,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_IN: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "IN", value)
@@ -1290,7 +1289,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_IO: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "IO", value)
@@ -1301,7 +1300,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_JE: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "JE", value)
@@ -1312,7 +1311,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_JM: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "JM", value)
@@ -1323,7 +1322,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_KE: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "KE", value)
@@ -1334,7 +1333,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_KI: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "KI", value)
@@ -1345,7 +1344,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_KN: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "KN", value)
@@ -1356,7 +1355,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_KY: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "KY", value)
@@ -1367,7 +1366,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_LC: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "LC", value)
@@ -1378,7 +1377,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_LR: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "LR", value)
@@ -1389,7 +1388,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_LS: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "LS", value)
@@ -1400,7 +1399,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_MG: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "MG", value)
@@ -1411,7 +1410,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_MH: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "MH", value)
@@ -1422,7 +1421,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_MO: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "MO", value)
@@ -1433,7 +1432,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_MP: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "MP", value)
@@ -1444,7 +1443,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_MS: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "MS", value)
@@ -1455,7 +1454,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_MT: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "MT", value)
@@ -1466,7 +1465,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_MU: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "MU", value)
@@ -1477,7 +1476,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_MW: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "MW", value)
@@ -1488,7 +1487,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_MY: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "MY", value)
@@ -1499,7 +1498,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_NA: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "NA", value)
@@ -1510,7 +1509,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_NF: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "NF", value)
@@ -1521,7 +1520,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_NG: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "NG", value)
@@ -1532,7 +1531,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_NR: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "NR", value)
@@ -1543,7 +1542,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_NU: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "NU", value)
@@ -1554,7 +1553,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_NZ: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "NZ", value)
@@ -1565,7 +1564,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_PG: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "PG", value)
@@ -1576,7 +1575,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_PH: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "PH", value)
@@ -1587,7 +1586,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_PK: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "PK", value)
@@ -1598,7 +1597,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_PN: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "PN", value)
@@ -1609,7 +1608,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_PR: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "PR", value)
@@ -1620,7 +1619,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_PW: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "PW", value)
@@ -1631,7 +1630,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_RW: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "RW", value)
@@ -1642,7 +1641,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_SB: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "SB", value)
@@ -1653,7 +1652,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_SC: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "SC", value)
@@ -1664,7 +1663,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_SD: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "SD", value)
@@ -1675,7 +1674,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_SG: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "SG", value)
@@ -1686,7 +1685,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_SH: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "SH", value)
@@ -1697,7 +1696,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_SL: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "SL", value)
@@ -1708,7 +1707,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_SS: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "SS", value)
@@ -1719,7 +1718,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_SX: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "SX", value)
@@ -1730,7 +1729,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_SZ: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "SZ", value)
@@ -1741,7 +1740,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_TC: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "TC", value)
@@ -1752,7 +1751,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_TK: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "TK", value)
@@ -1763,7 +1762,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_TO: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "TO", value)
@@ -1774,7 +1773,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_TT: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "TT", value)
@@ -1785,7 +1784,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_TV: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "TV", value)
@@ -1796,7 +1795,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_TZ: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "TZ", value)
@@ -1807,7 +1806,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_UG: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "UG", value)
@@ -1818,7 +1817,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_UM: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "UM", value)
@@ -1829,7 +1828,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_US: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "US", value)
@@ -1840,7 +1839,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_VC: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "VC", value)
@@ -1851,7 +1850,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_VG: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "VG", value)
@@ -1862,7 +1861,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_VI: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "VI", value)
@@ -1873,7 +1872,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_VU: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "VU", value)
@@ -1884,7 +1883,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_WS: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "WS", value)
@@ -1895,7 +1894,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_ZA: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "ZA", value)
@@ -1906,7 +1905,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_ZM: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "ZM", value)
@@ -1917,7 +1916,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var en_ZW: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("en", "ZW", value)
@@ -1928,7 +1927,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var eo: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("eo", value)
@@ -1939,7 +1938,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var es: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("es", value)
@@ -1950,7 +1949,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var es_AR: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("es", "AR", value)
@@ -1961,7 +1960,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var es_BO: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("es", "BO", value)
@@ -1972,7 +1971,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var es_CL: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("es", "CL", value)
@@ -1983,7 +1982,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var es_CO: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("es", "CO", value)
@@ -1994,7 +1993,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var es_CR: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("es", "CR", value)
@@ -2005,7 +2004,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var es_CU: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("es", "CU", value)
@@ -2016,7 +2015,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var es_DO: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("es", "DO", value)
@@ -2027,7 +2026,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var es_EA: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("es", "EA", value)
@@ -2038,7 +2037,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var es_EC: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("es", "EC", value)
@@ -2049,7 +2048,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var es_ES: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("es", "ES", value)
@@ -2060,7 +2059,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var es_GQ: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("es", "GQ", value)
@@ -2071,7 +2070,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var es_GT: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("es", "GT", value)
@@ -2082,7 +2081,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var es_HN: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("es", "HN", value)
@@ -2093,7 +2092,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var es_IC: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("es", "IC", value)
@@ -2104,7 +2103,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var es_MX: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("es", "MX", value)
@@ -2115,7 +2114,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var es_NI: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("es", "NI", value)
@@ -2126,7 +2125,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var es_PA: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("es", "PA", value)
@@ -2137,7 +2136,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var es_PE: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("es", "PE", value)
@@ -2148,7 +2147,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var es_PH: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("es", "PH", value)
@@ -2159,7 +2158,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var es_PR: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("es", "PR", value)
@@ -2170,7 +2169,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var es_PY: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("es", "PY", value)
@@ -2181,7 +2180,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var es_SV: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("es", "SV", value)
@@ -2192,7 +2191,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var es_US: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("es", "US", value)
@@ -2203,7 +2202,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var es_UY: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("es", "UY", value)
@@ -2214,7 +2213,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var es_VE: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("es", "VE", value)
@@ -2225,7 +2224,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var et: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("et", value)
@@ -2236,7 +2235,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var et_EE: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("et", "EE", value)
@@ -2247,7 +2246,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var eu: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("eu", value)
@@ -2258,7 +2257,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var eu_ES: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("eu", "ES", value)
@@ -2269,7 +2268,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fa: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fa", value)
@@ -2280,7 +2279,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fa_AF: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fa", "AF", value)
@@ -2291,7 +2290,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fa_IR: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fa", "IR", value)
@@ -2302,7 +2301,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ff: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ff", value)
@@ -2313,7 +2312,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ff_CM: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ff", "CM", value)
@@ -2324,7 +2323,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ff_GN: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ff", "GN", value)
@@ -2335,7 +2334,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ff_MR: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ff", "MR", value)
@@ -2346,7 +2345,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ff_SN: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ff", "SN", value)
@@ -2357,7 +2356,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fi: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fi", value)
@@ -2368,7 +2367,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fi_FI: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fi", "FI", value)
@@ -2379,7 +2378,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fo: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fo", value)
@@ -2390,7 +2389,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fo_FO: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fo", "FO", value)
@@ -2401,7 +2400,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fr: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fr", value)
@@ -2412,7 +2411,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fr_BE: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fr", "BE", value)
@@ -2423,7 +2422,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fr_BF: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fr", "BF", value)
@@ -2434,7 +2433,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fr_BI: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fr", "BI", value)
@@ -2445,7 +2444,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fr_BJ: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fr", "BJ", value)
@@ -2456,7 +2455,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fr_BL: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fr", "BL", value)
@@ -2467,7 +2466,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fr_CA: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fr", "CA", value)
@@ -2478,7 +2477,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fr_CD: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fr", "CD", value)
@@ -2489,7 +2488,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fr_CF: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fr", "CF", value)
@@ -2500,7 +2499,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fr_CG: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fr", "CG", value)
@@ -2511,7 +2510,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fr_CH: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fr", "CH", value)
@@ -2522,7 +2521,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fr_CI: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fr", "CI", value)
@@ -2533,7 +2532,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fr_CM: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fr", "CM", value)
@@ -2544,7 +2543,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fr_DJ: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fr", "DJ", value)
@@ -2555,7 +2554,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fr_DZ: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fr", "DZ", value)
@@ -2566,7 +2565,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fr_FR: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fr", "FR", value)
@@ -2577,7 +2576,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fr_GA: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fr", "GA", value)
@@ -2588,7 +2587,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fr_GF: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fr", "GF", value)
@@ -2599,7 +2598,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fr_GN: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fr", "GN", value)
@@ -2610,7 +2609,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fr_GP: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fr", "GP", value)
@@ -2621,7 +2620,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fr_GQ: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fr", "GQ", value)
@@ -2632,7 +2631,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fr_HT: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fr", "HT", value)
@@ -2643,7 +2642,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fr_KM: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fr", "KM", value)
@@ -2654,7 +2653,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fr_LU: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fr", "LU", value)
@@ -2665,7 +2664,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fr_MA: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fr", "MA", value)
@@ -2676,7 +2675,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fr_MC: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fr", "MC", value)
@@ -2687,7 +2686,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fr_MF: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fr", "MF", value)
@@ -2698,7 +2697,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fr_MG: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fr", "MG", value)
@@ -2709,7 +2708,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fr_ML: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fr", "ML", value)
@@ -2720,7 +2719,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fr_MQ: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fr", "MQ", value)
@@ -2731,7 +2730,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fr_MR: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fr", "MR", value)
@@ -2742,7 +2741,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fr_MU: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fr", "MU", value)
@@ -2753,7 +2752,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fr_NC: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fr", "NC", value)
@@ -2764,7 +2763,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fr_NE: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fr", "NE", value)
@@ -2775,7 +2774,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fr_PF: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fr", "PF", value)
@@ -2786,7 +2785,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fr_PM: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fr", "PM", value)
@@ -2797,7 +2796,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fr_RE: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fr", "RE", value)
@@ -2808,7 +2807,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fr_RW: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fr", "RW", value)
@@ -2819,7 +2818,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fr_SC: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fr", "SC", value)
@@ -2830,7 +2829,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fr_SN: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fr", "SN", value)
@@ -2841,7 +2840,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fr_SY: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fr", "SY", value)
@@ -2852,7 +2851,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fr_TD: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fr", "TD", value)
@@ -2863,7 +2862,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fr_TG: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fr", "TG", value)
@@ -2874,7 +2873,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fr_TN: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fr", "TN", value)
@@ -2885,7 +2884,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fr_VU: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fr", "VU", value)
@@ -2896,7 +2895,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fr_WF: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fr", "WF", value)
@@ -2907,7 +2906,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fr_YT: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fr", "YT", value)
@@ -2918,7 +2917,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fy: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fy", value)
@@ -2929,7 +2928,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var fy_NL: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("fy", "NL", value)
@@ -2940,7 +2939,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ga: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ga", value)
@@ -2951,7 +2950,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ga_IE: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ga", "IE", value)
@@ -2962,7 +2961,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var gd: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("gd", value)
@@ -2973,7 +2972,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var gd_GB: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("gd", "GB", value)
@@ -2984,7 +2983,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var gl: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("gl", value)
@@ -2995,7 +2994,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var gl_ES: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("gl", "ES", value)
@@ -3006,7 +3005,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var gu: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("gu", value)
@@ -3017,7 +3016,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var gu_IN: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("gu", "IN", value)
@@ -3028,7 +3027,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var gv: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("gv", value)
@@ -3039,7 +3038,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var gv_IM: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("gv", "IM", value)
@@ -3050,7 +3049,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ha: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ha", value)
@@ -3061,7 +3060,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ha_GH: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ha", "GH", value)
@@ -3072,7 +3071,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ha_NE: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ha", "NE", value)
@@ -3083,7 +3082,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ha_NG: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ha", "NG", value)
@@ -3094,7 +3093,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var he: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("he", value)
@@ -3105,7 +3104,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var he_IL: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("he", "IL", value)
@@ -3116,7 +3115,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var hi: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("hi", value)
@@ -3127,7 +3126,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var hi_IN: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("hi", "IN", value)
@@ -3138,7 +3137,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var hr: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("hr", value)
@@ -3149,7 +3148,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var hr_BA: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("hr", "BA", value)
@@ -3160,7 +3159,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var hr_HR: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("hr", "HR", value)
@@ -3171,7 +3170,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var hu: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("hu", value)
@@ -3182,7 +3181,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var hu_HU: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("hu", "HU", value)
@@ -3193,7 +3192,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var hy: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("hy", value)
@@ -3204,7 +3203,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var hy_AM: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("hy", "AM", value)
@@ -3215,7 +3214,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var id: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("id", value)
@@ -3226,7 +3225,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var id_ID: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("id", "ID", value)
@@ -3237,7 +3236,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ig: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ig", value)
@@ -3248,7 +3247,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ig_NG: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ig", "NG", value)
@@ -3259,7 +3258,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ii: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ii", value)
@@ -3270,7 +3269,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ii_CN: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ii", "CN", value)
@@ -3281,7 +3280,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var `is`: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("is", value)
@@ -3292,7 +3291,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var is_IS: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("is", "IS", value)
@@ -3303,7 +3302,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var it: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("it", value)
@@ -3314,7 +3313,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var it_CH: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("it", "CH", value)
@@ -3325,7 +3324,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var it_IT: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("it", "IT", value)
@@ -3336,7 +3335,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var it_SM: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("it", "SM", value)
@@ -3347,7 +3346,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ja: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ja", value)
@@ -3358,7 +3357,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ja_JP: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ja", "JP", value)
@@ -3369,7 +3368,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ka: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ka", value)
@@ -3380,7 +3379,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ka_GE: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ka", "GE", value)
@@ -3391,7 +3390,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ki: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ki", value)
@@ -3402,7 +3401,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ki_KE: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ki", "KE", value)
@@ -3413,7 +3412,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var kk: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("kk", value)
@@ -3424,7 +3423,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var kk_KZ: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("kk", "KZ", value)
@@ -3435,7 +3434,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var kl: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("kl", value)
@@ -3446,7 +3445,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var kl_GL: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("kl", "GL", value)
@@ -3457,7 +3456,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var km: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("km", value)
@@ -3468,7 +3467,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var km_KH: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("km", "KH", value)
@@ -3479,7 +3478,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var kn: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("kn", value)
@@ -3490,7 +3489,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var kn_IN: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("kn", "IN", value)
@@ -3501,7 +3500,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ko: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ko", value)
@@ -3512,7 +3511,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ko_KP: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ko", "KP", value)
@@ -3523,7 +3522,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ko_KR: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ko", "KR", value)
@@ -3534,7 +3533,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ks: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ks", value)
@@ -3545,7 +3544,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ks_IN: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ks", "IN", value)
@@ -3556,7 +3555,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var kw: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("kw", value)
@@ -3567,7 +3566,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var kw_GB: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("kw", "GB", value)
@@ -3578,7 +3577,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ky: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ky", value)
@@ -3589,7 +3588,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ky_KG: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ky", "KG", value)
@@ -3600,7 +3599,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var lb: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("lb", value)
@@ -3611,7 +3610,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var lb_LU: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("lb", "LU", value)
@@ -3622,7 +3621,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var lg: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("lg", value)
@@ -3633,7 +3632,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var lg_UG: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("lg", "UG", value)
@@ -3644,7 +3643,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ln: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ln", value)
@@ -3655,7 +3654,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ln_AO: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ln", "AO", value)
@@ -3666,7 +3665,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ln_CD: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ln", "CD", value)
@@ -3677,7 +3676,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ln_CF: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ln", "CF", value)
@@ -3688,7 +3687,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ln_CG: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ln", "CG", value)
@@ -3699,7 +3698,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var lo: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("lo", value)
@@ -3710,7 +3709,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var lo_LA: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("lo", "LA", value)
@@ -3721,7 +3720,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var lt: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("lt", value)
@@ -3732,7 +3731,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var lt_LT: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("lt", "LT", value)
@@ -3743,7 +3742,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var lu: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("lu", value)
@@ -3754,7 +3753,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var lu_CD: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("lu", "CD", value)
@@ -3765,7 +3764,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var lv: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("lv", value)
@@ -3776,7 +3775,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var lv_LV: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("lv", "LV", value)
@@ -3787,7 +3786,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var mg: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("mg", value)
@@ -3798,7 +3797,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var mg_MG: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("mg", "MG", value)
@@ -3809,7 +3808,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var mk: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("mk", value)
@@ -3820,7 +3819,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var mk_MK: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("mk", "MK", value)
@@ -3831,7 +3830,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ml: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ml", value)
@@ -3842,7 +3841,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ml_IN: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ml", "IN", value)
@@ -3853,7 +3852,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var mn: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("mn", value)
@@ -3864,7 +3863,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var mn_MN: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("mn", "MN", value)
@@ -3875,7 +3874,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var mr: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("mr", value)
@@ -3886,7 +3885,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var mr_IN: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("mr", "IN", value)
@@ -3897,7 +3896,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ms: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ms", value)
@@ -3908,7 +3907,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ms_BN: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ms", "BN", value)
@@ -3919,7 +3918,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ms_MY: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ms", "MY", value)
@@ -3930,7 +3929,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ms_SG: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ms", "SG", value)
@@ -3941,7 +3940,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var mt: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("mt", value)
@@ -3952,7 +3951,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var mt_MT: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("mt", "MT", value)
@@ -3963,7 +3962,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var my: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("my", value)
@@ -3974,7 +3973,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var my_MM: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("my", "MM", value)
@@ -3985,7 +3984,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var nb: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("nb", value)
@@ -3996,7 +3995,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var nb_NO: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("nb", "NO", value)
@@ -4007,7 +4006,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var nb_SJ: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("nb", "SJ", value)
@@ -4018,7 +4017,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var nd: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("nd", value)
@@ -4029,7 +4028,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var nd_ZW: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("nd", "ZW", value)
@@ -4040,7 +4039,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ne: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ne", value)
@@ -4051,7 +4050,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ne_IN: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ne", "IN", value)
@@ -4062,7 +4061,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ne_NP: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ne", "NP", value)
@@ -4073,7 +4072,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var nl: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("nl", value)
@@ -4084,7 +4083,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var nl_AW: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("nl", "AW", value)
@@ -4095,7 +4094,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var nl_BE: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("nl", "BE", value)
@@ -4106,7 +4105,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var nl_BQ: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("nl", "BQ", value)
@@ -4117,7 +4116,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var nl_CW: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("nl", "CW", value)
@@ -4128,7 +4127,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var nl_NL: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("nl", "NL", value)
@@ -4139,7 +4138,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var nl_SR: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("nl", "SR", value)
@@ -4150,7 +4149,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var nl_SX: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("nl", "SX", value)
@@ -4161,7 +4160,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var nn: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("nn", value)
@@ -4172,7 +4171,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var nn_NO: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("nn", "NO", value)
@@ -4183,7 +4182,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var no: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("no", value)
@@ -4194,7 +4193,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var no_NO: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("no", "NO", value)
@@ -4205,7 +4204,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var om: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("om", value)
@@ -4216,7 +4215,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var om_ET: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("om", "ET", value)
@@ -4227,7 +4226,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var om_KE: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("om", "KE", value)
@@ -4238,7 +4237,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var or: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("or", value)
@@ -4249,7 +4248,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var or_IN: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("or", "IN", value)
@@ -4260,7 +4259,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var os: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("os", value)
@@ -4271,7 +4270,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var os_GE: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("os", "GE", value)
@@ -4282,7 +4281,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var os_RU: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("os", "RU", value)
@@ -4293,7 +4292,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var pa: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("pa", value)
@@ -4304,7 +4303,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var pa_PK: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("pa", "PK", value)
@@ -4315,7 +4314,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var pa_IN: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("pa", "IN", value)
@@ -4326,7 +4325,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var pl: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("pl", value)
@@ -4337,7 +4336,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var pl_PL: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("pl", "PL", value)
@@ -4348,7 +4347,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ps: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ps", value)
@@ -4359,7 +4358,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ps_AF: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ps", "AF", value)
@@ -4370,7 +4369,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var pt: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("pt", value)
@@ -4381,7 +4380,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var pt_AO: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("pt", "AO", value)
@@ -4392,7 +4391,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var pt_BR: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("pt", "BR", value)
@@ -4403,7 +4402,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var pt_CV: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("pt", "CV", value)
@@ -4414,7 +4413,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var pt_GW: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("pt", "GW", value)
@@ -4425,7 +4424,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var pt_MO: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("pt", "MO", value)
@@ -4436,7 +4435,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var pt_MZ: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("pt", "MZ", value)
@@ -4447,7 +4446,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var pt_PT: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("pt", "PT", value)
@@ -4458,7 +4457,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var pt_ST: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("pt", "ST", value)
@@ -4469,7 +4468,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var pt_TL: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("pt", "TL", value)
@@ -4480,7 +4479,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var qu: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("qu", value)
@@ -4491,7 +4490,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var qu_BO: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("qu", "BO", value)
@@ -4502,7 +4501,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var qu_EC: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("qu", "EC", value)
@@ -4513,7 +4512,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var qu_PE: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("qu", "PE", value)
@@ -4524,7 +4523,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var rm: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("rm", value)
@@ -4535,7 +4534,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var rm_CH: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("rm", "CH", value)
@@ -4546,7 +4545,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var rn: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("rn", value)
@@ -4557,7 +4556,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var rn_BI: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("rn", "BI", value)
@@ -4568,7 +4567,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ro: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ro", value)
@@ -4579,7 +4578,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ro_MD: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ro", "MD", value)
@@ -4590,7 +4589,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ro_RO: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ro", "RO", value)
@@ -4601,7 +4600,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ru: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ru", value)
@@ -4612,7 +4611,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ru_BY: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ru", "BY", value)
@@ -4623,7 +4622,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ru_KG: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ru", "KG", value)
@@ -4634,7 +4633,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ru_KZ: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ru", "KZ", value)
@@ -4645,7 +4644,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ru_MD: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ru", "MD", value)
@@ -4656,7 +4655,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ru_RU: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ru", "RU", value)
@@ -4667,7 +4666,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ru_UA: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ru", "UA", value)
@@ -4678,7 +4677,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var rw: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("rw", value)
@@ -4689,7 +4688,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var rw_RW: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("rw", "RW", value)
@@ -4700,7 +4699,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var se: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("se", value)
@@ -4711,7 +4710,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var se_FI: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("se", "FI", value)
@@ -4722,7 +4721,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var se_NO: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("se", "NO", value)
@@ -4733,7 +4732,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var se_SE: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("se", "SE", value)
@@ -4744,7 +4743,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var sg: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("sg", value)
@@ -4755,7 +4754,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var sg_CF: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("sg", "CF", value)
@@ -4766,7 +4765,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var sh: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("sh", value)
@@ -4777,7 +4776,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var sh_BA: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("sh", "BA", value)
@@ -4788,7 +4787,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var si: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("si", value)
@@ -4799,7 +4798,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var si_LK: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("si", "LK", value)
@@ -4810,7 +4809,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var sk: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("sk", value)
@@ -4821,7 +4820,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var sk_SK: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("sk", "SK", value)
@@ -4832,7 +4831,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var sl: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("sl", value)
@@ -4843,7 +4842,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var sl_SI: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("sl", "SI", value)
@@ -4854,7 +4853,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var sn: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("sn", value)
@@ -4865,7 +4864,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var sn_ZW: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("sn", "ZW", value)
@@ -4876,7 +4875,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var so: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("so", value)
@@ -4887,7 +4886,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var so_DJ: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("so", "DJ", value)
@@ -4898,7 +4897,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var so_ET: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("so", "ET", value)
@@ -4909,7 +4908,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var so_KE: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("so", "KE", value)
@@ -4920,7 +4919,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var so_SO: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("so", "SO", value)
@@ -4931,7 +4930,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var sq: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("sq", value)
@@ -4942,7 +4941,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var sq_AL: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("sq", "AL", value)
@@ -4953,7 +4952,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var sq_MK: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("sq", "MK", value)
@@ -4964,7 +4963,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var sq_XK: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("sq", "XK", value)
@@ -4975,7 +4974,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var sr: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("sr", value)
@@ -4986,7 +4985,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var sr_BA: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("sr", "BA", value)
@@ -4997,7 +4996,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var sr_ME: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("sr", "ME", value)
@@ -5008,7 +5007,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var sr_RS: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("sr", "RS", value)
@@ -5019,7 +5018,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var sr_XK: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("sr", "XK", value)
@@ -5030,7 +5029,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var sv: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("sv", value)
@@ -5041,7 +5040,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var sv_AX: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("sv", "AX", value)
@@ -5052,7 +5051,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var sv_FI: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("sv", "FI", value)
@@ -5063,7 +5062,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var sv_SE: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("sv", "SE", value)
@@ -5074,7 +5073,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var sw: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("sw", value)
@@ -5085,7 +5084,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var sw_KE: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("sw", "KE", value)
@@ -5096,7 +5095,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var sw_TZ: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("sw", "TZ", value)
@@ -5107,7 +5106,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var sw_UG: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("sw", "UG", value)
@@ -5118,7 +5117,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ta: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ta", value)
@@ -5129,7 +5128,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ta_IN: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ta", "IN", value)
@@ -5140,7 +5139,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ta_LK: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ta", "LK", value)
@@ -5151,7 +5150,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ta_MY: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ta", "MY", value)
@@ -5162,7 +5161,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ta_SG: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ta", "SG", value)
@@ -5173,7 +5172,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var te: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("te", value)
@@ -5184,7 +5183,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var te_IN: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("te", "IN", value)
@@ -5195,7 +5194,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var th: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("th", value)
@@ -5206,7 +5205,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var th_TH: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("th", "TH", value)
@@ -5217,7 +5216,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ti: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ti", value)
@@ -5228,7 +5227,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ti_ER: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ti", "ER", value)
@@ -5239,7 +5238,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ti_ET: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ti", "ET", value)
@@ -5250,7 +5249,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var tl: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("tl", value)
@@ -5261,7 +5260,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var tl_PH: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("tl", "PH", value)
@@ -5272,7 +5271,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var to: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("to", value)
@@ -5283,7 +5282,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var to_TO: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("to", "TO", value)
@@ -5294,7 +5293,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var tr: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("tr", value)
@@ -5305,7 +5304,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var tr_CY: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("tr", "CY", value)
@@ -5316,7 +5315,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var tr_TR: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("tr", "TR", value)
@@ -5327,7 +5326,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ug: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ug", value)
@@ -5338,7 +5337,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ug_CN: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ug", "CN", value)
@@ -5349,7 +5348,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var uk: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("uk", value)
@@ -5360,7 +5359,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var uk_UA: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("uk", "UA", value)
@@ -5371,7 +5370,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ur: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ur", value)
@@ -5382,7 +5381,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ur_IN: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ur", "IN", value)
@@ -5393,7 +5392,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var ur_PK: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("ur", "PK", value)
@@ -5404,7 +5403,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var uz: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("uz", value)
@@ -5415,7 +5414,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var uz_AF: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("uz", "AF", value)
@@ -5426,7 +5425,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var uz_UZ: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("uz", "UZ", value)
@@ -5437,7 +5436,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var vi: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("vi", value)
@@ -5448,7 +5447,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var vi_VN: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("vi", "VN", value)
@@ -5459,7 +5458,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var yi: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("yi", value)
@@ -5470,7 +5469,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var yo: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("yo", value)
@@ -5481,7 +5480,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var yo_BJ: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("yo", "BJ", value)
@@ -5492,7 +5491,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var yo_NG: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("yo", "NG", value)
@@ -5503,7 +5502,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var zh: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("zh", value)
@@ -5514,7 +5513,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var zh_CN: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("zh", "CN", value)
@@ -5525,7 +5524,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var zh_HK: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("zh", "HK", value)
@@ -5536,7 +5535,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var zh_MO: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("zh", "MO", value)
@@ -5547,7 +5546,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var zh_SG: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("zh", "SG", value)
@@ -5558,7 +5557,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var zh_TW: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("zh", "TW", value)
@@ -5569,7 +5568,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var zu: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("zu", value)
@@ -5580,7 +5579,7 @@ public interface LocalizationTextScope : BaseLocalizationTextScope {
     public var zu_ZA: String
         @Deprecated(
             NO_GETTER,
-            level = DeprecationLevel.ERROR,
+            level = DeprecationLevel.ERROR
         )
         get() = noGetter()
         set(`value`) = add("zu", "ZA", value)

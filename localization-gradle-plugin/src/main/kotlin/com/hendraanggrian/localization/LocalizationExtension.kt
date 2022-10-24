@@ -6,8 +6,8 @@ import java.util.*
 /** Extension instance when configuring `localization` in Gradle scripts. */
 interface LocalizationExtension : LocalizeSpec {
     /**
-     * Default locale, when matching localization is found, file name suffix is removed.
-     * Default is [Locale.ENGLISH].
+     * Default locale, when matching localization is found, file name suffix is removed. Default
+     * is [Locale.ENGLISH].
      */
     val defaultLocale: Property<Locale>
 }

@@ -9,20 +9,21 @@ import java.io.File
 /** A specification for generating localization resources. */
 @LocalizationConfigurationDsl
 interface LocalizeSpec {
-    /** Prints debugging messages of CSV import. Named accordingly to avoid name clash with [org.gradle.api.Task]. */
+    /**
+     * Prints debugging messages of CSV import. Named accordingly to avoid name clash
+     * with [org.gradle.api.Task].
+     */
     fun getLogger(): Logger
 
     /** Locale configurations to be written as resources. */
     val table: Property<LocaleTable>
 
-    /**
-     * Generated resources file or root folder name.
-     * Default is `strings`.
-     */
+    /** Generated resources file or root folder name. Default is `strings`. */
     val resourceName: Property<String>
 
     /**
      * Marks [key] as current row and opening closure to modify that row.
+     *
      * @param key specified row.
      * @param configuration closure to populate localization table.
      */
@@ -33,9 +34,9 @@ interface LocalizeSpec {
         text(this, configuration)
 
     /**
-     * Import CSV file and add it to existing table, not replacing them.
-     * In this sense, it is possible to import multiple files.
-     * The CSV file in question must have a header with format `key;locale1;...;localeN`
+     * Import CSV file and add it to existing table, not replacing them. In this sense, it is
+     * possible to import multiple files. The CSV file in question must have a header with
+     * format `key;locale1;...;localeN`
      */
     fun importCSV(file: File) {
         getLogger().debug("Importing '${file.name}'")

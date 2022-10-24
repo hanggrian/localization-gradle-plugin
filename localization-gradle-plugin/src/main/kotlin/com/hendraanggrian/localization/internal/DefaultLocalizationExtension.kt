@@ -12,8 +12,12 @@ import org.gradle.kotlin.dsl.invoke
 import org.gradle.kotlin.dsl.property
 import java.util.*
 
-/** Gradle extension to configure localization, any changes made here will take affect in [AbstractLocalizeTask]. */
-open class DefaultLocalizationExtension(objects: ObjectFactory, private val logger: Logger) : LocalizationExtension {
+/**
+ * Gradle extension to configure localization, any changes made here will take effect
+ * in [AbstractLocalizeTask].
+ */
+open class DefaultLocalizationExtension(objects: ObjectFactory, private val logger: Logger) :
+    LocalizationExtension {
     final override fun getLogger(): Logger = logger
 
     final override val table: Property<LocaleTable> = objects.property<LocaleTable>()

@@ -2,7 +2,7 @@ package com.hendraanggrian.localization
 
 import com.google.common.collect.HashBasedTable
 import org.gradle.api.provider.Property
-import java.util.*
+import java.util.Locale
 
 /**
  * Locale configurations are kept in a Guava row sorted table using the following format:
@@ -15,7 +15,10 @@ internal typealias LocaleTable = HashBasedTable<String, String, String>
 /** Keep converted locales here for faster reuse. */
 private val LOCALE_MAP = mutableMapOf<String, Locale>()
 
-/** Converting locale string to actual locale is necessary since [Locale] tends to convert old ISO code. */
+/**
+ * Converting locale string to actual locale is necessary since [Locale] tends to convert old ISO
+ * code.
+ */
 internal fun LocaleTable.forEachLocale(action: (column: String, locale: Locale) -> Unit): Unit =
     columnKeySet().forEach { column ->
         action(
@@ -32,6 +35,7 @@ internal fun LocaleTable.forEachLocale(action: (column: String, locale: Locale) 
                         "zh" -> Locale.CHINESE
                         else -> Locale(column)
                     }
+
                     else -> {
                         val language = column.substringBefore('-')
                         val country = column.substringAfter('-')
@@ -55,7 +59,8 @@ internal fun LocaleTable.forEachLocale(action: (column: String, locale: Locale) 
         )
     }
 
-internal class LocalizationTextBuilder(private val table: Property<LocaleTable>) : LocalizationTextScope {
+internal class LocalizationTextBuilder(private val table: Property<LocaleTable>) :
+    LocalizationTextScope {
     lateinit var currentRow: String
     override fun add(language: String, value: String) {
         table.get().put(currentRow, language, value)
