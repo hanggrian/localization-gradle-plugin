@@ -1,4 +1,12 @@
-include("localization-gradle-plugin")
+pluginManagement.repositories {
+    gradlePluginPortal()
+    mavenCentral()
+}
+dependencyResolutionManagement.repositories.mavenCentral()
+
+rootProject.name = "localization-gradle-plugin"
+
+include("localization")
 include("codegen")
 include("website")
 includeDir("samples")
