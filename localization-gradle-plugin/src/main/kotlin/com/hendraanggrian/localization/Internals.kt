@@ -61,6 +61,7 @@ internal fun LocaleTable.forEachLocale(action: (column: String, locale: Locale) 
 
 internal class LocalizationTextBuilder(private val table: Property<LocaleTable>) :
     LocalizationTextScope {
+
     lateinit var currentRow: String
     override fun add(language: String, value: String) {
         table.get().put(currentRow, language, value)

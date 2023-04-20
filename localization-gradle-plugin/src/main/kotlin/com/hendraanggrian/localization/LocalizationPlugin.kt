@@ -40,10 +40,10 @@ class LocalizationPlugin : Plugin<Project> {
             .createLocalizeTask<LocalizeJvmTask>(TASK_LOCALIZE_JVM, localization)
         val localizeAndroid = project
             .createLocalizeTask<LocalizeAndroidTask>(TASK_LOCALIZE_ANDROID, localization)
-        project.tasks.register(TASK_LOCALIZE_ALL) {
-            group = GROUP
-            description = "Creates localization files for both JVM and Android."
-            dependsOn(localizeJvm, localizeAndroid)
+        project.tasks.register(TASK_LOCALIZE_ALL) { task ->
+            task.group = GROUP
+            task.description = "Creates localization files for both JVM and Android."
+            task.dependsOn(localizeJvm, localizeAndroid)
         }
 
         project.afterEvaluate {

@@ -1,7 +1,8 @@
 package com.hendraanggrian.localization
 
+import com.hendraanggrian.localization.LocalizationPlugin.Companion.TASK_LOCALIZE_JVM
 import org.gradle.testkit.runner.GradleRunner
-import org.gradle.testkit.runner.TaskOutcome
+import org.gradle.testkit.runner.TaskOutcome.SUCCESS
 import org.junit.Rule
 import org.junit.rules.TemporaryFolder
 import java.io.File
@@ -48,9 +49,8 @@ class LocalizationFunctionalTest {
             """.trimIndent()
         )
         assertEquals(
-            TaskOutcome.SUCCESS,
-            runner.withArguments(LocalizationPlugin.TASK_LOCALIZE_JVM).build()
-                .task(":${LocalizationPlugin.TASK_LOCALIZE_JVM}")!!.outcome
+            SUCCESS,
+            runner.withArguments(TASK_LOCALIZE_JVM).build().task(":$TASK_LOCALIZE_JVM")!!.outcome
         )
         testProjectDir.root.resolve("src/main/resources/strings.properties").readLines().let {
             assertTrue("hi=Hi" in it)

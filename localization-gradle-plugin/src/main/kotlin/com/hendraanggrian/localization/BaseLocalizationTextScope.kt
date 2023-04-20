@@ -9,7 +9,6 @@ import java.util.*
  * method on each possible localization.
  */
 interface BaseLocalizationTextScope {
-
     /**
      * Register localization value to locale with specified [language].
      *

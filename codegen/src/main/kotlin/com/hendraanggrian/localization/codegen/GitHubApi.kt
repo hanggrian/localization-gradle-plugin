@@ -12,7 +12,7 @@ import io.ktor.http.takeFrom
 
 object GitHubApi {
     private const val endPoint = "https://api.github.com"
-    private val client: HttpClient = HttpClient(OkHttp) {
+    private val client = HttpClient(OkHttp) {
         install(JsonFeature) {
             serializer = GsonSerializer()
         }

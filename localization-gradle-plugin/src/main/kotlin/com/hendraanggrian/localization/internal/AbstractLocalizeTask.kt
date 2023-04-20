@@ -23,7 +23,6 @@ import java.util.*
 
 /** Non-platform specific locale writer task. */
 abstract class AbstractLocalizeTask : DefaultTask(), LocalizeSpec {
-
     @Internal
     final override fun getLogger(): Logger = project.logger
 
@@ -55,10 +54,10 @@ abstract class AbstractLocalizeTask : DefaultTask(), LocalizeSpec {
     fun generate() {
         logger.info(
             "Generating resources with ${
-            when {
-                defaultLocale.isPresent -> "default locale '${defaultLocale.get()}'"
-                else -> "no default locale"
-            }
+                when {
+                    defaultLocale.isPresent -> "default locale '${defaultLocale.get()}'"
+                    else -> "no default locale"
+                }
             }:"
         )
 
@@ -66,7 +65,7 @@ abstract class AbstractLocalizeTask : DefaultTask(), LocalizeSpec {
 
         logger.info(
             "- Locale table column = ${table.get().columnKeySet().size}, row = ${
-            table.get().rowKeySet().size
+                table.get().rowKeySet().size
             }"
         )
         table.get().forEachLocale { column, locale -> onGenerateLocale(column, locale) }
@@ -105,10 +104,10 @@ abstract class AbstractLocalizeTask : DefaultTask(), LocalizeSpec {
         outputStream().use { action(it) }
         logger.info(
             "  ${
-            when {
-                exists() -> "Resource '$name' created."
-                else -> "Failed to create resource '$name.'"
-            }
+                when {
+                    exists() -> "Resource '$name' created."
+                    else -> "Failed to create resource '$name.'"
+                }
             }"
         )
     }

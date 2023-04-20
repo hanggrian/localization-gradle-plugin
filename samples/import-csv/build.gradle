@@ -1,13 +1,12 @@
 buildscript {
     repositories {
-        gradlePluginPortal()
         mavenCentral()
         google()
     }
     dependencies {
         classpath files('../localization-gradle-plugin-0.2.jar')
-        classpath 'com.google.guava:guava:31.1-jre'
-        classpath 'com.opencsv:opencsv:5.6'
+        classpath libs.guava
+        classpath libs.opencsv
     }
 }
 
@@ -17,7 +16,7 @@ apply plugin: 'com.hendraanggrian.localization'
 dependencies.testImplementation 'junit:junit:4.13.2'
 
 localization {
-    importCSV new File(projectDir, 'locale.csv')
+    importCsv new File(projectDir, 'locale.csv')
 }
 
 tasks.localizeAndroid.enabled false

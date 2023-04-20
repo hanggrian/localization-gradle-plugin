@@ -38,7 +38,7 @@ interface LocalizeSpec {
      * possible to import multiple files. The CSV file in question must have a header with
      * format `key;locale1;...;localeN`
      */
-    fun importCSV(file: File) {
+    fun importCsv(file: File) {
         getLogger().debug("Importing '${file.name}'")
 
         val result = CSVReader(file.inputStream().bufferedReader()).readAll()
@@ -50,12 +50,16 @@ interface LocalizeSpec {
         result.drop(1).forEach { line ->
             val row = line.first()
             val cells = line.drop(1)
-            text(row) {
+            text(row) { scope ->
                 cells.forEachIndexed { index, value ->
                     val column = columns[index]
                     when {
-                        '-' !in column -> add(column, value)
-                        else -> add(column.substringBefore('-'), column.substringAfter('-'), value)
+                        '-' !in column -> scope.add(column, value)
+                        else -> scope.add(
+                            column.substringBefore('-'),
+                            column.substringAfter('-'),
+                            value
+                        )
                     }
                 }
             }

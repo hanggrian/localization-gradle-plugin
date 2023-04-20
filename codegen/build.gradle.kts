@@ -3,7 +3,7 @@ plugins {
     kotlin("jvm") version libs.versions.kotlin
 }
 
-application.mainClass.set("$RELEASE_GROUP.localization.codegen.LocalizationTextBuilderGenerator")
+application.mainClass.set("$RELEASE_GROUP.codegen.LocalizationTextBuilderGenerator")
 
 dependencies {
     implementation(libs.kotlinx.coroutines)

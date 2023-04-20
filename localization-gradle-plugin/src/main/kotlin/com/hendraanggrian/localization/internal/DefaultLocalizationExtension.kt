@@ -18,6 +18,7 @@ import java.util.*
  */
 open class DefaultLocalizationExtension(objects: ObjectFactory, private val logger: Logger) :
     LocalizationExtension {
+
     final override fun getLogger(): Logger = logger
 
     final override val table: Property<LocaleTable> = objects.property<LocaleTable>()
