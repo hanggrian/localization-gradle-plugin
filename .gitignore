@@ -6,7 +6,7 @@
 build/
 local.properties
 
-# IDEA
+# IntelliJ
 *.iml
 .idea/
 out/

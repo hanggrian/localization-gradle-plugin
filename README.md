@@ -1,6 +1,6 @@
-[![Travis CI](https://img.shields.io/travis/com/hendraanggrian/localization-gradle-plugin)](https://travis-ci.com/github/hendraanggrian/localization-gradle-plugin/)
-[![Plugin Portal](https://img.shields.io/maven-metadata/v.svg?label=plugin-portal&metadataUrl=https%3A%2F%2Fplugins.gradle.org%2Fm2%2Fcom%2Fhendraanggrian%2Flocalization%2Fcom.hendraanggrian.localization.gradle.plugin%2Fmaven-metadata.xml)](https://plugins.gradle.org/plugin/com.hendraanggrian.localization)
-[![OpenJDK](https://img.shields.io/badge/jdk-11%2B-informational)](https://openjdk.java.net/projects/jdk/11/)
+[![CircleCI](https://img.shields.io/circleci/build/gh/hanggrian/localization-gradle-plugin)](https://app.circleci.com/pipelines/github/hanggrian/localization-gradle-plugin/)
+[![Plugin Portal](https://img.shields.io/gradle-plugin-portal/v/com.hanggrian.localization)](https://plugins.gradle.org/plugin/com.hanggrian.localization)
+[![OpenJDK](https://img.shields.io/badge/jdk-11%2B-informational)](https://openjdk.org/projects/jdk/11/)
 
 # Localization Gradle Plugin
 
@@ -16,7 +16,7 @@ Using plugins DSL:
 
 ```gradle
 plugins {
-    id('com.hendraanggrian.localization') version "$version"
+    id('com.hanggrian.localization') version "$version"
 }
 ```
 
@@ -28,11 +28,11 @@ buildscript {
         gradlePluginPortal()
     }
     dependencies {
-        classpath("com.hendraanggrian:localization-gradle-plugin:$version")
+        classpath("com.hanggrian:localization-gradle-plugin:$version")
     }
 }
 
-apply plugin: 'com.hendraanggrian.localization'
+apply plugin: 'com.hanggrian.localization'
 ```
 
 ## Usage

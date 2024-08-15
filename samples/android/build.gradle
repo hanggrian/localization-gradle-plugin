@@ -4,10 +4,10 @@ buildscript {
         google()
     }
     dependencies {
-        classpath files('../localization-gradle-plugin-0.2.jar')
+        classpath files('../localization-gradle-plugin-0.1.jar')
         classpath libs.guava
         classpath libs.opencsv
-        classpath 'com.android.tools.build:gradle:7.3.1'
+        classpath 'com.android.tools.build:gradle:8.5.1'
     }
 }
 
@@ -17,16 +17,17 @@ repositories {
 }
 
 apply plugin: 'com.android.application'
-apply plugin: 'com.hendraanggrian.localization'
+apply plugin: 'com.hanggrian.localization'
 
 android {
-    compileSdkVersion 32
+    namespace = 'com.example'
+    compileSdk 34
     defaultConfig {
-        minSdkVersion 14
-        targetSdkVersion 32
-        applicationId 'com.example'
+        minSdk 14
+        targetSdk 34
         versionCode 1
         versionName '1.0'
+      applicationId namespace
     }
     compileOptions {
         targetCompatibility = JavaVersion.VERSION_11
@@ -52,9 +53,7 @@ localization {
 tasks {
     localizeJvm.enabled false
     localizeAndroid {
-        text('android_only') {
-            en = 'Android Only'
-            id = 'Hanya Android'
-        }
+        table.get().put("android_only", "en", "Android only")
+        table.get().put("android_only", "id", "Hanya di Android")
     }
 }

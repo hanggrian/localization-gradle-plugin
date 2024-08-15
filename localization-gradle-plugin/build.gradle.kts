@@ -1,31 +1,40 @@
+val developerId: String by project
+val releaseArtifact: String by project
+val releaseGroup: String by project
+val releaseDescription: String by project
+val releaseUrl: String by project
+
 plugins {
     kotlin("jvm") version libs.versions.kotlin
     alias(libs.plugins.dokka)
+    alias(libs.plugins.ktlint)
     alias(libs.plugins.gradle.publish)
 }
 
-kotlin.jvmToolchain(libs.versions.jdk.get().toInt())
+kotlin.explicitApi()
 
 gradlePlugin {
-    website.set(RELEASE_URL)
-    vcsUrl.set("$RELEASE_URL.git")
+    website.set(releaseUrl)
+    vcsUrl.set("https://github.com/$developerId/$releaseArtifact.git")
     plugins.register("localizationPlugin") {
-        id = RELEASE_GROUP
+        id = releaseGroup
+        implementationClass = "$releaseGroup.LocalizationPlugin"
         displayName = "Localization Plugin"
-        description = RELEASE_DESCRIPTION
+        description = releaseDescription
         tags.set(listOf("localization", "locale", "language"))
-        implementationClass = "$RELEASE_GROUP.LocalizationPlugin"
     }
     testSourceSets(sourceSets.test.get())
 }
 
 dependencies {
-    ktlint(libs.ktlint, ::configureKtlint)
-    ktlint(libs.rulebook.ktlint)
+    ktlintRuleset(libs.rulebook.ktlint)
+
     compileOnly(kotlin("gradle-plugin-api"))
+
     implementation(gradleKotlinDsl())
     implementation(libs.guava)
     implementation(libs.opencsv)
+
     testImplementation(gradleTestKit())
     testImplementation(kotlin("test-junit", libs.versions.kotlin.get()))
 }

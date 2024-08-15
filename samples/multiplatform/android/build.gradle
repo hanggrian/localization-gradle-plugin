@@ -1,17 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 32
+    namespace = 'com.example'
+    compileSdk 34
     defaultConfig {
-        minSdkVersion 14
-        targetSdkVersion 32
-        applicationId 'com.example'
+        minSdk 14
+        targetSdk 34
         versionCode 1
         versionName '1.0'
-    }
-    compileOptions {
-        targetCompatibility = JavaVersion.VERSION_11
-        sourceCompatibility = JavaVersion.VERSION_11
+        applicationId namespace
     }
 }
 

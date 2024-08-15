@@ -11,7 +11,7 @@ import java.util.Properties;
 public class LocalizationTest {
     @Test
     public void in() {
-        Properties properties = load("strings_in");
+        Properties properties = load("strings_id");
         assertEquals("Tentang", properties.getProperty("about"));
         assertEquals("Beranda", properties.getProperty("home"));
     }
