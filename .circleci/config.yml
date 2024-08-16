@@ -3,7 +3,7 @@ version: 2.1
 executors:
   linux:
     docker:
-      - image: cimg/openjdk:17.0 # min for android
+      - image: cimg/android:2024.08
 
 jobs:
   unit-test:

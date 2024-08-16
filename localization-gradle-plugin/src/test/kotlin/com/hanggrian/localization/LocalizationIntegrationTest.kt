@@ -61,7 +61,7 @@ class LocalizationIntegrationTest {
         testProjectDir.root.resolve("res/strings.properties").readLines().let {
             assertTrue("hi=Hi" in it)
         }
-        testProjectDir.root.resolve("res/strings_in.properties").readLines().let {
+        testProjectDir.root.resolve("res/strings_id.properties").readLines().let {
             assertTrue("hi=Hai" in it)
         }
     }

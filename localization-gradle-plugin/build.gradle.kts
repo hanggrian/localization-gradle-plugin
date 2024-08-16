@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 val developerId: String by project
 val releaseArtifact: String by project
 val releaseGroup: String by project
@@ -11,7 +13,13 @@ plugins {
     alias(libs.plugins.gradle.publish)
 }
 
-kotlin.explicitApi()
+val jdkVersion = JavaLanguageVersion.of(libs.versions.jdk.get())
+val jreVersion = JavaLanguageVersion.of(libs.versions.jre.get())
+
+kotlin {
+    jvmToolchain(jdkVersion.asInt())
+    explicitApi()
+}
 
 gradlePlugin {
     website.set(releaseUrl)
@@ -37,8 +45,19 @@ dependencies {
 
     testImplementation(gradleTestKit())
     testImplementation(kotlin("test-junit", libs.versions.kotlin.get()))
+    testImplementation(libs.truth)
 }
 
-tasks.dokkaHtml {
-    outputDirectory.set(buildDir.resolve("dokka/dokka/"))
+tasks {
+    compileJava {
+        options.release = jreVersion.asInt()
+    }
+    compileKotlin {
+        compilerOptions.jvmTarget
+            .set(JvmTarget.fromTarget(JavaVersion.toVersion(jreVersion).toString()))
+    }
+
+    dokkaHtml {
+        outputDirectory.set(layout.buildDirectory.dir("dokka/dokka/"))
+    }
 }

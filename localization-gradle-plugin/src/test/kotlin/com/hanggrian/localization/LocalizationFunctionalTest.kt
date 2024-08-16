@@ -57,7 +57,7 @@ class LocalizationFunctionalTest {
         testProjectDir.root.resolve("src/main/resources/strings.properties").readLines().let {
             assertTrue("hi=Hi" in it)
         }
-        testProjectDir.root.resolve("src/main/resources/strings_in.properties").readLines().let {
+        testProjectDir.root.resolve("src/main/resources/strings_id.properties").readLines().let {
             assertTrue("hi=Hai" in it)
         }
     }

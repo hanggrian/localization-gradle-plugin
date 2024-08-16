@@ -1,6 +1,6 @@
 [![CircleCI](https://img.shields.io/circleci/build/gh/hanggrian/localization-gradle-plugin)](https://app.circleci.com/pipelines/github/hanggrian/localization-gradle-plugin/)
 [![Plugin Portal](https://img.shields.io/gradle-plugin-portal/v/com.hanggrian.localization)](https://plugins.gradle.org/plugin/com.hanggrian.localization)
-[![OpenJDK](https://img.shields.io/badge/jdk-11%2B-informational)](https://openjdk.org/projects/jdk/11/)
+[![Java](https://img.shields.io/badge/java-8+-informational)](https://docs.oracle.com/javase/8/)
 
 # Localization Gradle Plugin
 
@@ -64,7 +64,7 @@ tasks {
 
 It's even simpler with Gradle Kotlin DSL.
 
-```kotlin
+```kt
 localization {
     "home" {
         en = "Home"
