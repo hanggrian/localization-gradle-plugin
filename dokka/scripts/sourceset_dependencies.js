@@ -1,1 +1,1 @@
-sourceset_dependencies='{":localization:dokkaHtml/main":[]}'
+sourceset_dependencies='{":localization-gradle-plugin:dokkaHtml/main":[]}'

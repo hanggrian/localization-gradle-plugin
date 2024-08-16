@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html>
     <head>
         <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta charset="UTF-8">
@@ -8,19 +8,19 @@
         <meta content="chrome=1" http-equiv="X-UA-Compatible">
         <link href="styles/main.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,1,0" rel="stylesheet">
-        <link href="styles/prism-tomorrow.min.css" rel="stylesheet">
-        <script src="scripts/theme.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-groovy.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-kotlin.min.js"></script>
+        <link href="styles/prism-tomorrow.css" rel="stylesheet">
+        <script src="scripts/theme.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-gradle.min.js"></script>
         <!--Primary meta tags-->
         <meta content="localization-gradle-plugin" name="title">
-        <meta content="Cross-platform localization generated in Gradle" name="description">
+        <meta content="Generate localized resources file for JVM and Android" name="description">
     </head>
     <body>
         <div class="wrapper">
             <header>
                 <h1>localization-gradle-plugin</h1>
-                <p>Cross-platform localization generated in Gradle</p>
+                <p>Generate localized resources file for JVM and Android</p>
                 <p class="view">
-                    <a href="https://github.com/hendraanggrian/localization-gradle-plugin/">View the Project on GitHub <small>hendraanggrian/localization-gradle-plugin</small></a>
+                    <a href="https://github.com/hanggrian/localization-gradle-plugin/">View the Project on GitHub <small>hanggrian/localization-gradle-plugin</small></a>
                 </p>
                 <ul>
                     <li>
@@ -30,56 +30,56 @@
             </header>
             <section>
                 <p>
-                    <a href="https://travis-ci.com/github/hendraanggrian/localization-gradle-plugin/"><img alt="Travis CI" src="https://img.shields.io/travis/com/hendraanggrian/localization-gradle-plugin"></a>
-<a href="https://plugins.gradle.org/plugin/com.hendraanggrian.localization"><img alt="Plugin Portal" src="https://img.shields.io/maven-metadata/v.svg?label=plugin-portal&amp;metadataUrl=https%3A%2F%2Fplugins.gradle.org%2Fm2%2Fcom%2Fhendraanggrian%2Flocalization%2Fcom.hendraanggrian.localization.gradle.plugin%2Fmaven-metadata.xml"></a>
-<a href="https://openjdk.java.net/projects/jdk/11/"><img alt="OpenJDK" src="https://img.shields.io/badge/jdk-11%2B-informational"></a>
+                    <a href="https://app.circleci.com/pipelines/github/hanggrian/localization-gradle-plugin/"><img alt="CircleCI" src="https://img.shields.io/circleci/build/gh/hanggrian/localization-gradle-plugin"></a>
+<a href="https://plugins.gradle.org/plugin/com.hanggrian.localization"><img alt="Plugin Portal" src="https://img.shields.io/gradle-plugin-portal/v/com.hanggrian.localization"></a>
+<a href="https://www.java.com/en/download/help/java8.html"><img alt="Java" src="https://img.shields.io/badge/java-8+-informational"></a>
                 </p>
-
+                
                 <h1>Localization Gradle Plugin</h1>
-
+                
                 <p>An write-once-run-anywhere approach to localization in multiple platform
 project.</p>
-
+                
                 <ul>
-
+                    
                     <li>
                         Writes <code>ResourceBundle</code> for Java and XML values for Android.
                     </li>
-
+                    
                     <li>Localization data can be placed within Gradle script or CSV file.</li>
-
+                    
                 </ul>
-
+                
                 <h2>Download</h2>
-
+                
                 <p>Using plugins DSL:</p>
-
-                <pre><code class="language-groovy">plugins {
-    id('com.hendraanggrian.localization') version "$version"
+                
+                <pre><code class="language-gradle">plugins {
+    id('com.hanggrian.localization') version "$version"
 }
 </code></pre>
-
+                
                 <p>Using legacy plugin application:</p>
-
-                <pre><code class="language-groovy">buildscript {
+                
+                <pre><code class="language-gradle">buildscript {
     repositories {
         gradlePluginPortal()
     }
     dependencies {
-        classpath("com.hendraanggrian:localization-gradle-plugin:$version")
+        classpath("com.hanggrian:localization-gradle-plugin:$version")
     }
 }
 
-apply plugin: 'com.hendraanggrian.localization'
+apply plugin: 'com.hanggrian.localization'
 </code></pre>
-
+                
                 <h2>Usage</h2>
-
+                
                 <p>
                     Apply plugin in your module, and configure <code>localization</code> extension like below:
                 </p>
-
-                <pre><code class="language-groovy">localization {
+                
+                <pre><code class="language-gradle">localization {
     resourceName.set('strings')
     text('home') {
         en = 'Home'
@@ -100,9 +100,9 @@ tasks {
     }
 }
 </code></pre>
-
+                
                 <p>It's even simpler with Gradle Kotlin DSL.</p>
-
+                
                 <pre><code class="language-kotlin">localization {
     "home" {
         en = "Home"
@@ -114,19 +114,19 @@ tasks {
     }
 }
 </code></pre>
-
+                
                 <p>
                     Then use command <code>localizeJvm</code> or <code>localizeAndroid</code> to write localization files
 into their respective directory.
                 </p>
-
+                
             </section>
             <footer>
                 <p>
                     <button class="material-symbols-sharp" id="theme-toggle" onclick="toggleDarkMode()" title="Toggle dark mode"></button>
                 </p>
                 <p>
-                    This project is maintained by <a href="https://github.com/hendraanggrian/">Hendra Anggrian</a>
+                    This project is maintained by <a href="https://github.com/hanggrian/">Hendra Anggrian</a>
                 </p>
                 <small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist/">orderedlist</a></small>
             </footer>
